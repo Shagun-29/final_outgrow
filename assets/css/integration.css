@@ -1,0 +1,84 @@
+.section-top{
+    float: left;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    background: #fb5f66;
+    padding: 30px 0;
+}
+.section-top img {
+    margin: 20px auto;
+    display: block;
+    box-shadow: -10px 5px 28px 6px rgba(0,0,0,.4);
+}
+.section-top h3 {
+    font-size: 30px;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: montserratlight;
+    margin-top: 20px;
+    text-align: center;
+}
+.integration-box{
+    background: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    /*margin-left: 30px;*/
+    margin-bottom: 30px;
+    min-height: 180px;
+    border: 1px solid #62cbe8;
+    box-shadow: 0px 5px 18px 0px rgba(0,0,0,0.52);
+    display: flex;
+  	align-items: center;
+  	justify-content: center
+}
+.integration-box-new{
+    background: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    min-height: 180px;
+    border: 1px solid #62cbe8;
+    box-shadow: 0px 5px 18px 0px rgba(0,0,0,0.52);
+    display: flex;
+  	align-items: center;
+  	justify-content: center
+}
+.integration-head{
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #dfe3e6;
+    font-size: 48px;
+    line-height: 40px;
+    font-family: montserratbold;
+}
+.mt30{
+	margin-top: 30px;
+}
+/*
+.rs-hide{display: block;}
+.rs-show{display: none !important;}*/
+/*.menu-outer{position: fixed;width: 375px;background: #fff;z-index: 9999;right: 0;top: 0;height: 100vh;-webkit-box-shadow: -6px 3px 20px -6px rgba(0,0,0,0.75);-moz-box-shadow: -6px 3px 20px -6px rgba(0,0,0,0.75);box-shadow: -6px 3px 20px -6px rgba(0,0,0,0.75);}
+.menu-outer .top-section {float: left;width: 100%; padding: 25px;position: relative;}
+.menu-outer .clear-set {position: absolute;top: 10px;cursor: pointer; left: -30px;color: #fff;opacity: 0.7;}
+.menu-outer .clear-set i{font-size: 30px;}
+.menu-outer .navbar-nav.navbar-right>li{width: 100%;float: left;margin-right: 0;text-align: right;}
+.menu-outer .navbar-nav{float: left !important;margin-right: 0;}
+.menu-outer .navbar-nav.navbar-right>li>a{font-size: 16px;padding: 20px 15px;}
+.backdrop-custom{position: fixed;top: 0; right: 0; bottom: 0;left: 0;z-index: 1010;background: rgba(0, 0, 0, 0.99);filter: alpha(opacity=50);opacity: .5;}
+*/
+.mt25{
+    margin-top: 25px;
+}
+.section-2-integration{
+    margin-bottom: 25px;
+    margin-top: 15px;
+
+}
+.section-3-integration{
+    margin-top: 0px; 
+}
+

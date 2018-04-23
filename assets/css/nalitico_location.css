@@ -1,0 +1,78 @@
+.landing-inner{background-image:url('https://cdn.filestackcontent.com/NImx8g7nSUWp9tKr32hq')!important;background-size:cover;background-position:center center;}
+.question-head, .main-heading p, .main-heading h1, .t1-ques-head .question-title, .t1-result-topheading p, .t1-ques-component .input-section .input-outer .section-head div{
+background:none!important;
+}
+.t1-question{
+	background-image:url('https://cdn.filestackcontent.com/NImx8g7nSUWp9tKr32hq')!important;background-size:cover;background-position:center center;
+}
+.t1-result-top{
+	background-image:url('https://cdn.filestackcontent.com/Ogp62vzLQZWqSbdZ490w')!important;background-size:cover;background-position:center center;
+	background-color:#1e1e1e;
+}
+.disc-set p{
+	font-weight:bold;
+	color:#fff;
+}
+.disc-set{
+	margin-top:-200px;
+}
+.lf-submitted{
+	background:#911816!important;
+	color:#fff!important;
+}
+.irs-max,.question-subhead,.section-count{
+	color:#fff!important;
+}
+.t1-question button.back-action{
+	background:#fff!important;
+}
+.question-compontents input{
+	color:#fff!important;
+}
+.visual-outr{
+	margin-top:19px!important;
+}
+.highcharts-plot-band {
+	fill:#fff!important;
+}
+.t1-result-small-section[data-order="1"],.t1-result-small-section[data-order="2"],[data-order="5"],[data-order="6"],[data-order="7"],[data-order="8"],[data-order="9"],[data-order="10"],[data-order="11"],[data-order="14"],[data-order="15"],[data-order="16"],[data-order="17"],[data-order="18"],[data-order="19"],[data-order="22"],[data-order="23"],[data-order="24"],[data-order="25"],[data-order="26"],[data-order="27"],[data-order="30"],[data-order="31"],[data-order="32"],[data-order="33"],[data-order="34"],[data-order="35"]{
+	display:none!important;
+}
+
+.t1-result-main{ padding-top:0px !important;}
+
+@media (min-width:768px) and (max-width:1023px){
+	.disc-set{
+	margin-top:0px!important;
+}
+	
+}
+
+@media only screen and (max-width:480px){
+	.disc-set{
+	margin-top:0px!important;
+}
+}
+.reading-heading{
+	text-align:center!important;
+}
+.main-section .help-text{
+	color:#fff!important;
+}
+
+@media (min-width:0px) and (max-width:767px){
+	
+	.disc-set{
+	margin-top:0px!important;
+}
+.t1-result-top{ display:inline-block;}
+.t1-result-top .t1-result-inner{position:relative !important;}
+.t1-result-disclaimer {
+    padding: 0 30px 0;
+    margin: 0 0 6px !important;
+    position: absolute !important;
+    bottom: 0px !important;
+}
+	
+}
+

@@ -1,0 +1,116 @@
+
+.gallery{
+	float: left;
+	width: 100%; 
+}
+.gallery-header{
+	min-height: 100px;
+	width: 100%;
+	float: left;
+}
+.gallery-header-center{
+	height: 100px;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.gallery-header-center-left{
+	float: left;
+	height: 35px;
+	line-height: 35px;
+	margin-top: 32px;
+}
+.gallery-header-center-left-icon{
+	float: left;
+	height: 35px;
+	width: 35px;
+	background-color: rgba(63,141,191,1);
+	color: rgba(255,255,255,1);
+	text-align: center;
+	font-size: 20px;
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	-o-transition: background 0.5s;
+	transition: background 0.5s;
+}
+.gallery-header-center-left-icon:hover {
+	background-color: rgba(63,141,191,0.5);
+	cursor: pointer;
+}
+.gallery-header-center-left-title{
+	float: left;
+	height: 35px;
+	font-size: 25px;
+	color: #3f8dbf;
+	margin-left: 20px;
+}
+.gallery-header-center-right{
+	float: left; 
+	width:100%; 
+	text-align:center;
+	margin-top: 
+	32px; 
+	margin-bottom:30px;
+}
+.gallery-header-center-right-links {
+	color: #8c8c8f;
+	height: 35px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: montserratlight;
+	padding-top: 10px;
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	-o-transition: background 0.5s;
+	transition: background 0.5s; display:inline-block;
+}
+.gallery-header-center-right-links:hover {
+	color: #fd6e74;
+	cursor: pointer;
+}
+/* .gallery-header-center-right-links-current {
+	color: #FFFFFF;
+	background-color: rgba(63,141,191,1);
+} */
+.gallery-header-center-right-links-current {
+    color: #fd6e74 !important;
+    background-color: transparent;
+    border-bottom: 3px solid #fd6e74;
+    border-radius: 2px;
+	font-family:montserratregular;
+}
+.gallery-header-center-right-links-current:hover, :focus {
+    background-color: transparent;
+    color:fd6e74;
+    outline: none;
+}
+/* .gallery-header-center-right-links-current:hover {
+	background-color: #333;
+} */
+.gallery-content{
+	float: left;
+	width: 100%; 
+	margin-top:50px;
+}
+.gallery-content-center-normal {
+	width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.gallery-content-center-full {
+	float: left;
+	width: 100%;
+}
+
+.gallery-content-center .abc {
+	width: 290px;
+	margin-bottom: 30px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin-left: 30px;
+}

@@ -1,0 +1,484 @@
+/*################### Homepage responsive css start ###################*/
+
+@media (min-width: 320px) and (max-width:768px) {
+	#pricing .section-1{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+	#pricing .section-1-right {
+		padding-left: 0px;
+		margin-left: 0px;
+		margin-top: 30px;
+	}
+	#pricing .loader{
+		color:#FB6C73;
+	}
+	#pricing .pricing-text {
+		position: relative;
+		margin-top: 10%;
+	}
+	#pricing .billing-grey {
+		/*margin-top: -60px;*/
+	    width: 100%;
+	}
+	#pricing .billing-white {
+		/*margin-top: -60px;*/
+	    width: 100%;
+		border-radius: 8px;
+	}
+	#pricing .billing-grey-bottom .billing-list .list-name{
+		padding-left:0px;
+	}
+	#pricing .billing-grey-bottom ul.billing-list li{
+		margin-bottom:0px;
+	    float: left;
+    	width: 100%;
+	}
+	#pricing .billing-white-bottom .billing-list .list-name{
+		padding-left:0px;
+	}
+	#pricing .billing-white-bottom ul.billing-list li{
+		/*margin-bottom:10px;*/
+	}
+	#pricing .section-1-left .btn-buildcal{
+		padding:15px;
+		font-size:16px;
+	}
+	#pricing .section-2-heading {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+	#pricing .container-faqs {
+		/*width: 280px;*/
+		    width: 95%;
+		margin: 0 10px;
+	}
+	#pricing .accordion-section-title{
+		font-size:18px;
+	}
+	#pricing .accordion p {font-size: 14px;}
+	#pricing .accordion-section-title:before{
+		margin-left: -2px;
+		margin-right: 8px;
+		width:19px;
+	}
+	#pricing .accordion-section-content{
+		margin-left:35px;
+	}
+	/* #pricing .pricing-headingtop{ min-height: 50px; padding-bottom:25px;} */
+	/* #pricing .section-1-right{
+		position: relative;
+		padding-left: 25px;
+		padding-right: 25px;
+	} */
+	#pricing .section-faq{ margin-top: 15px;margin-bottom: 15px;}
+	#pricin .section-2-heading{ font-family: montserratbold;}
+	#pricing .billing-plan-list{width:100%;}
+	/*#pricing .billing-plan-list ul > li > a{
+		padding:15px 2px;
+	}*/
+	#pricing .pricing-help .billing-plans-help{
+		bottom: 415px;
+		left: 20px;
+	}
+	#pricing .container-enterprise{
+		width: 100%;
+		padding: 0 25px;
+	}
+	#pricing .enterprise-box-new p{
+		padding: 0px;
+		margin-bottom: 20px;
+	}
+	#pricing .enterprise_pos{
+		margin-top: 10px;
+	}
+	#pricing .need-custom-plan a{
+		font-size: 12px;
+	}
+	#pricing .need-custom-plan i.material-icons {
+	    font-size: 28px;
+	    top: 10px;
+	}
+	#pricing .pricing-cards.active {
+	    /* display: block; */
+	    flex-direction:column;
+	}
+	
+    .rs-text-center{text-align: center;}
+    .allPlans-blocks-right {margin-left: 0px;}
+    .allPlans-blocks p {padding: 0 10px;}
+    .allPlans-blocks img {margin-top: 0px; margin-bottom: 10px;}
+    #pricing .pricing-headingtop .plans-heading {font-size: 22px;}
+    #pricing .pricing-headingtop .plans-subheading {font-size: 14px; margin-top: 10px;}
+	#pricing .sec-allPlans .section-2-heading {font-size: 22px;}
+	#pricing .section-faq .section-2-heading {font-size: 22px; line-height: 30px;}
+	#pricing .pricing-cards.active{margin-left: 0px; padding-right: 0px;}
+
+
+
+}
+@media (min-width:320px) and (max-width:330px){
+	#pricing .section-1-right {
+		margin-top:70px;
+	}
+}
+
+@media (min-width: 331px) and (max-width:369px) {
+}
+@media (min-width: 340px) and (max-width:369px) {
+}
+
+@media (min-width: 413px) and (max-width:439px) {
+	#pricing .pricing-help .billing-plans-help {
+	    bottom: 380px !important;
+	}
+}
+@media (min-width: 370px) and (max-width:565px) {
+}
+@media (min-width: 440px) and (max-width:768px) {
+	#pricing .container-faqs {
+		/*width: 440px;*/
+		margin: 0 10px;
+	}
+	#pricing .section-1-right{
+		margin-left:0px;
+	}
+	#pricing .pricing-help .billing-plans-help{
+	    bottom:380px;
+	}
+}
+@media (min-width: 600px) and (max-width:768px) {
+	#pricing .container-faqs {
+		/*width: 560px;*/
+		margin: 0 auto;
+	}
+	#pricing .section-1-right{
+		margin-left:0px;
+	}
+	#pricing .billing-plan-list {
+		width: 90%;
+		margin-left: 30px;
+		margin-right: 25px;
+	}
+}
+@media (min-width: 640px) and (max-width:768px) {
+	.allPlans-blocks-640{width: 50%;}
+}
+@media (min-width: 768px) and (max-width:768px){
+	#pricing .pricing-help .billing-plans-help {
+		/*bottom: -30px;*/
+		left: -90px;
+	}
+}
+@media (min-width: 768px) and (max-width:1024px){
+	#pricing .custom-navbar.navbar-default .navbar-nav > li {
+		margin-right: 0px;
+	}
+	#pricing .section1-left-cell{
+		height:50px;
+	}	
+}
+@media (min-width: 769px) and (max-width:990px) {
+	
+	#pricing .loader{
+		margin-left: 0px;
+		color:#fb5f66;
+	}
+	#pricing .container-faqs {
+		width: 800px;
+		margin: 0 auto;
+	}
+	#pricing .section-1-right {
+		margin-left: 0px;
+	}
+	/*#pricing .billing-grey {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}*/
+	.toggle-dots-white {
+		float: left;
+		width: 100%;
+		text-align: center;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background: #f6f8f9;
+		border-top: 1px solid #fff;
+
+	}
+	.toggle-dots-grey {
+	    float: left;
+	    width: 100%;
+	    text-align: center;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	    /*background: #f2f2f2;*/
+		background: #888888; /* new css for popular plan */
+	}
+	#pricing .billing-white {
+		margin-right: 0px;
+		/*margin-bottom: 40px;*/
+		margin-top: 0px;
+	}
+	.toggle-dots-white div {
+	    font-size: 13px;
+	    color: #fff;
+	    height: 30px;
+	    font-family: montserratregular;
+	}
+	.toggle-dots-white div i.material-icons {
+	    position: relative;
+	    top: 3px;
+	    color: #62696d;
+	}
+	.toggle-dots-white div p.more-info {
+	    position: relative;
+	    top: -5px;
+	    margin-bottom: 0px;
+	    color: #62696d;
+	    display: inline-block;
+	}
+	#pricing .pricing-text {
+		position: relative;
+		margin-top: 10%;
+	}
+	#pricing .pricing-help .billing-plans-help {
+		font-size: 10px;
+		position: absolute;
+	    bottom: 420px;
+    	left: -100px;
+	}
+	#pricing .enterprise_pos {
+	    margin-top: 0;
+	}
+	.toggle-dots-white span {
+		width: 8px;
+		height: 8px;
+		display: inline-block;
+		border-radius: 100%;
+		background: #fff;
+	}
+	#pricing .section-1-right {
+		position: relative;
+		/*padding-left: 25px;
+		padding-right: 25px;*/
+		margin-left: 0px !important;
+	}
+	#pricing .pricing-cards.active {
+	    flex-direction: column;
+	}
+	.toggle-dots-grey div p.more-info {
+	    position: relative;
+	    top: -5px;
+	    margin-bottom: 0px;
+	    /*color: #62696d;*/
+	    display: inline-block;
+		color: #fff; /* new css for popular plan */
+		    font-size: 13px;
+	}
+	.toggle-dots-grey div i.material-icons {
+	    position: relative;
+	    top: 3px;
+	    /*color: #62696d;*/
+		color: #fff; /* new css for popular plan */
+	}	
+	
+    .billing-plan-list {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 40px
+    }
+    .rs-text-center{text-align: center;}
+    .allPlans-blocks-right {margin-left: 0px;}
+    .allPlans-blocks p {padding: 0 10px;}
+    .allPlans-blocks img {margin-top: 0px; margin-bottom: 10px;}
+	.sec-allPlans{margin-top: 30px;}
+	
+}
+@media screen and (max-width:990px){
+	.feature-list {display: none;}
+	.feature-list-name{font-size: 14px; font-family: montserratregular; color: #888888; display: block; line-height: 40px;}
+	.billing-grey-bottom ul.billing-list li, 
+	.billing-white-bottom ul.billing-list li {line-height: 0px; padding-top: 25px;}
+	.billing-grey-bottom, .billing-white-bottom{padding: 0px 0px 25px;}
+	.pricing-helptip{display: inline-block;  margin-top: 0px;}
+	.pricing-outer.container{padding-right: 30px; padding-left: 30px;}
+
+
+
+}
+@media screen and (max-width:991px){
+    .rs-text-center{text-align: center;}
+    .allPlans-blocks-right {margin-left: 0px;}
+    .allPlans-blocks p {padding: 0 10px;}
+    .allPlans-blocks img {margin-top: 0px; margin-bottom: 10px;}
+}
+@media (min-width: 996px){
+	.billing-grey-bottom{display: block !important; }
+	.billing-white-bottom{display: block !important; }
+}
+@media (min-width: 991px) and (max-width:1024px) {
+	#pricing .loader{
+		margin-left: 38%;
+		color:#fb5f66;
+	}
+	#pricing .container-faqs {
+		width: 800px;
+		margin: 0 auto;
+	}
+	#pricing .section-1-right {
+		margin-left: 0px;
+		padding:0px;
+	}
+	#pricing .billing-grey {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	
+	#pricing .billing-white {
+		margin-right: 0px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+	#pricing .pricing-text {
+		position: relative;
+		margin-top: 10px;
+	}
+	#pricing .pricing-help .billing-plans-help {
+		font-size: 10px;
+		position: absolute;
+		/*bottom: 30px;*/
+		left: -100px;
+	}
+	/* #pricing .section-1-right {
+		position: relative;
+		padding-left: 65px;
+		padding-right: 25px;
+	} */
+	#pricing .loader {
+		margin-left: 32%;
+		color: #fb5f66;
+	}
+	.toggle-dots-white {
+	    display: none;
+	}
+	.toggle-dots-grey {
+	    display: none;
+	}
+}
+@media (min-width: 1024px) and (max-width:1024px) {
+	#pricing .loader{
+		margin-left:26%;
+	}
+}
+@media (min-width: 991px) and (max-width:1150px) {
+	.feature-list{ width: 370px;}
+	#pricing .billing-grey, #pricing .billing-white{ width: 470px;}
+	#pricing .pricing-cards.active{ margin-left:-30px; }
+}
+@media (min-width: 1024px) and (max-width:1200px) {
+	/* #pricing .section-1-right {
+		margin-left: -10px;
+	} */
+	#pricing .billing-grey{
+		/* width:290px; */
+	}
+	#pricing .billing-grey-top{
+		padding:20px 10px;
+	}
+	#pricing .billing-white{
+		/* width:290px; */
+		margin-right: 0px;
+		margin-top:0px;
+		margin-bottom: 0px;
+	}
+	#pricing .container-faqs {
+		width: 900px;
+		margin: 0 auto;
+	}
+	#pricing .pricing-text {
+		position: relative;
+		margin-top: 0%;
+	}
+	/* #pricing .section-1-right {
+		padding-left: 7%;
+		padding-top: 15px;
+		position: absolute;
+		top: 40%;
+		float: left;
+		width: 100%;
+	} */
+	#pricing .pricing-help .billing-plans-help{
+		font-size: 10px;
+		position: absolute;
+		/*bottom: -600px;*/
+		bottom: 300px;
+	}
+	#pricing .pricing-text {
+		position: relative;
+		margin-top: 65%;
+	}
+	/* #pricing .enterprise_pos {
+	    position: relative;
+	    margin-top: 67%;
+	} */
+}
+@media (min-width: 767px) and (max-width:768px) {
+
+	#pricing .col-sm-4{
+		width:100%;
+		float:left;
+	}
+	#pricing .section-1-right {
+		margin-left:0px;
+		padding-left: 0;
+		padding-right: 25px;
+	}
+	
+}
+
+@media (min-width: 1367px) and (max-width:1439px) {
+	#pricing .billing-grey, #pricing .billing-white {
+		width: 250px;
+	}
+	.feature-list {margin-top: 176px;}
+	#pricing .billing-grey-top, #pricing .billing-white-top{
+		min-height: 165px;
+	}
+
+
+}
+
+
+@media (min-width: 1480px) and (max-width:1800px) {
+	
+}
+@media (min-width: 1810px) and (max-width:1920px) {
+
+}
+@media (min-width: 1480px) and (max-width:1920px) {
+	
+}
+
+@media (min-width: 1920px) {
+	#pricing .billing-grey, #pricing .billing-white {
+	    width: 350px;
+	}
+}
+@media (min-width: 1925px) and (max-width:2300px) {
+	
+}
+@media (min-width: 2450px) and (max-width:2550px) {
+	/* #pricing .section-1-right {
+	    padding-left: 32% !important;
+	} */
+}
+@media (min-width: 2600px){
+	.business-box .ribbon{
+		width:130px;
+	}
+	.business-box .ribbon:after{
+		top:1px;
+	}
+}
+/*################### Homepage responsive css end ###################*/
+

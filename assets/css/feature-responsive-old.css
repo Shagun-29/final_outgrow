@@ -1,0 +1,314 @@
+/*################### Feature Page responsive css start ###################*/
+@media (min-width: 320px) and (max-width:768px) {
+	#feature .rs-hide{
+		display:none !important;
+	}
+	#feature .rs-show{
+		display:block !important;
+	}
+	#feature .mobile-container{
+		padding:0px;
+	}
+	#feature .section-9-left {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	#feature .section-7{
+		margin-top:50px;
+	}
+	#feature .section-f1 {
+		margin-top: 50px;
+	}
+	#feature .section-f1-left {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	#feature .section-f1 .section-f1-left span span {
+		width: 80%;
+	}
+	#feature .section-f1-right {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	#feature .section-f1 .slider-sa {
+		min-height: 250px;
+	}
+	#feature .section-f2-left {
+		padding: 0px 20px;
+	}
+	#feature .section-f2-right {
+		margin-top: 20px;
+	}
+	#feature .secf2-2 {
+		position: absolute;
+		left: 46%;
+		top: 0;
+		box-shadow: 2px 0px 8px 2px rgba(0,0,0,0.1);
+		width: 70%;
+		height: auto;
+	}
+	#feature .section-f2 {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	#feature .section-f2 .section-f2-left span span{
+		width:83%;
+	}
+	#feature .section-9-right {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	#feature .section-7 .slider-sa{
+		padding-left:0px;
+	}
+	#feature .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+		left: 0px;
+		width: 100%;
+		margin-top: 10px;
+	}
+	#feature .swiper-pagination-clickable .swiper-pagination-bullet {
+		margin: 0 5px;
+	}
+	#feature .swiper-slide{
+		margin-top:30px;
+	}
+	#feature .section-7 .slider-sa{
+		min-height:250px;
+	}
+	#feature .section-7 .section-9-left .btn-exploreTemp {
+		background: #fff;
+		border: 1px solid #fb5f66;
+		color: #fb5f66;
+		margin-top: 60px !important;
+		margin: 0 auto;
+		display: block;
+		float:none;
+	}
+	#feature .section-4 {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	#feature .section-4-left {
+		padding: 0px 20px;
+	}
+	#feature .section-4-right-f {
+		margin-top: 20px;
+	}
+	#feature .sec4-2 {
+		position: absolute;
+		left: 46%;
+		top: 0;
+		box-shadow: 2px 0px 8px 2px rgba(0,0,0,0.1);
+		width: 70%;
+		height: auto;
+	}
+	#feature .img-pos{
+		margin-top:0px;
+		margin-left: 0px;
+		width:100%;
+	}
+	#feature .section-15-left {
+		padding: 0 20px;
+		margin-top:20px;
+	}
+	#feature .section-15 {
+		margin-top: 40px;
+		margin-bottom: 50px;
+	}
+	#feature .sec15-2 {
+		position: absolute;
+		left: -7%;
+		top: 6%;
+		width: 50%;
+		box-shadow: 2px 0px 8px 2px rgba(0,0,0,0.1);
+	}
+	#feature .section-17-left {
+		padding: 0 20px;
+		margin-top:20px;
+	}
+	#feature .sec17-2-1 {
+		left: 0;
+	}
+	#feature .sec17-2 {
+		position: absolute;
+		left: 0%;
+		top: 59%;
+		box-shadow: 2px 0px 8px 2px rgba(0,0,0,0.1);
+		width: 70%;
+	}
+	#feature .section.section-5 span{
+		padding:0px 5px;
+	}
+	#feature .section.section-5 p{
+		margin-left: 0;
+		padding: 0 20px;
+		width:100%;
+		margin-bottom:35px;
+	}
+	#feature .img-style{
+		margin-bottom: 50px;
+		margin-top: 0;
+		width:100%;
+	}
+	#feature .section.section-10 i.material-icons{
+		font-size:48px;
+	}
+	#feature .section.section-5{
+		margin-top:30px;
+		margin-bottom:0px;
+	}
+	#feature .section-10{
+		margin-top:0px;
+	}
+	#feature .sec-style{
+		margin-top:0px;
+	}
+	#feature .sec-4-style{
+		margin-top:50px;
+	}
+	#feature .section-6{
+		margin-bottom:50px;
+	}
+	#feature .sec-integration {
+		margin-top: 70px;
+	}
+	#feature .container.container-center h1{
+		padding:0px;
+		text-align:center;
+	}
+	#feature .section.section-10 span{
+		font-size:14px;
+	}
+	#feature .section-7 .section-9-left span span{
+		width:80%;
+	}
+	#feature .section-4-left .section-4-new span span{
+		width:80%;
+	}
+	#feature .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+		background-color: #fff;
+	}
+	#feature .navbar-default .navbar-toggle .icon-bar {
+		background-color: #fb5f66;
+	}
+	#feature .navbar-default .navbar-toggle {
+		border-color: #fff;
+	}
+	.navbar-brand {
+		margin-left: 15px !important;
+	}
+	.custom-navbar.navbar-default {
+		padding-right: 0px;
+	}
+}
+@media (min-width:440px) and (max-width:768px){
+	/* #feature .section-15 {
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+	#feature .sec-4-style {
+		margin-top: 100px;
+	}
+	#feature .sec-integration {
+		margin-top: 110px;
+	} */
+	#feature .sec4-2{
+		width:58%;
+	}
+	#feature .sec15-2 {
+		left: -5%;
+		width: 43%;
+	}
+	#feature .sec17-2{
+		top:49%;
+	}
+	
+}
+@media (min-width:768px) and (max-width:768px){
+	#feature .sec4-2 {
+		width: 52%;
+		left: 49%;
+	}
+	#feature .sec15-2 {
+		left: -2%;
+		width: 35%;
+	}
+	.custom-navbar.navbar-default {
+		margin-bottom: 0px;
+	}
+	
+	.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+		margin-right: 0;
+		margin-left: -30px;
+	}
+	.navbar-right {
+		margin-left: 0px;
+		margin-top: 10px;
+	}
+	.custom-navbar.navbar-default .navbar-nav > li {
+		margin-left: 0;
+		margin-right:1px;
+	}
+	.custom-navbar.navbar-default .navbar-nav > li > a {
+		font-size: 12px;
+		color: #62696d;
+		text-transform: uppercase;
+		padding:7px;
+	}
+}
+@media (max-width: 1250px) and (min-width: 1024px){
+	.container-fluid > .navbar-header {
+		margin-left: -30px;
+	}
+	.navbar-right {
+		margin-left: 20px;
+	}
+	.custom-navbar.navbar-default .navbar-nav > li {
+		margin-right: 0px;
+	}
+	.custom-navbar.navbar-default .navbar-nav > li > a {
+		padding-top: 15px;
+		padding-left: 25px;
+	}
+	#feature .section-9-left {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+	#feature .section-4-left {
+		padding-left: 90px;
+	}
+	#feature .sec4-2 {
+		left: 37%;
+	}
+	#feature .section-4-left .section-4-new span span{
+		width:84%;
+	}
+	#feature .section-15-left {
+		padding-right: 90px;
+	}
+	#feature .section-17-left {
+		padding-left: 90px;
+	}
+	#feature .sec17-2-1 {
+		position: relative;
+		left: 5%;
+	}
+	#feature .res-img{
+		width:90%;
+	}
+	#feature .sec-style-left{
+		padding-left:50px;
+	}
+}
+@media (min-width: 1480px) and (max-width:1800px) {
+	
+}
+@media (min-width: 1810px) and (max-width:1920px) {
+	
+}
+@media (min-width: 1480px) and (max-width:1920px) {
+	
+}
+
+
+/*################### Feature Page responsive css end ###################*/

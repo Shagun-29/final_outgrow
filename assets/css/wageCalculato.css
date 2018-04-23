@@ -1,0 +1,54 @@
+.landing-inner{background-image:url('https://cdn.filestackcontent.com/3rjRIemLQbybbmVXN661')!important;background-size:cover;background-position:center center;}
+.question-head, .main-heading p, .main-heading h1, .t1-ques-head .question-title, .t1-result-topheading p, .t1-ques-component .input-section .input-outer .section-head div{
+background:none!important;
+}
+.t1-question{
+	background-image:url('https://cdn.filestackcontent.com/3rjRIemLQbybbmVXN661')!important;background-size:cover;background-position:center center;
+}
+.t1-result-top{
+	background-image:url('https://cdn.filestackcontent.com/gklCixzOTOSrgBrmMEXC')!important;background-size:cover;background-position:center center;
+}
+.disc-set p{
+	font-weight:bold;
+
+}
+.disc-set{
+	margin-top:-80px;
+}
+
+[data-order="4"],[data-order="5"],[data-order="6"],[data-order="7"],[data-order="8"],[data-order="9"],[data-order="10"],[data-order="11"],[data-order="12"],[data-order="13"],[data-order="14"],[data-order="15"],[data-order="16"],[data-order="17"],[data-order="18"],[data-order="19"],[data-order="20"],[data-order="24"],[data-order="25"],[data-order="26"],[data-order="27"],[data-order=""]{
+	display:none;
+}
+.reading-heading{
+	text-align:center!important;
+}
+
+
+
+@media (min-width:768px) and (max-width:1023px){
+	.disc-set{
+	margin-top:0px!important;
+}
+	
+}
+
+@media only screen and (max-width:480px){
+	.disc-set{
+	margin-top:0px!important;
+}
+}
+@media (min-width:0px) and (max-width:767px){
+	
+	.disc-set{
+	padding-top:0px!important;
+}
+.t1-result-top{ display:inline-block;}
+.t1-result-top .t1-result-inner{position:relative !important;}
+.t1-result-disclaimer {
+    padding: 0 30px 0;
+    margin: 0 0 6px !important;
+    position: absolute !important;
+    bottom: 0px !important;
+}
+	
+}

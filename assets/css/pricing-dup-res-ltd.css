@@ -1,0 +1,489 @@
+/* ################### pricing responsive css start ################### */
+
+@media (min-width: 320px) and (max-width:768px) {
+	#pricing .section-1{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+	#pricing .loader{
+		color:#FB6C73;
+	}
+	#pricing .section-2-heading {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+	#pricing .container-faqs {
+        width: 95%;
+		margin: 0 10px;
+	}
+	#pricing .accordion-section-title{
+		font-size:18px;
+	}
+	#pricing .accordion p {font-size: 14px;}
+	#pricing .accordion-section-title:before{
+		margin-left: -2px;
+		margin-right: 8px;
+		width:19px;
+	}
+	#pricing .accordion-section-content{
+		margin-left:35px;
+	}
+	#pricing .section-faq{ margin-top: 15px;margin-bottom: 15px;}
+	#pricin .section-2-heading{ font-family: montserratbold;}
+	#pricing .billing-plan-list{width:100%;}
+	/*#pricing .billing-plan-list ul > li > a{
+		padding:15px 2px;
+	}*/
+	#pricing .container-enterprise{
+		width: 100%;
+		padding: 0 25px;
+	}
+	#pricing .enterprise-box-new p{
+		padding: 0px;
+		margin-bottom: 20px;
+	}
+	#pricing .enterprise_pos{
+		margin-top: 10px;
+	}
+	#pricing .need-custom-plan a{
+		font-size: 12px;
+	}
+	#pricing .need-custom-plan i.material-icons {
+	    font-size: 28px;
+	    top: 10px;
+	}
+	
+    .rs-text-center{text-align: center;}
+    .allPlans-blocks-right {margin-left: 0px;}
+    .allPlans-blocks p {padding: 0 10px;}
+    .allPlans-blocks img {margin-top: 0px; margin-bottom: 10px;}
+    #pricing .pricing-headingtop .plans-heading {font-size: 22px; }
+    #pricing .pricing-headingtop .plans-subheading {font-size: 14px; margin-top: 10px;}
+	#pricing .sec-allPlans .section-2-heading {font-size: 22px;}
+	#pricing .section-faq .section-2-heading {font-size: 22px; line-height: 30px;}
+	#plan-cycle {margin-bottom: 20px;}
+
+	/* table res css */
+	/*thead th{border-bottom: 1px solid transparent !important; border: 1px solid #eff0f1;}
+	thead th:nth-child(1) {display: none;}
+	tbody tr th {display: none;}
+	tbody td {border-left: 1px solid #eff0f1; border-right: 1px solid #eff0f1;}
+	tbody tr:last-child td {border-bottom: 1px solid #eff0f1;}
+	table, thead, tbody, th, td, tr{display: block;}*/
+	.quater{
+		vertical-align: middle !important;
+		margin-top: -3px;
+	}
+	.half{
+		vertical-align: middle !important;
+		margin-top: -3px;
+	}
+	.full{
+		vertical-align: middle !important;
+		margin-top: -3px;
+	}
+	.none{
+		vertical-align: middle !important;
+		margin-top: -3px;
+	}
+
+}
+
+@media (min-width:320px) and (max-width:330px){
+	#pricing .section-1-right {
+		margin-top:70px;
+	}
+}
+
+@media (min-width: 440px) and (max-width:768px) {
+	#pricing .container-faqs {
+		/*width: 440px;*/
+		margin: 0 10px;
+	}
+}
+
+@media (min-width: 640px) and (max-width:768px) {
+	.allPlans-blocks-640{width: 50%;}
+}
+
+@media (min-width: 768px) and (max-width:1024px){
+	#pricing .custom-navbar.navbar-default .navbar-nav > li {
+		margin-right: 0px;
+	}
+
+}
+
+@media (min-width: 769px) and (max-width:990px) {
+	
+	#pricing .loader{
+		margin-left: 0px;
+		color:#fb6c73;
+	}
+    .rs-text-center{text-align: center;}
+    .allPlans-blocks-right {margin-left: 0px;}
+    .allPlans-blocks p {padding: 0 10px;}
+    .allPlans-blocks img {margin-top: 0px; margin-bottom: 10px;}
+	.sec-allPlans{margin-top: 30px;}
+	.quater{
+		vertical-align: middle !important;
+		margin-top: -4px;
+	}
+	.half{
+		vertical-align: middle !important;
+		margin-top: -4px;
+	}
+	.full{
+		vertical-align: middle !important;
+		margin-top: -4px;
+	}
+	.none{
+		vertical-align: middle !important;
+		margin-top: -4px;
+	}
+	
+}
+@media screen and (max-width:990px){
+	.pricing-outer.container{padding-right: 30px; padding-left: 30px;}
+
+	/* new css */
+	table {
+		display: none;
+	}
+	.pricing-outer {
+    	width: 100%;
+	}
+	.pricing-block{
+		display: block; 
+		text-align: center;
+		background: #fff;
+    	border: 1px solid #eff0f1;
+		margin-bottom: 30px;
+	}
+	.pricing-block:last-child {
+		margin-bottom: 0px;
+	}
+	.pricing-top {
+		padding: 15px 30px;
+	}
+	.pricing-top h3{
+		font-size: 22px;
+    	color: #797f83;
+    	font-family: montserratlight;
+		margin-top: 15px;
+	}
+	.pricing-top p.price{	
+		font-size: 30px !important;
+		color: #009ad8;
+		font-family: montserratsemibold !important;
+		line-height: normal;
+		text-align: center;
+	}
+	.pricing-top p.price sup {
+		font-size: 20px;
+		font-family: montserratlight;
+	}
+	.pricing-top p.strike-price {
+		color: #abb7bc;
+		font-size: 14px;
+		font-family: montserratlight;
+		text-decoration: line-through;
+		margin: 0px;
+		line-height: normal;
+	}
+	.pricing-top p.price sub {
+		font-size: 14px;
+		bottom: 0px;
+		font-family: montserratregular;
+		left: 0px;
+	}
+	.pricing-top p.strike-price sub {
+		bottom: 0;
+		left: 3px;
+	}
+	.pricing-top span a {
+		color: #fdfeff;
+		text-decoration: none;
+		text-transform: uppercase;
+		display: inline-block;
+		background: #fb6c73;
+		border-radius: 4px;
+		padding: 11px 30px;
+		font-size: 13px;
+	}
+	.pricing-bottom {
+		/*padding-top: 10px;*/
+	}
+	.pricing-bottom ul {
+		padding: 0;
+		margin: 0;
+		padding-bottom: 15px;
+	}
+	.pricing-bottom ul li {
+		list-style: none;
+		margin-bottom: 0px;
+    	padding: 10px 0px;
+		float: left;
+    	width: 100%;
+	}
+	.pricing-bottom ul li .feature-title {
+		font-size: 13px;
+		font-family: montserratregular;
+		color: #797f83;
+		display: block;
+	}
+	.pricing-bottom ul li .feature-subtitle {
+		font-size: 12px;
+		color: #797f83;
+    	font-family: montserratlight;
+	}
+	.pricing-bottom a.toggle-more {
+		float: left;
+		width: 100%;
+		color: #2b93be;
+		background: #eff0f1;
+		padding: 3px;
+		margin-top: 7px;
+	}
+	.pricing-bottom a.toggle-more i {
+		vertical-align: middle;
+		position: relative;
+		top: -1px;
+		font-size: 13px;
+	}
+	.pricing-bottom a.toggle-more .more-info {
+		display: inline-block;
+		font-size: 10px;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	.pricing-bottom ul li .feature-title i.material-icons {
+		color: #2b93be;
+		vertical-align: middle;
+		position: relative;
+		top: -2px;
+		visibility: visible;
+		padding-right: 5px;
+		font-size: 20px;
+	}
+	.expand-rs .feature-title {
+		cursor: pointer;
+	}
+	.expand-rs.open {
+		background: #f5fbff;
+		box-shadow: 2px 3px 7px rgba(0, 0, 0, .10);
+		border-top: 1px solid #e0f2fe;
+		cursor: pointer;
+	}
+
+	.expand-rs .minus, .expand-rs.open .plus{display: none;}
+	.expand-rs.open .minus, .expand-rs .plus {display: inline-block;}
+	.ltd-plan span.label-popularPlan {
+		width: 100%;
+		left: 0px;
+	}
+	.pricing-block.most-popular-plan {
+		margin-bottom: 0px;
+	}
+	.detail {
+		padding: 10px 10px 0px 10px;
+	}
+	.pricing-outer-ltdSales .ltd-plan span.label-popularPlan {
+		width: 100% !important;
+		left: 0px !important;
+	}
+	.pricing-outer-ltdSales .pricing-top h3 {
+		margin-top: 25px;
+	}
+	.pricing-outer-ltdSales .pricing-block {
+		display: block;
+		text-align: center;
+		background: #fff;
+		border: 1px solid #eff0f1;
+		margin-bottom: 0;
+	}
+	.faq-section-ltd {
+		margin-right: 30px;
+		margin-left: 30px;
+		margin-top: 40px;
+		margin-bottom: 10px;
+	}
+	.ltdSales-wrapper .asterix-text {
+		padding: 0px 20px;
+	}
+
+
+}
+
+@media screen and (max-width:991px){
+    .rs-text-center{text-align: center;}
+    .allPlans-blocks-right {margin-left: 0px;}
+    .allPlans-blocks p {padding: 0 10px;}
+    .allPlans-blocks img {margin-top: 0px; margin-bottom: 10px;}
+}
+
+
+@media (min-width: 991px) and (max-width:1024px) {
+	#pricing .loader{
+		margin-left: 38%;
+		color:#fb6c73;
+	}
+	#pricing .container-faqs {
+		width: 800px;
+		margin: 0 auto;
+	}
+	.faq-section-ltd {
+   		margin-left: 30px;
+	}
+
+}
+
+@media (min-width: 1024px) and (max-width:1024px) {
+	#pricing .loader{
+		margin-left:26%;
+	}
+
+}
+
+
+@media (min-width: 1024px) and (max-width:1200px) {
+	#pricing .container-faqs {
+		width: 900px;
+		margin: 0 auto;
+	}
+	
+}
+
+@media (min-width: 1920px) {
+
+}
+
+@media (min-width: 1925px) and (max-width:2300px) {
+	
+}
+
+@media (min-width: 2450px) and (max-width:2550px) {
+
+}
+@media (min-width: 2600px){
+
+}
+
+/* ################### pricing responsive css end ################### */
+
+@media (min-width:3000px) and (max-width:6500px){
+	.custom-navbar.navbar-default.nav-boxshadow {padding: 15px 0px !important;}
+	.navbar-brand {padding-top: 12px;}
+	.custom-navbar.navbar-default .navbar-nav>li>a,.section-1-left .btn-bottominfo label,.section-1-left .btn-bottominfo span{font-size:20px}
+	.custom-navbar.navbar-default{padding-top:35px; padding-bottom: 35px;}
+	.custom-navbar .signUp-style a{
+	    padding: 10px 14px;
+		top: -5px;
+		font-size: 20px !important;
+		border-radius: 25px;
+	}
+	#footer{padding-top: 80px; padding-bottom: 30px;}
+	.footer-link h4 {font-size: 36px; margin-bottom: 40px;}
+	.footer-copyright p, .footer-link ul li a {font-size: 23px;}
+	.footer-img-text {font-size: 22px;}
+	.footer-social ul li a {font-size: 23px;}
+	.footer-copyright {margin-bottom: 30px;}
+	.footer-copyright i {font-size: 24px;}
+	.footer-copyright span {font-size: 24px;}
+	.footer-copyright img {width: 5%;}
+	.pricing-outer.container {
+		/* width: 50%; */
+		width: 2500px;
+	}
+
+	#pricing .pricing-headingtop .plans-heading{font-size: 96px; margin-top: 170px;}
+	#pricing .pricing-headingtop .plans-subheading {font-size: 58px; margin-top: 20px;}
+	.billing-plan-list {width: 35%; margin: 30px auto 60px;}
+	#pricing .billing-plan-list ul>li>a {padding: 16px 0;}
+	.billing-plan-list ul>li:nth-child(1)>a, .billing-plan-list ul>li:nth-child(2)>a  {font-size: 21px;}	
+	.billing-plan-list ul>li.active a i.material-icons {font-size: 28px;}
+	thead th h2 {font-size: 45px;}
+	thead th p.strike-price {font-size: 32px; margin-bottom: 20px;}
+	thead th p.price {font-size: 56px !important;margin-bottom: 30px;}
+	thead th:nth-child(1) {font-size: 33px;}
+	thead span a {border-radius: 8px; padding: 18px 20px; font-size: 33px;}
+	tbody th, tbody td {padding: 40px 20px; line-height: 35px; font-size: 33px;}
+	colgroup:nth-child(3) {right: 621px;}
+	span.label-popularPlan {font-size: 20px; padding: 6px 10px;top: -37px;}
+	thead th h2 {margin-top: 70px; MARGIN-BOTTOM: 30px;}
+	thead th p.price sup {font-size: 40px;}
+	thead th sub {font-size: 34px;}
+	thead th:nth-child(1) i.material-icons {font-size: 40px;}
+	tbody th i.material-icons {font-size: 40px;}
+	#pricing .pricing-headingtop {margin-bottom: 80px;}
+	.enterprise_pos {margin-top: 80px;}
+	#pricing .section-faq .section-2-heading {font-size: 104px;}
+	#pricing .need-custom-plan a {font-size: 44px;}
+	#pricing .need-custom-plan i.material-icons {
+		font-size: 98px;
+		top: 35px;
+		margin-right: 15px;
+	}
+	#pricing .container-enterprise {width: 1330px; margin: 20px auto 80px;}
+	#pricing .enterprise-box-new {padding: 70px;}
+	#pricing .enterprise-box-new h2.title {font-size: 44px;}
+	#pricing .enterprise-box-new span.border-center {width: 58px;}
+	#pricing .enterprise-box-new p {font-size: 30px; line-height: 44px;    margin-bottom: 40px;}
+	#pricing .enterprise-box-new .btn-white-red-outline {font-size: 21px; padding: 12px 30px;}
+	#pricing .accordion-section-title {font-size: 44px; padding: 30px;}
+	#pricing .container-faqs {width: 50%; margin: 80px auto;}
+	#pricing .accordion-section-title:before {
+		font-size: 34px;
+		margin-right: 35px;
+		margin-top: 7px;
+	}
+	#pricing .accordion-section-content {margin-left: 80px;}
+	#pricing .accordion p {font-size: 36px;}
+	.bg1-img {padding: 120px 0;}
+	.bg1-img .btn-buildcal{
+		font-size: 45px;
+		padding: 52px 75px;
+		border-radius: 80px;
+		line-height: 54px;
+	}
+	.start-trial-cta .btn-buildcal i{
+		margin-right: 30px;
+		font-size: 54px;
+		top: 0;
+	}
+	.start-trial-cta .btn-buildcal p {line-height: normal;}
+	.detail {line-height: 36px; font-size: 30px; padding: 20px 20px 0px 20px;}
+	thead span {margin: 20px auto;}
+	.quater{
+		background: url(./assets/images/pricing-quarter.png) no-repeat !important;
+		width: 30px;
+		height: 30px;
+		margin-right: 15px;
+		position: relative;
+    	top: -1px;
+	}
+	.half{
+		background: url(./assets/images/pricing-half.png) no-repeat !important;
+		width: 30px;
+		height: 30px;
+		margin-right: 15px;
+		position: relative;
+    	top: -1px;
+	}
+	.full{
+		background: url(./assets/images/pricing-full.png) no-repeat !important;
+		width: 30px;
+		height: 30px;
+		margin-right: 15px;
+		position: relative;
+    	top: -1px;
+	}
+	.none{
+		background: url(./assets/images/pricing-none.png) no-repeat !important;
+		width: 30px;
+		height: 30px;
+		margin-right: 15px;
+		position: relative;
+    	top: -1px;
+	}
+
+}
