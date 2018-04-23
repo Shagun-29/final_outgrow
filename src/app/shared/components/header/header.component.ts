@@ -12,19 +12,19 @@ export class HeaderComponent implements OnInit {
   constructor(private titleService: Title) {
     
    }
-   public setTitle0(newTitle:string){
+   public setTitle0(){
     this.titleService.setTitle("Interactive Calculators and Quizzes | Outgrow")
   }
-   public setTitle1(newTitle:string){
+   public setTitle1(){
      this.titleService.setTitle("Why Interactive Content ? | Outgrow")
    }
-   public setTitle2(newTitle:string){
+   public setTitle2(){
     this.titleService.setTitle("Product Features | Outgrow")
   }
-  public setTitle3(newTitle:string){
+  public setTitle3(){
     this.titleService.setTitle("Pricing | Outgrow")
   }
-  public setTitle4(newTitle:string){
+  public setTitle4(){
     this.titleService.setTitle("Examples | Outgrow")
   }
   
