@@ -93,6 +93,7 @@ export class ExamplesHomeComponent implements OnInit {
       this.isActive4 = false;
     }
 
+    
     this.videoURLService.videoURL(type, frame, );
 
   }//end of function videoUrl;
