@@ -9,7 +9,9 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   constructor(private router: Router) { }
+
   ngOnInit() {
     this.router.events.subscribe((evt) => {
         if (!(evt instanceof NavigationEnd)) {
@@ -18,5 +20,6 @@ export class AppComponent implements OnInit {
         window.scrollTo(0, 0)
     });
 }
+
 }
 
