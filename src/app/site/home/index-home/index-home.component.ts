@@ -13,7 +13,7 @@ import { element } from 'protractor';
   styleUrls: ['./index-home.component.css']
 })
 export class IndexHomeComponent implements OnInit {
-
+  public isActive0; isActive1; isActive2; isActive3; isActive4; isActive5;
    liveIf = 0;
    staticIf =0;
   // liveReviews:boolean = false;
@@ -40,8 +40,15 @@ export class IndexHomeComponent implements OnInit {
   }
   
   constructor(private videoURLService:VideoUrlService,title:Title) { 
+    
+    this.isActive0 = true;
+    this.isActive1 = false
+    this.isActive2 = false;
+    this.isActive3 = false;
+    this.isActive4 = false;
+    this.isActive5 = false;
   //   // var gridJS = document.createElement('script')
-  //     title.setTitle("Interactive Calculators and Quizzes | Outgrow");
+      title.setTitle("Interactive Calculators and Quizzes | Outgrow");
    }
   
   // var gridJS = document.createElement('script')
@@ -74,6 +81,55 @@ export class IndexHomeComponent implements OnInit {
    }
     
   videoURL(type,frame){
+    if (type == 'a') {
+      this.isActive0 = true;
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+    }
+    else if (type == 'b') {
+      this.isActive1 = true;
+      this.isActive0 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+    }
+    else if (type == 'c') {
+      this.isActive2 = true;
+      this.isActive0 = false;
+      this.isActive1 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+    }
+    else if (type == 'd') {
+      this.isActive3 = true;
+      this.isActive0 = false;
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive4 = false;
+      this.isActive5 = false;
+    }
+    else if (type == 'e') {
+      this.isActive4 = true;
+      this.isActive0 = false;
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive5 = false;
+    }
+    else if (type == 'f') {
+      this.isActive5 = true;
+      this.isActive0 = false;
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = false;
+      this.isActive4 = false;
+    }
+
     this.videoURLService.videoURL(type,frame);
   }
 
