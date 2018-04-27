@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['../../../../assets/css/animations.css','../../../../assets/css/custom-sa.css','../../../../assets/css/sahil-hover.css','../../../../assets/css/home-responsive.css','../../../../assets/css/useCase.css','../../../../assets/css/animated-masonry-gallery.css','../../../../assets/css/useCase-responsive.css']
+  styleUrls: ['../../../../assets/css/allPage_minified.css','../../../../assets/css/animations.css','../../../../assets/css/custom-sa.css','../../../../assets/css/sahil-hover.css','../../../../assets/css/home-responsive.css','../../../../assets/css/useCase.css','../../../../assets/css/animated-masonry-gallery.css','../../../../assets/css/useCase-responsive.css']
 })
 export class HeaderComponent implements OnInit {
 
