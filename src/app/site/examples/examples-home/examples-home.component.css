@@ -2,3 +2,8 @@
     background-color: #1483B7;
     color:white;
 }
+@media (min-width:768px){
+	.topSpace{
+        margin-top: 125px;
+        }
+}
