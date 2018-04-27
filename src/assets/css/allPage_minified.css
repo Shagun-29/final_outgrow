@@ -3474,8 +3474,17 @@ iframe[name=google_conversion_frame]{height:0!important;width:0!important;line-h
 	.navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover{background-color:#fff}
 	.sec-quiz{text-align: center;margin-top: 0;}
 	.sec-quiz-heading{font-size: 22px;}
-	.section-2-heading{text-transform:none !important;line-height:normal !important;font-size:22px !important;text-align:center; padding: 0px 10px;}
-	.section-2-subheading{display:block;width:100%;color:rgba(98,105,109,.8);font-size:12px;font-family:montserratultra_light;margin:0 auto;margin-top:15px;padding:0 15px; line-height: 18px;}
+	.section-2-heading {
+		float: left;
+		width: 100%;
+		text-align: center;
+		color: #dfe3e6 !important;
+		font-size: 48px;
+		line-height: 52px;
+		font-family: montserratbold;
+		text-transform: uppercase;
+		margin: 0px;
+	}.section-2-subheading{display:block;width:100%;color:rgba(98,105,109,.8);font-size:12px;font-family:montserratultra_light;margin:0 auto;margin-top:15px;padding:0 15px; line-height: 18px;}
 	.section-4{margin-top:10px;margin-bottom:50px}
 	/*.section-4-left span i{margin-top:4px}*/
 	/* .section-4-left span span{font-size:12px;text-transform:uppercase} */
@@ -17134,7 +17143,7 @@ iframe.outgrow-video {
 	margin-top: 15px;
 }
 .calc-table-inner {
-    margin-top: 80px;
+    margin-top: 0px;
 }
 
 

@@ -1,11 +1,3 @@
-p {
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}
-
 .img-max, .img-width {
 	max-width: 100%
 }
@@ -629,7 +621,7 @@ label {
 	text-transform: uppercase;
 	position: absolute;
 	top: -60px
-}	
+}
 .sec3-box2inner {
 	padding-top: 20px
 }
@@ -2614,18 +2606,17 @@ button.swiper-pagination-bullet {
 .vc_row {
 	margin-left: 0 !important
 }
-.mk-animate-element, .mk-effect-bg-layer, .mk-fullscreen-search-overlay {
-	-webkit-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0)
+.mk-animate-element,.mk-effect-bg-layer,.mk-fullscreen-search-overlay{-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0)}
+.mk-animate-element{opacity:1;-webkit-perspective:1000}
+.no-transform .mk-animate-element{opacity:1}
+
+h1.section-2-heading.mk-animate-element.scale-up.uppercase.fnt-chnge.fnt1 {padding-top: 0px!important;}
+h4.mk-animate-element.right-to-left.publish {width: 68%!important;}
+
+h4.mk-animate-element.right-to-left.publish {
+    width: 65%;
 }
-.mk-animate-element {
-	opacity: 1;
-	-webkit-perspective: 1000
-}
-.no-transform .mk-animate-element {
-	opacity: 1
-}
+h4.mk-animate-element.right-to-left.publish {width: 85%;}
 /*.mk-animate-element.mk-in-viewport.fade-in {
 	-webkit-animation: mk_fade .7s 1 cubic-bezier(.445, .05, .55, .95);
 	animation: mk_fade .7s 1 cubic-bezier(.445, .05, .55, .95);
