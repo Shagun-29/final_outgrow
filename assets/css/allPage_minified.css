@@ -2387,7 +2387,12 @@ label.control-label {
   .sec3-box1inner h4{color:rgba(98,105,109,.8);font-size:18px;text-transform:uppercase;margin-top:31px}
   .sec3-box1inner p{font-size:14px}
   .sec3-box2inner h4{color:#fb6c73;font-size:18px;text-transform:uppercase}
-  .sec3-box2inner p{font-size:14px; color: #8e989f !important;}
+  .sec3-box2inner p{
+	  font-family: montserratregular;
+    	font-size: 14px;
+		line-height: 1.42857143; 
+		/* font-weight:500; */
+		color: #8e989f !important;}
   .sec3-box3 h3,.sec3-box4 h3{color:rgba(98,105,109,.8);font-size:21px;position:absolute;top:-60px;text-transform:uppercase}
   .section-3 .btn-buildcal{background:#fb6c73;border:2px solid #fb6c73;color:#fff;float:none;font-size:14px;text-transform:uppercase;padding:7px 40px;margin-top:60px;-webkit-transition:.5s ease-in-out;transition:.5s ease-in-out}
   .section-3 .btn-buildcal:hover{background:#fdb6b9;color:#fb545b;border-color:#fdb6b9}
@@ -4838,7 +4843,7 @@ iframe[name=google_conversion_frame]{height:0!important;width:0!important;line-h
 
 	.sec3-box2 h3 {font-size: 19px;}
 	.sec3-box3 h3, .sec3-box4 h3{font-size: 19px;}
-	.sec3-box1inner h4 {font-size: 15px;}
+	.sec3-box1inner h4 {font-size: 15px;font-family: montserratregular;}
 	.section-old .video-img-wrapper {
 		width: 530px !important;
 		margin-right: 20px !important;
