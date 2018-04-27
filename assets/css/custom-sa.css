@@ -1,3 +1,11 @@
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
 .img-max, .img-width {
 	max-width: 100%
 }
@@ -185,11 +193,37 @@ label {
 }
 .custom-navbar.navbar-default .navbar-nav>li>a {
 	font-size: 14px;
-	color: #62696d;
-	text-transform: uppercase;
-	line-height: 25px;
-	background: none;
+    color: #62696d;
+    text-transform: uppercase;
+    background: none;
+    background-image: none;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+	overflow: visible;
+	font-weight: 450;   
 }
+/* .hvr-underline-from-left {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+}
+.hvr-underline-from-center, .hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-backface-visibility: hidden;
+} */
+
 .custom-navbar.navbar-default .navbar-nav > li > a.active, .custom-navbar.navbar-default .navbar-nav > li >a:hover {
 	color: #fb5f66;
 	background: none;
@@ -544,10 +578,13 @@ label {
 	padding-left: 40px
 }
 .sec3-box2, .sec3-box3, .sec3-box4 {
-	min-height: 300px;
-	border-left: 2px solid #eff0f0;
-	padding-left: 25px;
-	padding-right: 25px
+    min-height: 300px;
+    border-left: 2px solid #eff0f0;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-left-color: rgb(239, 240, 240);
+    padding-left: 25px;
+    padding-right: 25px;
 }
 .section-3-left h4 {
 	color: #fb6c73;
@@ -6317,7 +6354,7 @@ iframe[name=google_conversion_frame] {
 	.footer-link h4 {font-size: 36px; margin-bottom: 40px;}
 	.footer-copyright p, .footer-link ul li a {font-size: 23px;}
 	.footer-img-text {font-size: 22px;}
-	.footer-social ul li a {font-size: 23px;}
+	.footer-social ul li a {font-size: 20px;}
 	.footer-copyright {margin-bottom: 30px;}
 	.footer-copyright i {font-size: 24px;}
 	.footer-copyright span {font-size: 24px;}
