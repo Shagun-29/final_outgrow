@@ -6,8 +6,8 @@ export const routes: Routes = [
     { path: 'features', loadChildren: './features/features.module#FeaturesModule' },
     { path: '', loadChildren: './home/home.module#HomeModule' },
     { path: 'pricing', loadChildren: './pricing/pricing.module#PricingModule' },
-    { path: 'why-interactive', loadChildren: './why-interactive/why-interactive.module#WhyInteractiveModule' }
-
+    { path: 'why-interactive', loadChildren: './why-interactive/why-interactive.module#WhyInteractiveModule' },
+    // {path: 'calculator', component: './landing-pages/calculator/calculator.component'}
 ];
 
 // export const routing: ModuleWithProviders = RouterModule.forChild(routes);
