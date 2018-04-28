@@ -6490,16 +6490,16 @@ iframe[name=google_conversion_frame] {
 	/* padding-top: 35px; */
 }
 .feature-blue {
-    background: #f3f8fb;
+    /* background: #f3f8fb;
     background-image: initial;
     background-position-x: initial;
     background-position-y: initial;
     background-size: initial;
-    /* background-repeat-x: initial;
-    background-repeat-y: initial; */
+    background-repeat-x: initial;
+    background-repeat-y: initial;
     background-attachment: initial;
     background-origin: initial;
-    background-clip: initial;
+    background-clip: initial; */
     background-color: rgb(243, 248, 251);
     margin-top: 0px !important;
     padding-top: 50px !important;
