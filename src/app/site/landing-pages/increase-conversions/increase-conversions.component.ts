@@ -45,7 +45,7 @@ export class IncreaseConversionsComponent implements OnInit {
    
    
   }
-  
+  openTestimonial(item){}
   
  markAsActive = function (calcId) {
   console.log(calcId)

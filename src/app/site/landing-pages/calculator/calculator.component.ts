@@ -48,7 +48,7 @@ export class CalculatorComponent implements OnInit {
     this.shuffleCalcs('Auto');
     
   }
-  
+  openTestimonial(item){}
   markAsActive = function (calcId) {
     console.log(calcId)
     this.myId=calcId;
@@ -90,7 +90,7 @@ export class CalculatorComponent implements OnInit {
      this.obj=this.calcService.calcs;
  
      function filter_obj(item) {
-         return (item.Industry === filterName && item.route==="survey");
+         return (item.Industry === filterName && item.route==="calculator");
      }
      
       this.filteredObj = this.obj.filter(filter_obj);

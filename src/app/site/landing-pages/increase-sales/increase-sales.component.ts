@@ -15,7 +15,7 @@ export class IncreaseSalesComponent implements OnInit {
   ngOnInit() {
     this.shuffleCalcs('Auto');
   }
-
+  openTestimonial(item){}
  markAsActive = function (calcId) {
    console.log(calcId)
    this.myId=calcId;

@@ -42,7 +42,7 @@ export class IncreaseRoiComponent implements OnInit {
     this.triggerLiveStaticReviews();
     this.shuffleCalcs("Auto");
   }
-   
+  openTestimonial(item){}
  markAsActive = function (calcId) {
   console.log(calcId)
   this.myId=calcId;
