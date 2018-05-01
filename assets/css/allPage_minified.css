@@ -18900,7 +18900,7 @@ img.scrollimg1.wo {
 		font-size: 15px;
 		color: #fff;
 		font-family: montserratlight;
-		line-height: 24px;
+		line-height: 23px;
 	}
 	.banner-inner {
 		margin-top: 30px;
@@ -19381,6 +19381,7 @@ padding-top:20px;
 }
 .section-banner-sales .banner-content {
 margin-top: 0px;
+width:35%;
 }
 
 .section-six-roi {
