@@ -76,11 +76,44 @@ export class CalculatorComponent implements OnInit {
       ];
       this.gifs=[
         {
-          url:'https://dzvexx2x036l1.cloudfront.net/calc_images/new+car+vs+used+car.gif',
+          url:'https://dzvexx2x036l1.cloudfront.net/calc_images/auto+loan+calculator.gif',
           title:'NEW CAR VS USED CAR',
           description:'The Chicago',
           hRef:'https://premade.outgrow.us/New-Car-vs-Used-Car'
         }
+        // },
+        // {
+        //   url:'https://dzvexx2x036l1.cloudfront.net/calc_images/how+much+is+college+really+going+to+cost+you.gif',
+        //   title:'CALCULATE THE TOTAL REAL NET COST....',
+        //   description:'Madrid',
+        //   hRef:'https://premade.outgrow.us/New-Car-vs-Used-Car'
+        // },
+        
+        // {
+        //   url:'https://dzvexx2x036l1.cloudfront.net/calc_images/mortgage+calculator.gif',
+        //   title:'THE QUINTESSENTIAL MORTAGE CAL....',
+        //   description:'Londoner',
+        //   hRef:'https://premade.outgrow.us/New-Car-vs-Used-Car'
+        // },
+        // {
+        //   url:'https://dzvexx2x036l1.cloudfront.net/calc_images/Weightloss+Calc.gif',
+        //   title:'WHAT IS YOUR DIGITAL QUOTIENT?',
+        //   description:'Greek',
+        //   hRef:'https://premade.outgrow.us/New-Car-vs-Used-Car'
+        // },
+        //  {
+        //   url:'https://dzvexx2x036l1.cloudfront.net/calc_images/PPC+vs+in-house.gif',
+        //   title:'CALCULATE HOW MUCH HIRING AN EX....',
+        //   description:'Chicago',
+        //   hRef:'https://premade.outgrow.us/New-Car-vs-Used-Car'
+        // },
+        // {
+        //   url:'https://dzvexx2x036l1.cloudfront.net/calc_images/roi+of+using+outgrow.gif',
+        //   title:'CHECK HOW HIGH OF A ROI YOU CAN....',
+        //   description:'Londoner',
+        //   hRef:'https://premade.outgrow.us/New-Car-vs-Used-Car'
+        // },
+        
       ];
       console.log("@@@@",this.items[0].id);
       this.shuffleCalcs(this.items[0].id,0);
@@ -91,9 +124,6 @@ export class CalculatorComponent implements OnInit {
    
   }
   
-  
-  
-
   //function to change auto education finance etc content;
   shuffleCalcs(item,i) {
     console.log("!!!!!!!",i)
@@ -109,6 +139,7 @@ export class CalculatorComponent implements OnInit {
         "Find out which car suits you the best."
       ]
       this.markAsActive(0);
+      this.gifs[0];
     }
     else if (item == "Education") {
       this.headingDescription = [
@@ -119,6 +150,7 @@ export class CalculatorComponent implements OnInit {
         "Find out which major should you study."
       ]
       this.markAsActive(0);
+      this.gifs[1];
     }
     else if (item == "Finance") {
       this.headingDescription = [
@@ -131,6 +163,7 @@ export class CalculatorComponent implements OnInit {
         "Find out how long will you take to payoff your credit card."
       ]
       this.markAsActive(0);
+      this.gifs[2];
     }
     else if (item == "MarketingAdvertising") {
       this.headingDescription = [
@@ -144,6 +177,7 @@ export class CalculatorComponent implements OnInit {
         "Take the poll on the top content marketing trends of 2018."
       ]
       this.markAsActive(0);
+      this.gifs[3];
     }
     else if (item == "HealthFitness") {
       this.headingDescription = [
@@ -156,18 +190,21 @@ export class CalculatorComponent implements OnInit {
         "Find your ideal bodyweight"
       ]
       this.markAsActive(0);
+      this.gifs[4];
     }
     else if (item == "Legal") {
       this.headingDescription = [
         "Get an estimate of your legal fees when you purchase a home.",
       ]
       this.markAsActive(0);
+      this.gifs[5];
     }
     else if (item == "Quintessential") {
       this.headingDescription = [
         "Estimate the ROI you will get from using Outgrow.",
       ]
       this.markAsActive(0);
+      this.gifs[6];
     }
     else if (item == "RealEstateConstruction") {
       this.headingDescription = [
@@ -179,6 +216,7 @@ export class CalculatorComponent implements OnInit {
         "Take this quiz to find out if you are ready to buy a house."
       ]
       this.markAsActive(0);
+      this.gifs[6];
     }
     
   }// end of function ShuffleClas;
