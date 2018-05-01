@@ -9,6 +9,7 @@ import { IncreaseRoiComponent } from './landing-pages/increase-roi/increase-roi.
 import { IncreaseSalesComponent } from './landing-pages/increase-sales/increase-sales.component';
 import { QuizComponent } from './landing-pages/quiz/quiz.component';
 import { SurveyComponent } from './landing-pages/survey/survey.component';
+import { CalcService } from '../shared/services/calc.service';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { SurveyComponent } from './landing-pages/survey/survey.component';
     RouterModule.forChild(routes)
   ],
   providers:[
-    VideoUrlService
+    VideoUrlService,
+    CalcService
   ],
   declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent]
 })

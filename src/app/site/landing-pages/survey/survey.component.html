@@ -3,11 +3,11 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	
-	<div class="header-logo">		
+	<!-- <div class="header-logo">		
 		<a href="https://outgrow.co/?utm_source=website&utm_medium=logo&utm_campaign=outgrow_survey_page" class="" target="_blank">
 			<img src="https://dzvexx2x036l1.cloudfront.net/lp-header-logo.png" alt="lp-header-logo image">
 		</a>
-	</div>
+	</div> -->
 
 	<!-- start: landing page HTML  -->
 	<section class="section section-banner section-banner-survey">
@@ -62,34 +62,37 @@
 				<div class="premade-template">
 					<ul class="pre-temp-cat" id="calc-cats">
 						<li class="active">
-							<a href="javascript:void(0)" id="Auto" onclick="shuffleCalcs('Auto')">Auto</a>
+							<a href="javascript:void(0)" id="Auto" (click)="shuffleCalcs('Auto')">Auto</a>
 						</li>
 
 
 						<li>
-							<a href="javascript:void(0)" id="health-fitness" onclick="shuffleCalcs('health-fitness')">Health & Fitness</a>
+							<a href="javascript:void(0)" id="health-fitness" (click)="shuffleCalcs('health-fitness')">Health & Fitness</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)" id="marketing-advertising"
-							   onclick="shuffleCalcs('marketing-advertising')">Marketing & Advertising</a>
+							   (click)="shuffleCalcs('marketing-advertising')">Marketing & Advertising</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)" id="Publishing"
-							   onclick="shuffleCalcs('Publishing')">Publishing</a>
+							   (click)="shuffleCalcs('Publishing')">Publishing</a>
 						</li>
 
 						<li>
-							<a href="javascript:void(0)" id="construction" onclick="shuffleCalcs('construction')">Real
+							<a href="javascript:void(0)" id="construction" (click)="shuffleCalcs('construction')">Real
 								Estate & Construction</a>
 						</li>
 					</ul>
 					<div class="pre-temp-cont">
 						<ul class="pre-temp-list" id="gallery-content-center">
-
-							<li class="filter-all Auto active" id="car-game">
-								<a href="javascript:void(0)" onclick="markAsActive('car-game')">
+								<li *ngFor="let item of filteredObj; let i=index" [class.active]="item.id == myId" class="filter-all Auto" id="{{item.id}}">
+										<a href="javascript:void(0)" (click)="markAsActive(item.id)">
+											{{item.Description}}</a>
+									</li>
+							<!-- <li class="filter-all Auto active" id="car-game">
+								<a href="javascript:void(0)" (click)="markAsActive('car-game')">
 									Find out if you're ready to buy a car.</a>
-							</li>
+							</li> -->
 
 						</ul>
 						<div class="pre-temp-view">
@@ -127,22 +130,22 @@
 				<div class="section-heading text-center">Average Rating 4.9/5 <br/>450+ Reviews </div>
 				<div class="social-media-section">
 					<div class="each-arrow-section">
-						<div id="fb-img" class="arrow_box testactive" onclick="openTestimonial('fb')">
+						<div id="fb-img" class="arrow_box testactive" (click)="openTestimonial('fb')">
 							<img alt="Facebook image" src="//dzvexx2x036l1.cloudfront.net/facebookim.png"/> 
 							<img alt="Facebook image" src="//dzvexx2x036l1.cloudfront.net/facebookh.png" class="over over1"/>  
 						</div>
 			
-						<div id="capterra-img" class="arrow_box" onclick="openTestimonial('capterra')">
+						<div id="capterra-img" class="arrow_box" (click)="openTestimonial('capterra')">
 							<img alt="Capterra image" src="//dzvexx2x036l1.cloudfront.net/capterraimg.png"/>
 							<img alt="Capterra image" src="//dzvexx2x036l1.cloudfront.net/capterah.png" class="over over2"/>  
 						</div>
 			
-						<div id="g2-img" class="arrow_box" onclick="openTestimonial('g2')">
+						<div id="g2-img" class="arrow_box" (click)="openTestimonial('g2')">
 							<img alt="G2 Crowd image" src="//dzvexx2x036l1.cloudfront.net/crowd.png"/> 
 							<img alt="G2 Crowd image" src="//dzvexx2x036l1.cloudfront.net/crowdh.png" class="over over3"/> 
 						</div>
 
-						<div id="google-img" class="arrow_box" onclick="openTestimonial('google')">
+						<div id="google-img" class="arrow_box" (click)="openTestimonial('google')">
 							<img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_logo.png"/> 
 							<img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_hover.png" class="over over4"/> 
 						</div>
@@ -153,7 +156,7 @@
 			</div>
 		</div>
 		
-		<div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1">
+		<!-- <div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1">
 			<div class="container mobile-container protfolio-section">
 				
 				<div id="fb" class="protfolio-inner-section" data-repuso-grid="4406" data-website-id="0"></div>
@@ -164,7 +167,7 @@
 
 				<div id="google" class="protfolio-inner-section testhide" data-repuso-grid="5402" data-website-id="0"></div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- start static HTML of fb, capterra, g2 crowd and google -->
 		<div class="col-md-12 col-sm-12 col-xs-12 text-center np custom-embeds" id="staticReviews">
@@ -740,144 +743,6 @@
 		</div>
 		<!-- end static HTML of fb, capterra, g2 crowd and google -->
 
-		<script>
-			function triggerLiveStaticReviews () {
-				var url = 'https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652';
-				var live = document.querySelector('#liveReviews');
-				var static = document.querySelector('#staticReviews');
-
-				var xhr = new XMLHttpRequest;
-				xhr.onreadystatechange = function () {
-					console.log('Ready state changed');
-					if (this.status == 200) {
-						live.classList.remove('hide');
-						static.classList.add('hide');
-					}
-					else {
-						static.classList.remove('hide');
-						live.classList.add('hide');
-					}
-				}
-				xhr.open("GET", url, true);
-				xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-				xhr.send();
-			}
-
-			var gridJS = document.createElement('script');
-			gridJS.src = 'https://repuso.com/widgets/grid.js';
-
-			gridJS.onload = triggerLiveStaticReviews;
-
-			var head = document.querySelector('head');
-			head.appendChild(gridJS);
-
-            window.calcs = [
-                {
-                    "id": "car-game",
-                    "Name": "Are you ready to buy a car? Find out if you truly understand the game!",
-                    "Published Link": "https://premade.outgrow.us/Are-You-Ready-to-Buy-a-Car",
-                    "GIF": "https://dzvexx2x036l1.cloudfront.net/calc_images/are+you+ready+to+buy+a+car.gif",
-                    "Type": "Graded Quiz",
-                    "Layout": "Chicago",
-                    "Industry": "Auto",
-                    "Description": "Find out if you're ready to buy a car.",
-                    "filters": [
-                        "filter-auto",
-                        "Auto"
-                    ]
-                },
-                {
-                    "id": "fitness-regime",
-                    "Name": "You need to take this quiz before starting your fitness regime. If you fail maybe you'll break your back.",
-                    "Published Link": "https://premade.outgrow.us/fitness-regime-quiz",
-                    "GIF": "https://dzvexx2x036l1.cloudfront.net/calc_images/fitness+regime+quiz.gif",
-                    "Type": "Graded Quiz",
-                    "Layout": "Stockholm",
-                    "Industry": "health-fitness",
-                    "Description": "Find out if you know enough before jumping into your new fitness regime.",
-                    "filters": [
-                        "filter-auto",
-                        "health-fitness"
-                    ]
-                },
-                {
-                    "id": "digital-quotient",
-                    "Name": "What is your digital quotient?",
-                    "Published Link": "https://premade.outgrow.us/digital-quotient-quiz",
-                    "GIF": "https://dzvexx2x036l1.cloudfront.net/calc_images/find+out+your+digital+quotient.gif",
-                    "Type": "Graded Quiz",
-                    "Layout": "Stockholm",
-                    "Industry": "marketing-advertising",
-                    "Description": "Find out your Digital Quotient.",
-                    "filters": [
-                        "filter-auto",
-                        "marketing-advertising"
-                    ]
-                },
-                {
-                    "id": "marketers-quiz",
-                    "Name": "Find out where you stand amongst 5000 marketers on this SEO quiz!",
-                    "Published Link": "https://premade.outgrow.us/grade_your_seo_knowledge",
-                    "GIF": "https://dzvexx2x036l1.cloudfront.net/calc_images/SEO+knowledge+quiz.gif",
-                    "Type": "Graded Quiz",
-                    "Layout": "Stockholm",
-                    "Industry": "marketing-advertising",
-                    "Description": "Find out if your SEO knowledge stacks up against top the 150 marketers with this 12-question SEO quiz.",
-                    "filters": [
-                        "filter-auto",
-                        "marketing-advertising"
-                    ]
-                },
-                {
-                    "id": "facebook-marketing",
-                    "Name": "You think you are a Facebook Marketing expert? Take this quiz to really find out!",
-                    "Published Link": "https://premade.outgrow.us/facebook-marketing-expert-quiz",
-                    "GIF": "https://dzvexx2x036l1.cloudfront.net/calc_images/are+you+really+a+facebook+marketing+expert.gif",
-                    "Type": "Graded Quiz",
-                    "Layout": "Stockholm",
-                    "Industry": "marketing-advertising",
-                    "Description": "Take this quiz to find out if you are a Facebook Marketing Expert.",
-                    "filters": [
-                        "filter-auto",
-                        "marketing-advertising"
-                    ]
-                },
-                {
-                    "id": "global-warming",
-                    "Name": "How much do you know about global warming?",
-                    "Published Link": "https://premade.outgrow.us/global-warming-1",
-                    "GIF": "https://dzvexx2x036l1.cloudfront.net/calc_images/global+warming+quiz.gif",
-                    "Type": "Graded Quiz",
-                    "Layout": "Chicago",
-                    "Industry": "Publishing",
-                    "Description": "Find out how much you know about global warming.",
-                    "filters": [
-                        "filter-auto",
-                        "Publishing"
-                    ]
-                },
-                {
-                    "id": "real-estate-quiz",
-                    "Name": "You shouldn't buy real estate unless you pass this ultimate buyer quiz!",
-                    "Published Link": "https://premade.outgrow.us/ultimate-buyer-quiz",
-                    "GIF": "https://dzvexx2x036l1.cloudfront.net/calc_images/real+estate+buying+quiz.gif",
-                    "Type": "Graded Quiz",
-                    "Layout": "Chicago",
-                    "Industry": "construction",
-                    "Description": "Take this quiz to find out if you are ready to buy a house.",
-                    "filters": [
-                        "filter-auto",
-                        "construction"
-                    ]
-                }
-            ];
-
-            window.onload = function () {
-                setPremade();
-                shuffleCalcs('Auto');
-            }
-		</script> 
-
 	</section>
 
 	<section class="section section-bg-btn">
@@ -970,37 +835,4 @@
 	</section>
 
 	<!-- end: landing page HTML  -->
-
-
-	<script>
-			const libs = {
-		"jquery": "https://code.jquery.com/jquery-2.1.4.min.js",
-		"sitemin": "/js/site.min.js",
-		"index": "/js/pageScripts/index.js",
-		"resizer": "/js/loader/resizer.js",
-	}
-;
-
-		var loadedLibs = {};
-		var counter = 0;
-		var loadAsync = function(lib) {
-			var http = new XMLHttpRequest();
-			http.open("GET", libs[lib], true);
-			http.onload = function () {
-				loadedLibs[lib] = http.responseText;
-				if (++counter == Object.keys(libs).length) {
-					startScripts();
-				}
-			}
-			http.send();
-		}
-		var startScripts = function() {
-			for (var lib in libs) {
-				eval(loadedLibs[lib]);
-			}
-		}
-		for (var lib in libs) {
-			loadAsync(lib);
-		} 
-	</script>
 
