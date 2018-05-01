@@ -3475,15 +3475,15 @@ iframe[name=google_conversion_frame]{height:0!important;width:0!important;line-h
 	.sec-quiz{text-align: center;margin-top: 0;}
 	.sec-quiz-heading{font-size: 22px;}
 	.section-2-heading {
-		float: left;
-		width: 100%;
-		text-align: center;
-		color: #dfe3e6 !important;
-		font-size: 48px;
-		line-height: 52px;
-		font-family: montserratbold;
-		text-transform: uppercase;
-		margin: 0px;
+		font-size: 22px;
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    line-height: 26px;
+    text-align: center;
+    width: 100% !important;
 	}.section-2-subheading{display:block;width:100%;color:rgba(98,105,109,.8);font-size:12px;font-family:montserratultra_light;margin:0 auto;margin-top:15px;padding:0 15px; line-height: 18px;}
 	.section-4{margin-top:10px;margin-bottom:50px}
 	/*.section-4-left span i{margin-top:4px}*/
@@ -18888,7 +18888,7 @@ img.scrollimg1.wo {
 		background-color: #fff;
 	}
 	.section-banner h1.main-heading {
-		margin-top: 100px;
+		margin-top: 120px;
 		display: block;
 		font-size: 42px;
 		color: #fff !important;
@@ -19030,7 +19030,7 @@ img.scrollimg1.wo {
     .premade-template{float: left; width: 100%; padding: 15px 0px 70px; }
     ul.pre-temp-list > li.active > a, ul.pre-temp-list > li > a:hover{color: #4894ca; transition: 0.5s;}
     .pre-temp-view {    float: left;    width: 70%;    background: #fafafa;    max-width: 100%;       border: 5px solid #fff;    box-shadow: 0px 0 30px rgba(0,0,0,0.2);}
-	ul.nav.nav-tabs.template-tab li > a > span {    background-image: url(https://cdn.filestackcontent.com/H9UpvrVASvWMsbndJxuB);    background-repeat: no-repeat;    background-position: 0 0;    float: left;    width: 23px;    height: 21px;    margin-right: 6px;}
+	ul.nav.nav-tabs.template-tab li > a > span { background-image: url("https://cdn.filestackcontent.com/H9UpvrVASvWMsbndJxuB");    background-repeat: no-repeat;    background-position: 0 0;    float: left;    width: 23px;    height: 21px;    margin-right: 6px;}
     ul.nav.nav-tabs.template-tab li.premade > a > span{background-position: -60px 0px}
     ul.nav.nav-tabs.template-tab li.premade.active > a > span{background-position: -60px -40px}
     ul.nav.nav-tabs.template-tab li.active > a > span {background-position: 0px -40px}
@@ -19377,6 +19377,7 @@ padding: 0px 100px;
 }
 .section-banner-roi h1.main-heading {
 padding: 0px 100px;
+padding-top:20px;
 }
 .section-banner-sales .banner-content {
 margin-top: 0px;
