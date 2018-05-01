@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CalcService } from '../../../shared/services/calc.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-increase-conversions',
@@ -34,7 +35,9 @@ export class IncreaseConversionsComponent implements OnInit {
    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
    xhr.send();
  }
- constructor(private calcService:CalcService){}
+ constructor(private calcService:CalcService,title:Title){
+  title.setTitle("Boost Online Conversions by &gt;30% | Outgrow");
+ }
 
   ngOnInit() {
     var gridJS = document.createElement('script')

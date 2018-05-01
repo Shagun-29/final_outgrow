@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CalcService } from '../../../shared/services/calc.service';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-increase-roi',
   templateUrl: './increase-roi.component.html',
@@ -35,7 +35,9 @@ export class IncreaseRoiComponent implements OnInit {
    xhr.send();
  }
  
- constructor(private calcService:CalcService){}
+ constructor(private calcService:CalcService,title:Title){
+   title.setTitle('Improve Marketing and Sales ROI | Outgrow');
+ }
   ngOnInit() {
     var gridJS = document.createElement('script')
     gridJS.src = 'https://repuso.com/widgets/grid.js';

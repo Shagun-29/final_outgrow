@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CalcService } from '../../../shared/services/calc.service';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-increase-sales',
   templateUrl: './increase-sales.component.html',
@@ -10,7 +10,9 @@ export class IncreaseSalesComponent implements OnInit {
     filteredObj: any;
     myId:String;
   public obj;objLength;
-  constructor(private calcService:CalcService) { }
+  constructor(private calcService:CalcService,title:Title) {
+    title.setTitle('Increase Online Sales | Outgrow');
+   }
 
   ngOnInit() {
     this.shuffleCalcs('Auto');
@@ -38,11 +40,6 @@ export class IncreaseSalesComponent implements OnInit {
     premadeName.innerHTML = '<i class="material-icons">&#xE80E;</i>' + calc.Name;
     premadeLayout.innerHTML = '<strong>Layout:</strong> ' + calc.Layout
 }
-
-
-
-
-
 changeActiveCalcCategory = function (id) {
   var currentActiveCat = document.querySelector('#calc-cats li.active');
   currentActiveCat.classList.remove('active');

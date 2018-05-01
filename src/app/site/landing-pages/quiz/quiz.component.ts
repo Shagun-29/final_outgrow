@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CalcService } from '../../../shared/services/calc.service';
-
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
@@ -10,7 +10,9 @@ export class QuizComponent implements OnInit {
   filteredObj: any;
   myId:String;
   public obj;objLength;
-  constructor(private calcService:CalcService) { }
+  constructor(private calcService:CalcService,title:Title) {
+    title.setTitle('Interactive Quizzes | Outgrow');
+   }
 
   ngOnInit() {
     this.shuffleCalcs('Auto');

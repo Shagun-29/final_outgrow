@@ -36,8 +36,8 @@ export class CalculatorComponent implements OnInit {
     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     xhr.send();
   }
-  constructor(private router: Router,private calcService:CalcService) { 
-    // title.setTitle("Examples | Outgrow");
+  constructor(private router: Router,private calcService:CalcService,title:Title) { 
+    title.setTitle("Interactive, Business Calculators | Outgrow");
   }
   
   ngOnInit() {
