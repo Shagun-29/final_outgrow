@@ -19536,11 +19536,16 @@ width: 100% !important;
 border-radius: 15px;
 }
 .banner-content {
-padding: 0px 15px;
-margin-left: 0px;
-margin-top: 25px !important;
-width: 100%;
+	padding: 0px 15px;
+    padding-top: 0px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    margin-left: 0px;
+    margin-top: 25px !important;
+	width: 100% !important;
 }
+	
 .section-banner p {
 color: #61696c; 
 font-size: 14px; 
