@@ -10,6 +10,10 @@ declare let jQuery: any;
 })
 export class IdeaGeneratorComponent implements OnInit {
   category:string="";
+  newOptions:string="";
+  topFunnel="";
+  middleFunnel="";
+  bottomFunnel="";
   saveData="";
   makeSunCategory(a,b){};
   saveSubCAt=[];
@@ -33,6 +37,40 @@ export class IdeaGeneratorComponent implements OnInit {
     });
     jQuery('.selectize-category').
       change(function(event){
+        this.category=jQuery(this).val();
+        jQuery('.this').attr("data-placeholder","Choose Category");
+      if(this.category == 'eCommerce'){
+        
+        this.newOptions="<option>B2B</option><option>B2C</option>";
+        // jQuery('.selectize-sub-category').attr("placeholder",'choose..');
+        jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      } 
+      else if(this.category == 'education'){
+        this.newOptions="<option>Higher Education</option>";
+        jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      } 
+      else if(this.category == 'financial'){
+        this.newOptions="<option>Banking</option><option>Mortgage and Loans</option><option>Mutual Funds</option><option>Venture Capital</option>";
+        jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      }
+      else if(this.category == 'insurance'){
+        this.newOptions="<option>Vehicle Insurance</option><option>Fire Insurance</option><option>Health Insurance</option><option>Life Insurance</option>";
+        jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      }
+      else if(this.category == 'media'){
+        this.newOptions="<option>News & Journalism</option><option>Subscription-based Content</option>";
+        jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      } 
+      else if(this.category == 'saas'){
+        this.newOptions="<option>Collaborative Software</option><option>CRM</option><option>Marketing</option><option>Other Packaged Software</option>";
+        jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      }
           jQuery(".sec3-bg").removeClass("hide");
           jQuery('html, body').animate({
               scrollTop: jQuery('.sec3-bg').offset().top
@@ -83,6 +121,33 @@ jQuery('.sec-button-update').click(function(){
   // }
   // jQuery('.build-btn').removeClass('hide');
 })
-
-
+    jQuery('.selectize-category-result').
+    change(function(event){
+      this.category=jQuery(this).val();
+      if(this.category == 'eCommerce'){
+        this.newOptions="<option>B2B</option><option>B2C</option>";
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      } 
+      else if(this.category == 'education'){
+        this.newOptions="<option>Higher Education</option>";
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      } 
+      else if(this.category == 'financial'){
+        this.newOptions="<option>Banking</option><option>Mortgage and Loans</option><option>Mutual Funds</option><option>Venture Capital</option>";
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      }
+      else if(this.category == 'insurance'){
+        this.newOptions="<option>Vehicle Insurance</option><option>Fire Insurance</option><option>Health Insurance</option><option>Life Insurance</option>";
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      }
+      else if(this.category == 'media'){
+        this.newOptions="<option>News & Journalism</option><option>Subscription-based Content</option>";
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      } 
+      else if(this.category == 'saas'){
+        this.newOptions="<option>Collaborative Software</option><option>CRM</option><option>Marketing</option><option>Other Packaged Software</option>";
+        jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
+      }
+      
+    });
 }}
