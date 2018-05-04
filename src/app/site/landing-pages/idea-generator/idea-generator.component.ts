@@ -54,16 +54,16 @@ export class IdeaGeneratorComponent implements OnInit {
           }, 1000)     
     });
 
-  jQuery("#form-email").focus(function(){
-      if(!jQuery('.email-validator').hasClass('hide')) jQuery('.email-validator').addClass('hide');
-  })
+  // jQuery("#form-email").focus(function(){
+  //     if(!jQuery('.email-validator').hasClass('hide')) jQuery('.email-validator').addClass('hide');
+  // })
 
   jQuery(".sec-button").click(function(){
     // var verify = emailValidation(jQuery("#form-email").val());
     // if(verify) {
     //     window.email = jQuery("#form-email").val();
     //     if(parseData[saveData.category][saveData.subCat] || parseData[saveData.category]['keyCustom'])    showTitle();
-        jQuery(".sec5-outr").fadeIn("slow", function() {
+        jQuery(".new-sec-bg").fadeIn("slow", function() {
             jQuery(this).removeClass("hide");
         });
         jQuery(".sec4-bg").fadeOut("slow", function() {
