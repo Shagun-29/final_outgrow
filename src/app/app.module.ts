@@ -9,7 +9,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { PrivacyComponent } from './shared/components/privacy/privacy.component';
 import { TermsComponent } from './shared/components/terms/terms.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-
+import { IdeaGeneratorComponent } from './idea-generator/idea-generator.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     HeaderComponent,
     PrivacyComponent,
     TermsComponent,
-    FooterComponent
+    FooterComponent,
+    IdeaGeneratorComponent
   ],
   imports: [
     BrowserModule,

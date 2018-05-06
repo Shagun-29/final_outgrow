@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
+public isGenerator;
   constructor(private router: Router) { }
 
   ngOnInit() {
