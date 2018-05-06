@@ -101,7 +101,7 @@ a:focus {
     display: table;    
     height: 100vh;
     width: 100%;
-    background: #000;
+    /* background: #000; */
 }
 .sec{
     display: table-cell;
@@ -129,6 +129,10 @@ a:focus {
     padding: 30px 60px;
     padding-bottom: 0px;
 }
+.sec1-text {
+    float: left;
+    width: 100%;
+}
 .logo-top{
     float: right;
     padding: 30px 60px;
@@ -145,6 +149,14 @@ a:focus {
     text-align: center;
     width: 100%;
 } 
+.sec1-text h2 {
+    color: #fb5f66;
+    float: left;
+    font-family: montserratregular;
+    font-size: 46px;
+    text-align: center;
+    width: 100%;
+}
 .sec1-text + .sec1-button {
     background-image: url(../images/mouse.png);
     background-position: 70px center;
@@ -232,6 +244,15 @@ a:focus {
     text-shadow: none;
     width: 100%;
 }
+.sec-container.custom-conatiner {
+    margin: 90px auto 0;
+    margin-top: 90px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px;
+}
 .sec2-bg .sec-container{
     margin: 0 auto;
     width: 885px;
@@ -241,6 +262,14 @@ a:focus {
     float: left;
     width: 50%;
     position: relative;
+}
+.sec-catergory.custom-select {
+    float: none;
+    max-width: 350px;
+    padding: 0 10px;
+    position: relative;
+    width: 46.85%;
+    display: inline-block;
 }
 .sec-catergory .selectize-control.single .selectize-input{
     padding: 15px;
@@ -942,3 +971,256 @@ span.alert.alert-danger {
     height : 60px;
     background-color: white;
 } */
+
+.funnel-points {
+    display: flex;
+    float: left;
+    margin: 50px 0;
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    width: 100%;
+}
+
+.funnel-step {
+    border-right: 1px solid #d9dad3;
+    flex: 1 1 0;
+    padding: 0 15px 0px;
+    text-align: center;
+}
+figure.icons-part {
+    background: #fb5f66 url(../images/sprite-icons1.png) no-repeat scroll 45px center;
+    border-radius: 50%;
+    box-shadow: 0 12px 20px rgba(206, 27, 35, 0.2);
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+}
+.funnel-step > figcaption {
+    float: left;
+    padding: 0 35px;
+    width: 100%;
+}
+.funnel-step h4 {
+    color: #81878a;
+    float: left;
+    font-family: 'montserratregular';
+    font-size: 16px;
+    font-weight: normal;
+    margin: 25px 0 30px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+.info-content {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 2px;
+    position: relative;
+    top: 1px;
+}
+.funnel-step ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+.funnel-step li {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 0 0px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.funnel-step li a {
+    color: #81878a;
+    cursor: default;
+    display: block;
+    float: left;
+    font-family: montserratlight;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+.update-section {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.sec-catergory.custom-select {
+    float: none;
+    max-width: 350px;
+    padding: 0 10px;
+    position: relative;
+    width: 46.85%;
+    display: inline-block;
+}
+.sec-catergory.custom-select .selectize-control.single .selectize-input {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #d9dad3;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #666666;
+    font-size: 18px;
+    line-height: normal;
+    margin-top: 20px;
+    min-height: auto;
+    padding: 11px 20px;
+    text-align: left;
+    text-transform: none;
+    line-height: auto;
+}
+.sec-catergory .selectize-control.single .selectize-input:after {
+    border-color: #999 transparent transparent transparent;
+    border-width: 6px 5px 0 5px;
+}
+.selectize-dropdown [data-selectable], .selectize-dropdown .optgroup-header {
+    padding: 8px 16px !important;
+    font-size: 13px;
+    text-transform: none;
+}
+.sec-catergory.custom-select .error {
+    font-size: 12px;
+    color: #fb5f66;
+    text-align: left;
+    display: none;
+    float: left;
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+}
+.sec-catergory.custom-select {
+    float: none;
+    max-width: 350px;
+    padding: 0 10px;
+    position: relative;
+    width: 46.85%;
+    display: inline-block;
+}
+.sec-catergory.custom-select .selectize-control.single .selectize-input {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #d9dad3;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #666666;
+    font-size: 18px;
+    line-height: normal;
+    margin-top: 20px;
+    min-height: auto;
+    padding: 11px 20px;
+    text-align: left;
+    text-transform: none;
+    line-height: auto;
+}
+.sec-container.custom-conatiner .selectize-input.items.has-options.full.has-items .item {
+    padding-top: 2px;
+    line-height: initial;
+}
+.sec-catergory.custom-select .selectize-control.single .selectize-dropdown {
+    border-color: #d9dad3 !important;
+}
+.sec-catergory.custom-select .selectize-control.single .selectize-dropdown {
+    top: 65px !important;
+}
+.sec-catergory .selectize-control.single .selectize-dropdown {
+    top: 91px !important;
+    border: 1px solid #0f0e0e;
+    border-top: 0;
+    width: 100% !important;
+}
+.sec-catergory.custom-select .error {
+    font-size: 12px;
+    color: #fb5f66;
+    text-align: left;
+    display: none;
+    float: left;
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+}
+.update-btn {
+    float: left;
+    margin-top: 25px;
+    padding-left: 10px;
+}
+.update-btn > a {
+    border: 2px solid #fb5f66;
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: #fb5f66;
+    float: left;
+    font-size: 16px;
+    line-height: 1;
+    min-height: 50px;
+    min-width: 140px;
+    padding: 16px 35px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.update-btn > a:hover {
+    border: 2px solid #fb5f66;
+    border-radius: 50px;
+    box-sizing: border-box;
+    background-color: #fb5f66;
+    color:white;
+    float: left;
+    font-size: 16px;
+    line-height: 1;
+    min-height: 50px;
+    min-width: 140px;
+    padding: 16px 35px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+a, input, textarea, button:focus {
+    outline: none;
+}
+.funnel-points {
+    display: flex;
+    float: left;
+    margin: 50px 0;
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    width: 100%;
+}
+.funnel-step {
+    border-right: 1px solid #d9dad3;
+    flex: 1 1 0;
+    padding: 0 15px 0px;
+    text-align: center;
+}
+figure.icons-part {
+    background: #fb5f66 url(../images/sprite-icons1.png) no-repeat scroll 45px center;
+    border-radius: 50%;
+    box-shadow: 0 12px 20px rgba(206, 27, 35, 0.2);
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+}
+.funnel-step h4 {
+    color: #81878a;
+    float: left;
+    font-family: 'montserratregular';
+    font-size: 16px;
+    font-weight: normal;
+    margin: 25px 0 30px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+.buttom{
+    border:0px;
+}
