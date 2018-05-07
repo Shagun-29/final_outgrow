@@ -121,7 +121,7 @@ a:focus {
     width: 885px;
 }
 .sec1-bg {
-    background: url(assets/images/sec1-bg1.jpg) no-repeat 40% center;
+    background: url(../../assets/images/sec1-bg1.jpg) no-repeat 40% center;
     background-size: cover;
 }
 .logo{
