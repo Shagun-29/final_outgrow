@@ -10,6 +10,7 @@ import { IncreaseSalesComponent } from './landing-pages/increase-sales/increase-
 import { QuizComponent } from './landing-pages/quiz/quiz.component';
 import { SurveyComponent } from './landing-pages/survey/survey.component';
 import { CalcService } from '../shared/services/calc.service';
+import { IdeaGeneratorComponent } from './landing-pages/idea-generator/idea-generator.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,6 @@ import { CalcService } from '../shared/services/calc.service';
     VideoUrlService,
     CalcService
   ],
-  declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent]
+  declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent]
 })
 export class SiteModule { }
