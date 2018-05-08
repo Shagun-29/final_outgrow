@@ -39,18 +39,47 @@
                         does your company <br> fall into?
                     </div>
                     <div class="sec-catergory">
-                        <select class="demo-default selectize-category" data-placeholder="Choose Category">
-                            <option value="" hidden disabled selected>Choose Category</option>
-                            <option value="eCommerce">eCommerce</option>
+                        <select class="demo-default selectize-category" data-placeholder="Choose Category" tabindex="-1" style="display: none;">
+                            <option selected></option>
+                            <!-- <option value="eCommerce">eCommerce</option>
                             <option value="education">Education</option>
                             <option value="financial">Financial Services</option>
                             <option value="insurance">Insurance</option>
                             <option value="media">Media & Entertainment</option>
-                            <option value="saas">SaaS</option>
+                            <option value="saas">SaaS</option> -->
                         </select>
+
+                        <!-- <div class="selectize-dropdown single demo-default selectize-category" style="display: none; width: 443px; top: 78px; left: 0px; visibility: visible;">
+                                <div class="selectize-dropdown-content">
+                                    <div data-value="eCommerce-Key" data-selectable class="option">eCommerce</div>
+                                    <div data-value="Education-Key" data-selectable class="option">Education</div>
+                                    <div data-value="FinancialServices-Key" data-selectable class="option">Financial Services</div>
+                                    <div data-value="Insurance-Key" data-selectable class="option">Insurance</div>
+                                    <div data-value="Media and Entertainment-Key" data-selectable class="option">Media and Entertainment</div>
+                                    <div data-value="SaaS-Key" data-selectable class="option">SaaS</div>
+                                </div>
+                        </div>   -->
+                        <div class="selectize-control demo-default selectize-category single">
+                            <div class="selectize-input items not-full has-options focus input-active">
+                                <input type="text" autocomplete="off" class="category" tabindex placeholder="Choose Category" disabled="disabled" style="width: 125px; opacity: 1; position: relative; left: 0px;">
+                            </div>
+                           
+                        <div class="selectize-dropdown single demo-default selectize-category hide" style=" width: 443px; top: 78px; left: 0px; visibility: visible;">
+                                <div class="selectize-dropdown-content">
+                                    <div data-value="eCommerce-Key" data-selectable class="option">eCommerce</div>
+                                    <div data-value="Education-Key" data-selectable class="option">Education</div>
+                                    <div data-value="FinancialServices-Key" data-selectable class="option">Financial Services</div>
+                                    <div data-value="Insurance-Key" data-selectable class="option">Insurance</div>
+                                    <div data-value="Media and Entertainment-Key" data-selectable class="option">Media and Entertainment</div>
+                                    <div data-value="SaaS-Key" data-selectable class="option">SaaS</div>
+                                </div>
+                        </div> 
                     </div>
+                    </div>
+                        
                 </div>
             </div>
+
         </section>
         <section class="sec-outr sec3-bg hide">
        <!--  <div class="loader-wrapper sub-category-page-loader">
