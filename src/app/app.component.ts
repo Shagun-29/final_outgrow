@@ -22,6 +22,9 @@ export class AppComponent implements OnInit {
     if(this.text[this.text.length-1] == "idea-generator"){
         this.flag=false;
     }
+    else{
+        this.flag=true;
+    }
     this.router.events.subscribe((evt) => {
         if (!(evt instanceof NavigationEnd)) {
             return;

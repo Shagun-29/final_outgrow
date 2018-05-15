@@ -9,6 +9,9 @@ declare let jQuery: any;
   styleUrls: ['../../../../assets/css/allPage_minified.css', '../../../../assets/css/style.css', '../../../../assets/css/responsive.css', '../../../../assets/css/selectize.default.css']
 })
 export class IdeaGeneratorComponent implements OnInit {
+  isFinancial: boolean;
+  isEducation: boolean;
+  isEcommerce: boolean;
   category: string = "";
   newOptions: string = "";
   saveData = "";
@@ -19,6 +22,9 @@ export class IdeaGeneratorComponent implements OnInit {
   show=false;
   constructor(private router: Router, title: Title) {
     title.setTitle("Idea Generation | Outgrow");
+    this.isEcommerce=false;
+    this.isEducation=false;
+    this.isFinancial=false
   }
 
   ngOnInit() {
@@ -38,48 +44,58 @@ export class IdeaGeneratorComponent implements OnInit {
     });
     jQuery('.selectize-input').
       click(function (event) {
-        jQuery(".selectize-dropdown").removeClass("hide");
+        jQuery(".selectize-dropdown").toggleClass("hide");
       });
+      // jQuery(".expand").click( function(event) {
+      //   var $target = jQuery(event.target);
+      //   jQuery(this).toggleClass('open');
+      //   $target.closest(".expand").find(".detail").slideToggle(); 
+      // });
 
     jQuery('.option').
       click(function(event){
-        this.category = jQuery(this).data('value');
-        console.log(this.category);
+        this.category = jQuery(this).attr('value');
+        console.log("my category",this.category)
+        // console.log("!!",jQuery(this),jQuery(this).data('class'))
         if (this.category == 'eCommerce-Key') {
-
-          this.newOptions = `<option hidden disabled selected>Choose Sub Category</option><option value="b2b">B2B</option><option value="b2c">B2C</option>`;
+          console.log(this.category);
+          this.isEcommerce=true;
+          // this.newOptions = `<option hidden disabled selected>Choose Sub Category</option><option value="b2b">B2B</option><option value="b2c">B2C</option>`;
           // jQuery('.selectize-sub-category').attr("placeholder",'choose..');
-          jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+          this.newOPtions=`<div data-value="keyB2B" data-selectable="" class="option">B2B</div><div data-value="keyB2C" data-selectable="" class="option active">B2C</div>`;
+          jQuery('.selectize-dropdown-content').append(`<div data-value="keyB2B" data-selectable="" class="option">B2B</div><div data-value="keyB2C" data-selectable="" class="option active">B2C</div>`);
           jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
           jQuery('.selectize-category-result option[value=eCommerce]').attr('selected', 'selected')
         }
         else if (this.category == 'Education-Key') {
+          this.isEducation=true;
           this.newOptions = `<option hidden disabled selected>Choose Sub Category</option><option value="higherEducation">Higher Education</option>`;
-          jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+          jQuery('.selectize-dropdown-content').html(jQuery(this.newOptions));
           jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
           jQuery('.selectize-category-result option[value=education]').attr('selected', 'selected')
         }
         else if (this.category == 'FinancialServices-Key') {
+          this.isFinancial=true;
           this.newOptions = `<option hidden disabled selected>Choose Sub Category</option><option value="banking">Banking</option><option value="mortage">Mortgage and Loans</option><option value="mutualFunds">Mutual Funds</option><option value="venture">Venture Capital</option>`;
-          jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+          jQuery('.selectize-dropdown-content').html(jQuery(this.newOptions));
           jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
           jQuery('.selectize-category-result option[value=financial]').attr('selected', 'selected')
         }
         else if (this.category == 'Insurance-Key') {
           this.newOptions = `<option hidden disabled selected>Choose Sub Category</option><option value="vechicle">Vehicle Insurance</option><option value="fire">Fire Insurance</option><option value="health">Health Insurance</option><option value="life">Life Insurance</option>`;
-          jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+          jQuery('.selectize-dropdown-content').html(jQuery(this.newOptions));
           jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
           jQuery('.selectize-category-result option[value=insurance]').attr('selected', 'selected')
         }
         else if (this.category == 'Media and Entertainment-Key') {
           this.newOptions = `<option hidden disabled selected>Choose Sub Category</option><option value="news">News & Journalism</option><option value="subscription">Subscription-based Content</option>`;
-          jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+          jQuery('.selectize-dropdown-content').html(jQuery(this.newOptions));
           jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
           jQuery('.selectize-category-result option[value=media]').attr('selected', 'selected')
         }
         else if (this.category == 'Saas-Key') {
           this.newOptions = `<option hidden disabled selected>Choose Sub Category</option><option value="collabrative">Collaborative Software</option><option value="crm">CRM</option><option value="marketing">Marketing</option><option value="other">Other Packaged Software</option>`;
-          jQuery('.selectize-sub-category').html(jQuery(this.newOptions));
+          jQuery('.selectize-dropdown-content').html(jQuery(this.newOptions));
           jQuery('.selectize-sub-category-result').html(jQuery(this.newOptions));
           jQuery('.selectize-category-result option[value=saas]').attr('selected', 'selected')
         }
@@ -91,6 +107,8 @@ export class IdeaGeneratorComponent implements OnInit {
         setTimeout(function () {
           jQuery(".sec2-bg").addClass("hide");
         }, 1000)
+
+        
       })
 
     jQuery('.selectize-sub-category').
