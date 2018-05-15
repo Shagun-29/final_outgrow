@@ -65,14 +65,7 @@
                             </div>
                            
                         <div class="selectize-dropdown single demo-default selectize-category hide" style=" width: 443px; top: 78px; left: 0px; visibility: visible;">
-                                <div class="selectize-dropdown-content">
-                                    <div data-value="eCommerce-Key" data-selectable class="option">eCommerce</div>
-                                    <div data-value="Education-Key" data-selectable class="option">Education</div>
-                                    <div data-value="FinancialServices-Key" data-selectable class="option">Financial Services</div>
-                                    <div data-value="Insurance-Key" data-selectable class="option">Insurance</div>
-                                    <div data-value="Media and Entertainment-Key" data-selectable class="option">Media and Entertainment</div>
-                                    <div data-value="SaaS-Key" data-selectable class="option">SaaS</div>
-                                </div>
+                                <div class="selectize-dropdown-content"></div>
                         </div> 
                     </div>
                     </div>
@@ -98,10 +91,19 @@
                         Sub-Category
                     </div>
                     <div class="sec-catergory">
-                        <select class="demo-default selectize-sub-category" data-placeholder="Choose Sub Category">
-                           
-                            
+                        <select class="demo-default selectize-sub-category selectized" data-placeholder="Choose Sub Category" tabindex="-1" style="display: none;">
+                          <option value selected="selected"></option>  
                         </select>
+                        <div class="selectize-control demo-default selectize-sub-category single">
+                            <div class="selectize-input items not-full focus input-active dropdown-active has-options sub-category-section3">
+                                <input type="text"  autocomplete="off" tabindex placeholder="Choose Sub Category" style="width: 174px; opacity: 1; position: relative; left: 0px;">
+                            </div>
+                            <div class="selectize-dropdown single demo-default selectize-sub-category hide" style="display: block; width: 443px; top: 78px; left: 0px; visibility: visible;">
+                            <div class="selectize-dropdown-content sub-category-dropdown hide">
+                                <!-- <div data-value="keyHigherEducation" data-selectable class="option-subcategory">HigherEducation</div> -->
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
