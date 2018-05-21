@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { CalcService } from '../../../shared/services/calc.service';
+import { CalcService } from '../../../shared/service/calc.service';
 
 @Component({
   selector: 'app-calculator',

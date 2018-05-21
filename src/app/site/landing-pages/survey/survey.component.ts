@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CalcService } from '../../../shared/services/calc.service';
+import { CalcService } from '../../../shared/service/calc.service'
 import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-survey',
