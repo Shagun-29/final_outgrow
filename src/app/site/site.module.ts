@@ -11,16 +11,25 @@ import { QuizComponent } from './landing-pages/quiz/quiz.component';
 import { SurveyComponent } from './landing-pages/survey/survey.component';
 import { CalcService } from '../shared/services/calc.service';
 import { IdeaGeneratorComponent } from './landing-pages/idea-generator/idea-generator.component';
+import {SelectModule} from 'ng2-select';
+// import { GoogleSheet } from '../shared/interfaces/GoogleSheet';
+import { IdeaGenService } from '../shared/services/idea-gen.service';
+
 
 @NgModule({
   imports: [
     CommonModule,
+    SelectModule,
     RouterModule.forChild(routes)
   ],
   providers:[
+    // GoogleSheet,
+    IdeaGenService,
     VideoUrlService,
-    CalcService
-  ],
+    CalcService,
+    
+    
+   ],
   declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent]
 })
 export class SiteModule { }

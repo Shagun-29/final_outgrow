@@ -9,6 +9,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { PrivacyComponent } from './shared/components/privacy/privacy.component';
 import { TermsComponent } from './shared/components/terms/terms.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+// import { GoogleSheet } from './shared/interfaces/GoogleSheet';
+// import { IdeaGenService } from './shared/services/idea-gen.service';
 
 @NgModule({
   declarations: [
