@@ -1,19 +1,16 @@
-var spreadsheetsId = "1V954ZsJkGJ-AUYw62oefS8orYFZKk3Lzktjmyq6dG1w";
-var apiKey = "AIzaSyAAH-UAXp3vTaZjwJkfdjqpOKzssWSmYNY";
-
 export class GoogleSheet {
-baseUrl ="";
-sheetId="";
-sheetName="";
-	constructor(sheetId, apiKey, sheetName) {
-		sheetId  = sheetId;
-		apiKey = apiKey;
-		sheetName = sheetName;
-		this.baseUrl = "https://sheets.googleapis.com/v4/spreadsheets";
+apiKey="AIzaSyAAH-UAXp3vTaZjwJkfdjqpOKzssWSmYNY"
+sheetName=""
+baseUrl = "https://sheets.googleapis.com/v4/spreadsheets";
+sheetId = "1V954ZsJkGJ-AUYw62oefS8orYFZKk3Lzktjmyq6dG1w";
+	constructor(sheetName) {
+		// this.apiKey = apiKey;
+		this.sheetName = sheetName;
+		// this.baseUrl = "https://sheets.googleapis.com/v4/spreadsheets";
 	}
 
 	getLink(options = '') {
-		var link = this.baseUrl+ '/' + this.sheetId+ '/values/' + this.sheetName+ '?key=' + apiKey+ options; 
+		var link = this.baseUrl+ '/' + this.sheetId + '/values/' + this.sheetName + '?key=' + this.apiKey + options; 
 		return link;
 	}
 

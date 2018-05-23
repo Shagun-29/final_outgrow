@@ -11,6 +11,8 @@ import { QuizComponent } from './landing-pages/quiz/quiz.component';
 import { SurveyComponent } from './landing-pages/survey/survey.component';
 import { CalcService } from '../shared/service/calc.service';
 import { IdeaGeneratorComponent } from './landing-pages/idea-generator/idea-generator.component';
+import { IdeaGenService } from '../shared/service/idea-gen.service';
+
 
 @NgModule({
   imports: [
@@ -19,7 +21,8 @@ import { IdeaGeneratorComponent } from './landing-pages/idea-generator/idea-gene
   ],
   providers:[
     VideoUrlService,
-    CalcService
+    CalcService,
+    IdeaGenService
   ],
   declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent]
 })
