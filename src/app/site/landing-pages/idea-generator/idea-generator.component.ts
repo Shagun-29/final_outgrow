@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { SelectModule } from 'ng2-select';
-import { IdeaGenService } from '../../../shared/service/idea-gen.service';
-import { GoogleSheet } from "../../../shared/service/google-sheet"
-
+import { GoogleSheet } from '../../../shared/interfaces/GoogleSheet';
+import { IdeaGenService } from '../../../shared/services/idea-gen.service';
+import { GetDataService } from '../../../shared/service/get-data.service';
+import 'rxjs/add/operator/map';
+import { forEach } from '@angular/router/src/utils/collection';
 declare let jQuery: any;
 
 @Component({
@@ -14,63 +16,169 @@ declare let jQuery: any;
 
 })
 export class IdeaGeneratorComponent implements OnInit {
-  timestamp: any;
-  flag: boolean;
-  isFinancial: boolean;
-  isEducation: boolean;
-  isEcommerce: boolean;
-  category: string = "";
-  newOptions: string = "";
-  saveData = {};
-  email: string;
-  parseData = [];
-  buildSelect = [];
-  link;
-  option = "&range=Category!A2:Z";
-  makeSunCategory(a, b) { };
-  saveSubCat = [];
-  show = false;
-  public items;
-  public value;
-  constructor(private router: Router, title: Title,private ideaGenService:IdeaGenService) {
-    console.log("::Link 1::",this.link)
-    this.link = new GoogleSheet('Category')
-    console.log("::Link::",this.link)
-    this.sendRequest("https://sheets.googleapis.com/v4/spreadsheets/1V954ZsJkGJ-AUYw62oefS8orYFZKk3Lzktjmyq6dG1w/values/category?key=AIzaSyAAH-UAXp3vTaZjwJkfdjqpOKzssWSmYNY&range=Category!A2:Z")
+  
+  categories =[];
+  subCategories =[];
+  // categoryKey="";
+  selectize : any;
+  list:any;
+  rawData=[];
+  item=""
+  constructor(private router: Router, title: Title, private getData:GetDataService) {
   }
+  
 
   ngOnInit() {
      
-  }
+    //console.log("::In Idea Geerator::",this.categories)
+    console.log("Categories")
+    this.getData.getCategories()
+     .subscribe((res:any)=>{
+      console.log("::Got Data::",res.values)
+       console.log("::Got Data[0]::",res.values[0])
 
-  sendRequest(link) {
-    // var self=this;
-    this.ideaGenService.callGoogleSheet(link)
-    // .then((res)=>{
-    //   console.log(res);
-    //   self.makeCategories(res);
-    // }).catch((err)=>{
-    //   console.log(err)
-    // })
-  }
-
-  makeCategories(response) {
-    var self=this;
-    var selectizeCategory = [];
-    response.forEach(function (category, index) {
-      let key = category[0].replace(" ", "") + "-Key"
-      selectizeCategory.push({
-        text: category[0],
-        value: key
-      })
-      self.saveSubCat[key] = category.slice(1);
+      res.values.forEach((dataCategory,i)=>{
+        console.log(i,dataCategory[0])
+        this.categories[i]=dataCategory[0];   
+      }); 
+      
+      
     })
-    /** For category*/
-    console.log(selectizeCategory);
-    // self.makeSelectize('.selectize-category', selectizeCategory);
-    // self.makeSelectize('.selectize-category-result', selectizeCategory);
-    // self.stopLoader('.category-page-loader');
-    /** For Sub-Category*/
-  }
 
+    jQuery(document).ready(function (){
+      jQuery(".sec1-button").click(function (){
+      jQuery(".sec1-bg").hide();
+      jQuery(".sec2-bg").removeClass("hide");
+      jQuery(".logo-top").removeClass("hide");
+      jQuery('html, body').animate({
+      scrollTop: jQuery('.sec2-bg').offset().top
+      }, 1000);
+      setTimeout(function(){
+      jQuery(".sec1-bg").addClass("hide");
+      }, 1000)
+      });
+      })
+
+    let self=this;
+    setTimeout(function(){
+    console.log("Adding",this.categories)
+        jQuery('.selectize-category').selectize({
+          create: false,
+          sortField: 'text',
+          onChange:function(event){  
+              // self.categoryKey=event.replace(/ +/g, "")+"-Key";
+              // console.log("::Event::",self.categoryKey);
+              self.getData.getSubCategories(event)
+              .subscribe((res:any)=>{
+               console.log("::Got Data::",res.values)
+                console.log("::Got Data[0]::",res.values[0])
+
+                //in process
+                console.log("::Got Data[0] Length::",res.values.length)  
+                res.values.forEach((data,i)=>{
+                  console.log(i,"--Outside--",data)
+                  data.forEach((t,j)=>{
+                    if(t == event){
+                      console.log("matched")
+                    }
+                    // console.log(i,"--Inside--",t)
+                  })
+                })
+
+
+                //working
+               res.values.forEach((dataSubCategory,i)=>{
+                 console.log(i,dataSubCategory[0])
+                if(dataSubCategory[0].slice(3) != "Custom"){
+                 self.subCategories[i]=dataSubCategory[0].slice(3); 
+                } 
+               }); 
+
+              //  (async function subcat(){
+              //    setTimeout(()=>{
+              //     console.log("------------------subcat-----------------------",self.subCategories);
+              //   jQuery(".selectize-sub-category").selectize.addOption({
+              //    value:13, text:"abc"
+              //   });
+              //   jQuery(".selectize-sub-category").selectize.addItem(13)
+              //    },0)
+                
+              //  })()
+              (async function subcat(){
+                setTimeout(()=>{
+                 console.log("------------------subcat-----------------------",self.subCategories);
+               jQuery(".selectize-sub-category").selectize({
+                create: false,
+                sortField: 'text',
+                onChange:(event)=>{
+                  console.log(event, '....Selectize.....')
+                  // self.makeSubCategory(event);
+                  // self.item=event
+                  jQuery(".sec4-bg").removeClass("hide");
+                  jQuery('html, body').animate({
+                      scrollTop: jQuery('.sec4-bg').offset().top
+                  }, 1000);
+                  setTimeout(function(){
+                      jQuery(".sec3-bg").addClass("hide");
+                  }, 1000)
+                }
+               })
+                },0)
+                // console.log("::---Choose Item---::",self.item)
+              })()
+             })
+
+              jQuery(".sec3-bg").removeClass("hide");
+              jQuery('html, body').animate({
+                  scrollTop: jQuery('.sec3-bg').offset().top
+              }, 1000);
+              setTimeout(function(){
+                  jQuery(".sec2-bg").addClass("hide");
+              }, 1000)
+             
+            //  jQuery('.selectize-category-result')[0].selectize.setValue(event);
+          }
+          
+      }); 
+    
+      
+      },2000)
+
+      console.log("::Subcategory::",this.subCategories);
+      
+      
+        // jQuery(".selectize-sub-category").
+        // click(function(event){
+        //   console.log("event")
+        //     jQuery(".sec4-bg").removeClass("hide");
+        //     jQuery('html, body').animate({
+        //         scrollTop: jQuery('.sec4-bg').offset().top
+        //     }, 1000);
+        //     setTimeout(function(){
+        //         jQuery(".sec3-bg").addClass("hide");
+        //     }, 1000)
+
+        //     // jQuery('.selectize-sub-category-result')[0].selectize.setValue(event);
+        // })
+    
+        jQuery(".sec-button").click(function(){
+              jQuery(".sec5-bg").fadeIn("slow", function() {
+                  jQuery(this).removeClass("hide");
+              });
+              jQuery(".sec4-bg").fadeOut("slow", function() {
+                  jQuery(this).addClass("hide");
+              });
+              jQuery(".logo-top").removeClass("hide");
+              jQuery('body').css('overflow-y','scroll');
+
+          })
+   
+          // function makeSubCategory(event){
+          //   this.getData.getSubCategories(event)
+          //   .subscribe(res=>{
+          //     console.log("-------END-------",res)
+          //   })
+          // }
 }
+}
+

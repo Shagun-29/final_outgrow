@@ -2165,7 +2165,8 @@
         font-size: 16px
     }
     .custom-navbar.navbar-default {
-        padding-top: 25px; padding-bottom: 25px
+        /* padding-top: 25px; padding-bottom: 25px */
+        padding-top: 0px; padding-bottom: 0px
     }
     #feature .section-13 {margin-top: 30px;}
     #why .section-top-why {margin-top: 80px;}

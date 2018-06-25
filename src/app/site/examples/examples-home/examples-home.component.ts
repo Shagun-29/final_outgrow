@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-examples-home',
   templateUrl: './examples-home.component.html',
-  styleUrls: ['./examples-home.component.css','../../../../assets/css/animations.css','../../../../assets/css/custom-sa.css','../../../../assets/css/sahil-hover.css','../../../../assets/css/home-responsive.css','../../../../assets/css/useCase.css','../../../../assets/css/animated-masonry-gallery.css','../../../../assets/css/useCase-responsive.css']
+  styleUrls: ['./examples-home.component.css']
 })
 
 export class ExamplesHomeComponent implements OnInit {

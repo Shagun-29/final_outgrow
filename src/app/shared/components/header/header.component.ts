@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-
+import  * as $ from 'jquery';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['../../../../assets/css/allPage_minified.css','../../../../assets/css/animations.css','../../../../assets/css/custom-sa.css','../../../../assets/css/sahil-hover.css','../../../../assets/css/home-responsive.css','../../../../assets/css/useCase.css','../../../../assets/css/animated-masonry-gallery.css','../../../../assets/css/useCase-responsive.css']
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
 
@@ -28,7 +28,19 @@ export class HeaderComponent implements OnInit {
     this.titleService.setTitle("Examples | Outgrow")
   }
   
-  ngOnInit() {
-  }
+ ngOnInit() {
+
+  $(document).ready(function(){
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 1){  
+            $('.header1').addClass("sticky")
+               }else{
+                 $('.header1').removeClass("sticky");
+               }
+             
+                        
+  });
+  });
+}
 
 }
