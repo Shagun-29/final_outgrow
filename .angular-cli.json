@@ -19,14 +19,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "../node_modules/selectize/dist/css/selectize.css"
+        "styles.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
-        "../node_modules/jquery/dist/jquery.min.js",
-        "./assets/js/pricing.js",
-        "../node_modules/ng-selectize/selectize/selectize.standalone.js"
+        "../node_modules/jquery/dist/jquery.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

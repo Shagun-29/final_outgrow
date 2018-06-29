@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { SelectModule } from 'ng2-select';
-import { GoogleSheet } from '../../../shared/interfaces/GoogleSheet';
 import { IdeaGenService } from '../../../shared/services/idea-gen.service';
 import { GetDataService } from '../../../shared/service/get-data.service';
 import 'rxjs/add/operator/map';
