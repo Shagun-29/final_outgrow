@@ -1,3 +1,23 @@
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: .2;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+}
 @media (min-width:768px){
 	.topSpace{
         margin-top: 65px;
@@ -13,6 +33,7 @@
 .img-max, .img-width {
 	max-width: 100%
 }
+
 
 .ex-mb30{
     margin-bottom: 30px !important; 
@@ -3524,7 +3545,7 @@ iframe[name=google_conversion_frame] {
 	margin-right: 10px;
 	}
 	#feature section.sec-graphsCharts {
-		margin-bottom: 60px;
+	margin-bottom: 60px;
 	}
 
 	
@@ -4077,19 +4098,19 @@ iframe[name=google_conversion_frame] {
 /*################### Feature Page responsive css start ###################*/
 @media (min-width: 320px) and (max-width:768px) {
 	.feature-9-1 img.secf2-2 {
-		left: 35% !important;
+	left: 35% !important;
 	}
 	
 	.feature-9-1.feature-blue {
-		margin-top: 70px !important;
-		padding-bottom: 60px;
-		margin-bottom: 0px !important;
-		padding-top: 40px !important;
+	margin-top: 70px !important;
+	padding-bottom: 60px;
+	margin-bottom: 0px !important;
+	padding-top: 40px !important;
 	}
 	.section-f4.feature-blue {
-		padding-top: 0px !important;
-		padding-bottom: 50px;
-		margin-bottom: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 50px;
+	margin-bottom: 0px !important;
 	}
         .feature-blue {
                 padding-top: 40px !important;
@@ -5379,3 +5400,5 @@ iframe[name=google_conversion_frame] {
 }
 
 /* ends */
+
+
