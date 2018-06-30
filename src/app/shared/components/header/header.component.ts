@@ -40,11 +40,7 @@ export class HeaderComponent implements OnInit {
              
                         
   });
- 
   });
 }
-  fadeOut(){
-    $('#toogle-menu').trigger('click');
-  }
 
 }
