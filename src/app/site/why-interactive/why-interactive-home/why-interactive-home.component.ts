@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import * as $ from 'jquery';
+declare let Swiper: any;
 
 @Component({
   selector: 'app-why-interactive-home',
   templateUrl: './why-interactive-home.component.html',
-  styleUrls: ['./why-interactive-home.component.css','../../../../assets/css/allPage_minified.css','../../../../assets/css/custom-sa.css','../../../../assets/css/sahil-hover.css','../../../../assets/css/home-responsive.css','../../../../assets/css/why-responsive.css']
+  styleUrls: ['./why-interactive-home.component.css']
 })
 export class WhyInteractiveHomeComponent implements OnInit {
 
@@ -15,6 +17,20 @@ export class WhyInteractiveHomeComponent implements OnInit {
    }
 
   ngOnInit() {
+    $(document).ready(function(){
+
+    
+      var swipera = new Swiper('.swiper-container-first', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        slidesPerView: 1,
+        centeredSlides: true,
+        autoplayDisableOnInteraction: false
+    });
+});
   }
 
 }

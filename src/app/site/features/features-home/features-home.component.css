@@ -1,3 +1,25 @@
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: .2;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+}
+span.swiper-pagination-bullet {
+    margin-right: 5px;
+}
 @media (min-width:768px){
 	.topSpace{
         margin-top: 65px;
@@ -13,6 +35,7 @@
 .img-max, .img-width {
 	max-width: 100%
 }
+
 
 .ex-mb30{
     margin-bottom: 30px !important; 

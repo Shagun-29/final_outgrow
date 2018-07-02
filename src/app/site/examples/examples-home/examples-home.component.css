@@ -1555,7 +1555,7 @@ iframe[name=google_conversion_frame] {
 		}
 	/* End: Modal embed */
 	.calc-links {
-		margin-top: 80px;
+		margin-top: 45px;
 		margin-bottom: 45px;
 	}
 	.calc-links a {
@@ -2290,6 +2290,12 @@ body{background:#fff !important;}
 	.topSpace{
         margin-top: 125px;
         }
+}
+@media (max-width: 768px)
+{
+.topSpace {
+    margin-top: 0px;
+}
 }
 @media only screen and (max-width: 480px){
 .start-trial-cta .btn-buildcal{

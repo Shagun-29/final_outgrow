@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-
+import * as $ from 'jquery';
+declare let Swiper: any;
 @Component({
   selector: 'app-features-home',
   templateUrl: './features-home.component.html',
@@ -24,6 +25,23 @@ export class FeaturesHomeComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    $(document).ready(function(){
+
+    
+      var swipera = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        slidesPerView: 1,
+        centeredSlides: true,
+        autoplayDisableOnInteraction: false
+    });
+});
+
+
     this.f_slide1="//dzvexx2x036l1.cloudfront.net/f-slide1.jpg";
     this.f_slide2="//dzvexx2x036l1.cloudfront.net/f-slide2.jpg";
     this.f_slide3="//dzvexx2x036l1.cloudfront.net/slide1.jpg"

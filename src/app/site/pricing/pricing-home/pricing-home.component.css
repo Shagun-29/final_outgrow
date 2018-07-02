@@ -1238,6 +1238,14 @@ color: #fb5f66;
 
 @media screen and (max-width: 990px)
 {
+
+.expand-rs.open {
+  background: #f5fbff;
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, .10);
+  border-top: 1px solid #e0f2fe;
+  cursor: pointer;
+}
+
 .pricing-outer.container {
 padding-right: 30px;
 padding-left: 30px;
@@ -1341,6 +1349,7 @@ font-family: montserratbold;
 padding: 0;
 margin: 0;
 padding-bottom: 15px;
+float: left;
 }
 .pricing-bottom ul li {
 list-style: none;
@@ -1407,8 +1416,16 @@ padding: 0 !important;
 }
 
 
+
 @media (max-width: 768px) and (min-width: 320px)
 {
+  .rs-hide {
+    display: none;
+}
+  .billing-plan-list ul> li:nth-child(2) > a {
+    position: relative;
+    top: -8px;
+}
 .start-trial-cta .btn-buildcal {
 padding: 10px 25px;
 font-size: 13px;
@@ -1429,11 +1446,7 @@ top: 10px;
 width: 100%;
 padding: 0 25px;
 }
-.billing-plan-list ul>li:nth-child(2)>a {
 
-position: relative;
-top: -8px;
-}
 .quater {
 vertical-align: middle !important;
 margin-top: -3px;

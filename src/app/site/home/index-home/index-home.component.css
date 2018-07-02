@@ -9,6 +9,11 @@
 .testactive .over {
 	display: block;
 }
+.section, .section-1 {
+    margin-top: 30px;
+    float: left;
+    width: 100%;
+}
 .label,sub,sup{vertical-align:baseline}
 hr,img{border:0}
 body,figure{margin:0}
@@ -2209,10 +2214,7 @@ iframe[name=google_conversion_frame]{height:0!important;width:0!important;line-h
 			/* right: 0px !important;
 			top: -10px !important; */
 		}
-		.section-1-left h1.section1-firstheadnoab {
-			margin-top: 60px;
-			padding: 0px 10px;
-		}
+	
 		.calc-links a {
 			width: auto !important;
 			float: none !important;
@@ -6276,7 +6278,10 @@ span.recom {
  .lead-form-btn{position:relative!important;}
  .section-6 .section-6-right{padding-left: 25px !important; padding-right: 20px;}
  .sec-clients-logos .img-wrapper { width: 100%;}
- 
+ .section-1-left h1.section1-firstheadnoab {
+    margin-top: 0px;
+    padding: 0px 10px;
+}
 }
 
 .over1
