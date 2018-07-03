@@ -40,7 +40,7 @@ export class PricingHomeComponent implements OnInit {
  jQuery(this).toggleClass('open');
  });
 
- jQuery('.detail').hide();
+//  jQuery('.detail').hide();
 
  jQuery(".expand-rs").click( function(event) {
  // jQuery(this).parents('.expand').toggleClass('open');

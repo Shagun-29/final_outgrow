@@ -31,7 +31,7 @@ z
     border: none;
     padding: 0;
     z-index: 998!important;
-    /* border-bottom: 1px solid #eff0f0; */
+    border-bottom: 1px solid #f3f8fb;
     padding: 5px 0px;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
@@ -117,6 +117,9 @@ z
 }
 .sticky .signUp-style a  {
     margin-top: 20px!important;
+}
+.sticky .navbar-brand {
+    padding-top: 14px!important;
 }
 .sticky .login a  {
     padding: 8px 12px 8px 12px!important;
@@ -842,6 +845,14 @@ li.dropdown.open a {
     font-size: 16px;
 }
 }
+
+@media (min-width: 1800px)
+{
+    .custom-navbar.navbar-default .navbar-nav>li>a, .section-1-left .btn-bottominfo label, .section-1-left .btn-bottominfo span {
+        font-size: 16px;
+    }
+}
+
 .hvr-underline-from-left:before {
     left: 5px !important;
 }
