@@ -98,7 +98,7 @@ export class ExamplesHomeComponent implements OnInit {
 
   }//end of function videoUrl;
 
-  // function for heading example:"there is a caluculator for that"
+  // function for heading example:"there is a calculator for that"
   changeTab(tabName) {
 
     if (tabName == "Calculator") {
@@ -115,6 +115,8 @@ export class ExamplesHomeComponent implements OnInit {
         { name: 'Technology', id: 'Technology' },
         { name: 'Travel', id: 'Travel' },
         { name: 'Publishing', id: 'Publishing' },
+        { name: 'Trending', id: 'Trending' }
+ 
       ];
       this.gifs=[
         {
@@ -138,6 +140,7 @@ export class ExamplesHomeComponent implements OnInit {
         { name: 'Travel', id: 'Travel' },
         { name: 'TV and Entertainment', id: 'TVandEntertainment' },
         { name: 'Trending', id: 'Trending' }
+       
       ];
       this.gifs=[
         {
@@ -157,7 +160,7 @@ export class ExamplesHomeComponent implements OnInit {
         { name: 'Auto', id: 'Auto' },
         { name: 'Marketing & Advertising', id: 'MarketingAdvertising' },
         { name: 'Health & Fitness', id: 'HealthFitness' },
-        { name: 'Publishing', id: 'Publishing' },
+        { name: 'Real Estate & Construction', id: 'RealEstateConstruction' },
         { name: 'Trending', id: 'Trending' }
       ];
       this.gifs=[
@@ -176,6 +179,7 @@ export class ExamplesHomeComponent implements OnInit {
       this.hiddenHeading = "There is a Poll for that!";
       this.items = [
         { name: 'Marketing & Advertising', id: 'MarketingAdvertising' },
+        { name: 'Trending', id: 'Trending' }
       ];
       this.gifs=[
         {
@@ -196,61 +200,73 @@ export class ExamplesHomeComponent implements OnInit {
     console.log("!!!!!!!",i)
     this.sIndex = i;
     if (item == "Auto") {
-      this.headingDescription = ["Find out whether you should buy a used card or a new one.",
-        "Answer 6 questions to find out whether you should buy or lease your next car.",
+      this.headingDescription = ["Find out the downpayment amount you'll need to purchase your new home",
+      "Find out which car suits you the best.",  
+       "Answer 6 questions to find out whether you should buy or lease your next car.",
+       "Calculate the monthly lease payment on your next car.",
         "Find out if you're ready to buy a car.",
+        "Find out wheather you should buy a used card or a new one",
         "Find out how much monthly installment you'll be paying on your auto loan.",
-        "Calculate the monthly lease payment on your next car.",
         "How much extra monthly payment will you need to make to shorten your car loan term?",
-        "Find out the downpayment amount you'll need to purchase your new home.",
-        "Find out which car suits you the best."
+ 
       ]
       this.markAsActive(0);
     }
     else if (item == "Education") {
       this.headingDescription = [
+        "Find out which major should you study.",
         "Answer 9 simple questions to find out which Ivy League college is best for you.",
-        "Find out how much is college really going to cost you.",
-        "Use this calculator to calculate your budget as a full-time student.",
         "Find out if your SAT or ACT scores are good enough to land you in Harvard.",
-        "Find out which major should you study."
+        "Use this calculator to calculate your budget as a full-time student.",
+        "Find out how much is college really going to cost you."
+        
+        
+        
       ]
       this.markAsActive(0);
     }
     else if (item == "Finance") {
       this.headingDescription = [
-        "Calculate your monthly mortgage payment.",
-        "Calculate your monthly home budget and find how much you are saving each month.",
-        "How much money do you need if you want to retire?",
         "Find out when you will become a millionaire!",
         "Set your savings goal today and find out how much you need to invest every month to achieve that goal.",
+        "How much money do you need if you want to retire?",
+        "Calculate your monthly mortgage payment.",
+        "Find out how long will you take to payoff your credit card.",
+        "Calculate your monthly home budget and find how much you are saving each month.",
         "Find out how much balance will you have in your 401(k) at retirement.",
-        "Find out how long will you take to payoff your credit card."
+        
       ]
       this.markAsActive(0);
     }
     else if (item == "MarketingAdvertising") {
       this.headingDescription = [
-        "Find out your Digital Quotient. ",
-        "Find out if your SEO knowledge stacks up against top the 150 marketers with this 12-question SEO quiz.",
-        "Find out whether you should go for a PPC agency or build an in-house team.",
-        "Take this quiz to find out if you are a Facebook Marketing Expert.",
-        "Find out how much you should spend on Paid Advertising.",
         "Estimate the ROI of your current email marketing strategy.",
+        "Find out how much you should spend on Paid Advertising.",
+        "Take the poll on the top content marketing trends of 2018.",
+        "Take this quiz to find out if you are a Facebook Marketing Expert.",
         "Find out how often you should be blogging and how much you stand to gain from it.",
-        "Take the poll on the top content marketing trends of 2018."
+        "Find out your Digital Quotient. ",
+        "Find out whether you should go for a PPC agency or build an in-house team.",
+        "Find out if your SEO knowledge stacks up against top the 150 marketers with this 12-question SEO quiz."
+        
+        
+       
+        
+        
+       
       ]
       this.markAsActive(0);
     }
     else if (item == "HealthFitness") {
       this.headingDescription = [
-        "Find out which sport will be best suited for you.",
-        "Set your weight loss target and find out how much calories you need to reduce every day.",
-        "Find out if you know enough before jumping into your new fitness regime.",
-        "FInd out the ideal number of calories you should be consuming every day.",
-        "Find out if you are at risk of a heart attack or a stroke.",
         "Find out which yoga practice will deliver the results you want and is best suited for your physical condition Get your recommended daily protein intake.",
-        "Find your ideal bodyweight"
+        "Find your ideal bodyweight",
+        "Find out if you know enough before jumping into your new fitness regime.",
+        "Set your weight loss target and find out how much calories you need to reduce every day.",
+        "FInd out the ideal number of calories you should be consuming every day.",
+        "Find out which sport will be best suited for you.",
+        "Find out if you are at risk of a heart attack or a stroke.",
+       
       ]
       this.markAsActive(0);
     }
@@ -268,9 +284,10 @@ export class ExamplesHomeComponent implements OnInit {
     }
     else if (item == "RealEstateConstruction") {
       this.headingDescription = [
+        "Find out if you should buy or rent your next accomodation.",
         "Enter some details about your property and find out how much you will make by selling it.",
         "Find out how much you will need to shell out for your dream pool.",
-        "Find out if you should buy or rent your next accomodation.",
+        
         "Enter your details to find out the house value that fits within your budget.",
         "See how much it would cost you to rent instead of buying a house.",
         "Take this quiz to find out if you are ready to buy a house."

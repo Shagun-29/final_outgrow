@@ -136,6 +136,9 @@
     left: 44%;
     top: 0;
 }
+.section-7.why-blue {
+    padding-top: 40px;
+}
 .swiper-container-android .swiper-slide, .swiper-wrapper {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);

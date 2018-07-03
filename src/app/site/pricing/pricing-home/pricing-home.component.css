@@ -40,6 +40,14 @@ margin-top: 30px;
 float: left;
 width: 100%;
 }
+
+/* #plan-cycle {
+  z-index: 9;
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 17%;
+} */
 .billing-plan-list ul{padding:0;margin:0}
 
 .billing-plan-list {
@@ -310,7 +318,7 @@ padding-top: 10px
    padding: 0;
    background: #f3f8fb;
 }
-#plan-cycle[_ngcontent-c3] {
+#plan-cycle {
 z-index: 9;
 position: relative;
 margin-bottom: 50px;
@@ -1236,9 +1244,12 @@ a.text-red {
 color: #fb5f66;
 }
 
+
 @media screen and (max-width: 990px)
 {
-
+  a.link-contact.intercom_trigger {
+    padding-top: 15px!important;
+}
 .expand-rs.open {
   background: #f5fbff;
   box-shadow: 2px 3px 7px rgba(0, 0, 0, .10);
@@ -1269,7 +1280,7 @@ top: -1px;
 font-size: 13px;
 }
 .pricing-bottom a.toggle-more .more-info {
-/* display: inline-block; */
+display: inline-block;
 font-size: 10px;
 text-transform: uppercase;
 margin: 0;
@@ -1414,18 +1425,28 @@ font-size: 18px!important;
 padding: 0 !important;
 }
 }
-
-
-
-@media (max-width: 768px) and (min-width: 320px)
+@media (max-width: 768px) and (min-width: 768px)
 {
-  .rs-hide {
-    display: none;
+  .billing-plan-list ul> li:nth-child(2) > a {
+    position: relative;
+    top: 0px;
 }
+}
+
+@media (max-width: 760px) and (min-width: 320px)
+{
   .billing-plan-list ul> li:nth-child(2) > a {
     position: relative;
     top: -8px;
 }
+}
+@media (max-width: 768px) and (min-width: 320px)
+{
+  
+  .rs-hide {
+    display: none;
+}
+
 .start-trial-cta .btn-buildcal {
 padding: 10px 25px;
 font-size: 13px;
