@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {VideoUrlService} from '../shared/service/video-url.service'
+// import { Script } from '../shared/service/script.service'
 import { RouterModule } from '@angular/router';
 import { routes } from './site.routing';
 import { CalculatorComponent } from './landing-pages/calculator/calculator.component';
@@ -32,7 +33,8 @@ import { HttpClient } from '@angular/common/http';
     CalcService,
     GetDataService,
     HttpModule,
-    HttpClient
+    HttpClient,
+    // Script
     
    ],
   declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent]
