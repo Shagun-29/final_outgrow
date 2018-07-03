@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routes } from './app.routing';
 import { Routes, RouterModule } from '@angular/router';
+// import { Script } from './shared/service/script.service'; 
 import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
@@ -24,7 +25,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes)  ],
-  providers: [],
+  providers: [
+    // Script
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
