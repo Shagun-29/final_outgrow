@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 import { element } from 'protractor';
 import { INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS } from '@angular/platform-browser-dynamic/src/platform_providers';
-
+import  * as $ from 'jquery';
+declare let jQuery: any;
 
 @Component({
   selector: 'app-index-home',
@@ -117,6 +118,16 @@ export class IndexHomeComponent implements OnInit {
   // var gridJS = document.createElement('script')
   ngOnInit() {
     this.triggerLiveStaticReviews();
+
+    // jQuery(document).ready(function() {
+    //    window.display = function (url) {
+    //   document.getElementById('og-iframe').src = url;
+    //   jQuery('#og-iframe').addClass('iframeHeight');
+    //   calculateMinHeight();
+      
+    //   setTimeout(calculateMinHeight, 2000);
+    //   }
+    // });
 
    }
 

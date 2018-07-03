@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import  * as $ from 'jquery';
+declare let jQuery: any;
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -10,15 +11,18 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $(document).ready(function(){
-      $(".icon-close").click(function(){
-         $(".sec-cookies").hide();
-         });
-         $(".btn-understand").click(function(){
-          $(".sec-cookies").hide();
-          });
-
-    });
+    jQuery(document).ready(function() {
+      jQuery(".icon-close").click(function() {
+        
+      jQuery('body').removeClass('footer-cookies')
+      jQuery('.section.sec-cookies').hide();
+      });
+      jQuery(".btn-understand").click(function() {
+      jQuery('body').removeClass('footer-cookies')
+      jQuery('.section.sec-cookies').hide();
+      });
+    
+      });
   }
 
 }

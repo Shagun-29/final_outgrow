@@ -9,6 +9,7 @@
     z-index: 999;
     padding: 22px;
 }
+
 .btn-understand:hover {
     border: 2px solid #fff !important;
     background: none !important;
@@ -104,8 +105,7 @@
     background: #fafafa;
     margin: 0;
     padding-top: 30px;
-    padding-bottom: 10px;
-    min-height: 630px;
+    padding-bottom: 30px;
 }
 
 .section {
