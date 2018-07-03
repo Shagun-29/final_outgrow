@@ -12,9 +12,9 @@ declare let Swiper: any;
 })
 export class WhyInteractiveHomeComponent implements OnInit {
 
-  constructor(router:Router, title:Title) {
-    title.setTitle("Why Interactive Content ? | Outgrow");
-   }
+ constructor(router:Router, title:Title) {
+ title.setTitle("Why Interactive Content ? | Outgrow");
+ }
 
   ngOnInit() {
     $(document).ready(function(){

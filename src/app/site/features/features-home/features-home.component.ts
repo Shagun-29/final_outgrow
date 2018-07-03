@@ -5,9 +5,9 @@ import { Title } from '@angular/platform-browser';
 import * as $ from 'jquery';
 declare let Swiper: any;
 @Component({
-  selector: 'app-features-home',
-  templateUrl: './features-home.component.html',
-  styleUrls: ['./features-home.component.css']
+ selector: 'app-features-home',
+ templateUrl: './features-home.component.html',
+ styleUrls: ['./features-home.component.css']
 })
 export class FeaturesHomeComponent implements OnInit {
 
