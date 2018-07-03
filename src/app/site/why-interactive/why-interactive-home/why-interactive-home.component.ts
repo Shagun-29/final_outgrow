@@ -6,9 +6,9 @@ import * as $ from 'jquery';
 declare let Swiper: any;
 
 @Component({
- selector: 'app-why-interactive-home',
- templateUrl: './why-interactive-home.component.html',
- styleUrls: ['./why-interactive-home.component.css']
+  selector: 'app-why-interactive-home',
+  templateUrl: './why-interactive-home.component.html',
+  styleUrls: ['./why-interactive-home.component.css']
 })
 export class WhyInteractiveHomeComponent implements OnInit {
 
@@ -16,21 +16,21 @@ export class WhyInteractiveHomeComponent implements OnInit {
  title.setTitle("Why Interactive Content ? | Outgrow");
  }
 
- ngOnInit() {
- $(document).ready(function(){
+  ngOnInit() {
+    $(document).ready(function(){
 
- 
- var swipera = new Swiper('.swiper-container-first', {
- pagination: '.swiper-pagination',
- paginationClickable: true,
- nextButton: '.swiper-button-next',
- prevButton: '.swiper-button-prev',
- spaceBetween: 30,
- slidesPerView: 1,
- centeredSlides: true,
- autoplayDisableOnInteraction: false
- });
+    
+      var swipera = new Swiper('.swiper-container-first', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        slidesPerView: 1,
+        centeredSlides: true,
+        autoplayDisableOnInteraction: false
+    });
 });
- }
+  }
 
 }

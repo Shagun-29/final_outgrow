@@ -13,7 +13,7 @@ export class PricingHomeComponent implements OnInit {
  public isActive0; isActive1; isHideFree0; isHideFree1; isHideEssen0; isHideEssen1; isHideBusi0; isHideBusi1;
  public isOpen;
  public items=["temp","host","chart","cust","int","formula","analytic","af","support"];
- public show0;add_remove0; show1;add_remove1; show2;add_remove2;
+ public show0;add_remove0; show1;add_remove1; show2;add_remove2; show3;add_remove3;
  public isOpened0; dispSec0;isOpened1; dispSec1;isOpened2; dispSec2; isOpened3; dispSec3;isOpened4; dispSec4;isOpened5; dispSec5;isOpened6; dispSec6;isOpened7; dispSec7;isOpened8; dispSec8;
  public isSmallOpen0;isSmallOpen1;isSmallOpen2;isSmallDetail0;isSmallDetail1;isSmallDetail2;
 
@@ -22,7 +22,7 @@ export class PricingHomeComponent implements OnInit {
  }
 
  ngOnInit() {
-
+    // jQuery('.detail').hide();
  jQuery(".expand").click( function(event) {
  var $target = jQuery(event.target);
  jQuery(this).toggleClass('open');
@@ -40,23 +40,25 @@ export class PricingHomeComponent implements OnInit {
  jQuery(this).toggleClass('open');
  });
 
- // jQuery(".expand-rs").click( function(event) {
- // // jQuery(this).parents('.expand').toggleClass('open');
- // // jQuery(this).parents('.expand').find('.detail').slideToggle();
- 
- // var $target = jQuery(event.target);
- // jQuery(this).toggleClass('open');
- // // jQuery(this).parents('.expand').toggleClass('open');
- // jQuery(this).children(".detail").slideToggle();
- 
- // //jQuery('.expand .expand-child > .detail').slideToggle();
- // });
+ jQuery('.detail').hide();
 
- // jQuery(".expand").click( function(event) {
- // var $target = jQuery(event.target);
- // jQuery(this).toggleClass('open');
- // $target.closest(".expand").find(".detail").slideToggle(); 
- // });
+ jQuery(".expand-rs").click( function(event) {
+ // jQuery(this).parents('.expand').toggleClass('open');
+ // jQuery(this).parents('.expand').find('.detail').slideToggle();
+ 
+ var $target = jQuery(event.target);
+ jQuery(this).toggleClass('open');
+ // jQuery(this).parents('.expand').toggleClass('open');
+ jQuery(this).children(".detail").slideToggle();
+ 
+ //jQuery('.expand .expand-child > .detail').slideToggle();
+ });
+
+ jQuery(".expand").click( function(event) {
+ var $target = jQuery(event.target);
+ jQuery(this).toggleClass('open');
+ $target.closest(".expand").find(".detail").slideToggle(); 
+ });
 
  jQuery('.toggle-more').click(function(event){
  var $target = jQuery(event.target);
@@ -66,17 +68,36 @@ export class PricingHomeComponent implements OnInit {
  jQuery(this).children("p").html('show less');
  }
  else{
+     
  jQuery(this).children("i").html('add');
  jQuery(this).children("p").html('show more');
  }
  jQuery(this).parents('.pricing-bottom').toggleClass('open');
- $target.closest(".pricing-bottom").find(".features").slideToggle(); 
- });
+ $target.closest(".pricing-bottom").find(".features").slideToggle().removeClass('rs-hide');
+ this.initJQuery();
  
- 
- jQuery('li').click(function() {
- jQuery(this).addClass('active').siblings().removeClass('active'); 
+//  jQuery('li').click(function() {
+//  jQuery(this).addClass('active').siblings().removeClass('active'); 
  });
+
+
+
+    // jQuery('.toggle-sub-more').click(function (event) {
+    // let $target = jQuery(event.target);
+    // const d = jQuery(this).children('i').html();
+    // if (d === 'add') {
+    // jQuery(this).children('i').html('remove');
+    // jQuery(this).children('p').html('show less');
+    // } else {
+    // jQuery(this).children('i').html('add');
+    // jQuery(this).children('p').html('show more');
+    // }
+    // jQuery(this).parents('.pricing-bottom').toggleClass('open');
+    // $target.closest('.pricing-bottom').find('.features').slideToggle().removeClass('rs-hide');
+    // this.initJQuery();
+    // });
+    
+    
 
  this.isActive0 = true;
  this.isActive1 = false;
@@ -111,6 +132,8 @@ export class PricingHomeComponent implements OnInit {
  this.add_remove1="add";
  this.show2="Show More";
  this.add_remove2="add";
+ this.show3="Show More";
+ this.add_remove3="add";
  }
 
 //Function Cycletab is for selectin Annual or Monthly

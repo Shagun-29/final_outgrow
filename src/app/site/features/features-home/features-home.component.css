@@ -4,6 +4,19 @@
     left: 0;
     width: 100%;
 }
+
+@media (max-width: 768px) and (min-width: 768px)
+{
+#feature .secf2-2 {
+    width: 55%!important;
+    left: 43% !important;
+}
+#feature .feature-9-1.feature-blue .secf2-2 {
+    width: 60%!important;
+}
+}
+
+
 .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
@@ -18,11 +31,15 @@
 .swiper-pagination-clickable .swiper-pagination-bullet {
     cursor: pointer;
 }
-@media (min-width:768px){
+span.swiper-pagination-bullet {
+    margin-right: 5px;
+}
+@media (min-width:770px){
 	.topSpace{
         margin-top: 65px;
         }
 }
+
 .hello{
         background: #f3f8fb;
         margin-top: 0px !important;
@@ -4057,7 +4074,7 @@ iframe[name=google_conversion_frame] {
 	padding-bottom: 10px;
 }
 .feature-blue-brand {
-	padding-bottom: 140px;
+	padding-bottom: 110px;
 	margin-bottom: 0px !important;
 	padding-top: 60px !important;
 }
@@ -4097,6 +4114,11 @@ iframe[name=google_conversion_frame] {
 /* Responsive feature  */
 /*################### Feature Page responsive css start ###################*/
 @media (min-width: 320px) and (max-width:768px) {
+
+	.feature-blue-brand {
+		padding-bottom: 140px;
+		padding-top: 40px !important;
+	}
 	.feature-9-1 img.secf2-2 {
 	left: 35% !important;
 	}
@@ -4573,6 +4595,10 @@ iframe[name=google_conversion_frame] {
 	
 }
 @media (min-width:440px) and (max-width:768px){
+	#feature .secf2-2 {
+		width: 60%;
+		left: 43% !important;
+	}
 	#feature .span-style{
 	width:100% !important;
 	font-size:16px !important;
@@ -4595,9 +4621,9 @@ iframe[name=google_conversion_frame] {
 	#feature .secf2-2 {
 	width: 60%;
 	}
-	#feature .section-15{
+	/* #feature .section-15{
 	margin-top:70px;
-	}
+	} */
 	#feature .section-17{
 	margin-top:80px;
 	}
@@ -4637,9 +4663,9 @@ iframe[name=google_conversion_frame] {
 	}
 }
 @media (min-width: 640px) and (max-width: 768px){
-	#feature .section-15 {
+	/* #feature .section-15 {
 	margin-top: 90px;
-	}
+	} */
 	#feature .section-17 {
 	margin-top: 110px;
 	}
@@ -4649,8 +4675,8 @@ iframe[name=google_conversion_frame] {
 }
 @media (min-width:768px) and (max-width:768px){
 	#feature .sec4-2 {
-	width: 52%;
-	left: 49%;
+	width: 55%;
+	left: 43%;
 	}
 	#feature .section-17 {
 	margin-top: 0;
@@ -4659,8 +4685,8 @@ iframe[name=google_conversion_frame] {
 	width:100%;
 	}
 	#feature .sec15-2 {
-	left: -2%;
-	width: 35%;
+	left: 2%;
+	width: 40%;
 	}
 	#feature .section-6.sec-integration p {
 	padding-bottom: 60px;
