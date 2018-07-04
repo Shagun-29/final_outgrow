@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-
+import  * as $ from 'jquery';
 declare let jQuery: any;
 
 @Component({
@@ -22,23 +22,25 @@ export class PricingHomeComponent implements OnInit {
  }
 
  ngOnInit() {
+    jQuery(document).ready(function(){
     // jQuery('.detail').hide();
- jQuery(".expand").click( function(event) {
- var $target = jQuery(event.target);
- jQuery(this).toggleClass('open');
- $target.closest(".expand").find(".detail").slideToggle(); 
- });
- jQuery('.expand-all').click( function(event){
- if(jQuery(this).hasClass('open')){
- jQuery('.expand').removeClass('open');
- jQuery(".detail").slideUp("slow");
- }
- else{
- jQuery('.expand').addClass('open');
- jQuery(".detail").slideToggle();
- }
- jQuery(this).toggleClass('open');
- });
+	jQuery(".expand").click( function(event) {
+		var $target = jQuery(event.target);
+		jQuery(this).toggleClass('open');
+		$target.closest(".expand").find(".detail").slideToggle(); 
+	});
+
+//  jQuery('.expand-all').click( function(event){
+//  if(jQuery(this).hasClass('open')){
+//  jQuery('.expand').removeClass('open');
+//  jQuery(".detail").slideUp("slow");
+//  }
+//  else{
+//  jQuery('.expand').addClass('open');
+//  jQuery(".detail").slideToggle();
+//  }
+//  jQuery(this).toggleClass('open');
+//  });
 
 //  jQuery('.detail').hide();
 
@@ -54,11 +56,11 @@ export class PricingHomeComponent implements OnInit {
  //jQuery('.expand .expand-child > .detail').slideToggle();
  });
 
- jQuery(".expand").click( function(event) {
- var $target = jQuery(event.target);
- jQuery(this).toggleClass('open');
- $target.closest(".expand").find(".detail").slideToggle(); 
- });
+//  jQuery(".expand").click( function(event) {
+//  var $target = jQuery(event.target);
+//  jQuery(this).toggleClass('open');
+//  $target.closest(".expand").find(".detail").slideToggle(); 
+//  });
 
  jQuery('.toggle-more').click(function(event){
  var $target = jQuery(event.target);
@@ -74,13 +76,13 @@ export class PricingHomeComponent implements OnInit {
  }
  jQuery(this).parents('.pricing-bottom').toggleClass('open');
  $target.closest(".pricing-bottom").find(".features").slideToggle().removeClass('rs-hide');
- this.initJQuery();
+ });
  
-//  jQuery('li').click(function() {
-//  jQuery(this).addClass('active').siblings().removeClass('active'); 
+ jQuery('li').click(function() {
+ jQuery(this).addClass('active').siblings().removeClass('active'); 
  });
 
-
+});
 
     // jQuery('.toggle-sub-more').click(function (event) {
     // let $target = jQuery(event.target);
@@ -136,7 +138,8 @@ export class PricingHomeComponent implements OnInit {
  this.add_remove3="add";
  }
 
-//Function Cycletab is for selectin Annual or Monthly
+
+ //Function Cycletab is for selectin Annual or Monthly
  cycleTab(plan) {
  if (plan == "annual") {
  this.isActive0 = true;
@@ -167,7 +170,9 @@ export class PricingHomeComponent implements OnInit {
  console.log("in monthly :is annual is hidden", this.isHideBusi0)
  console.log("in monthly:is monthly is hidden", this.isHideBusi1);
  }
- }//End of function cycle tab
+ }
+
+ //End of function cycle tab
 
  //function expand is for expanding&compressing li elements when it's get clciked(Full page Desktop version)
  // expand(item) {
@@ -264,7 +269,7 @@ export class PricingHomeComponent implements OnInit {
 
  // }//End of expand function for Desktop version
 
-//Function SmallShow is for when we get clciked show more and show less items in mobile version
+ //Function SmallShow is for when we get clciked show more and show less items in mobile version
  // smallShow(item){
  // if(item=="freelancer"){
  // this.isSmallOpen0=!this.isSmallOpen0;
@@ -310,5 +315,5 @@ export class PricingHomeComponent implements OnInit {
  // }//End of smallShow Function
 
 
- 
+
 }

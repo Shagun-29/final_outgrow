@@ -45,7 +45,7 @@
                                     </th>
                                     <th>
                                         <h2>Freelancer</h2>                                
-                                        <span class="annual-price" style="display: none;">
+                                        <span class="annual-price" [ngClass]="{'hide': isHideFree0}">
                                             <p class="strike-price">$45<sub> mo.</sub></p>
                                             <p class="price"><sup>$</sup>25<sub> mo.</sub></p>
                                         </span>
@@ -53,7 +53,7 @@
                                             <p class="strike-price">$45<sub> mo.</sub></p>
                                             <p class="price"><sup>$</sup>30<sub> mo.</sub></p>
                                         </span>
-                                        <span class="monthly-price" style="display: block;">
+                                        <span class="monthly-price" [ngClass]="{'hide': isHideFree1}">
                                             <!--<p class="strike-price">$45<sub> mo.</sub></p>-->
                                             <p class="price"><sup>$</sup>45<sub> mo.</sub></p>
                                         </span>
@@ -63,7 +63,7 @@
                                         <!-- <span class="ribbon">Most Popular</span> -->
                                         <span class="label-popularPlan">Most Popular</span>
                                         <h2>Essentials</h2>
-                                        <span class="annual-price" style="display: none;">
+                                        <span class="annual-price" [ngClass]="{'hide': isHideFree0}">
                                             <p class="strike-price">$115<sub> mo.</sub></p>
                                             <p class="price"><sup>$</sup>95<sub> mo.</sub></p>
                                         </span>
@@ -71,7 +71,7 @@
                                             <p class="strike-price">$115<sub> mo.</sub></p>
                                             <p class="price"><sup>$</sup>105<sub> mo.</sub></p>
                                         </span>
-                                        <span class="monthly-price" style="display: block;">
+                                        <span class="monthly-price" [ngClass]="{'hide': isHideFree1}">
                                             <!--<p class="strike-price">$45<sub> mo.</sub></p>-->
                                             <p class="price"><sup>$</sup>115<sub> mo.</sub></p>
                                         </span>
@@ -79,7 +79,7 @@
                                     </th>
                                     <th>
                                         <h2>Business</h2>
-                                        <span class="annual-price" style="display: none;">
+                                        <span class="annual-price" [ngClass]="{'hide': isHideFree0}">
                                             <p class="strike-price">$720<sub> mo.</sub></p>
                                             <p class="price"><sup>$</sup>600<sub> mo.</sub></p>
                                         </span>
@@ -87,7 +87,7 @@
                                             <p class="strike-price">$720<sub> mo.</sub></p>
                                             <p class="price"><sup>$</sup>667<sub> mo.</sub></p>
                                         </span>
-                                        <span class="monthly-price" style="display: block;">
+                                        <span class="monthly-price" [ngClass]="{'hide': isHideFree1}">
                                             <!--<p class="strike-price">$45<sub> mo.</sub></p>-->
                                             <p class="price"><sup>$</sup>720<sub> mo.</sub></p>
                                         </span>
@@ -99,7 +99,7 @@
                                     <th>
                                         <h2>Freelancer</h2>  
                                         <label class="quiz-only">Quiz Only</label>                              
-                                        <span class="annual-price" style="display: none;">
+                                        <span class="annual-price" [ngClass]="{'hide': isHideFree0}">
                                             <p class="strike-price">$22<sub> mo.</sub></p>
                                             <p class="price"><sup>$</sup>14<sub> mo.</sub></p>
                                         </span>
@@ -107,7 +107,7 @@
                                             <p class="strike-price">$45<sub> mo.</sub></p>
                                             <p class="price"><sup>$</sup>30<sub> mo.</sub></p>
                                         </span>
-                                        <span class="monthly-price" style="display: block;">
+                                        <span class="monthly-price" [ngClass]="{'hide': isHideFree1}">
                                             <!--<p class="strike-price">$45<sub> mo.</sub></p>-->
                                             <p class="price"><sup>$</sup>22<sub> mo.</sub></p>
                                         </span>
@@ -126,48 +126,48 @@
                             </tfoot>-->
         
                             <tbody>
-                                <tr class="expand yearlyLeads open hide">
+                                <tr class="expand yearlyLeads hide" [ngClass]="{'hide': isHideFree0}">
                                     <th>
                                         <!-- <i class="material-icons vis-hide">add</i>  -->
                                         Leads <i class="material-icons">help</i>
                                     </th>
                                     <td>
                                         <span class="quater"></span>12,000 per year
-                                        <span class="detail" style="display: block;">Number of submissions of the lead generation form on Outgrow.</span>
+                                        <span class="detail" style="display: none;">Number of submissions of the lead generation form on Outgrow.</span>
                                     </td>
                                     <td class="expand-child active-bg">
                                         <span class="half"></span>90,000 per year
-                                        <span class="detail" style="display: block;">Number of submissions of the lead generation form on Outgrow.</span>
+                                        <span class="detail" style="display: none;">Number of submissions of the lead generation form on Outgrow.</span>
                                     </td>
                                     <td>
                                         <span class="full"></span>600,000 per year
-                                        <span class="detail" style="display: block;">Number of submissions of the lead generation form on Outgrow.</span>
+                                        <span class="detail" style="display: none;">Number of submissions of the lead generation form on Outgrow.</span>
                                     </td>
                                     <td>
                                         <span class="quater"></span>12,000 per year
-                                        <span class="detail" style="display: block;">Number of submissions of the lead generation form on Outgrow.</span>
+                                        <span class="detail" style="display: none;">Number of submissions of the lead generation form on Outgrow.</span>
                                     </td>
                                 </tr>
-                                <tr class="expand monthlyLeads">
+                                <tr class="expand monthlyLeads" [ngClass]="{'hide': isHideFree1}">
                                     <th>
                                         <!-- <i class="material-icons vis-hide">add</i>  -->
                                         Leads <i class="material-icons">help</i>
                                     </th>
                                     <td>
                                         <span class="quater"></span>1,000 per month
-                                        <span class="detail">Number of submissions of the lead generation form on Outgrow.</span>
+                                        <span class="detail" style="display: none;">Number of submissions of the lead generation form on Outgrow.</span>
                                     </td>
                                     <td class="expand-child active-bg">
                                         <span class="half"></span>7,500 per month
-                                        <span class="detail">Number of submissions of the lead generation form on Outgrow.</span>
+                                        <span class="detail" style="display: none;">Number of submissions of the lead generation form on Outgrow.</span>
                                     </td>
                                     <td>
                                         <span class="full"></span>50,000 per month
-                                        <span class="detail">Number of submissions of the lead generation form on Outgrow.</span>
+                                        <span class="detail" style="display: none;">Number of submissions of the lead generation form on Outgrow.</span>
                                     </td>
                                     <td>
                                         <span class="quater"></span>1,000 per month
-                                        <span class="detail">Number of submissions of the lead generation form on Outgrow.</span>
+                                        <span class="detail" style="display: none;">Number of submissions of the lead generation form on Outgrow.</span>
                                     </td>
                                 </tr>
                                 <tr class="expand">
@@ -175,22 +175,21 @@
                                         <!-- <i class="material-icons vis-hide">add</i>  -->
                                         No. of Content Pieces <i class="material-icons">help</i>
                                     </th>
-                                    
-                                    <td class="expand-child">                                
+                                    <td>
                                         <span class="quater"></span>5
-                                        <span class="detail">Number of calculators, quizzes, recommendations etc you can build.</span>                             
+                                        <span class="detail">Number of calculators, quizzes, recommendations etc you can build.</span>
                                     </td>
-                                    <td class="expand-child active-bg">                                
+                                    <td class=" expand-child active-bg">
                                         <span class="full"></span>Unlimited
-                                        <span class="detail">Number of calculators, quizzes, recommendations etc you can build.</span>                             
+                                        <span class="detail">Number of calculators, quizzes, recommendations etc you can build.</span>
                                     </td>
-                                    <td class="expand-child">                                
+                                    <td>
                                         <span class="full"></span>Unlimited
-                                        <span class="detail">Number of calculators, quizzes, recommendations etc you can build.</span>                             
+                                        <span class="detail">Number of calculators, quizzes, recommendations etc you can build.</span>
                                     </td>
-                                    <td class="expand-child">                                
+                                    <td>
                                         <span class="quater"></span>3
-                                        <span class="detail">Number of quizzes you can build.</span>                             
+                                        <span class="detail">Number of quizzes you can build.</span>
                                     </td>
                                 </tr>
                                 <!-- <tr class="not-info">
@@ -202,24 +201,24 @@
                                 <tr class="expand">
                                     <th>
                                         <!-- <i class="material-icons plus">add</i>
-                                        <i class="material-icons minus">remove</i>   -->
-                                     Templates and Layouts <i class="material-icons">help</i></th>
+                                        <i class="material-icons minus">remove</i>  -->
+                                        Templates &amp; Layouts <i class="material-icons">help</i></th>
                                     
-                                    <td class="expand-child">                                
-                                        <span class="quater"></span>Basic Templates & Layout
-                                        <span class="detail">Only the Classic "Chicago and Londoner" layout and templates.</span>                             
+                                    <td class="expand-child">
+                                        <span class="quater"></span>Basic Templates &amp; Layout
+                                        <span class="detail">Only the Classic "Chicago and Londoner" layout and templates.</span>
                                     </td>
-                                    <td class="expand-child active-bg">                                
-                                        <span class="full"></span>All Templates & Layouts
-                                        <span class="detail">All layouts and templates are unlocked.</span>                             
+                                    <td class="expand-child active-bg">
+                                        <span class="full"></span>All Templates &amp; Layouts
+                                        <span class="detail">All layouts and templates are unlocked.</span>
                                     </td>
-                                    <td class="expand-child active-bg">                                
-                                        <span class="full"></span>All Templates & Layouts
-                                        <span class="detail">All layouts and templates are unlocked.</span>                             
+                                    <td class="expand-child">
+                                        <span class="full"></span>All Templates &amp; Layouts
+                                        <span class="detail">All layouts and templates are unlocked.</span>
                                     </td>
-                                    <td class="expand-child">                                
-                                        <span class="quater"></span>Basic Templates & Layout
-                                        <span class="detail">Only the Classic "Chicago and Londoner" layout and templates.</span>                             
+                                    <td class="expand-child">
+                                        <span class="quater"></span>Basic Templates &amp; Layout
+                                        <span class="detail">Only the Classic "Chicago" layout and templates.</span>
                                     </td>
                                 </tr>
                                 <!-- <tr class="expand">
@@ -244,25 +243,25 @@
                                 <tr class="expand">
                                     <th>
                                         <!-- <i class="material-icons plus">add</i>
-                                        <i class="material-icons minus">remove</i>   -->
-                                        Hosting & Embedding <i class="material-icons">help</i></th>
+                                        <i class="material-icons minus">remove</i>  -->
+                                        Hosting &amp; Embedding <i class="material-icons">help</i></th>
                                     
-                                        <td class="expand-child">
-                                            <span class="full"></span>Embed Anywhere
-                                            <span class="detail">Experience hosted on Outgrow domain [yourcompany.outgrow.co] and can be embedded on any webpage.</span>
-                                        </td>
-                                        <td class="expand-child active-bg">
-                                            <span class="full"></span>Embed Anywhere
-                                            <span class="detail">Experience hosted on Outgrow domain [yourcompany.outgrow.co] and can be embedded on any webpage.</span>
-                                        </td>
-                                        <td class="expand-child">
-                                            <span class="full"></span>Embed &amp; Custom Domain
-                                            <span class="detail">Experience hosted on your company domain [yourcompany.com] and can be embedded on any webpage.</span>
-                                        </td>
-                                        <td class="expand-child">
-                                            <span class="full"></span>Embed Anywhere
-                                            <span class="detail">Experience hosted on Outgrow domain [yourcompany.outgrow.co] and can be embedded on any webpage.</span>
-                                        </td>
+                                    <td class="expand-child">
+                                        <span class="full"></span>Embed Anywhere
+                                        <span class="detail">Experience hosted on Outgrow domain [yourcompany.outgrow.co] and can be embedded on any webpage.</span>
+                                    </td>
+                                    <td class="expand-child active-bg">
+                                        <span class="full"></span>Embed Anywhere
+                                        <span class="detail">Experience hosted on Outgrow domain [yourcompany.outgrow.co] and can be embedded on any webpage.</span>
+                                    </td>
+                                    <td class="expand-child">
+                                        <span class="full"></span>Embed &amp; Custom Domain
+                                        <span class="detail">Experience hosted on your company domain [yourcompany.com] and can be embedded on any webpage.</span>
+                                    </td>
+                                    <td class="expand-child">
+                                        <span class="full"></span>Embed Anywhere
+                                        <span class="detail">Experience hosted on Outgrow domain [yourcompany.outgrow.co] and can be embedded on any webpage.</span>
+                                    </td>                         
                                 </tr>
                                 <!-- <tr class="expand">
                                     <th>
@@ -286,24 +285,24 @@
                                 <tr class="expand">
                                     <th>
                                         <!-- <i class="material-icons plus">add</i>
-                                        <i class="material-icons minus">remove</i>   -->
-                                     Charts & Graphs <i class="material-icons">help</i></th>
+                                        <i class="material-icons minus">remove</i> -->
+                                        Charts &amp; Graphs <i class="material-icons">help</i></th>
                                     
-                                    <td class="expand-child">                                
+                                    <td>
                                         <span class="none"></span>No Access
-                                        <span class="detail">You do not have access to charts and graphs.</span>                             
+                                        <span class="detail" style="display: none;">You do not have access to charts and graphs.</span>
                                     </td>
-                                    <td class="expand-child active-bg">                                
+                                    <td class="expand-child active-bg">
                                         <span class="none"></span>No Access
-                                        <span class="detail">You do not have access to charts and graphs.</span>                             
+                                        <span class="detail" style="display: none;">You do not have access to charts and graphs.</span>
                                     </td>
-                                    <td class="expand-child">                                
+                                    <td class="expand-child">
                                         <span class="full"></span>Full Access
-                                        <span class="detail">Increase interactivity by adding charts, graphs and tables to your experiences.</span>                             
+                                        <span class="detail" style="display: none;">Increase interactivity by adding charts, graphs and tables to your experiences.</span>
                                     </td>
-                                    <td class="expand-child">                                
-                                        <span class="quater"></span>No Access
-                                        <span class="detail">You do not have access to charts and graphs.</span>                          
+                                    <td>
+                                        <span class="none"></span>No Access
+                                        <span class="detail" style="display: none;">You do not have access to charts and graphs.</span>
                                     </td>
                                 </tr>
                                 <!-- <tr class="expand">
@@ -371,7 +370,112 @@
                                         <span class="detail">You can sync user's contact information using Zapier or over 17 native integrations with tools like Marketo, Salesforce, MailChimp, Aweber, Hubspot, GetResponse, Intercom, Sendlane, Drip, Slack etc.</span>                             
                                     </td>
                                 </tr>
-                              
+                                <!-- <tr class="not-info">
+                                    <th><i class="material-icons vis-hide">add</i>Templates</th>
+                                    <td><span class="half"></span>Basic Templates</td>
+                                    <td class="active-bg"><span class="full"></span>All Templates </td>
+                                    <td><span class="full"></span>All Templates</td>
+                                </tr> -->
+                                <!-- <tr class="expand">
+                                    <th>
+                                        <i class="material-icons plus">add</i>
+                                        <i class="material-icons minus">remove</i> 
+                                        Templates
+                                    </th>
+                                    <td class="expand-child">                                
+                                        <span class="quater"></span>Basic Templates
+                                        <span class="detail">You get access to all pre-made calculators and quizzes built using our basic design layout (The Chicago).</span>                             
+                                    </td>
+                                    <td class="expand-child active-bg">                                
+                                        <span class="half"></span>All Templates
+                                        <span class="detail">You get access to all pre-made calculators and quizzes built using any of our design layouts.</span>                             
+                                    </td>
+                                    <td class="expand-child">                                
+                                        <span class="full"></span>All Templates
+                                        <span class="detail">You get access to all pre-made calculators and quizzes built using any of our design layouts.</span>                             
+                                    </td>
+                                </tr> -->
+                                <!-- <tr class="not-info">
+                                    <th><i class="material-icons vis-hide">add</i>Layouts</th>
+                                    <td><span class="half"></span>Basic Layout</td>
+                                    <td class="active-bg"><span class="full"></span>All Layouts </td>
+                                    <td><span class="full"></span>All Layouts</td>
+                                </tr> -->
+                                <!-- <tr class="expand">
+                                    <th>
+                                        <i class="material-icons plus">add</i>
+                                        <i class="material-icons minus">remove</i> 
+                                        Layouts
+                                    </th>
+                                    <td class="expand-child">                                
+                                        <span class="quater"></span>Basic Layout
+                                        <span class="detail">You get access to our basic, yet the most versatile layout: The Chicago.</span>                             
+                                    </td>
+                                    <td class="expand-child active-bg">                                
+                                        <span class="half"></span>All Layouts
+                                        <span class="detail">You get access to all of the design layouts.</span>                             
+                                    </td>
+                                    <td class="expand-child">                                
+                                        <span class="full"></span>All Layouts
+                                        <span class="detail">You get access to all of the design layouts.</span>                             
+                                    </td>
+                                </tr> -->
+                                <!-- <tr class="expand">
+                                    <th>
+                                        <i class="material-icons plus">add</i>
+                                        <i class="material-icons minus">remove</i> 
+                                        Call To Actions
+                                    </th>
+                                    <td class="expand-child">                                
+                                        Basic CTAs
+                                        <span class="detail">Add Facebook, Twitter and Linkedin share buttons to power viral sharing.</span>                             
+                                    </td>
+                                    <td class="expand-child">                                
+                                        Advanced CTAs
+                                        <span class="detail">Add Facebook, Twitter and Linkedin share buttons as well as Facebook like and Twitter Follow buttons to improve social following. You can also redirect users to external web pages.</span>                             
+                                    </td>
+                                    <td class="expand-child">                                
+                                        Advanced CTAs
+                                        <span class="detail">Add Facebook, Twitter and Linkedin share buttons as well as Facebook like and Twitter Follow buttons to improve social following. You can also redirect users to external web pages and use dynamic variables.</span>                             
+                                    </td>
+                                </tr> -->
+                                <!-- <tr class="expand">
+                                    <th>
+                                        <i class="material-icons plus">add</i>
+                                        <i class="material-icons minus">remove</i>  
+                                        Formulas
+                                    </th>
+                                    <td class="expand-child">                                
+                                        <span class="quater"></span>Basic Operators
+                                        <span class="detail">You can use basic mathematical operators like +,-, x and /.</span>                             
+                                    </td>
+                                    <td class="expand-child active-bg">                                
+                                        <span class="full"></span>Advanced Operators
+                                        <span class="detail">You can use any mathematical (^, log etc) or logical (if then, average etc) operator.</span>                             
+                                    </td>
+                                    <td class="expand-child">                                
+                                        <span class="full"></span>Advanced Operators
+                                        <span class="detail">You can use any mathematical (^, log etc) or logical (if then, average etc) operator.</span>                             
+                                    </td>
+                                </tr> -->
+                                <!-- <tr class="expand">
+                                    <th>
+                                        <i class="material-icons plus">add</i>
+                                        <i class="material-icons minus">remove</i>  
+                                        Logic Jump
+                                    </th>
+                                    <td>
+                                        <span class="none"></span>No Access   
+                                    </td>
+                                    <td class="expand-child active-bg">  
+                                        <span class="full"></span>Full Access
+                                        <span class="detail">Apply logic jump to supported templates to improve personalization.</span>    
+                                    </td>
+                                    <td class="expand-child">  
+                                        <span class="full"></span>Full Access
+                                        <span class="detail">Apply logic jump to supported templates to improve personalization.</span>    
+                                    </td>
+                                </tr> -->
                                 <tr class="expand">
                                     <th>
                                         <!-- <i class="material-icons plus">add</i>
