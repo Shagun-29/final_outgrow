@@ -56,11 +56,7 @@ export class PricingHomeComponent implements OnInit {
  //jQuery('.expand .expand-child > .detail').slideToggle();
  });
 
-//  jQuery(".expand").click( function(event) {
-//  var $target = jQuery(event.target);
-//  jQuery(this).toggleClass('open');
-//  $target.closest(".expand").find(".detail").slideToggle(); 
-//  });
+
 
  jQuery('.toggle-more').click(function(event){
  var $target = jQuery(event.target);

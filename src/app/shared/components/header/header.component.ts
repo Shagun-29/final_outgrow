@@ -40,8 +40,12 @@ export class HeaderComponent implements OnInit {
              
                         
   });
- 
+  $('.navbar ul li a').on('click', function () {
+   $('.params').removeClass('active');
+   $(this).addClass('active');
+});
   });
+ 
 }
   fadeOut(){
     $('#toogle-menu').trigger('click');
