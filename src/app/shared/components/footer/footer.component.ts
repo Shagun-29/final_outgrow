@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import  * as $ from 'jquery';
-import { CookieService } from 'angular2-cookie/core';
+// import { CookieService } from 'angular2-cookie/core';
+import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -8,10 +9,10 @@ import { CookieService } from 'angular2-cookie/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private _cookieService:CookieService) {
-    
-  }
-public disableCookieDialog='false';
+  constructor(private _cookieService:CookieService) { }
+
+
+  public disableCookieDialog='false';
 public isVisible=true;
   ngOnInit() {
     $(document).ready(function(){
@@ -28,27 +29,26 @@ public isVisible=true;
   
       });
 
-    if(this.getCookie('disableCookieDialog')){
-      // console.log("====",x)
+    if(this._cookieService.get('disableCookieDialog')){
+      // console.log(this.getCookie('disableCookieDialog'))
       this.isVisible=false;
     }
   }
 
   saveCookie(){
-    this._cookieService.put('disableCookieDialog', 'true');
-    // console.log("Set Test Cookie as Test");
-   let x =this.getCookie('disableCookieDialog');
-    if(x){
-      console.log("====",x)
+    this._cookieService.set('disableCookieDialog', 'true');
+  //  let x =this.getCookie('disableCookieDialog');
+    if(this._cookieService.get('disableCookieDialog')){
+      console.log("====")
       this.isVisible=false;
+      // this.showMsg();
     }
   }
 
   showMsg(){
-
-    this.isVisible=true;
+    this.isVisible=false;
   }
   getCookie(key: string){
-    return this._cookieService.get(key);
+    return this._cookieService.get('test');
   }
 }
