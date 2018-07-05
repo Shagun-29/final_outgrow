@@ -15,6 +15,7 @@ padding-top: 0!important;
 
 }
 }
+
 @media only screen and (max-width: 380px)
 {
 .start-trial-cta .btn-buildcal p {
@@ -305,7 +306,7 @@ margin-top: 0;
 }
 }
 @media (min-width:1810px) and (max-width:1920px) {
-#pricing .section-1 {margin-top: 90px !important;}
+#pricing .section-1 {margin-top: 66px !important;}
 }
 @media (min-width:1440px) and (max-width:1920px) {
 #pricing .section-1 {
@@ -1020,7 +1021,7 @@ left: 0px;
 thead th p.strike-price {
 color: #abb7bc;
 font-size: 12px;
-font-family: montserratlight;
+font-family: montserratbold;
 text-decoration: line-through;
 margin: 0px;
 line-height: normal;
