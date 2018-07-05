@@ -3,6 +3,9 @@
     left: 0;
     width: 100%;
 }
+.test1 {
+    margin-top: 30px;
+}
 .mb0{
     margin-bottom: 0px;
 }
@@ -74,7 +77,10 @@
 .sec3-box1inner p {
  font-size: 14px;
 }
-
+#why .section-w2 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+   }
 .section-2-subheading {
  float: left;
  width: 100%;
@@ -88,7 +94,7 @@
  /* color: #6b696d; */
 }
 .section, .section-1 {
- /* margin-top: 30px; */
+ margin-top: 30px;
  float: left;
  width: 100%;
 }
@@ -575,6 +581,10 @@
 
 @media (max-width: 768px) and (min-width: 320px)
 {
+    #why .section-w2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+       }
     .swiper-pagination-clickable .swiper-pagination-bullet {
         margin: 0 5px;
     }
@@ -994,10 +1004,7 @@
  font-size:40px;
 }
 
-#why .section-w2 {
- margin-top: 0px;
- margin-bottom: 0px;
-}
+
 #why .section-w2-left {
  margin-top: 0px;
  padding: 0px!important;

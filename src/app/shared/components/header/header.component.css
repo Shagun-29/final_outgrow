@@ -39,7 +39,7 @@
     z-index: 998!important;
     border-bottom: 1px solid #f3f8fb;
     padding: 5px 0px;
-    -webkit-transition: .3s ease-in-out;
+    -webkit-transition: .4s ease-out;
     transition: .3s ease-in-out;
 }
 .custom-navbar.navbar-default .navbar-nav>li>a i.material-icons {
