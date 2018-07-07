@@ -16,9 +16,9 @@ export class FooterComponent implements OnInit {
 public isVisible=true;
   ngOnInit() {
     $(document).ready(function(){
-        $(".icon-close").click(function(){
-           $(".sec-cookies").hide();
-           });
+        $(".icon-close").click(function() {
+          $('body').removeClass('footer-cookies');
+          });
           //  $(".btn-understand").click(function(){
           //   // this._cookieService.put('test', 'true');
           //   $(".sec-cookies").hide();

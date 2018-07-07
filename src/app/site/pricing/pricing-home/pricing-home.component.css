@@ -189,6 +189,9 @@ font-size: 12px;
 color: #666;
 vertical-align: top;
 }
+.c1{
+  position: relative!important;
+}
 .pricing-outer.pricing-col-four span.label-popularPlan {
 width: 100% !important;
 }
@@ -268,6 +271,10 @@ background: #f5fbff;
 box-shadow: 2px 3px 7px rgba(0, 0, 0, .10);
 border-bottom: 1px solid #e0f2fe;
 
+}
+.pricing-outer.pricing-col-four tbody th i.material-icons {
+
+  font-size: 14px;
 }
 .pricing-outer.pricing-col-four thead th:nth-child(3), .pricing-outer.pricing-col-four tbody td:nth-child(3) {
 border-right: 1px solid #bed4df;
@@ -421,9 +428,9 @@ background: url(https://cdn.filestackcontent.com/I9cqiZQTQyKo3uGT28WZ)!important
  border-left: 1px solid #bed4df;
  border-right: 1px solid #bed4df;
 }
-tbody tr:hover td.active-bg {
-background: #f5fbff;
-cursor: pointer;
+tbody tr:hover {
+background: #f5fbff!important;
+cursor: pointer!important;
 }
 .not-info td.active-bg:hover {
 background: url(https://cdn.filestackcontent.com/I9cqiZQTQyKo3uGT28WZ);
@@ -431,7 +438,8 @@ background: url(https://cdn.filestackcontent.com/I9cqiZQTQyKo3uGT28WZ);
 tr.expand.open td.expand-child.active-bg {
 background: #f5fbff!important;
 box-shadow: 2px 3px 7px rgba(0, 0, 0, .10);
-border-bottom: 1px solid #f5fbff;
+border-bottom: 2px solid #f5fbff;
+
 }
 tr.expand.open td.active-bg {
 background: #f5fbff;
@@ -1551,4 +1559,24 @@ padding: 0px 10px;
 .billing-plan-list ul > li.active a i.material-icons {
 font-size: 14px;
 }
+}
+
+@-moz-document url-prefix() {
+  tbody td {
+    position: static!important;
+  
+}
+thead th  {
+  position: static!important;
+
+}
+th.active {
+ position: relative !important;
+  }
+  tr.expand.open td.expand-child.active-bg {
+  
+ 
+    border-bottom: 2px solid #dadade !important;
+}
+
 }

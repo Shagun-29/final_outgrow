@@ -44,6 +44,7 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="../../../../assets/js/swiper.min.js"></script> 
+<script src="../../../../assets/js/iframeResizer.contentWindow.min.js"></script> 
 
 
 <!-- <script src="https://repuso.com/widgets/grid.js"></script> -->
@@ -101,13 +102,52 @@ body.footer-cookies {
     .wrapper-mobile .h_iframe iframe {
       min-height: 444px;
     }
+
+
+
+
+
   </style>
 </head>
-<body  class="footer-cookies" style="overflow-x: hidden;">
 
+<body  class="footer-cookies" style="overflow-x: hidden;">
+   
   <app-root></app-root>
 
 </body>
 
 </html>
 
+<script type='text/javascript'>
+    
+  $(function(){
+  
+      var iFrames = $('iframe');
+    
+    function iResize() {
+    
+      for (var i = 0, j = iFrames.length; i < j; i++) {
+        iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';}
+        }
+        
+        if ($.browser.safari || $.browser.opera) { 
+        
+           iFrames.load(function(){
+               setTimeout(iResize, 0);
+             });
+          
+           for (var i = 0, j = iFrames.length; i < j; i++) {
+            var iSource = iFrames[i].src;
+            iFrames[i].src = '';
+            iFrames[i].src = iSource;
+             }
+             
+        } else {
+           iFrames.load(function() { 
+               this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+           });
+        }
+      
+      });
+
+</script>
