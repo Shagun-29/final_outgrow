@@ -23,7 +23,7 @@ export class IndexHomeComponent implements OnInit {
   //  staticIf =0;
   // liveReviews:boolean = false;
   
- 
+  public frame=document.getElementsByTagName('frame');
 
   triggerLiveStaticReviews () {
     
@@ -130,6 +130,10 @@ export class IndexHomeComponent implements OnInit {
     // });
 
    }
+   ngAfterViewInit(){
+    // frame=document.getElementById('')
+    this.videoURLService.videoURL('a',this.frame);
+  }
 
   videoURL(type,frame){
     if (type == 'a') {

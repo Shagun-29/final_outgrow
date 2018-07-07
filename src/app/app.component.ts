@@ -2,7 +2,7 @@ import { Component, OnInit  } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { Title } from '@angular/platform-browser';
-
+declare var window:any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -32,6 +32,8 @@ export class AppComponent implements OnInit {
         window.scrollTo(0, 0)
     });
 }
-
+    ngAfterViewInit(){
+    
+    }
 }
 
