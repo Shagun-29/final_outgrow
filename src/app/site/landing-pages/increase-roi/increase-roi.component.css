@@ -1448,3 +1448,14 @@ ul.pre-temp-list{float: left; width: 100%; padding: 0}
         p#premade-calc-name i {
             font-size: 40px;
         }
+        .testhide {     
+            overflow: hidden;
+            height: 0; 
+            margin-top: 0 !important;
+        }
+        .testshow {
+            height: auto;
+        }
+        .testactive .over {
+            display: block;
+        }

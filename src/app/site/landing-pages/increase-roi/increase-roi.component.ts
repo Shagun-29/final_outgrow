@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalcService } from '../../../shared/service/calc.service';
 import { Title } from '@angular/platform-browser';
+import { Http } from '@angular/http';
 @Component({
   selector: 'app-increase-roi',
   templateUrl: './increase-roi.component.html',
@@ -12,39 +13,99 @@ export class IncreaseRoiComponent implements OnInit {
   obj;objLength;
   liveIf = 0;
   staticIf =0;
+  public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
+
  // liveReviews:boolean = false;
- triggerLiveStaticReviews () {
-   var url = 'https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652';
-   var live = document.querySelector('#liveReviews');
-   var static1= document.querySelector('#staticReviews');
-   var xhr = new XMLHttpRequest;
-   xhr.onreadystatechange = function () {
-     console.log('Ready state changed');
-     if (this.status == 200) {
-       this.liveIf=1
-       console.log("LIVE REVIEWS",this.liveIf)
-     }
-     else {
-       // this.liveIf=0;
-       this.staticIf=1;
-       console.log("STATIC REVIEWS",this.staticIf)
-     }
-   }.bind(this);
-   xhr.open("GET", url, true);
-   xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-   xhr.send();
- }
- 
+ loader = document.querySelector('.preloader');
+    triggerLiveStaticReviews () {
+        
+      var gridJS = document.createElement('script')
+      gridJS.src = 'https://repuso.com/widgets/grid.js';
+
+      
+      var live = document.querySelector('#liveReviews');
+      var static1 = document.querySelector('#staticReviews');
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        live.classList.remove('hide');
+        static1.classList.add('hide');
+      }else {
+        static1.classList.remove('hide');
+        live.classList.add('hide');
+      }
+    };
+    xhttp.open("GET",this.url, true);
+    xhttp.send();
+
+    var head = document.querySelector('head');
+      head.appendChild(gridJS);
+
+    }
+
+    openTestimonial(site:any){
+      var fb1= document.querySelector('.fb1');
+      var capterra1= document.querySelector('.capterra1');
+      var google1= document.querySelector('.google1');
+      var g21= document.querySelector('.g21');
+  
+       // for active classes in fb, capterra, google, g2
+  
+      var fbActive = document.querySelector('.fbActive');
+      var capterraActive = document.querySelector('.capterraActive');
+      var googleActive = document.querySelector('.googleActive');
+      var g2Active = document.querySelector('.g2Active');
+  
+      fbActive.classList.remove('testactive');
+      capterraActive.classList.remove('testactive');
+      g2Active.classList.remove('testactive');
+      googleActive.classList.remove('testactive')
+  
+      // ends
+     
+      if(site == 'fb'){
+        fbActive.classList.add('testactive');
+  
+        fb1.classList.remove('testhide');
+        capterra1.classList.add('testhide');
+        google1.classList.add('testhide');      
+        g21.classList.add('testhide');
+        
+      }else if(site == "capterra"){
+        capterraActive.classList.add('testactive');
+  
+        fb1.classList.add('testhide');
+        capterra1.classList.remove('testhide');
+        google1.classList.add('testhide');      
+        g21.classList.add('testhide');
+      }else if(site == "g2"){
+        g2Active.classList.add('testactive');
+  
+        fb1.classList.add('testhide');
+        capterra1.classList.add('testhide');
+        google1.classList.add('testhide');      
+        g21.classList.remove('testhide');
+      }else if(site == "google"){
+        googleActive.classList.add('testactive');
+        
+        fb1.classList.add('testhide');
+        capterra1.classList.add('testhide');
+        google1.classList.remove('testhide');      
+        g21.classList.add('testhide');
+      }
+    }
+    
  constructor(private calcService:CalcService,title:Title){
    title.setTitle('Improve Marketing and Sales ROI | Outgrow');
  }
   ngOnInit() {
+    this.loader.classList.add('hide');
     var gridJS = document.createElement('script')
     gridJS.src = 'https://repuso.com/widgets/grid.js';
     this.triggerLiveStaticReviews();
     this.shuffleCalcs("Auto");
   }
-  openTestimonial(item){}
+ 
  markAsActive = function (calcId) {
   console.log(calcId)
   this.myId=calcId;
