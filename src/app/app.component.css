@@ -1,0 +1,34 @@
+.preloader {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0px;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    text-align: center;
+    margin-bottom: 120px;
+    margin-top: 60px;
+    width: 100%;
+    height: 100vh;
+    }
+    .preloader .logo{
+        width: 15%;
+        height: 34px;
+        margin-top: 11%;
+        float: right;
+        position: absolute;
+        right: 5vw;
+        bottom: 20px;
+    } 
+    .status{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url("../assets/images/loaders/logoAnim.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    }

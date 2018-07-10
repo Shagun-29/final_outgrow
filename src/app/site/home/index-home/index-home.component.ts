@@ -8,6 +8,7 @@ import { Http } from '@angular/http';
 import { element } from 'protractor';
 import { INTERNAL_BROWSER_DYNAMIC_PLATFORM_PROVIDERS } from '@angular/platform-browser-dynamic/src/platform_providers';
 import  * as $ from 'jquery';
+import { LoadingService } from '../../../shared/service/loading.service';
 declare let jQuery: any;
 
 @Component({
@@ -23,8 +24,8 @@ export class IndexHomeComponent implements OnInit {
   //  staticIf =0;
   // liveReviews:boolean = false;
   
- 
-
+  header = document.querySelector('.navbar-fixed-top');
+ footer = document.querySelector('.section-14')
   triggerLiveStaticReviews () {
     
     var gridJS = document.createElement('script')
@@ -103,7 +104,7 @@ export class IndexHomeComponent implements OnInit {
     }
   }
 
-  constructor(private videoURLService:VideoUrlService,title:Title) { 
+  constructor(private videoURLService:VideoUrlService,title:Title,public loadingService:LoadingService) { 
     
     this.isActive0 = true;
     this.isActive1 = false
@@ -116,7 +117,18 @@ export class IndexHomeComponent implements OnInit {
    }
   
   // var gridJS = document.createElement('script')
+   load = document.querySelector('#premade-loader');
   ngOnInit() {
+
+    console.log('......')
+      this.loadingService.isLoading.next(false);
+
+    console.log(this.loadingService.isLoading)
+
+    this.load.classList.add('hide');
+    this.header.classList.remove('hide');
+    this.footer.classList.remove('hide');
+
     this.triggerLiveStaticReviews();
 
     // jQuery(document).ready(function() {
@@ -128,7 +140,7 @@ export class IndexHomeComponent implements OnInit {
     //   setTimeout(calculateMinHeight, 2000);
     //   }
     // });
-
+    
    }
 
   videoURL(type,frame){

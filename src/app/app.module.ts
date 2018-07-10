@@ -11,6 +11,7 @@ import { TermsComponent } from './shared/components/terms/terms.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 // import { CookieService } from 'angular2-cookie/core';
 import { CookieService } from 'ngx-cookie-service';
+import { LoadingService } from './shared/service/loading.service';
 // import { GoogleSheet } from './shared/interfaces/GoogleSheet';
 // import { IdeaGenService } from './shared/services/idea-gen.service';
 
@@ -28,7 +29,8 @@ import { CookieService } from 'ngx-cookie-service';
     RouterModule.forRoot(routes)  ],
   providers: [
     // Script
-    CookieService
+    CookieService,
+    LoadingService
   ],
   bootstrap: [AppComponent]
 })

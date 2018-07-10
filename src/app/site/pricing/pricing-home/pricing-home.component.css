@@ -183,6 +183,9 @@ color: #ea101d;
 font-size: 13px !important;
 color: #797f83 !important;
 }
+tbody td, tbody th{
+  background: white;
+}
 th, td {
 font-family: 'Roboto', sans-serif;
 font-size: 12px;
@@ -221,7 +224,7 @@ border-bottom: 0px solid transparent;
 z-index: 1;
 }
 tbody td {
-background: #fff;
+/* background: #fff; */
 text-align: left;
 padding: 15px;      
 line-height: 1;
@@ -1034,7 +1037,7 @@ font-size: 75%;
 }
 
 tbody th {
-background: #fff;
+/* background: #fff; */
 border-left: 1px solid #eff0f1;
 /* border: 1px solid #eff0f1; */
 border-top: 1px solid #eff0f1;

@@ -29,6 +29,8 @@ export class HeaderComponent implements OnInit {
   }
   
  ngOnInit() {
+  var header = document.querySelector('.navbar-fixed-top');
+  header.classList.add('hide');
 
   $(document).ready(function(){
     $(window).scroll(function() {

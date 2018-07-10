@@ -1,7 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-
 import { Title } from '@angular/platform-browser';
+import { LoadingService } from './shared/service/loading.service';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +13,29 @@ export class AppComponent implements OnInit {
     url: string = "asdf";
     text=[];
     flag:boolean=true;
-  constructor(private router: Router) { }
-
+    show:boolean=false;
+    show1:boolean=true;
+    show2:boolean=false;
+  constructor(private router: Router,private loadingService: LoadingService) { }
+    
   ngOnInit() {
+
+    //   setTimeout(()=>{
+    //       this.show1=false;
+    //       this.show2=true;
+    //   },2000)
+
+
+    // this.loadingService.isLoading
+    // .subscribe((res)=>{
+    //     console.log('in Subscription',res)
+    //     if(!res){
+    //     this.show=true;
+    //     this.show1=false;
+    //     }
+    // });
+
+    // this.loadingService.isLoading.next(false)
     this.href = window.location.href;
     console.log("---------------------->",this.href.split('/'));
     this.text=this.href.split('/');
@@ -30,6 +50,18 @@ export class AppComponent implements OnInit {
             return;
         }
         window.scrollTo(0, 0)
+    });
+
+
+}
+ngAfterViewInit(){
+    this.loadingService.isLoading
+    .subscribe((res)=>{
+        console.log('in Subscription',res)
+        if(res){
+        this.show=true;
+        this.show1=false;
+        }
     });
 }
 
