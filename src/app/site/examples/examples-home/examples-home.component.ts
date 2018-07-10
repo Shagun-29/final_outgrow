@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import  * as $ from 'jquery';
 declare let jQuery: any;
-import * as resizer from 'iframe-resizer';
 declare let iFrameResize:any;
 declare var window:any;
 @Component({
