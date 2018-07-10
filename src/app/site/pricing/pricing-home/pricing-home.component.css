@@ -1065,7 +1065,9 @@ tbody tr:hover {
 background: #f5fbff;
 cursor: pointer;
 }
-
+tbody td, tbody th{
+ background: white;
+}
 tbody tr:last-child th {
 border-bottom: 1px solid #eff0f1;
 /*padding-bottom: 20px;*/

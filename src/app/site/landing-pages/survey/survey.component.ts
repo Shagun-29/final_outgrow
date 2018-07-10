@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-survey',
   templateUrl: './survey.component.html',
-  styleUrls: ['./survey.component.css','../../../../assets/css/allPage_minified.css']
+  styleUrls: ['./survey.component.css']
 })
 export class SurveyComponent implements OnInit {
   filteredObj: any;
