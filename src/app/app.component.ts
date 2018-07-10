@@ -3,6 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { LoadingService } from './shared/service/loading.service';
 
+declare var window:any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,8 +17,9 @@ export class AppComponent implements OnInit {
     show:boolean=false;
     show1:boolean=true;
     show2:boolean=false;
+
+ 
   constructor(private router: Router,private loadingService: LoadingService) { }
-    
   ngOnInit() {
 
     //   setTimeout(()=>{
@@ -36,6 +38,10 @@ export class AppComponent implements OnInit {
     // });
 
     // this.loadingService.isLoading.next(false)
+
+    // this.header.classList.add('hide');
+    // this.footer.classList.add('hide');
+
     this.href = window.location.href;
     console.log("---------------------->",this.href.split('/'));
     this.text=this.href.split('/');
@@ -64,6 +70,6 @@ ngAfterViewInit(){
         }
     });
 }
-
+  
 }
 

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-
+declare var window:any;
+declare var jQuery:any;
+declare var iFrameResize:any;
 @Injectable()
 export class VideoUrlService {
 
@@ -9,6 +11,7 @@ export class VideoUrlService {
       // this.video = document.getElementById("frame1");
       console.log(frame.src);
       frame.src="https://website.outgrow.us/build-a-startup?vHeight=1";
+
 
     }
     else if(type == "b"){
@@ -26,5 +29,16 @@ export class VideoUrlService {
     else if(type == "f"){
       frame.src="https://website.outgrow.us/build-an-app?vHeight=1";
     }
+    jQuery('#og-iframe').addClass('iframeHeight')
+    var iframes = iFrameResize({
+      log: false,
+      autoResize: true,
+      enablePublicMethods: true,
+      checkOrigin: false,
+  },'#og-iframe');
+    
+    setTimeout(()=>{
+
+      window.calculateMinHeight();},2000);
   }
 }

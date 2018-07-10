@@ -44,6 +44,9 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="../../../../assets/js/swiper.min.js"></script> 
+<script src="./assets/js/iframeResizer.contentWindow.min.js"></script> 
+<script src="./assets/js/resizer.js"></script> 
+
 
 
 <!-- <script src="https://repuso.com/widgets/grid.js"></script> -->
@@ -101,13 +104,26 @@ body.footer-cookies {
     .wrapper-mobile .h_iframe iframe {
       min-height: 444px;
     }
+
+
+
+
+
   </style>
 </head>
-<body  style="overflow-x: hidden;">
 
+<body  class="footer-cookies" style="overflow-x: hidden;">
+   
   <app-root></app-root>
-
+  <script>
+    window.calculateMinHeight = function() {
+    var a = screen.width / screen.height,
+        b = document.getElementById("og-iframe"),
+        c = b.clientWidth / a;
+        b.style.minHeight = c + "px"
+    };
+    
+  </script>
 </body>
 
 </html>
-

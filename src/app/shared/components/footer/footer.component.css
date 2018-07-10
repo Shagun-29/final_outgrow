@@ -9,7 +9,9 @@
     z-index: 999;
     padding: 22px;
 }
-
+a:active, a:hover {
+    outline: 0;
+}
 .btn-understand:hover {
     border: 2px solid #fff !important;
     background: none !important;

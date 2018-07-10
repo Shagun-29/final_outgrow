@@ -24,8 +24,10 @@ export class IndexHomeComponent implements OnInit {
   //  staticIf =0;
   // liveReviews:boolean = false;
   
+  load = document.querySelector('.preloader');
   header = document.querySelector('.navbar-fixed-top');
- footer = document.querySelector('.section-14')
+ footer = document.querySelector('.section-14');
+
   triggerLiveStaticReviews () {
     
     var gridJS = document.createElement('script')
@@ -117,7 +119,6 @@ export class IndexHomeComponent implements OnInit {
    }
   
   // var gridJS = document.createElement('script')
-   load = document.querySelector('#premade-loader');
   ngOnInit() {
 
     console.log('......')

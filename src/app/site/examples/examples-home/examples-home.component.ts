@@ -3,7 +3,10 @@ import { VideoUrlService } from '../../../shared/service/video-url.service';
 
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-
+import  * as $ from 'jquery';
+declare let jQuery: any;
+declare let iFrameResize:any;
+declare var window:any;
 @Component({
   selector: 'app-examples-home',
   templateUrl: './examples-home.component.html',
@@ -32,14 +35,58 @@ export class ExamplesHomeComponent implements OnInit {
     this.isHideContent = true;
 
   }
-
+ public frame=document.getElementsByTagName('frame')
   ngOnInit() {
+    console.log('----',this.frame)
     // new test();
     this.isHeadingHide = false;
     this.isHideContent = false;
 
     
-    this.changeTab("Calculator")
+    this.changeTab("Calculator");
+
+    jQuery(document).ready(function(){
+     
+      });
+
+      
+    // jQuery(document).ready(function () {
+     
+    //    this.window.display = function (url) {
+    //     jQuery('#og-iframe').attr('src',url);
+    //     jQuery('#og-iframe').addClass('iframeHeight');
+    //     this.calculateMinHeight();
+        
+    //     setTimeout(this.calculateMinHeight, 2000);
+    //     }
+  
+    //   var iframes = iFrameResize({
+    //         log: false,
+    //         autoResize: true,
+    //         enablePublicMethods: true,
+    //         checkOrigin: false,
+    //     },'#og-iframe');
+    
+    //     jQuery('.calc-links a').on('click',function(){
+    //     jQuery('a').removeClass('active');
+    //     jQuery(this).addClass('active');
+    //   });
+    //     jQuery('.og-iframe-res').each(function () {
+    //         console.log('Examples og');
+    //         if (jQuery(this).attr('data-calc')) {
+    //             console.log('Examples og if');
+    //             jQuery(this).attr('src', jQuery(this).attr('data-calc'));
+    //             jQuery(this).attr('data-calc', '');
+    //         }
+    //     })
+    //    this.window.runTimeout = function() {
+    //       setTimeout(function () {
+    //           jQuery('.content-loader').addClass('hide');   
+    //       }, 5000);
+    //   }
+    // });
+
+   
   }
   
   //function for service
@@ -94,10 +141,14 @@ export class ExamplesHomeComponent implements OnInit {
     }
 
     
-    this.videoURLService.videoURL(type, frame, );
+    this.videoURLService.videoURL(type, frame);
 
   }//end of function videoUrl;
 
+  ngAfterViewInit(){
+    // frame=document.getElementById('')
+    this.videoURLService.videoURL('a',this.frame);
+  }
   // function for heading example:"there is a calculator for that"
   changeTab(tabName) {
 
@@ -354,4 +405,13 @@ export class ExamplesHomeComponent implements OnInit {
   markAsActive(i){
     this.sIndex1=i;
   }
+ 
+//   calculateMinHeight = function() {
+//     var a = screen.width / screen.height,
+//         b = document.getElementById("og-iframe"),
+//         c = b.clientWidth / a;
+//     b.style.minHeight = c + "px";
+//     b.style.height = c + "px";
+// };
+  
 }
