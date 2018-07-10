@@ -6,7 +6,7 @@ import { CalcService } from '../../../shared/service/calc.service';
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css','../../../../assets/css/allPage_minified.css']
+  styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
   filteredObj: any;

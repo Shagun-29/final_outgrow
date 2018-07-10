@@ -22,3 +22,57 @@
 	right: 5vw;
 	bottom: 20px;
 }  */
+
+@font-face {
+	font-family: montserratregular;
+	src: url("assets/fonts/montserrat-regular-webfont.eot");
+	src: url("assets/fonts/montserrat-regular-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/montserrat-regular-webfont.woff2") format('woff2'), url("assets/fonts/montserrat-regular-webfont.woff") format('woff'), url("assets/fonts/montserrat-regular-webfont.ttf") format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased
+}
+@font-face {
+	font-family: montserratbold;
+	src:  url("assets/fonts/montserrat-bold-webfont.woff2") format('woff2'), url("assets/fonts/montserrat-bold-webfont.woff") format('woff'), url("assets/fonts/montserrat-bold-webfont.ttf") format('truetype');
+	font-style: normal;
+	font-weight: 400;
+	
+}
+@font-face {
+	font-family: montserratsemibold;
+	font-style: normal;
+	font-weight: 400;
+	src:  url("assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("assets/fonts/montserrat-semibold-webfont.woff") format("woff"), url("assets/fonts/montserrat-semibold-webfont.ttf") format("truetype")
+}
+@font-face {
+	font-family: montserratlight;
+	font-style: normal;
+	font-weight: 400;
+	src: url("assets/fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/montserrat-light-webfont.woff2") format("woff2"), url("/fonts/montserrat-light-webfont.woff") format("woff"), url("assets/fonts/montserrat-light-webfont.ttf") format("truetype")
+}
+@font-face {
+	font-family: montserratultra_light;
+	src: url("assets/fonts/montserrat-ultralight-webfont.woff2") format('woff2'), url("assets/fonts/montserrat-ultralight-webfont.woff") format('woff'), url("assets/fonts/montserrat-ultralight-webfont.ttf") format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+@font-face {
+	font-family: montserrathairline;
+	font-style: normal;
+	font-weight: 400;
+	src: url("assets/fonts/montserrat-hairline-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/montserrat-hairline-webfont.woff2") format("woff2"), url("assets/fonts/montserrat-hairline-webfont.woff") format("woff"), url("assets/fonts/montserrat-hairline-webfont.ttf") format("truetype")
+}
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url("assets/fonts/MaterialIcons-Regular.eot");
+	src: local('Material Icons'), local('materialIcons-Regular'), url("assets/fonts/materialIcons-Regular.woff2") format('woff2'), url("assets/fonts/materialIcons-Regular.woff") format('woff'), url("assets/fonts/materialIcons-Regular.ttf") format('truetype')
+}
+.content.temp-info h3 p i.material-icons {
+    color: #fb7f84;
+    font-size: 18px;
+    vertical-align: bottom;
+    margin-right: 7px;
+}

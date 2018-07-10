@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.css','../../../../assets/css/allPage_minified.css']
+  styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
   filteredObj: any;

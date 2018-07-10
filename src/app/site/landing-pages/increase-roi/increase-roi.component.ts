@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-increase-roi',
   templateUrl: './increase-roi.component.html',
-  styleUrls: ['./increase-roi.component.css','../../../../assets/css/allPage_minified.css']
+  styleUrls: ['./increase-roi.component.css']
 })
 export class IncreaseRoiComponent implements OnInit {
   filteredObj: any;

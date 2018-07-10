@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-increase-sales',
   templateUrl: './increase-sales.component.html',
-  styleUrls: ['./increase-sales.component.css','../../../../assets/css/allPage_minified.css']
+  styleUrls: ['./increase-sales.component.css']
 })
 export class IncreaseSalesComponent implements OnInit {
     filteredObj: any;
