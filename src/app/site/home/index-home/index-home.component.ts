@@ -19,7 +19,7 @@ declare let jQuery: any;
 export class IndexHomeComponent implements OnInit {
   public isActive0; isActive1; isActive2; isActive3; isActive4; isActive5;
    public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
-
+   public frame=document.getElementsByTagName('frame');
   //  liveIf = 0;
   //  staticIf =0;
   // liveReviews:boolean = false;
@@ -232,6 +232,10 @@ changeHeightWebXL () {
             xDiv.style.height = '';
         }
         
+        ngAfterViewInit(){
+              // frame=document.getElementById('')
+             this.videoURLService.videoURL('a',this.frame);
+            }
  
 }
 
