@@ -16,6 +16,9 @@ export class FooterComponent implements OnInit {
 public isVisible=true;
   ngOnInit() {
 
+    if(this._cookieService.get('disableCookieDialog')){
+      this.isVisible=false;
+    }
     this.footer.classList.add('hide');
 
     $(document).ready(function(){
@@ -32,17 +35,13 @@ public isVisible=true;
   
       });
 
-    if(this._cookieService.get('disableCookieDialog')){
-      // console.log(this.getCookie('disableCookieDialog'))
-      this.isVisible=false;
-    }
+    
   }
 
   saveCookie(){
     this._cookieService.set('disableCookieDialog', 'true');
   //  let x =this.getCookie('disableCookieDialog');
     if(this._cookieService.get('disableCookieDialog')){
-      console.log("====")
       this.isVisible=false;
       // this.showMsg();
     }
@@ -51,6 +50,7 @@ public isVisible=true;
   showMsg(){
     this.isVisible=false;
   }
+
   getCookie(key: string){
     return this._cookieService.get('test');
   }

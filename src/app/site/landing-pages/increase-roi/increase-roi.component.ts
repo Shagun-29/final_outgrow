@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalcService } from '../../../shared/service/calc.service';
 import { Title } from '@angular/platform-browser';
+import { Http } from '@angular/http';
 @Component({
   selector: 'app-increase-roi',
   templateUrl: './increase-roi.component.html',
@@ -10,7 +11,7 @@ export class IncreaseRoiComponent implements OnInit {
   premadeNameIs:any;
   filteredObj: any;
   myId:String;
-  obj;objLength;
+  public obj;objLength;
   // liveIf = 0;
   // staticIf =0;
   public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
@@ -102,6 +103,7 @@ var head = document.querySelector('head');
       g21.classList.add('testhide');
     }
   }
+  
  markAsActive = function (calcId) {
   console.log(calcId)
   this.myId=calcId;
