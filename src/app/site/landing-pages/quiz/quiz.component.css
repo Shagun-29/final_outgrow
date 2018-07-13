@@ -1424,3 +1424,15 @@ ul.pre-temp-list{float: left; width: 100%; padding: 0}
             .billing-grey-bottom ul.billing-list li, .billing-grey2 ul.billing-list li, .billing-white-bottom ul.billing-list li, li, ul {
                 list-style: none;
             }
+    
+            .testhide {     
+                overflow: hidden;
+                height: 0; 
+                margin-top: 0 !important;
+            }
+            .testshow {
+                height: auto;
+            }
+            .testactive .over {
+                display: block;
+            }
