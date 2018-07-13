@@ -24,9 +24,7 @@ export class IndexHomeComponent implements OnInit {
   //  staticIf =0;
   // liveReviews:boolean = false;
   
-  load = document.querySelector('.preloader');
-  header = document.querySelector('.navbar-fixed-top');
- footer = document.querySelector('.footer-14');
+
 
   triggerLiveStaticReviews () {
     
@@ -120,15 +118,18 @@ export class IndexHomeComponent implements OnInit {
   
   // var gridJS = document.createElement('script')
   ngOnInit() {
+   let load = document.querySelector('.preloader');
+   let header = document.querySelector('.navbar-fixed-top');
+   let footer = document.querySelector('.footer-14');
+   header.classList.remove('hide');
+   footer.classList.remove('hide');
+    load.classList.add('hide');
+    
 
     console.log('......')
       this.loadingService.isLoading.next(false);
 
     console.log(this.loadingService.isLoading)
-
-    this.load.classList.add('hide');
-    this.header.classList.remove('hide');
-    this.footer.classList.remove('hide');
 
     this.triggerLiveStaticReviews();
 

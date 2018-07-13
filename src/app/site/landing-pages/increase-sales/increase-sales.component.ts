@@ -7,6 +7,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./increase-sales.component.css']
 })
 export class IncreaseSalesComponent implements OnInit {
+  premadeNameIs:any;
     filteredObj: any;
     myId:String;
   public obj;objLength;
@@ -118,13 +119,15 @@ export class IncreaseSalesComponent implements OnInit {
     console.log(calc)
     var premadeGif = document.getElementById('premade-gif');
     var premadePreview = document.getElementById('premade-preview-link');
-    var premadeName = document.getElementById('premade-calc-name');
+    // var premadeName = document.getElementById('premade-calc-name');
     var premadeLayout = document.getElementById('premade-calc-layout')
     // premadeGif.src = calc.GIF;
     document.getElementById('premade-gif').setAttribute( 'src', calc.GIF);
     // premadePreview.href = calc['Published Link'];
     document.getElementById('premade-preview-link').setAttribute( 'href', calc['Published Link']);
-    premadeName.innerHTML = '<i class="material-icons">&#xE80E;</i>' + calc.Name;
+    // premadeName.innerHTML = '<i class="material-icons">&#xE80E;</i>' + calc.Name;
+    this.premadeNameIs=calc.Name
+    
     premadeLayout.innerHTML = '<strong>Layout:</strong> ' + calc.Layout
 }
 changeActiveCalcCategory = function (id) {

@@ -7,6 +7,12 @@
     background-size: cover;
     background-color: #fff;
 }
+.content.temp-info h3 p i.material-icons {
+    color: #fb7f84;
+    font-size: 18px;
+    vertical-align: bottom;
+    margin-right: 7px;
+}
 
 .section-banner p {
     font-size: 15px;
@@ -193,7 +199,7 @@ span.profile-detail {
     font-size: 16px;
     vertical-align: middle;
     float: left;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 .section-second img {
     float: right;
@@ -1151,7 +1157,8 @@ ul.pre-temp-list{float: left; width: 100%; padding: 0}
         padding: 13px 65px 13px 25px;
     }
     .section-btn {
-        margin-top: 30px;
+        margin-top: 30px!important;
+        margin-bottom: 60px!important;
         }
     .reading-content p {
         min-height: auto;
@@ -1379,6 +1386,12 @@ ul.pre-temp-list{float: left; width: 100%; padding: 0}
                 .custom-embeds .nav-tabs>li.active:nth-child(3)>a, 	.custom-embeds .nav-tabs>li:nth-child(3)>a:hover, 
                 .custom-embeds .nav-tabs>li.active:nth-child(4)>a,  .custom-embeds .nav-tabs>li:nth-child(4)>a:hover {
                     background-size: 68px 40px !important;
+                }
+                .view-post img {
+                    display: none!important;
+                }
+                .testi-content, span.testi-desig, .view-post {
+                    width: 50px !important;
                 }
             
             }

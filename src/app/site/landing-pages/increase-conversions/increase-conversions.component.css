@@ -14,6 +14,12 @@
     font-family: montserratlight;
     line-height: 23px;
 }
+.content.temp-info h3 p i.material-icons {
+    color: #fb7f84;
+    font-size: 18px;
+    vertical-align: bottom;
+    margin-right: 7px;
+}
 .section {
     margin-bottom: 30px;
 }
@@ -89,6 +95,11 @@ h1 {
     font-family: montserratlight;
     margin-top: 25px;
     margin-left: -25px;
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .section-banner p {
     font-size: 15px;
@@ -191,7 +202,7 @@ span.profile-detail {
     font-size: 16px;
     vertical-align: middle;
     float: left;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 .section-second img {
     float: right;
@@ -960,7 +971,7 @@ span.profile-detail {
             text-transform: none!important;
             font-size: 30px!important;
         }
-
+      
     }
         @media (max-width:580px){
      
@@ -1114,6 +1125,9 @@ width: 100%;
     .section-banner h1.main-heading {
         margin-top: 100px;
     }
+    .testi-content, span.testi-desig {
+        width: 90px !important;
+    }
 }
 @media (max-width: 990px) and (min-width: 769px)
 {
@@ -1137,10 +1151,13 @@ ul.pre-temp-list{float: left; width: 100%; padding: 0}
 }
 @media (max-width: 768px) and (min-width: 320px)
 {
+    .banner-jacket img {
+        border-radius: 15px;
+    }
     .section-2-heading {
         text-transform: none !important;
         line-height: normal !important;
-        font-size: 22px !important;
+        /* font-size: 22px !important; */
         text-align: center;
         padding: 0px 10px;
     }
@@ -1149,7 +1166,8 @@ ul.pre-temp-list{float: left; width: 100%; padding: 0}
         padding: 13px 65px 13px 25px;
     }
     .section-btn {
-        margin-top: 30px;
+        margin-top: 30px!important;
+        margin-bottom: 60px;
         }
     .reading-content p {
         min-height: auto;
@@ -1378,7 +1396,12 @@ ul.pre-temp-list{float: left; width: 100%; padding: 0}
                 .custom-embeds .nav-tabs>li.active:nth-child(4)>a,  .custom-embeds .nav-tabs>li:nth-child(4)>a:hover {
                     background-size: 68px 40px !important;
                 }
-            
+                .testi-content, span.testi-desig, .view-post {
+                    width: 50px !important;
+                }
+                .view-post img {
+                    display: none!important;
+                }
             }
             @media(min-width:320px) and (max-width:640px) { 
                 .section-6-left {padding: 0px 20px 0 16px !important;}
