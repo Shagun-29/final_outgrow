@@ -266,26 +266,26 @@ label {
 	overflow: hidden
 }
 .collag1-img {
-	background-image: url(assets/images/new-collag1.jpg);
+	background-image: url(/images/new-collag1.jpg);
 	float: left;
 	width: 100%;
 	min-height: 385px
 }
 .collag2-img {
-	background-image: url(assets/images/collag4-big.jpg);
+	background-image: url(/images/collag4-big.jpg);
 	float: left;
 	width: 100%;
 	min-height: 225px
 }
 .collag3-img {
-	background-image: url(assets/images/new-collag2-insurance.jpg);
+	background-image: url(/images/new-collag2-insurance.jpg);
 	background-position: 85% 50%;
 	float: left;
 	width: 100%;
 	min-height: 275px
 }
 .collag4-img {
-	background-image: url(assets/images/new-collag3-soccer1.jpg);
+	background-image: url(/images/new-collag3-soccer1.jpg);
 	background-position: top center;
 	float: left;
 	width: 100%;
@@ -1219,7 +1219,7 @@ label {
 	margin: 30px 0px 0px;
 }
 .bg1-img {
-	background: url(assets/images/strtFreeTrial.jpg) no-repeat;
+	background: url(/images/strtFreeTrial.jpg) no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -3779,7 +3779,7 @@ iframe[name=google_conversion_frame] {
 
 
 .bg2-img {
-	background: url(assets/images/bg-gen-ideas.jpg) no-repeat;
+	background: url(/images/bg-gen-ideas.jpg) no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

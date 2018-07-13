@@ -13,10 +13,10 @@
 	padding-bottom: 10px;
 }
 
-@font-face {
+/* @font-face {
 	font-family: montserratregular;
-	src: url("assets/fonts/montserrat-regular-webfont.eot");
-	src: url("assets/fonts/montserrat-regular-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/montserrat-regular-webfont.woff2") format('woff2'), url("assets/fonts/montserrat-regular-webfont.woff") format('woff'), url("assets/fonts/montserrat-regular-webfont.ttf") format('truetype');
+	src: url("/fonts/montserrat-regular-webfont.eot");
+	src: url("/fonts/montserrat-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/montserrat-regular-webfont.woff2") format('woff2'), url("/fonts/montserrat-regular-webfont.woff") format('woff'), url("/fonts/montserrat-regular-webfont.ttf") format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-smooth: always;
@@ -24,7 +24,7 @@
 }
 @font-face {
 	font-family: montserratbold;
-	src:  url("assets/fonts/montserrat-bold-webfont.woff2") format('woff2'), url("assets/fonts/montserrat-bold-webfont.woff") format('woff'), url("assets/fonts/montserrat-bold-webfont.ttf") format('truetype');
+	src:  url("/fonts/montserrat-bold-webfont.woff2") format('woff2'), url("/fonts/montserrat-bold-webfont.woff") format('woff'), url("/fonts/montserrat-bold-webfont.ttf") format('truetype');
 	font-style: normal;
 	font-weight: 400;
 	
@@ -33,17 +33,17 @@
 	font-family: montserratsemibold;
 	font-style: normal;
 	font-weight: 400;
-	src:  url("assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("assets/fonts/montserrat-semibold-webfont.woff") format("woff"), url("assets/fonts/montserrat-semibold-webfont.ttf") format("truetype")
+	src:  url("/fonts/montserrat-semibold-webfont.woff2") format("woff2"), url("/fonts/montserrat-semibold-webfont.woff") format("woff"), url("/fonts/montserrat-semibold-webfont.ttf") format("truetype")
 }
 @font-face {
 	font-family: montserratlight;
 	font-style: normal;
 	font-weight: 400;
-	src: url("assets/fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/montserrat-light-webfont.woff2") format("woff2"), url("/fonts/montserrat-light-webfont.woff") format("woff"), url("assets/fonts/montserrat-light-webfont.ttf") format("truetype")
+	src: url("/fonts/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-light-webfont.woff2") format("woff2"), url("/fonts/montserrat-light-webfont.woff") format("woff"), url("/fonts/montserrat-light-webfont.ttf") format("truetype")
 }
 @font-face {
 	font-family: montserratultra_light;
-	src: url("assets/fonts/montserrat-ultralight-webfont.woff2") format('woff2'), url("assets/fonts/montserrat-ultralight-webfont.woff") format('woff'), url("assets/fonts/montserrat-ultralight-webfont.ttf") format('truetype');
+	src: url("/fonts/montserrat-ultralight-webfont.woff2") format('woff2'), url("/fonts/montserrat-ultralight-webfont.woff") format('woff'), url("/fonts/montserrat-ultralight-webfont.ttf") format('truetype');
 	font-weight: 400;
 	font-style: normal
 }
@@ -51,15 +51,15 @@
 	font-family: montserrathairline;
 	font-style: normal;
 	font-weight: 400;
-	src: url("assets/fonts/montserrat-hairline-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/montserrat-hairline-webfont.woff2") format("woff2"), url("assets/fonts/montserrat-hairline-webfont.woff") format("woff"), url("assets/fonts/montserrat-hairline-webfont.ttf") format("truetype")
+	src: url("/fonts/montserrat-hairline-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-hairline-webfont.woff2") format("woff2"), url("/fonts/montserrat-hairline-webfont.woff") format("woff"), url("/fonts/montserrat-hairline-webfont.ttf") format("truetype")
 }
 @font-face {
 	font-family: 'Material Icons';
 	font-style: normal;
 	font-weight: 400;
-	src: url("assets/fonts/MaterialIcons-Regular.eot");
-	src: local('Material Icons'), local('materialIcons-Regular'), url("assets/fonts/materialIcons-Regular.woff2") format('woff2'), url("assets/fonts/materialIcons-Regular.woff") format('woff'), url("assets/fonts/materialIcons-Regular.ttf") format('truetype')
-}
+	src: url("/fonts/MaterialIcons-Regular.eot");
+	src: local('Material Icons'), local('materialIcons-Regular'), url("/fonts/materialIcons-Regular.woff2") format('woff2'), url("/fonts/materialIcons-Regular.woff") format('woff'), url("/fonts/materialIcons-Regular.ttf") format('truetype')
+} */
 .material-icons {
 	font-family: 'Material Icons';
 	font-weight: 400;
@@ -77,13 +77,13 @@
 	font-feature-settings: 'liga';
 	text-rendering: optimizeLegibility
 }
-@font-face {
+/* @font-face {
 	font-family: montserrat-bold;
-	/* src: url("assets/fonts/montserrat-bold-webfont.eot"); */
-	src:  url("assets/fonts/montserrat-bold-webfont.woff2") format('woff2'), url("assets/fonts/montserrat-bold-webfont.woff") format('woff'), url("assets/fonts/montserrat-bold-webfont.ttf") format('truetype');
+	/* src: url("/fonts/montserrat-bold-webfont.eot"); 
+	src:  url("/fonts/montserrat-bold-webfont.woff2") format('woff2'), url("/fonts/montserrat-bold-webfont.woff") format('woff'), url("/fonts/montserrat-bold-webfont.ttf") format('truetype');
 	font-weight: 400;
 	font-style: normal
-}
+} */
 body {
 	font-family: montserratregular;
 	color: #8e989f;
@@ -131,7 +131,7 @@ label {
 .section-1 {
 	margin-bottom: 70px;
 	padding-bottom: 30px;
-	/*background: url(assets/images/watermark-logo.png) 0 10% no-repeat*/
+	/*background: url(/images/watermark-logo.png) 0 10% no-repeat*/
 }
 .section-1-left h3, .section-1-left h3.section1-firsthead {
 	font-size: 28px;
@@ -879,7 +879,7 @@ label {
 	margin: 30px 0px 0px;
 }
 .bg1-img {
-	background: url(assets/images/strtFreeTrial.jpg) no-repeat;
+	background: url(/images/strtFreeTrial.jpg) no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -1590,7 +1590,7 @@ iframe[name=google_conversion_frame] {
 }
 
 .bg2-img {
-	background: url(assets/images/bg-gen-ideas.jpg) no-repeat;
+	background: url(/images/bg-gen-ideas.jpg) no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -1672,7 +1672,7 @@ iframe[name=google_conversion_frame] {
 	/* centers the loading animation horizontally on the screen */
 	top: 50%;
 	/* centers the loading animation vertically on the screen */
-	background-image: url("assets/images/loaders/logoAnim.gif");
+	background-image: url("/images/loaders/logoAnim.gif");
 	/* path to your loading animation */
 	background-repeat: no-repeat;
 	background-position: center;

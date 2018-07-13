@@ -787,28 +787,28 @@ span.profile-detail {
                                                                      transition: none !important; 
                                                                 }
                                                                 .custom-embeds .nav-tabs>li:nth-child(1)>a {		
-                                                                    background-image: url("assets/images/facebookim.png");
+                                                                    background-image: url("/images/facebookim.png");
                                                                     /* background-size: 142px 62px; */
                                                                     background-repeat: no-repeat;
                                                                     width: 142px;
                                                                     height: 77px;
                                                                 }
                                                                 .custom-embeds .nav-tabs>li:nth-child(2)>a {
-                                                                    background-image: url("assets/images/capterraimg.png");
+                                                                    background-image: url("/images/capterraimg.png");
                                                                     /* background-size: 142px 62px; */
                                                                     background-repeat: no-repeat;
                                                                     width: 142px;
                                                                     height: 77px;
                                                                 }
                                                                 .custom-embeds .nav-tabs>li:nth-child(3)>a {
-                                                                    background-image: url("assets/images/crowd.png");
+                                                                    background-image: url("/images/crowd.png");
                                                                     /* background-size: 142px 62px; */
                                                                     background-repeat: no-repeat;
                                                                     width: 142px;
                                                                     height: 77px;
                                                                 }
                                                                 .custom-embeds .nav-tabs>li:nth-child(4)>a {
-                                                                    background-image: url("assets/images/google_logo.png");
+                                                                    background-image: url("/images/google_logo.png");
                                                                     /* background-size: 142px 62px; */
                                                                     background-repeat: no-repeat;
                                                                     width: 142px;
@@ -816,28 +816,28 @@ span.profile-detail {
                                                                     margin-right: 0px;
                                                                 }
                                                                 .custom-embeds .nav-tabs>li.active:nth-child(1)>a {
-                                                                    background-image: url("assets/images/facebookh.png");
+                                                                    background-image: url("/images/facebookh.png");
                                                                 }
                                                                 .custom-embeds .nav-tabs>li.active:nth-child(2)>a {
-                                                                    background-image: url("assets/images/capterah.png");
+                                                                    background-image: url("/images/capterah.png");
                                                                 }
                                                                 .custom-embeds .nav-tabs>li.active:nth-child(3)>a {
-                                                                    background-image: url("assets/images/crowdh.png");
+                                                                    background-image: url("/images/crowdh.png");
                                                                 }
                                                                 .custom-embeds .nav-tabs>li.active:nth-child(4)>a {
-                                                                    background-image: url("assets/images/google_hover.png");
+                                                                    background-image: url("/images/google_hover.png");
                                                                 }
                                                                 .custom-embeds .nav-tabs>li:nth-child(1)>a:hover {
-                                                                    background-image: url("assets/images/facebookh.png");
+                                                                    background-image: url("/images/facebookh.png");
                                                                 }
                                                                 .custom-embeds .nav-tabs>li:nth-child(2)>a:hover {
-                                                                    background-image: url("assets/images/capterah.png");
+                                                                    background-image: url("/images/capterah.png");
                                                                 }
                                                                 .custom-embeds .nav-tabs>li:nth-child(3)>a:hover {
-                                                                    background-image: url("assets/images/crowdh.png");
+                                                                    background-image: url("/images/crowdh.png");
                                                                 }
                                                                 .custom-embeds .nav-tabs>li:nth-child(4)>a:hover {
-                                                                    background-image: url("assets/images/google_hover.png");
+                                                                    background-image: url("/images/google_hover.png");
                                                                 }
                                                                 .custom-embeds .nav-tabs>li>a:hover {
                                                                     background-color: transparent;
@@ -864,7 +864,7 @@ span.profile-detail {
                                                                     border-top-width: 0;
                                                                 }
                                                                 .testimonial-quote {
-                                                                    background-image: url("assets/images/icon-testimonial-quote.png");
+                                                                    background-image: url("/images/icon-testimonial-quote.png");
                                                                     width: 28px;
                                                                     height: 24px;
                                                                     position: absolute;
