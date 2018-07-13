@@ -48,7 +48,16 @@ var head = document.querySelector('head');
    title.setTitle('Improve Marketing and Sales ROI | Outgrow');
  }
   ngOnInit() {
+<<<<<<< HEAD
      this.triggerLiveStaticReviews();
+=======
+    let header = document.querySelector('.navbar-fixed-top');
+    header.classList.add('show');
+    this.loader.classList.add('hide');
+    var gridJS = document.createElement('script')
+    gridJS.src = 'https://repuso.com/widgets/grid.js';
+    this.triggerLiveStaticReviews();
+>>>>>>> 28a2c032a2fa06d64cda2f34c4d8bb8caaa4ba8a
     this.shuffleCalcs("Auto");
   }
 
