@@ -1,4 +1,4 @@
-/* .preloader {
+.preloader {
     position: relative;
     top: 0;
     left: 0;
@@ -20,7 +20,31 @@
 	position: absolute;
 	right: 5vw;
 	bottom: 20px;
-}  */
+} 
+.status {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	/* centers the loading animation horizontally on the screen */
+	top: 50%;
+	/* centers the loading animation vertically on the screen */
+	background-image: url("assets/images/loaders/logoAnim.gif");
+	/* path to your loading animation */
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: -100px 0 0 -100px;
+	/* is width and height divided by two */
+}
+.status-msg{
+	font-family: "montserratregular";
+	font-size: 12px;
+	color: #FB6066;
+	margin-top: 70px;
+	display: block;
+}
+
+
 
 @font-face {
 	font-family: montserratregular;

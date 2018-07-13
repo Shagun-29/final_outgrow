@@ -12,6 +12,7 @@ export class IncreaseRoiComponent implements OnInit {
   filteredObj: any;
   myId:String;
   public obj;objLength;
+  loader = document.querySelector('.preloader');
   // liveIf = 0;
   // staticIf =0;
   public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
@@ -48,16 +49,12 @@ var head = document.querySelector('head');
    title.setTitle('Improve Marketing and Sales ROI | Outgrow');
  }
   ngOnInit() {
-<<<<<<< HEAD
-     this.triggerLiveStaticReviews();
-=======
     let header = document.querySelector('.navbar-fixed-top');
     header.classList.add('show');
     this.loader.classList.add('hide');
     var gridJS = document.createElement('script')
     gridJS.src = 'https://repuso.com/widgets/grid.js';
     this.triggerLiveStaticReviews();
->>>>>>> 28a2c032a2fa06d64cda2f34c4d8bb8caaa4ba8a
     this.shuffleCalcs("Auto");
   }
 
