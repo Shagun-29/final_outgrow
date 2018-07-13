@@ -51,6 +51,8 @@ var head = document.querySelector('head');
   ngOnInit() {
     let header = document.querySelector('.navbar-fixed-top');
     header.classList.add('show');
+    let footer = document.querySelector('.footer-14');
+    footer.classList.add('show');
     this.loader.classList.add('hide');
     var gridJS = document.createElement('script')
     gridJS.src = 'https://repuso.com/widgets/grid.js';
