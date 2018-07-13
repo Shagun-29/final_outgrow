@@ -99,6 +99,8 @@ export class IncreaseRoiComponent implements OnInit {
    title.setTitle('Improve Marketing and Sales ROI | Outgrow');
  }
   ngOnInit() {
+    let header = document.querySelector('.navbar-fixed-top');
+    header.classList.add('show');
     this.loader.classList.add('hide');
     var gridJS = document.createElement('script')
     gridJS.src = 'https://repuso.com/widgets/grid.js';

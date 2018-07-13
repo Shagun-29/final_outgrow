@@ -13,6 +13,7 @@ export class IncreaseConversionsComponent implements OnInit {
   obj;objLength;
   liveIf = 0;
   staticIf =0;
+  loader = document.querySelector('.preloader');
  // liveReviews:boolean = false;
  triggerLiveStaticReviews () {
    var url = 'https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652';
@@ -40,6 +41,9 @@ export class IncreaseConversionsComponent implements OnInit {
  }
 
   ngOnInit() {
+    let header = document.querySelector('.navbar-fixed-top');
+    header.classList.add('show');
+    this.loader.classList.add('hide');
     var gridJS = document.createElement('script')
     gridJS.src = 'https://repuso.com/widgets/grid.js';
     this.triggerLiveStaticReviews();

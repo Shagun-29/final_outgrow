@@ -10,11 +10,15 @@ export class QuizComponent implements OnInit {
   filteredObj: any;
   myId:String;
   public obj;objLength;
+  loader = document.querySelector('.preloader');
   constructor(private calcService:CalcService,title:Title) {
     title.setTitle('Interactive Quizzes | Outgrow');
    }
 
   ngOnInit() {
+    let header = document.querySelector('.navbar-fixed-top');
+    header.classList.add('show');
+    this.loader.classList.add('hide');
     this.shuffleCalcs('Auto');
   }
   openTestimonial(item){}
