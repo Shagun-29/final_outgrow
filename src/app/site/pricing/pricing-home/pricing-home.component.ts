@@ -16,12 +16,17 @@ export class PricingHomeComponent implements OnInit {
  public show0;add_remove0; show1;add_remove1; show2;add_remove2; show3;add_remove3;
  public isOpened0; dispSec0;isOpened1; dispSec1;isOpened2; dispSec2; isOpened3; dispSec3;isOpened4; dispSec4;isOpened5; dispSec5;isOpened6; dispSec6;isOpened7; dispSec7;isOpened8; dispSec8;
  public isSmallOpen0;isSmallOpen1;isSmallOpen2;isSmallDetail0;isSmallDetail1;isSmallDetail2;
-
+ load = document.querySelector('.preloader');
+ header = document.querySelector('.navbar-fixed-top');
+footer = document.querySelector('.footer-14');
  constructor(title: Title) {
 
  }
 
  ngOnInit() {
+    this.load.classList.add('hide');
+    this.header.classList.remove('hide');
+    this.footer.classList.remove('hide');
     jQuery(document).ready(function(){
     // jQuery('.detail').hide();
 	jQuery(".expand").click( function(event) {

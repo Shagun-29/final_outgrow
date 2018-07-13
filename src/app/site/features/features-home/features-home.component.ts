@@ -20,12 +20,17 @@ export class FeaturesHomeComponent implements OnInit {
   isActiveSlide2: string;isActive5: boolean;isActive4: boolean;isActive6: boolean;isActive7: boolean;isActive3: boolean;isActive2: boolean;isActiveSlide1: any;isActiveSlide: string;isActive0: boolean;isActive1: boolean;
   public f_slide1;f_slide2;f_slide3;f_slide4;
   public temp0;temp1;
+  load = document.querySelector('.preloader');
+  header = document.querySelector('.navbar-fixed-top');
+ footer = document.querySelector('.footer-14');
   constructor(router:Router, title:Title) { 
     title.setTitle("Product Features | Outgrow");
   }
 
   ngOnInit() {
-
+    this.load.classList.add('hide');
+    this.header.classList.remove('hide');
+    this.footer.classList.remove('hide');
     $(document).ready(function(){
 
     

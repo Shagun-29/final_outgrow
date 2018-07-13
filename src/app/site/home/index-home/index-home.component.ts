@@ -26,7 +26,7 @@ export class IndexHomeComponent implements OnInit {
   
   load = document.querySelector('.preloader');
   header = document.querySelector('.navbar-fixed-top');
- footer = document.querySelector('.section-14');
+ footer = document.querySelector('.footer-14');
 
   triggerLiveStaticReviews () {
     

@@ -11,12 +11,17 @@ declare let Swiper: any;
   styleUrls: ['./why-interactive-home.component.css']
 })
 export class WhyInteractiveHomeComponent implements OnInit {
-
+  load = document.querySelector('.preloader');
+  header = document.querySelector('.navbar-fixed-top');
+ footer = document.querySelector('.footer-14');
  constructor(router:Router, title:Title) {
  title.setTitle("Why Interactive Content ? | Outgrow");
  }
 
   ngOnInit() {
+    this.load.classList.add('hide');
+    this.header.classList.remove('hide');
+    this.footer.classList.remove('hide');
     $(document).ready(function(){
 
     

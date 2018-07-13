@@ -8,18 +8,20 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  footer = document.querySelector('.section-14');
+  
   constructor(private _cookieService:CookieService) { }
 
 
   public disableCookieDialog='false';
 public isVisible=true;
   ngOnInit() {
-
+   let footerShow = document.querySelector('.footer-14');
+    footerShow.classList.add('hide');
     if(this._cookieService.get('disableCookieDialog')){
+      console.log("----->>>>",this._cookieService.get('disableCookieDialog'))
       this.isVisible=false;
     }
-    this.footer.classList.add('hide');
+    
 
     $(document).ready(function(){
         $(".icon-close").click(function() {

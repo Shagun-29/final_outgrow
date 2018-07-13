@@ -21,6 +21,10 @@ export class ExamplesHomeComponent implements OnInit {
   public items;gifs;
   public  sIndex: number = null;
   public  sIndex1: number = null;
+  load = document.querySelector('.preloader');
+  header = document.querySelector('.navbar-fixed-top');
+  footer = document.querySelector('.footer-14');
+
   constructor(private videoURLService: VideoUrlService, router: Router, title: Title) {
     title.setTitle("Examples | Outgrow");
 
@@ -37,7 +41,11 @@ export class ExamplesHomeComponent implements OnInit {
   }
  public frame=document.getElementsByTagName('frame')
   ngOnInit() {
-    console.log('----',this.frame)
+    console.log('----',this.frame);
+
+    this.load.classList.add('hide');
+    this.header.classList.remove('hide');
+    this.footer.classList.remove('hide');
     // new test();
     this.isHeadingHide = false;
     this.isHideContent = false;
