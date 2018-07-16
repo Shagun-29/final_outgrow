@@ -1672,7 +1672,7 @@ iframe[name=google_conversion_frame] {
 	/* centers the loading animation horizontally on the screen */
 	top: 50%;
 	/* centers the loading animation vertically on the screen */
-	background-image: url("/images/loaders/logoAnim.gif");
+	background-image: url("/assets/images/loaders/logoAnim.gif");
 	/* path to your loading animation */
 	background-repeat: no-repeat;
 	background-position: center;

@@ -27,6 +27,7 @@ export class HeaderComponent implements OnInit {
   public setTitle4(){
     this.titleService.setTitle("Examples | Outgrow")
   }
+ 
   
  ngOnInit() {
   var header = document.querySelector('.navbar-fixed-top');
