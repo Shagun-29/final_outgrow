@@ -1223,7 +1223,7 @@ color: #fff;
 border-color: #f8434b;
 }
 .start-trial-cta .btn-buildcal i {
-display: inline-block;
+/* display: inline-block; */
 float: left;
 margin-right: 10px;
 position: relative;

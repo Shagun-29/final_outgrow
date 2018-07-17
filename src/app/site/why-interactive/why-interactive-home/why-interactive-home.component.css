@@ -137,6 +137,7 @@
 }
 .swiper-slide {
  -webkit-flex-shrink: 0;
+ flex: 0 0 auto;
  -ms-flex: 0 0 auto;
  flex-shrink: 0;
  width: 100%;
@@ -160,6 +161,7 @@
 }
 .mk-animate-element {
  opacity: 1;
+ perspective: 1000;
  -webkit-perspective: 1000;
 }
 .mk-animate-element, .mk-effect-bg-layer, .mk-fullscreen-search-overlay {
@@ -476,7 +478,7 @@
  padding: 0;
 }
 .bg1-img {
- background: url("assets/images/strtFreeTrial.jpg") no-repeat;
+ background: url("/assets/images/strtFreeTrial.jpg") no-repeat;
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -519,7 +521,7 @@
  box-shadow: none;
 }
 .start-trial-cta .btn-buildcal i {
- display: inline-block;
+ /* display: inline-block; */
  float: left;
  margin-right: 10px;
  position: relative;

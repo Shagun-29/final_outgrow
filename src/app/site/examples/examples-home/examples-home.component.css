@@ -173,6 +173,7 @@ label {
 }
 .section-1-left .btn-buildcal, .section-1-left .btn-buildcal.red {
 	margin-top: 20px;
+	transition: .5s ease-in-out;
 	-webkit-transition: .5s ease-in-out;
 	float: left;
 	text-transform: uppercase
@@ -195,7 +196,7 @@ label {
 	color: #62696d
 }
 .section-1-left .btn-buildcal i {
-	display: inline-block;
+	/* display: inline-block; */
 	float: left;
 	margin-right: 10px;
 	font-size: 24px
@@ -214,7 +215,7 @@ label {
 	color: #fb545b
 }
 .section-1-left .btn-buildcal.red i {
-	display: inline-block;
+	/* display: inline-block; */
 	float: left;
 	margin-right: 10px;
 	font-size: 20px
@@ -857,7 +858,7 @@ label {
     border-color: #f8434b;
 }
 .start-trial-cta .btn-buildcal i {
-	display: inline-block;
+	/* display: inline-block; */
 	float: left;
 	margin-right: 10px;
 	position: relative;
@@ -879,7 +880,7 @@ label {
 	margin: 30px 0px 0px;
 }
 .bg1-img {
-	background: url(/images/strtFreeTrial.jpg) no-repeat;
+	background: url("/assets/images/strtFreeTrial.jpg") no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -962,7 +963,7 @@ label {
 	width: 1200px !important
 }
 .mk-animate-element,.mk-effect-bg-layer,.mk-fullscreen-search-overlay{-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0)}
-.mk-animate-element{opacity:1;-webkit-perspective:1000}
+.mk-animate-element{opacity:1;-webkit-perspective:1000;perspective: 1000;}
 .no-transform .mk-animate-element{opacity:1}
 
 h1.section-2-heading.mk-animate-element.scale-up.uppercase.fnt-chnge.fnt1 {padding-top: 0px!important;}
@@ -1848,7 +1849,7 @@ iframe[name=google_conversion_frame] {
 
 body{background:#fff !important;}
 .text-bar{ margin-bottom:40px; float:left;}
-.tab-section{}
+/* .tab-section{} */
 .tab-section .nav-tabs {border-bottom: 0; text-align: center;  }
 .tab-section .nav-tabs > li {float: none; margin-bottom: -1px; display: inline-block;}
 .tab-section .nav-tabs > li > a {color: #61696c;    cursor: pointer;background-color: #eff0f0;    border:0; margin-right:-4px; 
@@ -1931,7 +1932,7 @@ body{background:#fff !important;}
 /* Icon Spin */
 .hvr-spin {
   display: block;
-  vertical-align: middle;
+  
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -1944,6 +1945,7 @@ body{background:#fff !important;}
   transition-property: transform;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
+  /* vertical-align: middle; */
 }
 
 .hvr-spin:hover, .hvr-spin:focus, .hvr-spin:active {
@@ -2115,7 +2117,7 @@ body{background:#fff !important;}
         margin: 0px;
         position: relative;
     }
-    .example-calc .tab-section{}
+    /* .example-calc .tab-section{} */
     .example-calc .tab-section .nav-tabs {
         border-bottom: 1px solid #fff;
         text-align: center;
