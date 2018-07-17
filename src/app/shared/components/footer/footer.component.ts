@@ -49,9 +49,9 @@ public isVisible=true;
   //   }
   // }
 
-  // showMsg(){
-  //   this.isVisible=false;
-  // }
+  showMsg(){
+    this.isVisible=false;
+  }
 
   // getCookie(key: string){
   //   return this._cookieService.get('test');
