@@ -488,8 +488,10 @@
 .hvr-underline-from-center, .hvr-underline-from-left {
     display: inline-block;
     vertical-align: middle;
+    transform: translateZ(0);
     -webkit-transform: translateZ(0);
     box-shadow: 0 0 1px transparent;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
 .custom-navbar.navbar-default .navbar-nav>li {
@@ -850,6 +852,9 @@ li.dropdown.open a {
 .sticky .navbar-brand {
     padding-top: 17px!important;
 }
+.custom-navbar .signUp a {
+    margin-top: 22px!important;
+}
 }
 @media   (min-width: 1024px) and (max-width: 1480px)
 {
@@ -917,6 +922,11 @@ li.dropdown.open a {
     .custom-navbar.navbar-default .navbar-nav>li>a, .section-1-left .btn-bottominfo label, .section-1-left .btn-bottominfo span {
         font-size: 16px;
     }
+    .custom-navbar .signUp-style a {
+        padding: 10px 14px;
+        /* top: -5px; */
+        font-size: 16px !important;
+    }
 }
 
 .hvr-underline-from-left:before {
@@ -927,6 +937,7 @@ li.dropdown.open a {
     z-index: -1;
     background: #fb5f66 !important;
     height: 2px !important;
+    transition-timing-function: ease-out;
     -webkit-transition-timing-function: ease-out;
     /* top: 58px; */
 }
@@ -946,6 +957,7 @@ li.dropdown.open a {
     z-index: -1;
     background: #2098d1;
     height: 4px;
+    transition-timing-function: ease-out;
     -webkit-transition-timing-function: ease-out;
 }
 .custom-navbar.navbar-default .navbar-nav>li>a.active, .custom-navbar.navbar-default .navbar-nav>li>a:hover {
