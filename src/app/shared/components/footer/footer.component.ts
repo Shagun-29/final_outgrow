@@ -17,10 +17,10 @@ public isVisible=true;
   ngOnInit() {
    let footerShow = document.querySelector('.footer-14');
     footerShow.classList.add('hide');
-    // if(this._cookieService.get('disableCookieDialog')){
-    //   console.log("----->>>>",this._cookieService.get('disableCookieDialog'))
-    //   this.isVisible=false;
-    // }
+    if(this._cookieService.get('disableCookieDialog')){
+      console.log("----->>>>",this._cookieService.get('disableCookieDialog'))
+      this.isVisible=false;
+    }
     
 
     $(document).ready(function(){
@@ -40,20 +40,20 @@ public isVisible=true;
     
   }
 
-  // saveCookie(){
-  //   this._cookieService.set('disableCookieDialog', 'true');
-  // //  let x =this.getCookie('disableCookieDialog');
-  //   if(this._cookieService.get('disableCookieDialog')){
-  //     this.isVisible=false;
-  //     // this.showMsg();
-  //   }
-  // }
+  saveCookie(){
+    this._cookieService.set('disableCookieDialog', 'true');
+  //  let x =this.getCookie('disableCookieDialog');
+    if(this._cookieService.get('disableCookieDialog')){
+      this.isVisible=false;
+      // this.showMsg();
+    }
+  }
 
   showMsg(){
     this.isVisible=false;
   }
 
-  // getCookie(key: string){
-  //   return this._cookieService.get('test');
-  // }
+  getCookie(key: string){
+    return this._cookieService.get('test');
+  }
 }
