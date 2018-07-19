@@ -5,6 +5,7 @@ import { SurveyComponent } from './landing-pages/survey/survey.component';
 import { CalculatorComponent } from './landing-pages/calculator/calculator.component';
 import { IncreaseSalesComponent } from './landing-pages/increase-sales/increase-sales.component';
 import { IncreaseRoiComponent } from './landing-pages/increase-roi/increase-roi.component';
+import {InteractiveCalculatorsAndQuizzesComponent} from './landing-pages/interactive-calculators-and-quizzes/interactive-calculators-and-quizzes.component';
 import { IncreaseConversionsComponent } from './landing-pages/increase-conversions/increase-conversions.component';
 import { IdeaGeneratorComponent } from './landing-pages/idea-generator/idea-generator.component';
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
     {path:'idea-generator' ,component:IdeaGeneratorComponent},
     { path: 'increase-sales', component: IncreaseSalesComponent },
     { path: 'increase-roi', component: IncreaseRoiComponent },
+    {path: 'interactive-calculators-and-quizzes',component:InteractiveCalculatorsAndQuizzesComponent},
     { path: 'increase-conversions', component: IncreaseConversionsComponent },
     { path: 'pricing', loadChildren: './pricing/pricing.module#PricingModule' },
     { path: 'quiz', component: QuizComponent },

@@ -964,6 +964,7 @@ blockquote::after {
     text-transform: none;
     margin: 0px;
     margin-top: 30px;
+    margin-bottom: 25px;
 }
 
 .custom-embeds .nav-tabs {
@@ -1290,7 +1291,7 @@ span.testi-desig {
         padding-bottom: 50px;
     }
     .section-second-calc img {
-        top: 100px!important;
+        top: 100px !important;
     }
     .section-heading {
         font-size: 32px;
