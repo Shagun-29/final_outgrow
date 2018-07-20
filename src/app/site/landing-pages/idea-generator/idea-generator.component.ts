@@ -18,7 +18,7 @@ declare let selectize: any;
 
 })
 export class IdeaGeneratorComponent implements OnInit {
-  
+  loader = document.querySelector('.preloader');
   categories =[];
   subCategories =[];
   // categoryKey="";
@@ -31,7 +31,8 @@ export class IdeaGeneratorComponent implements OnInit {
   
 
   ngOnInit() {
-     
+    this.loader.classList.add('hide');
+
     //console.log("::In Idea Geerator::",this.categories)
     console.log("Categories")
     this.getData.getCategories()

@@ -14,7 +14,7 @@ export class InteractiveCalculatorsAndQuizzesComponent implements OnInit {
     myId:String;
   public obj;objLength;
   public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
-
+  loader = document.querySelector('.preloader');
   triggerLiveStaticReviews () {
         
     var gridJS = document.createElement('script')
@@ -97,7 +97,7 @@ export class InteractiveCalculatorsAndQuizzesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    this.loader.classList.add('hide');
   }
 
 }
