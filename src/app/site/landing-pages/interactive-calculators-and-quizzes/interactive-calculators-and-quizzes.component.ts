@@ -9,10 +9,15 @@ import { Http } from '@angular/http';
   styleUrls: ['./interactive-calculators-and-quizzes.component.css']
 })
 export class InteractiveCalculatorsAndQuizzesComponent implements OnInit {
-
+  loader = document.querySelector('.preloader');
   constructor() { }
 
   ngOnInit() {
+    let header = document.querySelector('.navbar-fixed-top');
+    header.classList.add('show');
+    let footer = document.querySelector('.footer-14');
+    footer.classList.add('show');
+    this.loader.classList.add('hide');
   }
 
 }
