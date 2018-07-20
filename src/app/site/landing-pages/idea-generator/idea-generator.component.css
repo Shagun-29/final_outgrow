@@ -1,0 +1,725 @@
+.main-outr {
+    float: left;
+    width: 100%;
+}
+.mouse-bg {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: relative !important;
+    z-index: 9 !important;
+}
+.sec1-bg {
+    background: url("/assets/images/sec1-bg1.jpg") no-repeat 40% center !important;
+    background-size: cover;
+}
+.sec-outr {
+    display: table;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+}
+.sec1-text h1 span {
+    font-family: 'montserratbold';
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+.sec-outr.sec1-bg .sec {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.sec {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.sec1-bg .sec-container {
+    text-align: center;
+}
+
+.sec-container {
+    margin: 0 auto;
+    margin-top: 90px;
+    width: 885px;
+}
+.sec1-text {
+    float: left;
+    width: 100%;
+}
+.sec1-text h1 {
+    color: #fb5f66 !important;
+    float: left;
+    font-family: 'montserratlight';
+    font-size: 66px;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+}
+.h1, h1 {
+    font-size: 36px;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    display: inline;
+}
+h1 {
+    margin: .67em 0;
+}
+.sec1-text + .sec1-button {
+    background-image: url(/assets/images/mouse.png);
+    background-position: 70px center;
+    background-repeat: no-repeat;
+}
+.sec1-button,.sec-button {
+    background: #fb5f66 none repeat scroll 0 0;
+    border: 2px solid #fb5f66;
+    border-radius: 50px;
+    box-shadow: 4px 12px 21px rgba(251, 95, 102, 0.4);
+    box-sizing: border-box;
+    color: #ffffff;
+    display: inline-block;
+    float: none;
+    font-family: montserratregular;
+    font-size: 30px;
+    margin-left: 0;
+    margin-top: 40px;
+    min-height: 77px;
+    min-width: 380px;
+    padding: 18px 60px 18px 90px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a, input, textarea, button:focus {
+    outline: none;
+}
+.sec2-step {
+    background: rgba(220, 219, 220, 0.5) none repeat scroll 0 0;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    float: left;
+    height: auto;
+    left: -90px;
+    position: absolute;
+    top: -40px;
+    width: auto;
+}
+.sec2-step span {
+    background: #ffffff none repeat scroll 0 0;
+    border: 2px solid #fb5f66;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #62696d;
+    float: left;
+    font-family: 'montserratregular';
+    font-size: 24px;
+    height: 60px;
+    margin: 8px;
+    padding-top: 10px;
+    text-align: center;
+    width: 60px;
+}
+sup {
+    top: -.5em;
+}
+sub, sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+}
+.label, sub, sup {
+    vertical-align: baseline;
+}
+sub {
+    bottom: -.25em;
+}
+.sec2-text {
+    color: #fb5f66;
+    float: left;
+    font-family: montserratregular;
+    font-size: 48px;
+    text-align: left;
+    text-shadow: none;
+    width: 100%;
+}
+.sec-catergory {
+    float: left;
+    width: 50%;
+    position: relative;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.hide {
+    display: none !important;
+}
+.butn-outr {
+    width: 100%;
+    float: left;
+}
+.update-section {
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.sec-catergory.custom-select {
+    float: none;
+    max-width: 350px;
+    padding: 0 10px;
+    position: relative;
+    width: 46.85%;
+    display: inline-block;
+}
+.update-btn {
+    float: left;
+    margin-top: 25px;
+    padding-left: 10px;
+}
+.update-btn > a {
+    border: 2px solid #fb5f66;
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: #fb5f66;
+    float: left;
+    font-size: 16px;
+    line-height: 1;
+    min-height: 50px;
+    min-width: 140px;
+    padding: 16px 35px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.funnel-points {
+    display: flex;
+    float: left;
+    margin: 50px 0;
+    width: 100%;
+}
+.funnel-step {
+    border-right: 1px solid #d9dad3;
+    flex: 1 1 0;
+    padding: 0 15px 0px;
+    text-align: center;
+}
+figure.icons-part {
+    background: #fb5f66 url(/assets/images/sprite-icons1.png) no-repeat scroll 45px center;
+    border-radius: 50%;
+    box-shadow: 0 12px 20px rgba(206, 27, 35, 0.2);
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+}
+.funnel-step > figcaption {
+    float: left;
+    padding: 0 35px;
+    width: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+.funnel-step h4 {
+    color: #81878a;
+    float: left;
+    font-family: 'montserratregular';
+    font-size: 16px;
+    font-weight: normal;
+    margin: 25px 0 30px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+.info-content {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 2px;
+    position: relative;
+    top: 1px;
+}
+.info-content i {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.funnel-step ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+.funnel-step li {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 0 0px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.funnel-step li a {
+    color: #81878a;
+    cursor: default;
+    display: block;
+    float: left;
+    font-family: montserratlight;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+.funnel-step li::after {
+    background: #fb5f66 none repeat scroll 0 0;
+    border-radius: 50%;
+    content: "";
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 6px;
+}
+.sec2-bg {
+    background: url(/assets/images/sec2-bg1.jpg) no-repeat fixed bottom center !important;
+    background-size: cover;
+}
+
+.sec-outr {
+    display: table;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+}
+.sec-catergory .selectize-control.single .selectize-input {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #d9dad3;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #0f0e0e;
+    font-size: 18px;
+    line-height: normal;
+    margin-top: 25px;
+    padding: 15px 20px;
+    text-align: left;
+    text-transform: uppercase;
+    box-shadow: 3px 0 40px rgba(0, 0, 0, 0.2);
+}
+.demo-default .selectize-dropdown.single.demo-default.selectize-sub-category, .demo-default .selectize-dropdown.single.demo-default.selectize-category {
+    border-color: #d9dad3;
+    color: #999999;
+    text-align: left;
+    top: 85px !important;
+}
+
+.sec-catergory .selectize-control.single .selectize-dropdown {
+    top: 91px !important;
+    border: 1px solid #0f0e0e;
+    border-top: 0;
+    width: 100% !important;
+}
+.sec-catergory .selectize-control.single .selectize-input input {
+    color: #666;
+    width: auto !important;
+    padding-top: 2px !important;
+}
+.selectize-dropdown-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 200px;
+}
+.sec-catergory .selectize-control.single .selectize-dropdown {
+    top: 91px !important;
+    border: 1px solid #0f0e0e;
+    border-top: 0;
+    width: 100% !important;
+}
+.sec-catergory .selectize-control.single .selectize-dropdown .active {
+    background-color: #ccc;
+    color: #0f0e0e;
+}
+.selectize-dropdown [data-selectable], .selectize-dropdown .optgroup-header {
+    padding: 8px 16px !important;
+    font-size: 13px;
+    text-transform: none;
+}
+.sec-catergory .selectize-control.single .selectize-input {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #d9dad3;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #0f0e0e;
+    font-size: 18px;
+    line-height: normal;
+    margin-top: 25px;
+    padding: 15px 20px;
+    text-align: left;
+    text-transform: uppercase;
+    box-shadow: 3px 0 40px rgba(0, 0, 0, 0.2);
+}
+.selectize-control {
+    text-align: left !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 639px)
+{
+.sec-outr.sec1-bg .sec {
+    padding: 0 15px;
+    text-align: center;
+    vertical-align: top;
+}
+.sec-container {
+    margin: 40px auto 0;
+    width: 100%;
+}
+.sec1-text {
+    width: 100%;
+    margin-left: 0px;
+}
+.sec1-text h1 {
+    font-size: 26px;
+    width: 100%;
+}
+.sec1-text + .sec1-button {
+    background-position: 30px center !important;
+    background-repeat: no-repeat;
+    padding: 12px 30px 12px 60px;
+}
+.sec2-step {
+    left: 0;
+    margin-bottom: 10px;
+    position: relative;
+    top: 0;
+}
+.sec2-step span {
+    font-size: 18px;
+    height: 50px;
+    margin: 3px;
+    padding-top: 10px;
+    text-align: center;
+    width: 50px;
+}
+.sec2-text {
+    font-size: 18px;
+}
+.sec-catergory {
+    width: 80%;
+}
+.sec-button {
+    font-size: 13px;
+    margin-top: 30px;
+    min-height: initial;
+    min-width: initial;
+    padding: 12px 20px 12px;
+}
+.sec1-button {
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: 40px;
+    min-height: initial;
+    min-width: initial;
+    padding: 12px 35px 12px 55px;
+}
+.sec-catergory.custom-select {
+    float: none;
+    display: inline-block;
+    max-width: 100%;
+    padding: 0 10px;
+    position: relative;
+    width: 45% !important;
+}
+.update-btn {
+    float: left;
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
+}
+.update-btn a {
+    float: none;
+    display: inline-block;
+}
+
+.update-btn > a {
+    font-size: 14px;
+    line-height: 1;
+    min-height: 45px;
+    padding: 15px 35px;
+}
+.funnel-points {
+    display: block;
+    float: left;
+    margin: 10px 0 0;
+    width: 100%;
+}
+.funnel-step {
+    border-bottom: 1px solid #d9dad3;
+    border-right: 0 none;
+    flex: 1 1 0;
+    float: none;
+    display: inline-block;
+    max-width: 300px;
+    padding: 30px 0 10px;
+    text-align: center;
+    width: 100%;
+}
+figure.icons-part {
+    height: 90px;
+    width: 90px;
+    background-position: 30px center;
+}
+.funnel-step > figcaption {
+    padding: 0 0px;
+}
+.funnel-step h4 {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 20px 0 15px;
+    text-align: center;
+}
+.info-content i {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+}
+.funnel-step li {
+    margin-bottom: 5px;
+    width: auto;
+}
+.funnel-step li a {
+    font-size: 13px;
+    text-align: center;
+}
+.sec-catergory .selectize-control.single .selectize-input {
+    font-size: 14px;
+}
+.demo-default .selectize-dropdown.single.demo-default.selectize-sub-category, .demo-default .selectize-dropdown.single.demo-default.selectize-category {
+    top: 65px !important;
+}
+}
+@media (max-width: 1023px) and (min-width: 640px)
+{
+.sec-container {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 90%;
+}
+.sec1-text h1 {
+    font-size: 32px;
+}
+.sec1-button,.sec-button {
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: 40px;
+    min-height: initial;
+    min-width: initial;
+    padding: 12px 35px 12px 55px;
+}
+.sec1-text + .sec1-button {
+    background-position: 30px center;
+}
+.sec2-step {
+    left: 20px;
+    position: absolute;
+    top: -90px;
+    width: auto;
+}
+.sec2-text {
+    font-size: 20px;
+}
+.sec-catergory {
+    float: left;
+    width: 60%;
+    position: relative;
+}
+.update-section {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px 0 0;
+}
+.sec-catergory.custom-select {
+    float: none;
+    max-width: 350px;
+    padding: 0 5px;
+    position: relative;
+    width: 34.85%;
+    display: inline-block;
+}
+.update-btn {
+    float: none;
+    padding-left: 5px;
+    display: inline-block;
+}
+.update-btn > a {
+    font-size: 15px;
+    line-height: initial;
+    min-height: initial;
+    min-width: initial;
+    padding: 14px 35px 12px;
+}
+.funnel-step {
+    padding: 0 10px 0px;
+    text-align: center;
+}
+figure.icons-part {
+    height: 100px;
+    width: 100px;
+    background-position: 35px center;
+}
+.funnel-step > figcaption {
+    padding: 0 20px;
+}
+.funnel-step h4 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 20px 0 15px;
+}
+.info-content i {
+    font-size: 12px;
+    line-height: 1;
+}
+.funnel-step li a {
+    font-size: 14px;
+}
+.sec-catergory .selectize-control.single .selectize-input {
+    font-size: 14px;
+    margin-top: 25px;
+    min-height: 45px;
+    padding: 12px 20px;
+}
+.demo-default .selectize-dropdown.single.demo-default.selectize-sub-category, .demo-default .selectize-dropdown.single.demo-default.selectize-category {
+    top: 70px !important;
+}
+}
+@media (max-width: 1679px) and (min-width: 1366px)
+{
+.sec1-text h1 {
+    font-size: 42px;
+}
+.sec1-text + .sec1-button {
+    background-position: 35px center;
+}
+.sec1-button,.sec-button{
+    font-size: 16px;
+    margin-left: 0;
+    margin-top: 40px;
+    min-height: initial;
+    min-width: initial;
+    padding: 15px 40px 15px 60px;
+}
+.sec2-text {
+    font-size: 32px;
+}
+.update-btn > a {
+    font-size: 16px;
+    line-height: initial;
+    min-height: 50px;
+    min-width: initial;
+    padding: 15px 35px 12px;
+}
+figure.icons-part {
+    height: 100px;
+    width: 100px;
+    background-position: 35px center;
+}
+.demo-default .selectize-dropdown.single.demo-default.selectize-sub-category, .demo-default .selectize-dropdown.single.demo-default.selectize-category {
+    top: 75px !important;
+}
+.sec-catergory .selectize-control.single .selectize-input input {
+    font-size: 16px;
+    padding-top: 2px !important;
+}
+}
+@media (max-width: 1365px) and (min-width: 1024px)
+{
+.sec1-text h1 {
+    font-size: 36px;
+}
+.sec1-text + .sec1-button {
+    background-position: 35px center;
+}
+.sec1-button {
+    font-size: 15px;
+    margin-left: 0;
+    margin-top: 40px;
+    min-height: initial;
+    min-width: initial;
+    padding: 13px 40px 13px 60px;
+}
+.sec2-step {
+    left: -50px;
+    position: absolute;
+    top: -90px;
+    width: auto;
+}
+.sec2-text {
+    font-size: 28px;
+}
+.update-btn > a {
+    font-size: 15px;
+    line-height: initial;
+    min-height: initial;
+    min-width: initial;
+    padding: 15px 35px 13px;
+}
+figure.icons-part {
+    height: 100px;
+    width: 100px;
+    background-position: 35px center;
+}
+.funnel-step li a {
+    font-size: 14px;
+}
+.sec-catergory .selectize-control.single .selectize-input {
+    font-size: 15px;
+    margin-top: 25px;
+    min-height: 50px;
+    padding: 12px 20px;
+}
+.demo-default .selectize-dropdown.single.demo-default.selectize-sub-category, .demo-default .selectize-dropdown.single.demo-default.selectize-category {
+    top: 75px !important;
+}
+}

@@ -6,12 +6,15 @@ import { IdeaGenService } from '../../../shared/services/idea-gen.service';
 import { GetDataService } from '../../../shared/service/get-data.service';
 import 'rxjs/add/operator/map';
 import { forEach } from '@angular/router/src/utils/collection';
+import {NgSelectizeModule} from 'ng-selectize';
 declare let jQuery: any;
+declare let selectize: any;
+
 
 @Component({
   selector: 'app-idea-generator',
   templateUrl: './idea-generator.component.html',
-  styleUrls: ['../../../../assets/css/allPage_minified.css', '../../../../assets/css/style.css', '../../../../assets/css/responsive.css', '../../../../assets/css/selectize.default.css']
+  styleUrls: ['./idea-generator.component.css']
 
 })
 export class IdeaGeneratorComponent implements OnInit {
@@ -56,7 +59,7 @@ export class IdeaGeneratorComponent implements OnInit {
       jQuery(".sec1-bg").addClass("hide");
       }, 1000)
       });
-      })
+      
 
     let self=this;
     setTimeout(function(){
@@ -178,6 +181,7 @@ export class IdeaGeneratorComponent implements OnInit {
           //     console.log("-------END-------",res)
           //   })
           // }
+        })
 }
 }
 
