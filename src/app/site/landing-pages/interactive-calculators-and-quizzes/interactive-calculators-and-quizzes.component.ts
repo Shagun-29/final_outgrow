@@ -9,12 +9,12 @@ import { Http } from '@angular/http';
   styleUrls: ['./interactive-calculators-and-quizzes.component.css']
 })
 export class InteractiveCalculatorsAndQuizzesComponent implements OnInit {
-  premadeNameIs:any;
-  filteredObj: any;
-  myId:String;
-public obj;objLength;
-loader = document.querySelector('.preloader');
-public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
+ premadeNameIs:any;
+    filteredObj: any;
+    myId:String;
+  public obj;objLength;
+  loader = document.querySelector('.preloader');
+  public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
 
   triggerLiveStaticReviews () {
         
@@ -97,9 +97,6 @@ public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery11120530
   constructor() { }
 
   ngOnInit() {
-    var gridJS = document.createElement('script')
-    gridJS.src = 'https://repuso.com/widgets/grid.js';
-    this.triggerLiveStaticReviews();
   }
 
 }
