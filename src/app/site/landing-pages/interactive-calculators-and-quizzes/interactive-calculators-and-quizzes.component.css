@@ -974,6 +974,43 @@ span.testi-desig {
 #video-main-rs {
     display: none !important;
 }
+.social-media-section
+{
+    width: 100%;
+    float: left;
+    padding-top: 40px;
+}
+
+.each-arrow-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow_box {
+    position: relative;
+    background: #fff;
+    min-width: 145px;
+    float: left;
+    border-radius: 5px;
+    margin: 0 15px 0 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.testactive .over {
+    display: block;
+}
+
+.over1,.over2,.over3,.over4{
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    display: none;
+}
+
+
+
+
+
 
 @media (max-width: 2999px) and (min-width: 1480px)
 {
@@ -1462,6 +1499,13 @@ section.section-old .inside-circle i.material-icons {
     font-size: 15px;
     font-family: montserratlight!important;
 }
+.arrow_box {
+    min-width: 100px!important;
+    margin: 0px 10px;
+}
+.over3, .over2, .over1, .over4 {
+    left: 1px !important;
+}
 
 }
 @media (max-width: 768px) and (min-width: 440px)
@@ -1896,6 +1940,15 @@ div.custom-embeds .nav-tabs>li {
 .sec-integrations {
     display: none;
 }
+#video-main-rs {
+    display: none !important;
+}
+.arrow_box {
+    margin: 0 5px 0 5px !important;
+}
+.over3, .over2, .over1, .over4 {
+    left: 0px !important;
+}
 }
 @media (max-width: 1366px)
 {
@@ -1960,4 +2013,15 @@ div.custom-embeds .nav-tabs>li {
 .col-sm-pull-3, .col-sm-pull-6 {
     right: 0;
 }
+}
+.testhide {     
+    overflow: hidden;
+    height: 0; 
+    margin-top: 0 !important;
+}
+.testshow {
+    height: auto;
+}
+.testactive .over {
+    display: block;
 }
