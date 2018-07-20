@@ -22,13 +22,14 @@ export class IdeaGeneratorComponent implements OnInit {
   selectize : any;
   list:any;
   rawData=[];
+  loader = document.querySelector('.preloader');
   item=""
   constructor(private router: Router, title: Title, private getData:GetDataService) {
   }
   
 
   ngOnInit() {
-     
+    this.loader.classList.add('hide');
     //console.log("::In Idea Geerator::",this.categories)
     console.log("Categories")
     this.getData.getCategories()
