@@ -18,13 +18,13 @@ declare let selectize: any;
 
 })
 export class IdeaGeneratorComponent implements OnInit {
-  loader = document.querySelector('.preloader');
   categories =[];
   subCategories =[];
   // categoryKey="";
   selectize : any;
   list:any;
   rawData=[];
+  loader = document.querySelector('.preloader');
   item=""
   constructor(private router: Router, title: Title, private getData:GetDataService) {
   }
