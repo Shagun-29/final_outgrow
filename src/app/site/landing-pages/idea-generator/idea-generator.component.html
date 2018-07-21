@@ -42,7 +42,7 @@
                     <br> fall into?
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-category"   data-placeholder="Choose Category">
+                    <select class="demo-default selectize-category" placeholder = "Choose Category" (click)="selectCategory()" >
                             <option *ngFor = "let category of categories">{{ category }}</option>
                         </select>
                     <!-- <select name="categories" class="demo-default selectize-category" ng-options="categories.name for categories in arrlist" ng-model="userselected">
@@ -72,7 +72,7 @@
                     <br> Sub-Category
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-sub-category" data-placeholder="Choose Sub Category">
+                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category">
                             <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
                          <!-- <option value="0">Sub Category</option>
                             <option value="1">Sub Category 1</option>
