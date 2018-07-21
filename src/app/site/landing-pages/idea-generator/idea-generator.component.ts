@@ -26,13 +26,26 @@ export class IdeaGeneratorComponent implements OnInit {
   list:any;
   rawData=[];
   loader = document.querySelector('.preloader');
-  item=""
+  // selectCategory : String = "Choose Category";
+  // selectSubcategory = "Choose Sub-Category";
+  item="";
+  topFunnel=[];
+  middleFunnel=[];
+  bottomFunnel=[];
   constructor(private router: Router, title: Title, private getData:GetDataService) {
   }
   
 
   ngOnInit() {
     this.loader.classList.add('hide');
+    let header = document.querySelector('.navbar-fixed-top');
+    header.classList.add('show');
+    let footer = document.querySelector('.footer-14');
+    footer.classList.add('show');
+    let footer1 = document.querySelector('.section-14');
+    footer1.classList.add('hide');
+    
+    
     //console.log("::In Idea Geerator::",this.categories)
     console.log("Categories")
     this.getData.getCategories()
@@ -56,10 +69,12 @@ export class IdeaGeneratorComponent implements OnInit {
       jQuery('html, body').animate({
       scrollTop: jQuery('.sec2-bg').offset().top
       }, 1000);
+      
       setTimeout(function(){
       jQuery(".sec1-bg").addClass("hide");
       }, 1000)
       });
+
       })
 
     let self=this;
@@ -68,25 +83,34 @@ export class IdeaGeneratorComponent implements OnInit {
         jQuery('.selectize-category').selectize({
           create: false,
           sortField: 'text',
+          placeholder : ' Choose Category',
           onChange:function(event){  
               // self.categoryKey=event.replace(/ +/g, "")+"-Key";
               // console.log("::Event::",self.categoryKey);
               self.getData.getSubCategories(event)
               .subscribe((res:any)=>{
-               console.log("::Got Data::",res.values)
+               console.log("::Got Data::",res)
                 console.log("::Got Data[0]::",res.values[0])
-
+                let len = res.values.length;
                 //in process
-                console.log("::Got Data[0] Length::",res.values.length)  
-                res.values.forEach((data,i)=>{
-                  console.log(i,"--Outside--",data)
-                  data.forEach((t,j)=>{
-                    if(t == event){
-                      console.log("matched")
-                    }
-                    // console.log(i,"--Inside--",t)
-                  })
-                })
+                console.log("::Got Data[0] Length::",res.values.length);
+                // for(let i=0;i<len;i++)
+                // {
+                //   console.log("-Count->",res.values[i] )
+                //   for(let j=0;j<res.values[i].count;j++){
+                //     console.log("-values->",res.values[i][j])
+                //   }
+                // }  
+                // res.values.forEach((data,i)=>{
+                //   console.log(i,"--Outside--",data)
+                //   // data.forEach((t,j)=>{
+                //   //   if(t == event){
+                //   //     console.log("matched")
+                //   //   }
+                //   //   // console.log(i,"--Inside--",t)
+                //   // })
+
+                // })
 
 
                 //working
@@ -113,6 +137,7 @@ export class IdeaGeneratorComponent implements OnInit {
                jQuery(".selectize-sub-category").selectize({
                 create: false,
                 sortField: 'text',
+                placeholder : ' Choose Sub Category',
                 onChange:(event)=>{
                   console.log(event, '....Selectize.....')
                   // self.makeSubCategory(event);
