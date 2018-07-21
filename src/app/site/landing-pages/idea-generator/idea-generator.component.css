@@ -420,7 +420,18 @@ section.mouse-bg.sec-outr.new-sec-bg {
     text-align: center;
     width: 100%;
 }
+::placeholder { 
+    color: #666!important;
+    opacity: 1; 
+}
 
+:-ms-input-placeholder { 
+    color: #666;
+}
+
+::-ms-input-placeholder { 
+    color: #666;
+}
 
 
 
@@ -696,7 +707,7 @@ figure.icons-part {
     top: 75px !important;
 }
 .sec-catergory .selectize-control.single .selectize-input input {
-    font-size: 16px;
+    font-size: 16px!important;
     padding-top: 2px !important;
 }
 }
