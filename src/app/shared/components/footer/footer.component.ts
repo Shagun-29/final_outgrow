@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
   constructor(private _cookieService:CookieService) { }
 
 
-  // public disableCookieDialog='false';
+  public disableCookieDialog='false';
 public isVisible=true;
   ngOnInit() {
    let footerShow = document.querySelector('.footer-14');
@@ -57,3 +57,4 @@ public isVisible=true;
     return this._cookieService.get('test');
   }
 }
+
