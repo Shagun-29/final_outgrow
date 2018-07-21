@@ -18,6 +18,7 @@ declare let selectize: any;
 
 })
 export class IdeaGeneratorComponent implements OnInit {
+  
   categories =[];
   subCategories =[];
   // categoryKey="";
@@ -32,7 +33,6 @@ export class IdeaGeneratorComponent implements OnInit {
 
   ngOnInit() {
     this.loader.classList.add('hide');
-
     //console.log("::In Idea Geerator::",this.categories)
     console.log("Categories")
     this.getData.getCategories()
@@ -60,7 +60,7 @@ export class IdeaGeneratorComponent implements OnInit {
       jQuery(".sec1-bg").addClass("hide");
       }, 1000)
       });
-      
+      })
 
     let self=this;
     setTimeout(function(){
@@ -165,7 +165,7 @@ export class IdeaGeneratorComponent implements OnInit {
         // })
     
         jQuery(".sec-button").click(function(){
-              jQuery(".sec5-bg").fadeIn("slow", function() {
+              jQuery(".new-sec-bg").fadeIn("slow", function() {
                   jQuery(this).removeClass("hide");
               });
               jQuery(".sec4-bg").fadeOut("slow", function() {
@@ -182,7 +182,5 @@ export class IdeaGeneratorComponent implements OnInit {
           //     console.log("-------END-------",res)
           //   })
           // }
-        })
 }
 }
-

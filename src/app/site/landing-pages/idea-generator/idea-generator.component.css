@@ -319,7 +319,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .sec-outr {
-    display: table;
+    display: table!important;
     height: 100vh;
     width: 100%;
     background: #000;
@@ -393,11 +393,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .selectize-control {
     text-align: left !important;
 }
-
-
-
-
-
+.sec3-bg {
+    background: url(/assets/images/sec2-bg1.jpg) no-repeat fixed bottom center!important;
+    background-size: cover;
+}
+.sec4-bg {
+    background: url(/assets/images/sec2-bg1.jpg) no-repeat fixed bottom center!important;
+    background-size: cover;
+}
+.sec-container.custom-conatiner {
+    margin: 90px auto 0;
+    width: 100%;
+    max-width: 1200px;
+}
+section.mouse-bg.sec-outr.new-sec-bg {
+    background: #ffffff none repeat scroll 0 0;
+}
+.hide {
+    display: none !important;
+}
+.sec1-text h2 {
+    color: #fb5f66;
+    float: left;
+    font-family: montserratregular;
+    font-size: 46px;
+    text-align: center;
+    width: 100%;
+}
 
 
 
@@ -537,6 +559,11 @@ figure.icons-part {
 }
 .demo-default .selectize-dropdown.single.demo-default.selectize-sub-category, .demo-default .selectize-dropdown.single.demo-default.selectize-category {
     top: 65px !important;
+}
+.sec-container.custom-conatiner {
+    margin: 50px auto 0;
+    max-width: 900px;
+    width: 100%;
 }
 }
 @media (max-width: 1023px) and (min-width: 640px)
