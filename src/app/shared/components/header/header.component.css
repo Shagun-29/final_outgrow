@@ -5,6 +5,10 @@
     background: #fb5f66 !important;
     height: 2px;
 }
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
 
 .header1{
     padding: 0!important;
@@ -41,6 +45,9 @@
 }
 .sticky.custom-navbar .signUp a {
     margin-top: 13px!important;
+}
+.sticky li.nav-lead-input {
+    margin-top: 16px;
 }
 
 .navbar-brand {
@@ -502,6 +509,42 @@
     color: #fb6c73!important;
     font-family: montserratbold;
 }
+li.nav-lead-input {
+    margin-top: 22px;
+    position: relative;
+    width: 317px;
+    margin-right: 5px !important;
+    line-height: 22px;
+}
+.custom-navbar.navbar-default .navbar-nav>li input.lead-form-email {
+    border: 1px solid #ebebeb;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 0 15px;
+    height: 30px;
+    color: #62696d;
+}
+.nav-lead-input .lead-form-btn {
+    position: absolute !important;
+    right: 0;
+    top: 0;
+}
+.nav-lead-input a.lead-email.btn-buildcal {
+    background: #fb5f66;
+    color: #fff;
+    font-size: 14px;
+    padding: 4px 20px;
+    border: 2px solid #fb5f66;
+    transition: .5s ease-in-out;
+    line-height: normal;
+    box-shadow: none;
+    border-radius: 25px;
+    display: inline-block;
+    float: none;
+    font-family: montserratbold;
+    text-transform: uppercase;
+    margin-left: 3px;
+}
 
 @media (min-width: 768px)
 {
@@ -737,6 +780,12 @@ li.dropdown.open a {
     border: none !important;
     display: inline-block;
 }
+.custom-navbar.navbar-default .navbar-nav>li input.lead-form-email {
+    width: 100%;
+}
+li.nav-lead-input {
+    margin: 10px !important;
+}
 }
 @media (max-width: 1023px) and (min-width: 991px)
 {
@@ -796,6 +845,9 @@ li.dropdown.open a {
 .sticky .navbar-brand {
     padding-top: 12px!important;
 }
+.navbar-nav>li {
+    float: left;
+}
 }
 @media (max-width: 1250px) and (min-width: 1024px)
 {
@@ -823,6 +875,22 @@ li.dropdown.open a {
 /* .sticky .navbar-brand {
     padding-top: 12px!important;
 } */
+}
+@media (max-width: 1280px) and (min-width: 1024px)
+{
+    .nav-lead-input a.lead-email.btn-buildcal {
+        font-size: 12px;
+        padding: 5px 10px;
+        line-height: 16px;
+    }
+    .custom-navbar.navbar-default .navbar-nav>li input.lead-form-email {
+        font-size: 12px;
+    }
+    li.nav-lead-input {
+        width: 237px;
+        margin-right: 0px !important;
+    }
+
 }
 @media (min-width: 1250px) and (max-width:1480px){
 

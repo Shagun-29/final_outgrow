@@ -67,6 +67,25 @@ export class IdeaGeneratorComponent implements OnInit {
       
     })
 
+
+     
+      // Function that validates email address through a regular expression.
+
+   
+
+  function clearAppendTabData (html = null) {
+    jQuery('#top-funnel').empty();
+    jQuery('#mid-funnel').empty();
+    jQuery('#bottom-funnel').empty();
+    if (html) {
+        jQuery('#top-funnel').append(html.top)
+        jQuery('#mid-funnel').append(html.middle)
+        jQuery('#bottom-funnel').append(html.bottom)
+    }
+}
+
+
+
     jQuery(document).ready(function (){
       jQuery(".sec1-button").click(function (){
       jQuery(".sec1-bg").hide();
@@ -80,8 +99,10 @@ export class IdeaGeneratorComponent implements OnInit {
       jQuery(".sec1-bg").addClass("hide");
       }, 1000)
       });
+   
+      });
 
-      })
+    
 
     let self=this;
     setTimeout(function(){
