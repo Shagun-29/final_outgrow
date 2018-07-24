@@ -42,7 +42,7 @@
                     <br> fall into?
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-category" placeholder = "Choose Category" (click)="selectCategory()" >
+                    <select class="demo-default selectize-category" placeholder = "Choose Category" (click)="selectCategory()" #category>
                             <option *ngFor = "let category of categories">{{ category }}</option>
                         </select>
                     <!-- <select name="categories" class="demo-default selectize-category" ng-options="categories.name for categories in arrlist" ng-model="userselected">
@@ -72,13 +72,9 @@
                     <br> Sub-Category
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category">
+                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" #subcategory>
                             <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
-                         <!-- <option value="0">Sub Category</option>
-                            <option value="1">Sub Category 1</option>
-                            <option value="2">Sub Category 2</option>
-                            <option value="3">Sub Category 3</option>
-                            <option value="4">Sub Category 4</option> -->
+                        
                     </select>
                 </div>
             </div>
@@ -120,12 +116,15 @@
             </div>
             <div class="update-section">
                  <div class="sec-catergory  custom-select">
-                    <select class="demo-default selectize-category-result selectized" data-placeholder="Choose Category" tabindex="-1" style="display: none;"><option value="Education-Key" selected="selected">Education</option></select><div class="selectize-control demo-default selectize-category-result single"><div class="selectize-input items full has-options has-items"><div data-value="Education-Key" class="item">Education</div><input type="text" autocomplete="off" tabindex="" disabled="disabled" style="width: 4px; opacity: 0; position: absolute; left: -10000px;"></div><div class="selectize-dropdown single demo-default selectize-category-result" style="display: none; width: 100px; top: 0px; left: 0px;"><div class="selectize-dropdown-content"><div data-value="eCommerce-Key" data-selectable="" class="option">eCommerce</div><div data-value="Education-Key" data-selectable="" class="option selected">Education</div><div data-value="FinancialServices-Key" data-selectable="" class="option">Financial Services</div><div data-value="Insurance-Key" data-selectable="" class="option">Insurance</div><div data-value="Mediaand Entertainment-Key" data-selectable="" class="option">Media and Entertainment</div><div data-value="SaaS-Key" data-selectable="" class="option">SaaS</div></div></div></div>
-                    <span class="error update-cat-error" style="display: none;"></span>
+                    <select class="demo-default selectize-category" placeholder = "Choose Category" (click)="selectCategory1()" #category>
+                        <option *ngFor = "let category of categories">{{ category }}</option>
+                    </select> <span class="error update-cat-error" style="display: none;"></span>
                 </div>
                 <div class="sec-catergory  custom-select">
-                    <select class="demo-default selectize-sub-category-result selectized" data-placeholder="Choose Sub Category" tabindex="-1" style="display: none;"><option value="keyHigherEducation" selected="selected">Higher Education</option></select><div class="selectize-control demo-default selectize-sub-category-result single"><div class="selectize-input items full has-options has-items"><div data-value="keyHigherEducation" class="item">Higher Education</div><input type="text" autocomplete="off" tabindex="" disabled="disabled" style="width: 4px; opacity: 0; position: absolute; left: -10000px;"></div><div class="selectize-dropdown single demo-default selectize-sub-category-result" style="display: none; width: 100px; top: 0px; left: 0px;"><div class="selectize-dropdown-content"><div data-value="keyHigherEducation" data-selectable="" class="option selected">Higher Education</div></div></div></div>
-                    <span class="error update-subcat-error" style="display: none;"></span>
+                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" #subcategory>
+                        <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
+                    
+                </select> <span class="error update-subcat-error" style="display: none;"></span>
                 </div>
                 <div class="update-btn" style="float: none; display: inline-block">
                     <a href="javascript:void(0)">update</a>
@@ -138,21 +137,21 @@
                     <figcaption>
                        
                         <h4>TOP OF THE FUNNEL<span class="info-content" data-content="Your goal with Top Of The Funnel content should be to educate your audience on a specific question, need or pain point that they're looking to address, but without a sales tie-in. "><i class="material-icons">info_outline</i></span></h4>
-                        <ul id="top-funnel"><li><a href="javascript:void(0);">Which major is right for you?</a></li><li><a href="javascript:void(0);">What should be your top college choices?</a></li><li><a href="javascript:void(0);">Which type of college should you aim at?</a></li></ul>
+                        <ul id="top-funnel" ><li *ngFor="let funnelItem of topFunnel"><a href="javascript:void(0);">{{ funnelItem }}</a></li></ul>
                     </figcaption>
                 </div>
                 <div class="funnel-step middle">
                     <figure class="icons-part">                            </figure>
                     <figcaption>
                         <h4>Middle OF THE FUNNEL<span class="info-content" data-content="In the Middle Of The Funnel stage, your content should continue to educate but also start the process of positioning your company as the solution to the lead's needs and challenges."><i class="material-icons">info_outline</i></span></h4>
-                        <ul id="mid-funnel"><li><a href="javascript:void(0);">Do you truly understand the college application procress?</a></li><li><a href="javascript:void(0);">What are your chance of getting into Harvard?</a></li><li><a href="javascript:void(0);">Are you ready for an MBA?</a></li></ul>
+                        <ul id="mid-funnel"><li *ngFor="let funnelItem of middleFunnel"><a href="javascript:void(0);">{{funnelItem}}</a></li></ul>
                     </figcaption>
                 </div>
                 <div class="funnel-step bottom">
                     <figure class="icons-part">                            </figure>
                     <figcaption>
                         <h4>Bottom OF THE FUNNEL<span class="info-content" data-content="Now that the prospect has been engaged and informed about your product or service, in this stage, you can try and position your company/product as the preferred choice for your client."><i class="material-icons">info_outline</i></span></h4>
-                        <ul id="bottom-funnel"><li><a href="javascript:void(0);">How much scholarship can I get?</a></li><li><a href="javascript:void(0);">By when can I complete my degree?</a></li><li><a href="javascript:void(0);">What are my cances of getting a job?</a></li><li><a href="javascript:void(0);">What is going to be the ROI of going to Harvard?</a></li></ul>
+                        <ul id="bottom-funnel"><li *ngFor="let funnelItem of bottomFunnel"><a href="javascript:void(0);">{{funnelItem}}</a></li></ul>
                     </figcaption>
                 </div>
             </div>    

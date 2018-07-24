@@ -18,9 +18,17 @@ declare let selectize: any;
 
 })
 export class IdeaGeneratorComponent implements OnInit {
-  
+  selectCategory=""
+  selectSubCategory="";
   categories =[];
   subCategories =[];
+  topFunnel1:any= ['a','b'];
+   topFunnel=[];
+   middleFunnel=[];
+   bottomFunnel=[];
+
+  // middleFunnel1:any=[];
+  // bottomFunnel1:any=[]
   // categoryKey="";
   selectize : any;
   list:any;
@@ -29,9 +37,7 @@ export class IdeaGeneratorComponent implements OnInit {
   // selectCategory : String = "Choose Category";
   // selectSubcategory = "Choose Sub-Category";
   item="";
-  topFunnel=[];
-  middleFunnel=[];
-  bottomFunnel=[];
+  
   constructor(private router: Router, title: Title, private getData:GetDataService) {
   }
   
@@ -79,12 +85,13 @@ export class IdeaGeneratorComponent implements OnInit {
 
     let self=this;
     setTimeout(function(){
-    console.log("Adding",this.categories)
+    // console.log("Adding",this.categories);
         jQuery('.selectize-category').selectize({
           create: false,
           sortField: 'text',
           placeholder : ' Choose Category',
           onChange:function(event){  
+            this.selectCategory=event;
               // self.categoryKey=event.replace(/ +/g, "")+"-Key";
               // console.log("::Event::",self.categoryKey);
               self.getData.getSubCategories(event)
@@ -92,45 +99,17 @@ export class IdeaGeneratorComponent implements OnInit {
                console.log("::Got Data::",res)
                 console.log("::Got Data[0]::",res.values[0])
                 let len = res.values.length;
-                //in process
-                console.log("::Got Data[0] Length::",res.values.length);
-                // for(let i=0;i<len;i++)
-                // {
-                //   console.log("-Count->",res.values[i] )
-                //   for(let j=0;j<res.values[i].count;j++){
-                //     console.log("-values->",res.values[i][j])
-                //   }
-                // }  
-                // res.values.forEach((data,i)=>{
-                //   console.log(i,"--Outside--",data)
-                //   // data.forEach((t,j)=>{
-                //   //   if(t == event){
-                //   //     console.log("matched")
-                //   //   }
-                //   //   // console.log(i,"--Inside--",t)
-                //   // })
-
-                // })
-
-
+               
                 //working
                res.values.forEach((dataSubCategory,i)=>{
                  console.log(i,dataSubCategory[0])
+
                 if(dataSubCategory[0].slice(3) != "Custom"){
                  self.subCategories[i]=dataSubCategory[0].slice(3); 
                 } 
                }); 
 
-              //  (async function subcat(){
-              //    setTimeout(()=>{
-              //     console.log("------------------subcat-----------------------",self.subCategories);
-              //   jQuery(".selectize-sub-category").selectize.addOption({
-              //    value:13, text:"abc"
-              //   });
-              //   jQuery(".selectize-sub-category").selectize.addItem(13)
-              //    },0)
-                
-              //  })()
+             
               (async function subcat(){
                 setTimeout(()=>{
                  console.log("------------------subcat-----------------------",self.subCategories);
@@ -139,9 +118,64 @@ export class IdeaGeneratorComponent implements OnInit {
                 sortField: 'text',
                 placeholder : ' Choose Sub Category',
                 onChange:(event)=>{
-                  console.log(event, '....Selectize.....')
+                  console.log(event, '....Selectize.....',res.values,event)
                   // self.makeSubCategory(event);
                   // self.item=event
+                  // this.selectSubCategory=event
+                  let keyValue = "key"+event;
+                  // let topFunnel=[];
+                  // let middleFunnel=[];
+                  // let bottomFunnel=[];
+                  let a1=[];
+
+                 res.values.forEach((element,index) => {
+                  //  console.log("Key"+event);
+                   element.forEach((key,i) => {
+                    // console.log(i,key);
+                    if(key=="keyCustom"){
+                      console.log("inside keycustom",key) 
+                      a1=element
+                      a1.forEach((keys,j) => {
+                        if(j==1){
+                          if(keys!="")
+                          self.topFunnel.push(keys);
+                        }else if(j==2){
+                          if(keys!="")
+                          self.middleFunnel.push(keys);
+                        }else if(j==3){
+                          if(keys!="")
+                          self.bottomFunnel.push(keys);
+                        }
+                        
+                      });
+                    }if(key===keyValue){
+                      console.log("inside selected key",keyValue);
+                      a1=element
+                      a1.forEach((keys,j) => {
+                        if(j==1){
+                          if(keys!="")
+                          self.topFunnel.push(keys);
+                        }else if(j==2){
+                          if(keys!="")
+                          self.middleFunnel.push(keys);
+                        }else if(j==3){
+                          if(keys!="")
+                          self.bottomFunnel.push(keys);
+                        }
+                        
+                      });
+                    }
+
+                   });
+                   
+                 });
+                 console.log("Top Funnel",self.topFunnel)
+                 console.log("Middle Funnel",self.middleFunnel)
+                 console.log("Bottom Funnel",self.bottomFunnel)
+                //  this.topFunnel1=topFunnel;
+                //  this.middleFunnel1=middleFunnel;
+                //  this.bottomFunnel1=bottomFunnel;
+                 
                   jQuery(".sec4-bg").removeClass("hide");
                   jQuery('html, body').animate({
                       scrollTop: jQuery('.sec4-bg').offset().top
@@ -172,23 +206,9 @@ export class IdeaGeneratorComponent implements OnInit {
       
       },2000)
 
-      console.log("::Subcategory::",this.subCategories);
+      console.log("::Subcategory::",this.subCategories,this.selectCategory);
       
       
-        // jQuery(".selectize-sub-category").
-        // click(function(event){
-        //   console.log("event")
-        //     jQuery(".sec4-bg").removeClass("hide");
-        //     jQuery('html, body').animate({
-        //         scrollTop: jQuery('.sec4-bg').offset().top
-        //     }, 1000);
-        //     setTimeout(function(){
-        //         jQuery(".sec3-bg").addClass("hide");
-        //     }, 1000)
-
-        //     // jQuery('.selectize-sub-category-result')[0].selectize.setValue(event);
-        // })
-    
         jQuery(".sec-button").click(function(){
               jQuery(".new-sec-bg").fadeIn("slow", function() {
                   jQuery(this).removeClass("hide");
@@ -200,12 +220,6 @@ export class IdeaGeneratorComponent implements OnInit {
               jQuery('body').css('overflow-y','scroll');
 
           })
-   
-          // function makeSubCategory(event){
-          //   this.getData.getSubCategories(event)
-          //   .subscribe(res=>{
-          //     console.log("-------END-------",res)
-          //   })
-          // }
 }
+
 }
