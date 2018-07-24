@@ -77,39 +77,7 @@ export class IdeaGeneratorComponent implements OnInit {
         jQuery('#bottom-funnel').append(html.bottom)
     }
 }
-// function stepEmail () {
-//   var verify = emailValidation(jQuery("#form-email").val());
-//   if(verify) {
-//       window.email = jQuery("#form-email").val();
-//       if(parseData[saveData.category][saveData.subCat] || parseData[saveData.category]['keyCustom'])    showTitle();
-//       jQuery(".new-sec-bg").fadeIn("slow", function() {
-//           jQuery(this).removeClass("hide");
-//       });
-//       jQuery(".sec4-bg").fadeOut("slow", function() {
-//           jQuery(this).addClass("hide");
-//       });
-//       jQuery(".logo-top").removeClass("hide");
-//       jQuery('body').css('overflow-y','auto');
 
-//       sendResponse();
-
-//   }
-//   else jQuery('.email-validator').removeClass('hide');
-// }
-
-// jQuery("#form-email").focus(function(){
-//   if(!jQuery('.email-validator').hasClass('hide')) jQuery('.email-validator').addClass('hide');
-// })
-
-// document.getElementById('form-email').onkeypress = function (e) {
-//   if (e.key.match(/Enter/)) {
-//       stepEmail()
-//   }
-// }
-
-// jQuery(".sec-button").click(function(){
-//   stepEmail();
-// });
 
 
     jQuery(document).ready(function (){
@@ -128,31 +96,7 @@ export class IdeaGeneratorComponent implements OnInit {
    
       });
 
-    //  jQuery(document).ready(function(e) {
-    //    jQuery('#btnValidate').click(function() {
-    //         var sEmail =jQuery('#txtEmail').val();
-    //         if (jQuery.trim(sEmail).length == 0) {
-    //             alert('Please enter valid email address');
-    //             e.preventDefault();
-    //         }
-    //         if (validateEmail(sEmail)) {
-    //             alert('Email is valid');
-    //         }
-    //         else {
-    //             alert('Invalid Email Address');
-    //             e.preventDefault();
-    //         }
-    //     });
-    // });
-    //   function validateEmail(sEmail) {
-    //     var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    //     if (filter.test(sEmail)) {
-    //         return true;
-    //     }
-    //     else {
-    //         return false;
-    //     }
-    // }
+    
 
     let self=this;
     setTimeout(function(){
