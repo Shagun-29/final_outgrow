@@ -12,7 +12,7 @@
 }
 .sec1-bg {
     background: url("/assets/images/sec1-bg1.jpg") no-repeat 40% center !important;
-    background-size: cover;
+    background-size: cover!important;
 }
 .sec-outr {
     display: table;
@@ -57,6 +57,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-weight: 100;
     text-align: center;
     width: 100%;
+    margin-bottom: 10px!important;
 }
 .h1, h1 {
     font-size: 36px;
@@ -315,7 +316,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .sec2-bg {
     background: url(/assets/images/sec2-bg1.jpg) no-repeat fixed bottom center !important;
-    background-size: cover;
+    background-size: cover!important;
 }
 
 .sec-outr {
@@ -395,14 +396,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 .sec3-bg {
     background: url(/assets/images/sec2-bg1.jpg) no-repeat fixed bottom center!important;
-    background-size: cover;
+    background-size: cover!important;
 }
 .sec4-bg {
     background: url(/assets/images/sec2-bg1.jpg) no-repeat fixed bottom center!important;
-    background-size: cover;
+    background-size: cover!important;
 }
 .sec-container.custom-conatiner {
-    margin: 90px auto 0;
+    margin: 76px auto 0;
     width: 100%;
     max-width: 1200px;
 }
@@ -449,6 +450,50 @@ section.mouse-bg.sec-outr.new-sec-bg {
     text-transform: none;
     color: #666666;
 }
+.selectize-control {
+    text-align: left !important;
+}
+.sec-catergory input.sec-input {
+    box-sizing: border-box;
+}
+.sec-catergory input.sec-input {
+    padding: 15px;
+    line-height: normal;
+    text-transform: none;
+    border: 1px solid #d9dad3;
+    border-radius: 0px;
+    color: #666;
+    margin-top: 12px;
+    background: #fff;
+    width: 100%;
+    max-width: 660px;
+    font-family: montserratregular;
+    box-shadow: 3px 0 40px rgba(0, 0, 0, 0.2);
+    min-height: 65px;
+}
+a, input, textarea, button:focus {
+    outline: none;
+}
+span.alert.alert-danger {
+    font-size: 12px;
+    color: #ef4040;
+    font-family: montserratregular;
+    width: 100%;
+    float: left;
+    margin-left: 15px;
+    margin-top: 7px;
+    text-align: left;
+}
+
+.sec-catergory input.sec-input::placeholder {    opacity: 0.5;     color: #666666;}
+.sec-catergory input.sec-input::-moz-placeholder {    color: #666666;      opacity: 0.5;}
+.sec-catergory input.sec-input::-webkit-placeholder{     color: #666666;       opacity: 0.5;    }
+
+
+.sec-catergory .selectize-control.single .selectize-input input::-moz-placeholder {    opacity: 1 !important;}
+.sec-catergory .selectize-control.single .selectize-input input::-webkit-placeholder {    opacity: 1 !important;}
+.sec-catergory .selectize-control.single .selectize-input input::-ms-placeholder {    opacity: 1 !important;}
+
 
 @media (max-width: 639px)
 {
@@ -610,6 +655,20 @@ figure.icons-part {
     padding: 0 30px;
     vertical-align: middle;
 }
+.sec2-bg .sec-container {
+    margin: 0px auto;
+    width: 100%;
+}
+.sec-catergory input.sec-input {
+    font-size: 14px;
+    min-height: auto !important;
+}
+
+
+.sec-catergory input.sec-input {
+    margin-top: 20px !important;
+    min-height: auto !important;
+}
 }
 @media (max-width: 1023px) and (min-width: 640px)
 {
@@ -705,6 +764,12 @@ figure.icons-part {
 .demo-default .selectize-dropdown.single.demo-default.selectize-sub-category, .demo-default .selectize-dropdown.single.demo-default.selectize-category {
     top: 70px !important;
 }
+.sec-catergory input.sec-input {
+    padding: 12px 20px;
+    font-size: 14px;
+    margin-top: 20px;
+    min-height: 45px;
+}
 }
 @media (max-width: 1679px) and (min-width: 1366px)
 {
@@ -743,6 +808,15 @@ figure.icons-part {
 .sec-catergory .selectize-control.single .selectize-input input {
     font-size: 16px!important;
     padding-top: 2px !important;
+}
+.sec1-text h2 {
+    font-size: 36px;
+}
+.sec-catergory input.sec-input {
+    padding: 15px 20px;
+    font-size: 16px;
+    margin-top: 25px;
+    min-height: 50px;
 }
 }
 @media (max-width: 1365px) and (min-width: 1024px)
@@ -793,6 +867,12 @@ figure.icons-part {
 }
 .demo-default .selectize-dropdown.single.demo-default.selectize-sub-category, .demo-default .selectize-dropdown.single.demo-default.selectize-category {
     top: 75px !important;
+}
+.sec-catergory input.sec-input {
+    padding: 12px 20px;
+    font-size: 15px;
+    margin-top: 25px;
+    min-height: 50px;
 }
 }
 
