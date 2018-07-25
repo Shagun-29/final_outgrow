@@ -110,13 +110,14 @@ export class IdeaGeneratorComponent implements OnInit {
         jQuery('.selectize-category').selectize({
           create: false,
           sortField: 'text',
-          placeholder : ' Choose Category',
+          // placeholder : 'Choose Category',
           onChange:function(event){ 
              
             jQuery(".selectize-category-result option[value='"+ event +"']").attr('selected', 'selected')
             jQuery(".selectize-category-result").val(event);
 
             this.selectCategory=event;
+            console.log('-----Event-----',event);
               // self.categoryKey=event.replace(/ +/g, "")+"-Key";
               // console.log("::Event::",self.categoryKey);
               self.getData.getSubCategories(event)
