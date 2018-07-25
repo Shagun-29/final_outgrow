@@ -19,9 +19,9 @@
         </div>
     </section>
     <div class="logo-top hide">
-        <a href="javascript:void(0);">
+        <!-- <a href="javascript:void(0);">
             <img src="images/logo.png" alt="logo" />
-        </a>
+        </a> -->
     </div>
     <section class="sec-outr sec2-bg hide">
         <!-- <div class="loader-wrapper category-page-loader">
@@ -94,7 +94,7 @@
                     Your Email
                 </div>
                 <div class="sec-catergory">
-                    <input type="email" class="sec-input" id="form-email" placeholder="johnwatson@sh.com"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+                    <input type="email" class="sec-input" id="form-email" placeholder="johnwatson@sh.com" required/>
                     <span class="alert alert-danger email-validator hide">
                         <i class="material-icons">error_outline</i> Please enter valid email
                     </span>
@@ -116,25 +116,16 @@
         </div>-->
         <div class="sec-container custom-conatiner">
             <div class="sec1-text">
-                <h2>Here you go!</h
+                <h2>Here you go!</h2>
             </div>
             <div class="update-section">
                  <div class="sec-catergory  custom-select">
-                    <select class="demo-default selectize-category-result selectized" data-placeholder="Choose Category" >
-                     <!-- <option value="Education-Key" selected="selected">Education</option> -->
-                    </select>
-                     <!-- <div class="selectize-control demo-default selectize-category-result single"><div class="selectize-input items full has-options has-items"><div data-value="Education-Key" class="item">Education</div><input type="text" autocomplete="off" tabindex="" disabled="disabled" style="width: 4px; opacity: 0; position: absolute; left: -10000px;"></div><div class="selectize-dropdown single demo-default selectize-category-result" style="display: none; width: 100px; top: 0px; left: 0px;"><div class="selectize-dropdown-content"><div data-value="eCommerce-Key" data-selectable="" class="option">eCommerce</div><div data-value="Education-Key" data-selectable="" class="option selected">Education</div><div data-value="FinancialServices-Key" data-selectable="" class="option">Financial Services</div><div data-value="Insurance-Key" data-selectable="" class="option">Insurance</div><div data-value="Mediaand Entertainment-Key" data-selectable="" class="option">Media and Entertainment</div><div data-value="SaaS-Key" data-selectable="" class="option">SaaS</div></div></div></div>  -->
-                       
-                        <option *ngFor = "let category of categories">{{ category }}</option>
-
-                        <span class="error update-cat-error" style="display: none;"></span>
+                    <select class="demo-default selectize-category-result selectized" data-placeholder="Choose Category" tabindex="-1" style="display: none;"><option value="Education-Key" selected="selected">Education</option></select><div class="selectize-control demo-default selectize-category-result single"><div class="selectize-input items full has-options has-items"><div data-value="Education-Key" class="item">Education</div><input type="text" autocomplete="off" tabindex="" disabled="disabled" style="width: 4px; opacity: 0; position: absolute; left: -10000px;"></div><div class="selectize-dropdown single demo-default selectize-category-result" style="display: none; width: 100px; top: 0px; left: 0px;"><div class="selectize-dropdown-content"><div data-value="eCommerce-Key" data-selectable="" class="option">eCommerce</div><div data-value="Education-Key" data-selectable="" class="option selected">Education</div><div data-value="FinancialServices-Key" data-selectable="" class="option">Financial Services</div><div data-value="Insurance-Key" data-selectable="" class="option">Insurance</div><div data-value="Mediaand Entertainment-Key" data-selectable="" class="option">Media and Entertainment</div><div data-value="SaaS-Key" data-selectable="" class="option">SaaS</div></div></div></div>
+                    <span class="error update-cat-error" style="display: none;"></span>
                 </div>
                 <div class="sec-catergory  custom-select">
-                    <select class="demo-default selectize-sub-category-result selectized" data-placeholder="Choose Sub Category" ></select>
-                        <!-- <option value="keyHigherEducation" selected="selected">Higher Education</option><div class="selectize-control demo-default selectize-sub-category-result single"><div class="selectize-input items full has-options has-items"><div data-value="keyHigherEducation" class="item">Higher Education</div><input type="text" autocomplete="off" tabindex="" disabled="disabled" style="width: 4px; opacity: 0; position: absolute; left: -10000px;"></div><div class="selectize-dropdown single demo-default selectize-sub-category-result" style="display: none; width: 100px; top: 0px; left: 0px;"><div class="selectize-dropdown-content"><div data-value="keyHigherEducation" data-selectable="" class="option selected">Higher Education</div></div></div></div> -->
-                    
-                        <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
-                        <span class="error update-subcat-error" style="display: none;"></span>
+                    <select class="demo-default selectize-sub-category-result selectized" data-placeholder="Choose Sub Category" tabindex="-1" style="display: none;"><option value="keyHigherEducation" selected="selected">Higher Education</option></select><div class="selectize-control demo-default selectize-sub-category-result single"><div class="selectize-input items full has-options has-items"><div data-value="keyHigherEducation" class="item">Higher Education</div><input type="text" autocomplete="off" tabindex="" disabled="disabled" style="width: 4px; opacity: 0; position: absolute; left: -10000px;"></div><div class="selectize-dropdown single demo-default selectize-sub-category-result" style="display: none; width: 100px; top: 0px; left: 0px;"><div class="selectize-dropdown-content"><div data-value="keyHigherEducation" data-selectable="" class="option selected">Higher Education</div></div></div></div>
+                    <span class="error update-subcat-error" style="display: none;"></span>
                 </div>
                 <div class="update-btn" style="float: none; display: inline-block">
                     <a href="javascript:void(0)">update</a>
@@ -170,79 +161,4 @@
 </section>
             </div>
 
-            <script>
-                function myFunction() {
-    var x = document.getElementById("#email-btn").pattern;
-    // document.getElementById("demo").innerHTML = x;
-}
-    //            function ValidateEmail(email) {
-    //     var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    //     return expr.test(email);
-    // };
-    // $("#email-btn").on("click", function () {
-    //     if (!ValidateEmail($("#form-email").val())) {
-    //         alert("Invalid email address.");
-    //     }
-    //     else {
-    //         alert("Valid email address.");
-    //     }
-    // });
-
-
-// function emailValidation(email){
-//     var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-//     if(regex.test(email)) return true;
-//     else false;
-// }
-
-//   $(document).ready(function()
-//   {
-//     jQuery('#email-btn').click(function() {
-//           var sEmail =jQuery('#txtEmail').val();
-
-
-//   });
-// }
-
-//   );
-
-
-
-
-
-//     function stepEmail () {
-//     var verify = emailValidation($("#form-email").val());
-//     if(verify) {
-//         window.email = $("#form-email").val();
-//         if(parseData[saveData.category][saveData.subCat] || parseData[saveData.category]['keyCustom'])    showTitle();
-//         $(".new-sec-bg").fadeIn("slow", function() {
-//             $(this).removeClass("hide");
-//         });
-//         $(".sec4-bg").fadeOut("slow", function() {
-//             $(this).addClass("hide");
-//         });
-//         $(".logo-top").removeClass("hide");
-//         $('body').css('overflow-y','auto');
-
-//         sendResponse();
-
-//     }
-//     else $('.email-validator').removeClass('hide');
-// }
-
-
-
-//   $("#form-email").focus(function(){
-//                 if(!$('.email-validator').hasClass('hide')) $('.email-validator').addClass('hide');
-//             })
-
-//             document.getElementById('form-email').onkeypress = function (e) {
-//                 if (e.key.match(/Enter/)) {
-//                     stepEmail()
-//                 }
-//             }
-
-//             $(".sec-button").click(function(){
-//                 stepEmail();
-//             });
-            </script>
+   

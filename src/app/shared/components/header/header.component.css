@@ -512,7 +512,7 @@ a {
 li.nav-lead-input {
     margin-top: 22px;
     position: relative;
-    width: 317px;
+    width: 317px!important;
     margin-right: 5px !important;
     line-height: 22px;
 }
@@ -523,6 +523,7 @@ li.nav-lead-input {
     padding: 0 15px;
     height: 30px;
     color: #62696d;
+    outline: none;
 }
 .nav-lead-input .lead-form-btn {
     position: absolute !important;
@@ -652,17 +653,30 @@ li.nav-lead-input {
     display: inline-block!important;
 }
 }
+@media (max-width: 1023px) and (min-width: 769px)
+{
+    .custom-navbar.navbar-default .navbar-nav>li {
+      float: left;
+      width: 100%;
+    }
+}
 
-
+@media (max-width: 380px) and (min-width: 320px)
+{
+li.nav-lead-input {
+    width: auto!important;
+    
+}
+}
 
 @media (max-width: 1023px) and (min-width: 320px)
 {
 
-    .custom-navbar.navbar-default .navbar-nav>li {
+    /* .custom-navbar.navbar-default .navbar-nav>li {
         margin-right: 0px;
         float: left;
         width:100%;
-    }
+    } */
     .collapse {
         display: none!important;
     }
@@ -887,8 +901,17 @@ li.nav-lead-input {
         font-size: 12px;
     }
     li.nav-lead-input {
-        width: 237px;
+        width: 237px!important;
         margin-right: 0px !important;
+    }
+    .custom-navbar.navbar-default .navbar-nav>li>a {
+        font-size: 13px;
+    }
+    .sticky li.nav-lead-input {
+        margin-top: 12px!important;
+    }
+    li.nav-lead-input {
+        margin-top: 17px!important;
     }
 
 }
