@@ -536,6 +536,24 @@ span.alert.alert-danger {
 .funnel-step.bottom {
     border-right: 0px;
 }
+.demo-default {
+    font-size: 16px!important;
+    margin-top: 25px!important;
+    min-height: 50px;
+    padding: 12px 20px;
+    color: #666666!important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    text-transform: none;
+    outline: none;
+    border: 1px solid #d9dad3;
+}
+.demo-default:after {
+    border-color: #999 transparent transparent transparent;
+    border-width: 6px 5px 0 5px;
+}
 @media (max-width: 639px)
 {
     .sec-container.custom-conatiner .selectize-input.items.has-options.full.has-items .item {
@@ -645,6 +663,12 @@ figure.icons-part {
     height: 90px;
     width: 90px;
     background-position: 30px center;
+}
+.middle figure.icons-part {
+    background-position: -159px center;
+}
+.bottom figure.icons-part {
+    background-position: -65px center;
 }
 .funnel-step > figcaption {
     padding: 0 0px;
@@ -781,6 +805,12 @@ figure.icons-part {
     width: 100px;
     background-position: 35px center;
 }
+.middle figure.icons-part {
+    background-position: -155px center;
+}
+.bottom figure.icons-part {
+    background-position: -60px center;
+}
 .funnel-step > figcaption {
     padding: 0 20px;
 }
@@ -859,6 +889,12 @@ figure.icons-part {
     margin-top: 25px;
     min-height: 50px;
 }
+.middle figure.icons-part {
+    background-position: -155px center;
+}
+.bottom figure.icons-part {
+    background-position: -60px center;
+}
 }
 @media (max-width: 1365px) and (min-width: 1024px)
 {
@@ -896,6 +932,12 @@ figure.icons-part {
     height: 100px;
     width: 100px;
     background-position: 35px center;
+}
+.middle figure.icons-part {
+    background-position: -155px center;
+}
+.bottom figure.icons-part {
+    background-position: -60px center;
 }
 .funnel-step li a {
     font-size: 14px;

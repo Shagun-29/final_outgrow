@@ -1,11 +1,11 @@
 <div class="main-outr">
     <section class="sec-outr sec1-bg mouse-bg">
         <div class="sec">
-            <!-- <div class="logo">
+            <div class="logo">
                 <a href="javascript:void(0);">
-                    <!-- <img src="images/logo.png" alt="logo" />
+                    <!-- <img src="images/logo.png" alt="logo" /> -->
                 </a>
-            </div> -->
+            </div>
             <div class="sec-container">
                 <div class="sec1-text">
                     <h1 id="background" class="mouse-bg">
@@ -42,7 +42,7 @@
                     <br> fall into?
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-category" placeholder = "Choose Category" (click)="selectCategory()" #category>
+                    <select class="demo-default selectize-category" placeholder = "Choose Category"  #category>
                             <option *ngFor = "let category of categories">{{ category }}</option>
                         </select>
                     <!-- <select name="categories" class="demo-default selectize-category" ng-options="categories.name for categories in arrlist" ng-model="userselected">
@@ -96,7 +96,7 @@
                     </span>
                 </div>
                 <div class="butn-outr">
-                    <button type="submit" id="email-btn" class="sec-button button-ideas" onclick="myFunction()" >Show me my ideas!</button>
+                    <button type="submit" class="sec-button button-ideas">Show me my ideas!</button>
                 </div>
             </div>
         </div>
@@ -116,15 +116,14 @@
             </div>
             <div class="update-section">
                  <div class="sec-catergory  custom-select">
-                    <select class="demo-default selectize-category" placeholder = "Choose Category" (click)="selectCategory1()" #category>
+                    <select class=" selectize-control demo-default selectize-category-result" >
                         <option *ngFor = "let category of categories">{{ category }}</option>
                     </select> <span class="error update-cat-error" style="display: none;"></span>
                 </div>
                 <div class="sec-catergory  custom-select">
-                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" #subcategory>
-                        <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
-                    
-                </select> <span class="error update-subcat-error" style="display: none;"></span>
+                    <select class=" selectize-control demo-default selectize-sub-category-result">
+                            <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
+                       </select><span class="error update-subcat-error" style="display: none;"></span>
                 </div>
                 <div class="update-btn" style="float: none; display: inline-block">
                     <a href="javascript:void(0)">update</a>
