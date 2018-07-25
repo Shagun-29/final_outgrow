@@ -18,8 +18,8 @@ declare let selectize: any;
 
 })
 export class IdeaGeneratorComponent implements OnInit {
-  selectCategory=""
-  selectSubCategory="";
+  selectCategory : string = ""
+  selectSubCategory : string = "";
   categories =[];
   subCategories =[];
   topFunnel1:any= ['a','b'];
@@ -111,7 +111,11 @@ export class IdeaGeneratorComponent implements OnInit {
           create: false,
           sortField: 'text',
           placeholder : ' Choose Category',
-          onChange:function(event){  
+          onChange:function(event){ 
+             
+            jQuery(".selectize-category-result option[value='"+ event +"']").attr('selected', 'selected')
+            jQuery(".selectize-category-result").val(event);
+
             this.selectCategory=event;
               // self.categoryKey=event.replace(/ +/g, "")+"-Key";
               // console.log("::Event::",self.categoryKey);
@@ -123,10 +127,12 @@ export class IdeaGeneratorComponent implements OnInit {
                
                 //working
                res.values.forEach((dataSubCategory,i)=>{
-                 console.log(i,dataSubCategory[0])
+                 console.log(i,dataSubCategory[0]) 
 
                 if(dataSubCategory[0].slice(3) != "Custom"){
+                  if(self.subCategories[i] != "")
                  self.subCategories[i]=dataSubCategory[0].slice(3); 
+
                 } 
                }); 
 
@@ -139,6 +145,10 @@ export class IdeaGeneratorComponent implements OnInit {
                 sortField: 'text',
                 placeholder : ' Choose Sub Category',
                 onChange:(event)=>{
+
+                  jQuery(".selectize-sub-category-result option[value='"+ event +"']").attr('selected', 'selected')
+                  jQuery(".selectize-sub-category-result").val(event);
+                 
                   console.log(event, '....Selectize.....',res.values,event)
                   // self.makeSubCategory(event);
                   // self.item=event
@@ -227,7 +237,7 @@ export class IdeaGeneratorComponent implements OnInit {
       
       },2000)
 
-      console.log("::Subcategory::",this.subCategories,this.selectCategory);
+      // console.log("::Subcategory::",this.subCategories,this.selectCategory);
       
       
         jQuery(".sec-button").click(function(){
@@ -241,6 +251,10 @@ export class IdeaGeneratorComponent implements OnInit {
               jQuery('body').css('overflow-y','scroll');
 
           })
-}
 
+       
+            
+         
+  
+  }
 }

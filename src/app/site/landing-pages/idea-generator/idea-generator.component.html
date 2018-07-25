@@ -1,11 +1,11 @@
 <div class="main-outr">
     <section class="sec-outr sec1-bg mouse-bg">
         <div class="sec">
-            <!-- <div class="logo">
+            <div class="logo">
                 <a href="javascript:void(0);">
-                    <!-- <img src="images/logo.png" alt="logo" />
+                    <!-- <img src="images/logo.png" alt="logo" /> -->
                 </a>
-            </div> -->
+            </div>
             <div class="sec-container">
                 <div class="sec1-text">
                     <h1 id="background" class="mouse-bg">
@@ -42,7 +42,7 @@
                     <br> fall into?
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-category" placeholder = "Choose Category" (click)="selectCategory()" #category>
+                    <select class="demo-default selectize-category" placeholder = "Choose Category"  #category>
                             <option *ngFor = "let category of categories">{{ category }}</option>
                         </select>
                     <!-- <select name="categories" class="demo-default selectize-category" ng-options="categories.name for categories in arrlist" ng-model="userselected">
@@ -90,13 +90,13 @@
                     Your Email
                 </div>
                 <div class="sec-catergory">
-                    <input type="email" class="sec-input" id="form-email" placeholder="johnwatson@sh.com"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+                    <input type="text" class="sec-input" id="form-email" placeholder="johnwatson@sh.com" />
                     <span class="alert alert-danger email-validator hide">
                         <i class="material-icons">error_outline</i> Please enter valid email
                     </span>
                 </div>
                 <div class="butn-outr">
-                    <button type="submit" id="email-btn" class="sec-button button-ideas" onclick="myFunction()" >Show me my ideas!</button>
+                    <button type="submit" class="sec-button button-ideas">Show me my ideas!</button>
                 </div>
             </div>
         </div>
@@ -112,19 +112,18 @@
         </div>-->
         <div class="sec-container custom-conatiner">
             <div class="sec1-text">
-                <h2>Here you go!</h
+                <h2>Here you go!</h2>
             </div>
             <div class="update-section">
                  <div class="sec-catergory  custom-select">
-                    <select class="demo-default selectize-category" placeholder = "Choose Category" (click)="selectCategory1()" #category>
+                    <select class="demo-default selectize-category-result" >
                         <option *ngFor = "let category of categories">{{ category }}</option>
                     </select> <span class="error update-cat-error" style="display: none;"></span>
                 </div>
                 <div class="sec-catergory  custom-select">
-                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" #subcategory>
-                        <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
-                    
-                </select> <span class="error update-subcat-error" style="display: none;"></span>
+                    <select class="demo-default selectize-sub-category-result">
+                            <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
+                       </select><span class="error update-subcat-error" style="display: none;"></span>
                 </div>
                 <div class="update-btn" style="float: none; display: inline-block">
                     <a href="javascript:void(0)">update</a>
@@ -159,80 +158,3 @@
     </div>
 </section>
             </div>
-
-            <script>
-                function myFunction() {
-    var x = document.getElementById("#email-btn").pattern;
-    // document.getElementById("demo").innerHTML = x;
-}
-    //            function ValidateEmail(email) {
-    //     var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    //     return expr.test(email);
-    // };
-    // $("#email-btn").on("click", function () {
-    //     if (!ValidateEmail($("#form-email").val())) {
-    //         alert("Invalid email address.");
-    //     }
-    //     else {
-    //         alert("Valid email address.");
-    //     }
-    // });
-
-
-// function emailValidation(email){
-//     var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-//     if(regex.test(email)) return true;
-//     else false;
-// }
-
-//   $(document).ready(function()
-//   {
-//     jQuery('#email-btn').click(function() {
-//           var sEmail =jQuery('#txtEmail').val();
-
-
-//   });
-// }
-
-//   );
-
-
-
-
-
-//     function stepEmail () {
-//     var verify = emailValidation($("#form-email").val());
-//     if(verify) {
-//         window.email = $("#form-email").val();
-//         if(parseData[saveData.category][saveData.subCat] || parseData[saveData.category]['keyCustom'])    showTitle();
-//         $(".new-sec-bg").fadeIn("slow", function() {
-//             $(this).removeClass("hide");
-//         });
-//         $(".sec4-bg").fadeOut("slow", function() {
-//             $(this).addClass("hide");
-//         });
-//         $(".logo-top").removeClass("hide");
-//         $('body').css('overflow-y','auto');
-
-//         sendResponse();
-
-//     }
-//     else $('.email-validator').removeClass('hide');
-// }
-
-
-
-//   $("#form-email").focus(function(){
-//                 if(!$('.email-validator').hasClass('hide')) $('.email-validator').addClass('hide');
-//             })
-
-//             document.getElementById('form-email').onkeypress = function (e) {
-//                 if (e.key.match(/Enter/)) {
-//                     stepEmail()
-//                 }
-//             }
-
-//             $(".sec-button").click(function(){
-//                 stepEmail();
-//             });
-            </script>
