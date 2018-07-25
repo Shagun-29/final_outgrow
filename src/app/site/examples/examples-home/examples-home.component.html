@@ -1,4 +1,4 @@
-<div class="usecase" id="" >
+<div class="usecase" id="">
     <!--  top section-->
     <div class="section-main sec-example topSpace">
         <!-- <section class="section section-5 sec-outgrowMagic-title">
@@ -19,66 +19,46 @@
                     <div class="tab-outer-frame col-xs-12 col-md-10 col-sm-12 text-center">
                         <!--<span class="icon-webcam"></span>-->
                         <div class="hrefTarget tab-inner-frame col-xs-12 col-md-12 col-sm-12">
-                            <iframe id="og-iframe"  src="https://website.outgrow.us/build-a-startup?vHeight=1" class="iframe" scrolling="no"
-                         #frame ></iframe>
-                         
-                             
-                            
-                            
+                            <iframe id="og-iframe" src="https://website.outgrow.us/build-a-startup?vHeight=1" class="iframe" scrolling="no" #frame></iframe>
                         </div>
                     </div>
                 </div>
-
-                
                 <div class="col-xs-12 col-md-12 col-sm-12 mobile-container rs-hide calc-links text-center">
-                    <a href="javascript:void(0);" [ngClass]="{'active': isActive0}" (click)="videoURL('a',frame)" >
-                        
-                        <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc06.jpg" />
-                    </a>
-                    <a href="javascript:void(0);"  [ngClass]="{'active': isActive1}"  (click)="videoURL('b',frame)">
-                            
-                        <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc01.jpg" />
-                    </a>
-                    <a href="javascript:void(0);" [ngClass]="{'active': isActive2}"  (click)="videoURL('c',frame)">
-                            
-                        <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc02.jpg" />
-                    </a>
-                    <a href="javascript:void(0);" [ngClass]="{'active': isActive3}"  (click)="videoURL('d',frame)">
-                            
-                        <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc03.jpg" />
-                    </a>
-                    <a href="javascript:void(0);" [ngClass]="{'active': isActive4}"  (click)="videoURL('e',frame)">
-                            
-                        <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc04.jpg" />
-                    </a>
-                    <a href="javascript:void(0);" [ngClass]="{'active': isActive5}"  (click)="videoURL('f',frame)">
-                            
-                        <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc05.jpg" />
-                    </a>
+                    <ng-container *ngFor="let iFrame of iFrames;let i=index">
+                        <a href="javascript:void(0);" [class.active]="activeFrame === i" (click)="videoURL(frame,iFrame.name,i)">
+                            <img alt="Calculator thumb image" class="thumb-calc" [src]="iFrame.media" />
+                        </a>
+                    </ng-container>
                 </div>
 
-                <div class="col-xs-12 col-md-12 col-sm-12 section-6-left mobile-container rs-show text-center">
+                <!-- <div class="col-xs-12 col-md-12 col-sm-12 section-6-left mobile-container rs-show text-center">
                     <div class="col-md-12 col-sm-12 col-xs-12 np calc-links">
-                        <a href="https://website.outgrow.us/build-a-startup?vHeight=1" [ngClass]="{'active': isActive0}" (click)="videoURL('a',frame)" class="col-sm-4 np calcembed active" target="_blank">
+                        <a href="https://website.outgrow.us/build-a-startup?vHeight=1" [ngClass]="{'active': isActive0}" (click)="videoURL('a',frame)"
+                            class="col-sm-4 np calcembed active" target="_blank">
                             <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc06.jpg" />
                         </a>
-                        <a href="https://website.outgrow.us/Which-engineering-major-is-right-for-you?vHeight=1" [ngClass]="{'active': isActive1}" (click)="videoURL('b',frame)" class="col-sm-4 np calcembed" target="_blank">
+                        <a href="https://website.outgrow.us/Which-engineering-major-is-right-for-you?vHeight=1" [ngClass]="{'active': isActive1}"
+                            (click)="videoURL('b',frame)" class="col-sm-4 np calcembed" target="_blank">
                             <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc01.jpg" />
                         </a>
-                        <a href="https://website.outgrow.us/Cost-of-a-video-campaign-4?vHeight=1" [ngClass]="{'active': isActive2}" (click)="videoURL('c',frame)" class="col-sm-4 np calcembed" target="_blank">
+                        <a href="https://website.outgrow.us/Cost-of-a-video-campaign-4?vHeight=1" [ngClass]="{'active': isActive2}" (click)="videoURL('c',frame)"
+                            class="col-sm-4 np calcembed" target="_blank">
                             <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc02.jpg" />
                         </a>
-                        <a href="https://website.outgrow.us/What-is-your-risk-of-getting-a-heart-disease?vHeight=1" [ngClass]="{'active': isActive3}" (click)="videoURL('d',frame)" class="col-sm-4 np calcembed" target="_blank">
+                        <a href="https://website.outgrow.us/What-is-your-risk-of-getting-a-heart-disease?vHeight=1" [ngClass]="{'active': isActive3}"
+                            (click)="videoURL('d',frame)" class="col-sm-4 np calcembed" target="_blank">
                             <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc03.jpg" />
                         </a>
-                        <a href="https://website.outgrow.us/outgrow-roi?vHeight=1" [ngClass]="{'active': isActive4}" (click)="videoURL('e',frame)" class="col-sm-4 np calcembed" target="_blank">
+                        <a href="https://website.outgrow.us/outgrow-roi?vHeight=1" [ngClass]="{'active': isActive4}" (click)="videoURL('e',frame)"
+                            class="col-sm-4 np calcembed" target="_blank">
                             <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc04.jpg" />
                         </a>
-                        <a href="https://website.outgrow.us/build-an-app" [ngClass]="{'active': isActive5}" (click)="videoURL('f',frame)" class="col-sm-4 np calcembed" target="_blank">
+                        <a href="https://website.outgrow.us/build-an-app" [ngClass]="{'active': isActive5}" (click)="videoURL('f',frame)" class="col-sm-4 np calcembed"
+                            target="_blank">
                             <img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc05.jpg" />
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </div>
@@ -115,42 +95,42 @@
 
     <section class="section">
         <div class="container">
-            <div id="premade-heading" class="useCase-heading"  [ngClass]="{'hide': isHeadingHide}" >
-                {{hiddenHeading}}
+            <div id="premade-heading" class="useCase-heading">
+                {{tabHeading}}
             </div>
         </div>
     </section>
     <!--  section end-->
 
-  
+
 
     <!-- start: example calc -->
 
     <section class="section example-calc">
-        <!-- <div id="premade-loader" class="preloader">
+        <div *ngIf="loading" id="premade-loader" class="preloader">
             <div class="status">&nbsp;</div>
-        </div> -->
-        <div id="premade-content" class="tab-section "  [ngClass]="{'hide': isHideContent}" >
+        </div>
+        <div *ngIf="!loading" id="premade-content" class="tab-section">
             <div class="container-fluid">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs premade-calc" role="tablist">
                     <li role="presentation" class="tab-title active">
-                        <a id="Calculator" href="#numeric-calc" aria-controls="numeric-calc" class="res-tab" role="tab" data-toggle="tab" (click)="changeTab('Calculator')">
+                        <a id="Calculator" href="#numeric-calc" aria-controls="numeric-calc" class="res-tab" role="tab" data-toggle="tab" (click)="typeOfCalculator('Calculator')">
                             Numerical Calculator
                         </a>
                     </li>
                     <li role="presentation" class="tab-title">
-                        <a id="OutcomeQuiz" href="#outcome-quiz" aria-controls="outcome-quiz" role="tab" data-toggle="tab" (click)="changeTab('OutcomeQuiz')">
+                        <a id="OutcomeQuiz" href="#outcome-quiz" aria-controls="outcome-quiz" role="tab" data-toggle="tab" (click)="typeOfCalculator('Outcome Quiz')">
                             Outcome Quiz
                         </a>
                     </li>
                     <li role="presentation" class="tab-title">
-                        <a id="GradedQuiz" href="#graded-quiz" aria-controls="graded-quiz" role="tab" data-toggle="tab" (click)="changeTab('GradedQuiz')">
+                        <a id="GradedQuiz" href="#graded-quiz" aria-controls="graded-quiz" role="tab" data-toggle="tab" (click)="typeOfCalculator('Graded Quiz')">
                             Graded Quiz
                         </a>
                     </li>
                     <li role="presentation" class="tab-title">
-                        <a id="Poll" href="#outcome-quiz" aria-controls="poll" role="tab" data-toggle="tab" (click)="changeTab('Poll')">
+                        <a id="Poll" href="#outcome-quiz" aria-controls="poll" role="tab" data-toggle="tab" (click)="typeOfCalculator('Poll')">
                             Poll
                         </a>
                     </li>
@@ -165,28 +145,28 @@
 							</div> -->
                             <div class="premade-template">
                                 <ul class="pre-temp-cat" id="calc-cats">
-                                    
-                                    <li class="" *ngFor="let item of items; let i=index"  [class.active]="sIndex === i">
-                                    <!-- <li [ngClass]="{'active': s}" *ngFor="let item of items; let i=index;let s = false;"> -->
-                                    <a href="javascript:void(0)" id="{{item.id}}" (click)="shuffleCalcs(item.id,i);">{{item.name}}</a>
+
+                                    <li class="" *ngFor="let industry of industries; let i=index" [class.active]="sIndex === i">
+                                        <!-- <li [ngClass]="{'active': s}" *ngFor="let item of items; let i=index;let s = false;"> -->
+                                        <a href="javascript:void(0)" id="{{industry.industry}}" (click)="displayCalcs(industry.type,industry.industry,i);">{{industry.industry}}</a>
                                     </li>
-                                    
+
                                 </ul>
 
                                 <div class="pre-temp-cont">
                                     <ul class="pre-temp-list" id="gallery-content-center">
 
-                                        <li class=" filter-all filter-auto" id="calc-auto-loan" *ngFor="let item of headingDescription; let ind=index" [class.active]="sIndex1 === ind">
-                                            <a href="javascript:void(0)" (click)="markAsActive(ind)">{{item}} </a>
+                                        <li class=" filter-all filter-auto" id="calc-auto-loan" *ngFor="let calc of finalCalculators; let ind=index" [class.active]="sIndex1 === ind">
+                                            <a href="javascript:void(0)" (click)="markAsActive(calc,ind)">{{calc.description}} </a>
                                         </li>
-                                        
+
                                     </ul>
 
                                     <div class="pre-temp-view">
-                                        <div class="temp-preview" *ngFor="let gif of gifs">
+                                        <div class="temp-preview">
                                             <span class="image-bg1">
                                                 <span class="image-scroll1">
-                                                    <img id="premade-gif" src={{gif.url}} />
+                                                    <img id="premade-gif" src={{gif.media}} />
                                                 </span>
                                             </span>
                                             <div class="content temp-info">
@@ -197,11 +177,11 @@
                                                     </p>
                                                     <span id="premade-calc-layout">
                                                         <strong>Layout:</strong>
-                                                        {{gif.description}}
+                                                        {{gif.layout}}
                                                     </span>
                                                 </h3>
-                                                <a id="premade-preview-link" class="btn btn-red btn-hover" target="_blank" href={{gif.hRef}}>Preview</a>
-                                                <a class="btn btn-red btn-hover" href="//app.outgrow.co/signup">Build your own</a>
+                                                <a id="premade-preview-link" class="btn btn-red btn-hover" target="_blank" href={{gif.liveApp.url}}>Preview</a>
+                                                <a class="btn btn-red btn-hover" href="//app.outgrow.co">Build your own</a>
                                             </div>
                                         </div>
                                     </div>
@@ -259,7 +239,7 @@
                         <i class="material-icons">close</i>
                     </button>
                     <div class="col-md-12 np">
-                        <iframe class="og-iframe-res" src="" data-calc="https://website.outgrow.us/Cost-of-a-video-campaign-4?vHeight=1" ></iframe>
+                        <iframe class="og-iframe-res" src="" data-calc="https://website.outgrow.us/Cost-of-a-video-campaign-4?vHeight=1"></iframe>
                     </div>
                 </div>
             </div>
@@ -284,7 +264,7 @@
         </div>
     </div>
     <!-- End: Modal calcEmbed3 -->
-<!-- <app-footer></app-footer> -->
-  
-   
+    <!-- <app-footer></app-footer> -->
+
+
 </div>

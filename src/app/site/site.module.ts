@@ -17,15 +17,17 @@ import {SelectModule} from 'ng2-select';
 // import { GoogleSheet } from '../shared/interfaces/GoogleSheet';
 import { IdeaGenService } from '../shared/services/idea-gen.service';
 import { GetDataService } from '../shared/service/get-data.service';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
+import { ApiRequestService } from '../shared/services/api-request.service';
 
 
 @NgModule({
   imports: [
     CommonModule,
     SelectModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpModule
   ],
   providers:[
     // GoogleSheet,
@@ -33,8 +35,9 @@ import { HttpClient } from '@angular/common/http';
     VideoUrlService,
     CalcService,
     GetDataService,
-    HttpModule,
+   
     HttpClient,
+    ApiRequestService
     // Script
     
    ],
