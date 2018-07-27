@@ -49,7 +49,7 @@ export class FeaturesHomeComponent implements OnInit {
         autoplayDisableOnInteraction: false
     });
     
-    }, 0);
+    }, 1000);
 
 
 });
