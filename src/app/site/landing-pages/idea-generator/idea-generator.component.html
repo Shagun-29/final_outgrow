@@ -42,7 +42,7 @@
                     <br> fall into?
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-category" placeholder = "Choose Category"  #category>
+                    <select class="demo-default selectize-category" placeholder = "Choose Category" tabindex="-1" #category>
                             <option *ngFor = "let category of categories">{{ category }}</option>
                         </select>
                     <!-- <select name="categories" class="demo-default selectize-category" ng-options="categories.name for categories in arrlist" ng-model="userselected">
@@ -72,7 +72,7 @@
                     <br> Sub-Category
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" #subcategory>
+                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" tabindex="-1" #subcategory>
                             <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
                         
                     </select>
@@ -123,6 +123,7 @@
                 <div class="sec-catergory  custom-select">
                     <select class=" selectize-control demo-default selectize-sub-category-result" data-placeholder="Choose Sub Category"> >
                             <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
+                            <!-- <option value="a">a</option> -->
                        </select><span class="error update-subcat-error" style="display: none;"></span>
                 </div> -->
                 <div class="update-btn" style="float: none; display: inline-block">
@@ -132,7 +133,7 @@
 
             <div class="funnel-points">
                 <div class="funnel-step top">
-                    <figure class="icons-part">                            </figure>
+                    <figure class="icons-part"> </figure>
                     <figcaption>
                        
                         <h4>TOP OF THE FUNNEL<span class="info-content" data-content="Your goal with Top Of The Funnel content should be to educate your audience on a specific question, need or pain point that they're looking to address, but without a sales tie-in. "><i class="material-icons">info_outline</i></span></h4>

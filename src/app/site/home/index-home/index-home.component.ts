@@ -236,6 +236,40 @@ changeHeightWebXL () {
               // frame=document.getElementById('')
              this.videoURLService.videoURL('a',this.frame);
             }
+
+            changeHeightRes2 () {
+              window.location.replace('#outgrow2')
+              document.getElementsByClassName("video-img-inner-res2")[0].innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/1Bkoqqp1lro?vq=hd720&rel=0&controls=0&showinfo=0;autoplay=1&iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
+              var xDiv = document.getElementById('video-main-rs');
+              if (xDiv.style.height == '')
+                xDiv.style.height = '460px';
+              else
+                xDiv.style.height = '';
+          }
+          
+          changeHeightWeb2 () {
+            window.location.replace('#outgrow2')
+            document.getElementById("him2").innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/1Bkoqqp1lro?vq=hd720&rel=0&controls=0&showinfo=0;autoplay=1&iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
+            var xDiv = document.getElementById('video-main');
+          
+            if (xDiv.style.height == '')
+              xDiv.style.height = '574px';
+            else
+              xDiv.style.height = '';
+          }
+          
+          changeHeightWebXL2 () {
+            
+                    window.location.replace('#outgrow2')
+                    document.getElementById("him2-xl").innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/1Bkoqqp1lro?vq=hd720&rel=0&controls=0&showinfo=0;autoplay=1&iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
+                    var xDiv = document.getElementById('video-main-xl2');
+          
+                    if (xDiv.style.height == '')
+                      xDiv.style.height = '1160px';
+                    else
+                      xDiv.style.height = '';
+                  }
+                  
  
 }
 
