@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { SelectModule } from 'ng2-select';
-import { IdeaGenService } from '../../../shared/services/idea-gen.service';
+// import { IdeaGenService } from '../../../shared/services/idea-gen.service';
 import { GetDataService } from '../../../shared/service/get-data.service';
 import 'rxjs/add/operator/map';
 import { forEach } from '@angular/router/src/utils/collection';
@@ -110,9 +110,9 @@ export class IdeaGeneratorComponent implements OnInit {
         jQuery('.selectize-category').selectize({
           create: false,
           sortField: 'text',
-          // placeholder : 'Choose Category',
+          placeholder : 'Choose Category',
           onChange:function(event){ 
-             
+             console.log("--event--",event)
             jQuery(".selectize-category-result option[value='"+ event +"']").attr('selected', 'selected')
             jQuery(".selectize-category-result").val(event);
 
@@ -146,7 +146,7 @@ export class IdeaGeneratorComponent implements OnInit {
                 sortField: 'text',
                 placeholder : ' Choose Sub Category',
                 onChange:(event)=>{
-
+                  console.log("--subcat--",event)
                   jQuery(".selectize-sub-category-result option[value='"+ event +"']").attr('selected', 'selected')
                   jQuery(".selectize-sub-category-result").val(event);
                  
@@ -253,9 +253,15 @@ export class IdeaGeneratorComponent implements OnInit {
 
           })
 
-       
-            
+    // jQuery(".selectize-category-result").selectize({
+    //   create: false,
+    //   sortField: 'text',
+    //   onChange:(event)=>{
+    //     console.log("---->")
+    //   }
+    //  })      
          
-  
+   
+    
   }
 }

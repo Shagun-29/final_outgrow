@@ -15,7 +15,7 @@ import { CalcService } from '../shared/service/calc.service';
 import { IdeaGeneratorComponent } from './landing-pages/idea-generator/idea-generator.component';
 import {SelectModule} from 'ng2-select';
 // import { GoogleSheet } from '../shared/interfaces/GoogleSheet';
-import { IdeaGenService } from '../shared/services/idea-gen.service';
+// import { IdeaGenService } from '../shared/services/idea-gen.service';
 import { GetDataService } from '../shared/service/get-data.service';
 import { HttpModule, Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
@@ -31,7 +31,7 @@ import { ApiRequestService } from '../shared/services/api-request.service';
   ],
   providers:[
     // GoogleSheet,
-    IdeaGenService,
+    // IdeaGenService,
     VideoUrlService,
     CalcService,
     GetDataService,
