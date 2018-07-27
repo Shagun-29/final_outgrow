@@ -9,7 +9,12 @@
 .mb0{
     margin-bottom: 0px;
 }
-
+a:focus, a:hover {
+    text-decoration: none;
+    color: inherit;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
 .start-trial-cta {
     margin: 30px 0px 0px;
 }
@@ -519,6 +524,12 @@
  transition: .5s ease-in-out;
  vertical-align: middle;
  box-shadow: none;
+ outline: none;
+}
+.start-trial-cta .btn-buildcal:hover {
+    background: #fb757b;
+    color: #fff;
+    border-color: #f8434b;
 }
 .start-trial-cta .btn-buildcal i {
  /* display: inline-block; */

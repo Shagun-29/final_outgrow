@@ -33,7 +33,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .sec {
     display: table-cell;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 
 .sec1-bg .sec-container {
@@ -194,6 +194,8 @@ preloader {
     float: left;
     text-align: center;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .sec-catergory.custom-select {
     float: none;
