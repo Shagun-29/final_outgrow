@@ -117,7 +117,7 @@ export class IdeaGeneratorComponent implements OnInit {
              console.log("--event--",event)
             jQuery(".selectize-category-result option[value='"+ event +"']").attr('selected', 'selected')
             jQuery(".selectize-category-result").val(event);
-
+            // console.log("------>>>>>>>>>>>-------",this.selectCategory)
             this.selectCategory=event;
             console.log('-----Event-----',event);
               // self.categoryKey=event.replace(/ +/g, "")+"-Key";
@@ -259,7 +259,8 @@ export class IdeaGeneratorComponent implements OnInit {
       create: false,
       sortField: 'text',
       onChange:(event)=>{
-        console.log("---->")
+        // console.log("---->",this.categories);
+
       }
      })      
          

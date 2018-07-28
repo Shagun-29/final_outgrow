@@ -128,13 +128,14 @@
 
                 <div class="sec-catergory  custom-select">
                     <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Category">   
-                    <option value="0">Education</option>
+                    <!-- <option value="0">Education</option>
                             <option value="1">eCommerce</option>
                             <option value="2">Education</option>
                             <option value="3">Financial Services</option>
                             <option value="4">Insurance</option>
                             <option value="5">Media and Entertainment</option>
-                            <option value="6">SaaS</option>
+                            <option value="6">SaaS</option> -->
+                            <option *ngFor = "let category of categories">{{ category }}</option>
                     </select>
                     <span class="error update-cat-error">Some error</span>
                 </div>
