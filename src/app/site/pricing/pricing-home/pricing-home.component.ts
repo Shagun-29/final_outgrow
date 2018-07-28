@@ -35,11 +35,12 @@ active = document.querySelector('.pricing');
     this.href = window.location.href;
     console.log("---------------------->",this.href.split('/'));
     this.text=this.href.split('/');
-    this.activeHeader=this.text[3];
-    console.log('::Active Header::',this.activeHeader);
-    if(this.activeHeader == "pricing"){
-      this.active.classList.add('active')
-    }
+    this.text.forEach(element => {
+        console.log("::Element::",element)
+        if(element=="pricing"){
+            this.active.classList.add('active')
+        }
+      });
 
     jQuery(document).ready(function(){
     // jQuery('.detail').hide();

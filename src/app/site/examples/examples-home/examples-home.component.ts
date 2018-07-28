@@ -50,10 +50,13 @@ export class ExamplesHomeComponent implements OnInit {
     console.log("---------------------->",this.href.split('/'));
     this.text=this.href.split('/');
     this.activeHeader=this.text[3];
-    console.log('::Active Header::',this.activeHeader);
-    if(this.activeHeader == "examples"){
-      this.active.classList.add('active')
-    }
+    this.text.forEach(element => {
+      console.log("::Element::",element)
+      if(element=="examples"){
+          this.active.classList.add('active')
+      }
+    });
+   
     this.iFrames = this.videoURLService.iFrames;
     this.videoURL(this.frame);
 
