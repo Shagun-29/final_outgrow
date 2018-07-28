@@ -39,6 +39,8 @@ export class IdeaGeneratorComponent implements OnInit {
   item="";
   
   constructor(private router: Router, title: Title, private getData:GetDataService) {
+      title.setTitle("Idea Generator | Outgrow");
+   
   }
   
 

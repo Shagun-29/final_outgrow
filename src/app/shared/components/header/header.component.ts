@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import  * as $ from 'jquery';
+import { Router } from '../../../../../node_modules/@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  public href: string = "";
+  url: string = "";
+  text=[];
+  activeHeader="";
   collapse: boolean = true;
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title,private router:Router) {
     
    }
    public setTitle0(){
@@ -30,6 +34,9 @@ export class HeaderComponent implements OnInit {
  
   
  ngOnInit() {
+
+  
+
   var header = document.querySelector('.navbar-fixed-top');
   header.classList.add('hide');
 

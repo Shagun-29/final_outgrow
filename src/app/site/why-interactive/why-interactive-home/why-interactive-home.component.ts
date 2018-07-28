@@ -14,6 +14,11 @@ export class WhyInteractiveHomeComponent implements OnInit {
   load = document.querySelector('.preloader');
   header = document.querySelector('.navbar-fixed-top');
  footer = document.querySelector('.footer-14');
+ active = document.querySelector('.interactive');
+ activeHeader="";
+ href="";
+ text:any;
+
  constructor(router:Router, title:Title) {
  title.setTitle("Why Interactive Content ? | Outgrow");
  }
@@ -22,6 +27,15 @@ export class WhyInteractiveHomeComponent implements OnInit {
     this.load.classList.add('hide');
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
+    this.href = window.location.href;
+    console.log("---------------------->",this.href.split('/'));
+    this.text=this.href.split('/');
+    this.activeHeader=this.text[3];
+    console.log('::Active Header::',this.activeHeader);
+    if(this.activeHeader == "why-interactive"){
+      this.active.classList.add('active')
+    }
+
     $(document).ready(function(){
 
     

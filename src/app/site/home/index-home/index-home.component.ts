@@ -23,7 +23,15 @@ export class IndexHomeComponent implements OnInit {
   //  liveIf = 0;
   //  staticIf =0;
   // liveReviews:boolean = false;
-  
+  menu1=document.querySelector('.interactive');
+  menu2=document.querySelector('.features');
+  menu3=document.querySelector('.pricing');
+  menu4=document.querySelector('.examples');
+  active = document.querySelector('.home');
+  activeHeader="";
+  href="";
+  text:any;
+
 
 
   triggerLiveStaticReviews () {
@@ -124,7 +132,20 @@ export class IndexHomeComponent implements OnInit {
    header.classList.remove('hide');
    footer.classList.remove('hide');
     load.classList.add('hide');
-    
+    this.href = window.location.href;
+    console.log("---------------------->",this.href.split('/'));
+    this.text=this.href.split('/');
+    this.activeHeader=this.text[3];
+    console.log('::Active Header::',this.activeHeader);
+    if(this.activeHeader == ""){
+      console.log("index")
+      // this.active.classList.add('active')
+      this.menu1.classList.remove('active');
+      this.menu2.classList.remove('active');
+      this.menu3.classList.remove('active');
+      this.menu4.classList.remove('active');
+    }
+
 
     console.log('......')
       this.loadingService.isLoading.next(false);

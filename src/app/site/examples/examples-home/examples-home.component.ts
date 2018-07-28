@@ -22,6 +22,7 @@ export class ExamplesHomeComponent implements OnInit {
   load = document.querySelector('.preloader');
   header = document.querySelector('.navbar-fixed-top');
   footer = document.querySelector('.footer-14');
+  active = document.querySelector('.examples')
   allCalcs: any;
   industries: any = [];
   calculators: any;
@@ -31,6 +32,9 @@ export class ExamplesHomeComponent implements OnInit {
   activeFrame: any;
   iFrames: Array<Object>;
   public frame = document.getElementsByTagName('frame');
+  href="";
+  text:any;
+  activeHeader="";
 
   constructor(private videoURLService: VideoUrlService, router: Router, title: Title, public apiRequestService: ApiRequestService) {
     title.setTitle("Examples | Outgrow");
@@ -68,6 +72,15 @@ export class ExamplesHomeComponent implements OnInit {
     this.load.classList.add('hide');
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
+    this.href = window.location.href;
+    console.log("---------------------->",this.href.split('/'));
+    this.text=this.href.split('/');
+    this.activeHeader=this.text[3];
+    console.log('::Active Header::',this.activeHeader);
+    if(this.activeHeader == "examples"){
+      this.active.classList.add('active')
+    }
+
   }
 
   ngAfterViewInit() {
