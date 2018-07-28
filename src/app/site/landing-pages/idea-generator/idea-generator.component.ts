@@ -255,13 +255,13 @@ export class IdeaGeneratorComponent implements OnInit {
 
           })
 
-    // jQuery(".selectize-category-result").selectize({
-    //   create: false,
-    //   sortField: 'text',
-    //   onChange:(event)=>{
-    //     console.log("---->")
-    //   }
-    //  })      
+    jQuery(".selectize-category-result").selectize({
+      create: false,
+      sortField: 'text',
+      onChange:(event)=>{
+        console.log("---->")
+      }
+     })      
          
    
     

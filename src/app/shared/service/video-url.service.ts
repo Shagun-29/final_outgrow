@@ -4,41 +4,52 @@ declare var jQuery:any;
 declare var iFrameResize:any;
 @Injectable()
 export class VideoUrlService {
-
+  public iFrames = [
+    {
+      name: 'calc1',
+      media: 'https://dzvexx2x036l1.cloudfront.net/calc06.jpg',
+      url: 'https://website.outgrow.us/build-a-startup?vHeight=1'
+    },
+    {
+      name: 'calc2',
+      media: 'https://dzvexx2x036l1.cloudfront.net/calc01.jpg',
+      url: 'https://website.outgrow.us/Which-engineering-major-is-right-for-you?vHeight=1'
+    },
+    {
+      name: 'calc3',
+      media: 'https://dzvexx2x036l1.cloudfront.net/calc02.jpg',
+      url: 'https://website.outgrow.us/Cost-of-a-video-campaign-4?vHeight=1'
+    },
+    {
+      name: 'calc4',
+      media: 'https://dzvexx2x036l1.cloudfront.net/calc03.jpg',
+      url: 'https://website.outgrow.us/What-is-your-risk-of-getting-a-heart-disease?vHeight=1'
+    },
+    {
+      name: 'calc5',
+      media: 'https://dzvexx2x036l1.cloudfront.net/calc04.jpg',
+      url: 'https://website.outgrow.us/outgrow-roi?vHeight=1'
+    },
+    {
+      name: 'calc6',
+      media: 'https://dzvexx2x036l1.cloudfront.net/calc05.jpg',
+      url: 'https://website.outgrow.us/build-an-app?vHeight=1'
+    }
+  ]
   constructor() { }
-  public videoURL(type,frame){
-    if(type == "calc1"){
-      // this.video = document.getElementById("frame1");
-      console.log(frame.src);
-      frame.src="https://website.outgrow.us/build-a-startup?vHeight=1";
 
-
-    }
-    else if(type == "calc2"){
-      frame.src="https://website.outgrow.us/Which-engineering-major-is-right-for-you?vHeight=1";
-    }
-    else if(type == "calc3"){
-      frame.src="https://website.outgrow.us/Cost-of-a-video-campaign-4?vHeight=1";
-    }
-    else if(type == "calc4"){
-      frame.src="https://website.outgrow.us/What-is-your-risk-of-getting-a-heart-disease?vHeight=1";
-    }
-    else if(type == "calc5"){
-      frame.src="https://website.outgrow.us/outgrow-roi?vHeight=1";
-    }
-    else if(type == "calc6s"){
-      frame.src="https://website.outgrow.us/build-an-app?vHeight=1";
-    }
+  public resizeIframe(frame) {
     jQuery('#og-iframe').addClass('iframeHeight')
     var iframes = iFrameResize({
       log: false,
       autoResize: true,
       enablePublicMethods: true,
       checkOrigin: false,
-  },'#og-iframe');
-    
-    setTimeout(()=>{
+    }, '#og-iframe');
 
-      window.calculateMinHeight();},2000);
+    setTimeout(() => {
+
+      window.calculateMinHeight();
+    }, 2000);
   }
 }

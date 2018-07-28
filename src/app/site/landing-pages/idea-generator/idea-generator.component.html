@@ -42,7 +42,7 @@
                     <br> fall into?
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-category" placeholder = "Choose Category" tabindex="-1" #category>
+                    <select class="demo-default selectize-category" placeholder = "Choose Category"  #category>
                             <option *ngFor = "let category of categories">{{ category }}</option>
                         </select>
                     <!-- <select name="categories" class="demo-default selectize-category" ng-options="categories.name for categories in arrlist" ng-model="userselected">
@@ -72,7 +72,7 @@
                     <br> Sub-Category
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" tabindex="-1" #subcategory>
+                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" #subcategory>
                             <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
                         
                     </select>
@@ -115,16 +115,39 @@
                 <h2>Here you go!</h2>
             </div>
             <div class="update-section">
-                 <div class="sec-catergory  custom-select">
-                    <select class=" selectize-control demo-default selectize-category-result" >
+                 <!-- <div class="sec-catergory  custom-select">
+                    <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Category">  >
                         <option *ngFor = "let category of categories">{{ category }}</option>
                     </select> <span class="error update-cat-error" style="display: none;"></span>
+                </div> -->
+                <!-- <div class="sec-catergory  custom-select">
+                    <select class=" selectize-control demo-default selectize-sub-category-result" data-placeholder="Choose Sub Category"> >
+                            <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
+                       </select><span class="error update-subcat-error" style="display: none;"></span>
+                </div> -->
+
+                <div class="sec-catergory  custom-select">
+                    <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Category">   
+                    <option value="0">Education</option>
+                            <option value="1">eCommerce</option>
+                            <option value="2">Education</option>
+                            <option value="3">Financial Services</option>
+                            <option value="4">Insurance</option>
+                            <option value="5">Media and Entertainment</option>
+                            <option value="6">SaaS</option>
+                    </select>
+                    <span class="error update-cat-error">Some error</span>
                 </div>
                 <div class="sec-catergory  custom-select">
-                    <select class=" selectize-control demo-default selectize-sub-category-result">
-                            <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
-                            <!-- <option value="a">a</option> -->
-                       </select><span class="error update-subcat-error" style="display: none;"></span>
+                    <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Sub Category" >
+                            <option  value="0">Choose Category</option>
+                            <option  value="1">Category 1</option>
+                            <option  value="2">Category 2</option>
+                            <option  value="3">Category 3</option>
+                            <option  value="4">Category 4</option>
+                    
+                    </select>
+                    <span class="error update-cat-error">Some error</span>
                 </div>
                 <div class="update-btn" style="float: none; display: inline-block">
                     <a href="javascript:void(0)">update</a>
@@ -133,7 +156,7 @@
 
             <div class="funnel-points">
                 <div class="funnel-step top">
-                    <figure class="icons-part"> </figure>
+                    <figure class="icons-part">                            </figure>
                     <figcaption>
                        
                         <h4>TOP OF THE FUNNEL<span class="info-content" data-content="Your goal with Top Of The Funnel content should be to educate your audience on a specific question, need or pain point that they're looking to address, but without a sales tie-in. "><i class="material-icons">info_outline</i></span></h4>
