@@ -18,6 +18,9 @@ a:focus, a:hover {
 .start-trial-cta {
     margin: 30px 0px 0px;
 }
+.mb0 {
+    margin-bottom: 0px!important;
+}
 .swiper-pagination {
     position: absolute;
     -webkit-transition: .3s;
@@ -239,8 +242,14 @@ a:focus, a:hover {
  width: 90%;
 }
 #why .section-4-left {
- padding-left: 40px;
+ padding-left: 40px!important;
+
 }
+#why .section-4 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+   
+   }
 #why .section-4-left h4 {
  width: 80%;
  /* font-family: montserratUltra_light; */
@@ -250,7 +259,11 @@ a:focus, a:hover {
 }
 #why .section-w1 {
  margin-top: 40px;
- margin-bottom: 40px;
+ margin-bottom: 60px;
+}
+#why .section-16 {
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 #why .section-w1-left, #why .section-w2-left {
  padding-left: 40px;
@@ -466,6 +479,13 @@ a:focus, a:hover {
 }
 .section {
  margin-bottom: 30px;
+}
+#why .section-7 {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+    background: #fff;
 }
 #why .container-video {
  width: 890px;
@@ -1205,7 +1225,9 @@ a:focus, a:hover {
     .sec3-box2inner {min-height: 140px;}
     .sec3-box1inner {min-height: 140px;}
     #why .secw2-2-new {margin-left: 0;}
-
+    .calc-table {
+        margin-top: 55px;
+    }
 }
 
 
@@ -1239,7 +1261,12 @@ a:focus, a:hover {
 }
 
 }
-
+@media (max-width: 1920px) and (min-width: 1810px)
+{
+.calc-table {
+    margin-top: 105px;
+}
+}
 
 
 @media (min-width:1921px) and (max-width:6500px){
