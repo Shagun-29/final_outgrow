@@ -160,7 +160,10 @@ a {
     border-bottom: none!important;
    
 } */
-
+.custom-navbar.navbar-default .navbar-nav > li > a.active, .custom-navbar.navbar-default .navbar-nav > li >a:hover {
+    color: #fb5f66;
+    background: none;
+}
 .custom-navbar.navbar-default .navbar-nav>li {
     -webkit-transition: .5s ease-in-out; 
  transition: .5s ease-in-out;
@@ -1036,7 +1039,7 @@ li.nav-lead-input {
     position: absolute;
     left: 0;
     right: 100%;
-    bottom: 0;
+    bottom: -1px;
     -webkit-transition-property: right;
     transition-property: right;
     -webkit-transition-duration: .3s;
