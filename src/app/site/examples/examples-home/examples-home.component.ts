@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
 import { VideoUrlService } from '../../../shared/service/video-url.service';
-import * as $ from 'jquery';
 import * as _ from 'lodash';
 
-declare let jQuery: any;
-declare let iFrameResize: any;
-declare var window: any;
 @Component({
   selector: 'app-examples-home',
   templateUrl: './examples-home.component.html',
@@ -22,6 +18,7 @@ export class ExamplesHomeComponent implements OnInit {
   load = document.querySelector('.preloader');
   header = document.querySelector('.navbar-fixed-top');
   footer = document.querySelector('.footer-14');
+  active = document.querySelector('.examples')
   allCalcs: any;
   industries: any = [];
   calculators: any;
@@ -30,48 +27,41 @@ export class ExamplesHomeComponent implements OnInit {
   loading: boolean;
   activeFrame: any;
   iFrames: Array<Object>;
+  frameUrl: any;
   public frame = document.getElementsByTagName('frame');
+  href="";
+  text:any;
+  activeHeader="";
 
-  constructor(private videoURLService: VideoUrlService, router: Router, title: Title, public apiRequestService: ApiRequestService) {
+  constructor(public videoURLService: VideoUrlService,
+    public title: Title,
+    public apiRequestService: ApiRequestService,
+    public sanitizer: DomSanitizer,
+  ) {
     title.setTitle("Examples | Outgrow");
-    this.iFrames = [
-      {
-        name: 'calc1',
-        media: 'https://dzvexx2x036l1.cloudfront.net/calc06.jpg',
-      },
-      {
-        name: 'calc2',
-        media: 'https://dzvexx2x036l1.cloudfront.net/calc01.jpg',
-      },
-      {
-        name: 'calc3',
-        media: 'https://dzvexx2x036l1.cloudfront.net/calc02.jpg',
-      },
-      {
-        name: 'calc4',
-        media: 'https://dzvexx2x036l1.cloudfront.net/calc03.jpg',
-      },
-      {
-        name: 'calc5',
-        media: 'https://dzvexx2x036l1.cloudfront.net/calc04.jpg',
-      },
-      {
-        name: 'calc6',
-        media: 'https://dzvexx2x036l1.cloudfront.net/calc05.jpg',
-      }
-    ]
   }
 
   ngOnInit() {
     this.loading = true;
-    this.getAllCalculators();
     this.load.classList.add('hide');
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
+    this.href = window.location.href;
+    console.log("---------------------->",this.href.split('/'));
+    this.text=this.href.split('/');
+    this.activeHeader=this.text[3];
+    console.log('::Active Header::',this.activeHeader);
+    if(this.activeHeader == "examples"){
+      this.active.classList.add('active')
+    }
+    this.iFrames = this.videoURLService.iFrames;
+    this.videoURL(this.frame);
+
   }
 
   ngAfterViewInit() {
-    this.videoURL(this.frame, 'calc1');
+
+    this.getAllCalculators();
   }
 
   getAllCalculators() {
@@ -88,18 +78,27 @@ export class ExamplesHomeComponent implements OnInit {
     this.industries.splice(0, this.industries.length); //to clear industries array on this function call
     this.calculators = this.allCalcs.filter(calc => {
       if (calc['type'] == type)
-        return calc
+        return calc;
     });
-    for (let i = 0; i < this.calculators.length; i++) {
+    this.calculators.map(myCalc => {
       let data = {};
-      for (let a in this.calculators[i]) {
+      for (let a in myCalc) {
         if (a == 'industry' || a == 'type') {
-          data[a] = this.calculators[i][a];
+          data[a] = myCalc[a]
         }
       }
-      data.hasOwnProperty('industry') && this.industries.push(data);
-    }
+      data.hasOwnProperty('industry') && this.industries.push(data)
+    });
+    this.industries.sort(function (a, b) {
+      var industryA = a.industry.toLowerCase(), industryB = b.industry.toLowerCase()
+      if (industryA < industryB)
+        return -1
+      if (industryA > industryB)
+        return 1
+      return 0
+    })
     this.industries = _.uniqBy(this.industries, 'industry');
+
     this.displayCalcs(type, this.industries[0]['industry']);
   }
 
@@ -154,16 +153,22 @@ export class ExamplesHomeComponent implements OnInit {
         calc.layout = 'The Venice';
         break;
       default:
-        calc.layout = 'Chandu';
+        calc.layout = 'Calculator ledu dude';
     }
     this.sIndex1 = i;
     this.gif = Object.assign({}, calc);
     this.loading = false;
   }
 
-  videoURL(frame, name, index = 0) {
+  videoURL(frame, index = 0) {
     this.activeFrame = index;
-    this.videoURLService.videoURL(name, frame);
+    this.frameUrl = this.iFrames[index]['url'];
+    this.sanitize(this.frameUrl);
+    this.videoURLService.resizeIframe(frame);
+  }
+
+  sanitize(frameUri) {
+    this.frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(frameUri);
   }
 
 }

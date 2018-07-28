@@ -23,6 +23,11 @@ export class FeaturesHomeComponent implements OnInit {
   load = document.querySelector('.preloader');
   header = document.querySelector('.navbar-fixed-top');
  footer = document.querySelector('.footer-14');
+ active = document.querySelector('.features');
+ activeHeader="";
+ href="";
+ text:any;
+
   constructor(router:Router, title:Title) { 
     title.setTitle("Product Features | Outgrow");
   }
@@ -31,6 +36,15 @@ export class FeaturesHomeComponent implements OnInit {
     this.load.classList.add('hide');
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
+    this.href = window.location.href;
+    console.log("---------------------->",this.href.split('/'));
+    this.text=this.href.split('/');
+    this.activeHeader=this.text[3];
+    console.log('::Active Header::',this.activeHeader);
+    if(this.activeHeader == "features"){
+      this.active.classList.add('active')
+    }
+
     $(document).ready(function(){
 
     

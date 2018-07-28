@@ -11,7 +11,7 @@ declare var window:any;
 })
 export class AppComponent implements OnInit {
     public href: string = "";
-    url: string = "asdf";
+    url: string = "";
     text=[];
     flag:boolean=true;
     show:boolean=false;
@@ -57,8 +57,6 @@ export class AppComponent implements OnInit {
         }
         window.scrollTo(0, 0)
     });
-
-
 }
 ngAfterViewInit(){
     this.loadingService.isLoading

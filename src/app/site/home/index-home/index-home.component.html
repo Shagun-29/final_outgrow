@@ -623,7 +623,7 @@
 					<div class="tab-outer-frame col-xs-12 col-md-10 col-sm-12 text-center">
 						<!--<span class="icon-webcam"></span>-->
 						<div class="hrefTarget tab-inner-frame col-xs-12 col-md-12 col-sm-12">
-							<iframe style="overflow-y: hidden;"  id="og-iframe" src="https://website.outgrow.us/build-a-startup?vHeight=1" style="height:auto"class="iframe" scrolling="no"
+							<iframe style="overflow-y: hidden;"  id="og-iframe" [src]="frameUrl" style="height:auto"class="iframe" scrolling="no"
 						#frame></iframe>
 						</div>
 					</div><nav></nav>
@@ -631,54 +631,13 @@
 				
 
 				<div class="col-xs-12 col-md-12 col-sm-12 mobile-container rs-hide calc-links text-center">
-					<a href="javascript:void(0);" [ngClass]="{'active': isActive0}"
-					(click)="videoURL('a',frame)">
-						<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc06.jpg" />
-					</a>
-					<a href="javascript:void(0);" [ngClass]="{'active': isActive1}" 
-					(click)="videoURL('b',frame)">
-						<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc01.jpg" />
-					</a>
-					<a href="javascript:void(0);" [ngClass]="{'active': isActive2}"
-					(click)="videoURL('c',frame)">
-						<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc02.jpg" />
-					</a>
-					<a href="javascript:void(0);" [ngClass]="{'active': isActive3}"
-					(click)="videoURL('d',frame)">
-						<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc03.jpg" />
-					</a>
-					<a href="javascript:void(0);" [ngClass]="{'active': isActive4}"
-					(click)="videoURL('e',frame)">
-						<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc04.jpg" />
-					</a>
-					<a href="javascript:void(0);" [ngClass]="{'active': isActive5}"
-					(click)="videoURL('f',frame)">
-						<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc05.jpg" />
-					</a>
+					<ng-container *ngFor="let iFrame of iFrames;let i=index">
+                        <a href="javascript:void(0);" [class.active]="activeFrame === i" (click)="videoURL(frame,i)">
+                            <img alt="Calculator thumb image" class="thumb-calc" [src]="iFrame.media" />
+                        </a>
+                    </ng-container>
 				</div>
 
-				<div class="col-xs-12 col-md-12 col-sm-12 section-6-left mobile-container rs-show text-center">
-					<div class="col-md-12 col-sm-12 col-xs-12 np calc-links">
-						<a href="http://website.outgrow.us/build-a-startup?vHeight=1" class="col-sm-4 np calcembed active" target="_blank">
-							<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc06.jpg" />
-						</a>
-						<a href="http://website.outgrow.us/Which-engineering-major-is-right-for-you?vHeight=1" class="col-sm-4 np calcembed" target="_blank">
-							<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc01.jpg" />
-						</a>
-						<a href="http://website.outgrow.us/Cost-of-a-video-campaign-4?vHeight=1" class="col-sm-4 np calcembed" target="_blank">
-							<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc02.jpg" />
-						</a>
-						<a href="http://website.outgrow.us/What-is-your-risk-of-getting-a-heart-disease?vHeight=1" class="col-sm-4 np calcembed" target="_blank">
-							<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc03.jpg" />
-						</a>
-						<a href="http://website.outgrow.us/outgrow-roi?vHeight=1" class="col-sm-4 np calcembed" target="_blank">
-							<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc04.jpg" />
-						</a>
-						<a href="http://website.outgrow.us/build-an-app" class="col-sm-4 np calcembed" target="_blank">
-							<img alt="Calculator thumb image" class="thumb-calc" src="https://dzvexx2x036l1.cloudfront.net/calc05.jpg" />
-						</a>
-					</div>
-				</div>
 			</div>
 		</section>
 	</div>

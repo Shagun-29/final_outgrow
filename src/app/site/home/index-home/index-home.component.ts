@@ -2,7 +2,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { VideoUrlService } from '../../../shared/service/video-url.service'
 
-import { Title } from '@angular/platform-browser';
+import { Title, DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 import { element } from 'protractor';
@@ -23,8 +23,20 @@ export class IndexHomeComponent implements OnInit {
   //  liveIf = 0;
   //  staticIf =0;
   // liveReviews:boolean = false;
-  
+  menu1=document.querySelector('.interactive');
+  menu2=document.querySelector('.features');
+  menu3=document.querySelector('.pricing');
+  menu4=document.querySelector('.examples');
+  active = document.querySelector('.home');
+  activeHeader="";
+  href="";
+  text:any;
 
+
+  
+  iFrames: { name: string; media: string; url: string; }[];
+  activeFrame: number;
+  frameUrl: any;
 
   triggerLiveStaticReviews () {
     
@@ -104,7 +116,7 @@ export class IndexHomeComponent implements OnInit {
     }
   }
 
-  constructor(private videoURLService:VideoUrlService,title:Title,public loadingService:LoadingService) { 
+  constructor(private videoURLService:VideoUrlService,title:Title,public loadingService:LoadingService,public sanitizer:DomSanitizer) { 
     
     this.isActive0 = true;
     this.isActive1 = false
@@ -124,7 +136,20 @@ export class IndexHomeComponent implements OnInit {
    header.classList.remove('hide');
    footer.classList.remove('hide');
     load.classList.add('hide');
-    
+    this.href = window.location.href;
+    console.log("---------------------->",this.href.split('/'));
+    this.text=this.href.split('/');
+    this.activeHeader=this.text[3];
+    console.log('::Active Header::',this.activeHeader);
+    if(this.activeHeader == ""){
+      console.log("index")
+      // this.active.classList.add('active')
+      this.menu1.classList.remove('active');
+      this.menu2.classList.remove('active');
+      this.menu3.classList.remove('active');
+      this.menu4.classList.remove('active');
+    }
+
 
     console.log('......')
       this.loadingService.isLoading.next(false);
@@ -142,61 +167,20 @@ export class IndexHomeComponent implements OnInit {
     //   setTimeout(calculateMinHeight, 2000);
     //   }
     // });
-    
+    this.iFrames=this.videoURLService.iFrames;
    }
 
-  videoURL(type,frame){
-    if (type == 'a') {
-      this.isActive0 = true;
-      this.isActive1 = false;
-      this.isActive2 = false;
-      this.isActive3 = false;
-      this.isActive4 = false;
-      this.isActive5 = false;
-    }
-    else if (type == 'b') {
-      this.isActive1 = true;
-      this.isActive0 = false;
-      this.isActive2 = false;
-      this.isActive3 = false;
-      this.isActive4 = false;
-      this.isActive5 = false;
-    }
-    else if (type == 'c') {
-      this.isActive2 = true;
-      this.isActive0 = false;
-      this.isActive1 = false;
-      this.isActive3 = false;
-      this.isActive4 = false;
-      this.isActive5 = false;
-    }
-    else if (type == 'd') {
-      this.isActive3 = true;
-      this.isActive0 = false;
-      this.isActive1 = false;
-      this.isActive2 = false;
-      this.isActive4 = false;
-      this.isActive5 = false;
-    }
-    else if (type == 'e') {
-      this.isActive4 = true;
-      this.isActive0 = false;
-      this.isActive1 = false;
-      this.isActive2 = false;
-      this.isActive3 = false;
-      this.isActive5 = false;
-    }
-    else if (type == 'f') {
-      this.isActive5 = true;
-      this.isActive0 = false;
-      this.isActive1 = false;
-      this.isActive2 = false;
-      this.isActive3 = false;
-      this.isActive4 = false;
-    }
-
-    this.videoURLService.videoURL(type,frame);
+   videoURL(frame, index = 0) {
+    this.activeFrame = index;
+    this.frameUrl = this.iFrames[index]['url'];
+    this.sanitize(this.frameUrl);
+    this.videoURLService.resizeIframe(frame);
   }
+
+  sanitize(frameUri) {
+    this.frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(frameUri);
+  }
+
 
 
   changeHeightRes () {
@@ -234,7 +218,7 @@ changeHeightWebXL () {
         
         ngAfterViewInit(){
               // frame=document.getElementById('')
-             this.videoURLService.videoURL('a',this.frame);
+              this.videoURL(this.frame);
             }
 
             changeHeightRes2 () {
