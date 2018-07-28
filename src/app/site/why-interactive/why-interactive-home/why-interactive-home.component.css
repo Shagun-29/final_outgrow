@@ -160,6 +160,11 @@ a:focus, a:hover {
 .section-7.why-blue {
     padding-top: 40px;
 }
+#why .secw2-2-new {
+    margin-left: 50px;
+    margin-top: 0;
+    border-radius: 15px;
+}
 .swiper-container-android .swiper-slide, .swiper-wrapper {
  -webkit-transform: translate3d(0, 0, 0);
  -moz-transform: translate3d(0, 0, 0);
