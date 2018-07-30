@@ -16,7 +16,7 @@ a {
 .header1.sticky {
     font-size: 24px;
     background: white;
-    box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 9px 1px rgba(0,0,0,.2);
     /* height: 60px; */
     padding:0!important;
     margin: 0;
@@ -47,7 +47,7 @@ a {
     margin-top: 13px!important;
 }
 .sticky li.nav-lead-input {
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .navbar-brand {
@@ -160,6 +160,18 @@ a {
     border-bottom: none!important;
    
 } */
+input.lead-form-email::placeholder {
+    color: 666!important;
+    opacity: 0.5; 
+}
+
+.lead-form-email:-ms-input-placeholder { 
+    color: #666;
+}
+
+.lead-form-email::-ms-input-placeholder { 
+    color: #666;
+}
 .custom-navbar.navbar-default .navbar-nav > li > a.active, .custom-navbar.navbar-default .navbar-nav > li >a:hover {
     color: #fb5f66;
     background: none;
@@ -935,7 +947,7 @@ li.nav-lead-input {
     line-height: 45px;
 }
 .sticky .navbar-nav>li>a {
-    line-height: 35px;
+    line-height: 25px;
 }
 /* .custom-navbar .signUp a {
     margin-top: 22px!important;
@@ -944,7 +956,7 @@ li.nav-lead-input {
     margin-top: 17px!important;
 }
 .sticky .navbar-brand {
-    padding-top: 17px!important;
+    padding-top: 12px!important;
 }
 .custom-navbar .signUp a {
     margin-top: 22px!important;

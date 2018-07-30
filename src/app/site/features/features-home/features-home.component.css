@@ -14,6 +14,10 @@
 #feature .feature-9-1.feature-blue .secf2-2 {
     width: 60%!important;
 }
+#feature .section-17 {
+    margin-top: 0;
+    padding-bottom: 120px !important;
+}
 }
 
 
@@ -2478,7 +2482,7 @@ h4.mk-animate-element.right-to-left.publish {width: 85%;}
 	box-shadow: 2px 0 8px 2px rgba(0, 0, 0, .1)
 }
 #feature .section-f3 {
-	margin-top: 40px;
+	margin-top: 20px;
 	margin-bottom: 50px
 }
 #feature .section-f3-left span {
@@ -3000,8 +3004,8 @@ h4.mk-animate-element.right-to-left.publish {width: 85%;}
 	padding-bottom: 0 !important
 }
 #feature .section-15 {
-	margin-top: 50px;
-	margin-bottom: 60px
+	margin-top: 30px;
+	margin-bottom: 50px
 }
 #feature .section-15 .section-15-left h4 {
 	color: #fb6c73;
@@ -4122,6 +4126,13 @@ iframe[name=google_conversion_frame] {
 	.feature-9-1 img.secf2-2 {
 	left: 35% !important;
 	}
+	#feature .section-f4 img:last-child {
+		margin-bottom: 0px !important;
+	}
+
+	.feature-white {
+		padding-top: 40px !important;
+	}
 	
 	.feature-9-1.feature-blue {
 	margin-top: 70px !important;
@@ -4133,6 +4144,11 @@ iframe[name=google_conversion_frame] {
 	padding-top: 0px !important;
 	padding-bottom: 50px;
 	margin-bottom: 0px !important;
+	}
+
+	.section-5.feature-blue {
+		margin-bottom: 0px !important;
+		padding-bottom: 0;
 	}
         .feature-blue {
                 padding-top: 40px !important;
@@ -4336,7 +4352,7 @@ iframe[name=google_conversion_frame] {
 	}
 	#feature .section-17-left {
 	padding: 0 20px;
-	margin-top:20px;
+	margin-top:0px;
 	margin-bottom:10px;
 	}
 	#feature .section-17-right{
@@ -4449,10 +4465,10 @@ iframe[name=google_conversion_frame] {
 	    margin-right: 10px !important;
 	}
 	#feature .sec-f4-style {
-	margin-top: 50px;
+	margin-top: 40px;
 	}
 	#feature .section-4-left h4{
-	margin: 10px 0px;
+	margin: 0px 0px 10px;
 	}
 	#feature .section-f4-left .section-f4-new span span {
 	width: 80%;
@@ -4475,6 +4491,7 @@ iframe[name=google_conversion_frame] {
 	#feature .section-f2 .section-f2-left h4{
 	line-height:normal;
 	font-size:20px;
+	margin-top: 0px;
 	}
 	#feature .section-f1-left span i{
 	margin-right: 10px;
@@ -5222,7 +5239,10 @@ iframe[name=google_conversion_frame] {
 	padding-left: 90px;
 	}
 	#feature .sec4-2 {
-	left: 37%;
+		left: 43%;
+		width: 57%;
+		top: 0px;
+
 	}
 	#feature .section-4-left .section-4-new span span{
 	width:84%;
@@ -5275,6 +5295,14 @@ iframe[name=google_conversion_frame] {
 
 
 
+}
+@media  (min-width: 360px) and (max-width: 480px)
+{
+.start-trial-cta .btn-buildcal {
+font-size: 13px !important;
+padding: 10px 25px !important;
+line-height: 22px !important;
+}
 }
 
 
