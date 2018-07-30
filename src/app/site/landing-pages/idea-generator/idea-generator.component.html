@@ -1,5 +1,5 @@
 <div class="main-outr">
-    <section class="sec-outr sec1-bg mouse-bg">
+    <section class="sec-outr sec1-bg mouse-bg" [class.hide]="section_1" >
         <div class="sec">
             <div class="logo">
                 <a href="javascript:void(0);">
@@ -10,11 +10,12 @@
                 <div class="sec1-text">
                     <h1 id="background" class="mouse-bg">
                         Generate Ideas
-                        <br> for <span> Quiz</span> or
+                        <br> for
+                        <span> Quiz</span> or
                         <span>Calculator.</span>
                     </h1>
                 </div>
-                <a class="sec1-button" href="javascript:void(0);">Get Started</a>
+                <a class="sec1-button" href="javascript:void(0);" (click)="getStarted()">Get Started</a>
             </div>
         </div>
     </section>
@@ -23,13 +24,7 @@
             <img src="images/logo.png" alt="logo" />
         </a> -->
     </div>
-    <section class="sec-outr sec2-bg hide">
-        <!-- <div class="loader-wrapper category-page-loader">
-                    <i class="material-icons loader-anim">autorenew</i>
-            </div> -->
-        <!-- <div class="preloader category-page-loader">
-            <div class="status">&nbsp;</div>
-        </div> -->
+    <section class="sec-outr sec2-bg" [class.hide]="section_2">
         <div class="sec">
             <div class="sec-container">
                 <div class="sec2-step">
@@ -37,31 +32,19 @@
                 </div>
                 <div class="sec2-text">
                     Which category
-                    <br> does your
-                     company 
+                    <br> does your company
                     <br> fall into?
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-category" placeholder = "Choose Category"  #category>
-                            <option *ngFor = "let category of categories">{{ category }}</option>
-                        </select>
-                    <!-- <select name="categories" class="demo-default selectize-category" ng-options="categories.name for categories in arrlist" ng-model="userselected">
-							<option value="">Choose Category</option>
-                        </select> -->
-                    <!-- <ng-select  [items]="items" 
-                         placeholder="Choose Category">
-                    </ng-select> -->
+                    <select class="demo-default selectize-category" placeholder="Choose Category" [(ngModel)]="selectedOption.category" (ngModelChange)="categorySelected($event)">
+                        <option [ngValue]="null" selected>Choose Category</option>
+                        <option *ngFor="let category of categories">{{ category }}</option>
+                    </select>
                 </div>
             </div>
         </div>
     </section>
-    <section class="sec-outr sec3-bg hide">
-        <!--  <div class="loader-wrapper sub-category-page-loader">
-                    <i class="material-icons loader-anim">autorenew</i>
-        </div> -->
-        <!-- <div class="preloader sub-category-page-loader">
-            <div class="status">&nbsp;</div>
-        </div> -->
+    <section class="sec-outr sec3-bg" [class.hide]="section_3">
         <div class="sec">
             <div class="sec-container">
                 <div class="sec2-step">
@@ -72,15 +55,16 @@
                     <br> Sub-Category
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" #subcategory>
-                            <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
-                        
+                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" [(ngModel)]="selectedOption.subCategory"
+                        (ngModelChange)="subCategorySelected($event)">
+                        <option [ngValue]="null" selected>Choose Sub Category</option>
+                        <option *ngFor="let subCategory of subCategories">{{ subCategory }}</option>
                     </select>
                 </div>
             </div>
         </div>
     </section>
-    <section class="sec-outr sec4-bg hide">
+    <section class="sec-outr sec4-bg" [class.hide]="section_4">
         <div class="sec">
             <div class="sec-container">
                 <div class="sec2-step">
@@ -90,98 +74,102 @@
                     Your Email
                 </div>
                 <div class="sec-catergory">
-                    <input type="email" class="sec-input" id="form-email" placeholder="johnwatson@sh.com" required/>
-                    <span class="alert alert-danger email-validator hide">
+                    <input type="email" class="sec-input" id="form-email" placeholder="johnwatson@sh.com" [(ngModel)]="emailField" required/>
+                    <span *ngIf="emailError" class="alert alert-danger email-validator">
                         <i class="material-icons">error_outline</i> Please enter valid email
                     </span>
                 </div>
                 <div class="butn-outr">
-                    <button type="submit" class="sec-button button-ideas">Show me my ideas!</button>
+                    <button type="submit" class="sec-button button-ideas" (click)="showIdeas()">Show me my ideas!</button>
                 </div>
             </div>
         </div>
     </section>
 
 
-<section class="sec-outr new-sec-bg mouse-bg hide" >
-    <div class="sec">
-        <!--<div class="logo">
+    <section class="sec-outr new-sec-bg mouse-bg hide">
+        <div class="sec">
+            <!--<div class="logo">
             <a href="/">
                 <img src="//dzvexx2x036l1.cloudfront.net/logo1.png" alt="logo" />
             </a>
         </div>-->
-        <div class="sec-container custom-conatiner">
-            <div class="sec1-text">
-                <h2>Here you go!</h2>
-            </div>
-            <div class="update-section">
-                 <!-- <div class="sec-catergory  custom-select">
-                    <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Category">  >
-                        <option *ngFor = "let category of categories">{{ category }}</option>
-                    </select> <span class="error update-cat-error" style="display: none;"></span>
-                </div> -->
-                <!-- <div class="sec-catergory  custom-select">
-                    <select class=" selectize-control demo-default selectize-sub-category-result" data-placeholder="Choose Sub Category"> >
-                            <option *ngFor = "let subCategory of subCategories">{{ subCategory }}</option>
-                       </select><span class="error update-subcat-error" style="display: none;"></span>
-                </div> -->
+            <div class="sec-container custom-conatiner">
+                <div class="sec1-text">
+                    <h2>Here you go!</h2>
+                </div>
+                <div class="update-section">
 
-                <div class="sec-catergory  custom-select">
-                    <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Category">   
-                    <!-- <option value="0">Education</option>
-                            <option value="1">eCommerce</option>
-                            <option value="2">Education</option>
-                            <option value="3">Financial Services</option>
-                            <option value="4">Insurance</option>
-                            <option value="5">Media and Entertainment</option>
-                            <option value="6">SaaS</option> -->
-                            <option *ngFor = "let category of categories">{{ category }}</option>
-                    </select>
-                    <span class="error update-cat-error">Some error</span>
+                    <div class="sec-catergory  custom-select">
+                        <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Category" [(ngModel)]="selectedOption.category_new"
+                            (ngModelChange)="newCategoryChanges($event)">
+                            <option [ngValue]="null" selected>Choose Category</option>
+                            <option *ngFor="let category of categories" [selected]="selectedOption.category===category">{{ category }}</option>
+                        </select>
+                        <span *ngIf="categoryError" class="error update-cat-error" style="display:block">Please Choose a Category</span>
+                    </div>
+                    <div class="sec-catergory  custom-select">
+                        <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Sub Category" [(ngModel)]="selectedOption.subCategory_new"
+                            (ngModelChange)="newSubCategoryChanges()">
+                            <option [ngValue]="null" selected>Choose Sub Category</option>
+                            <option *ngFor="let subCategory of subCategories" [selected]="selectedOption.subCategory===subCategory">{{ subCategory }}</option>
+                        </select>
+                        <span *ngIf="subCategoryError" class="error update-cat-error" style="display:block">Please choose a sub category</span>
+                    </div>
+                    <div class="update-btn" style="float: none; display: inline-block">
+                        <a href="javascript:void(0)">update</a>
+                    </div>
                 </div>
-                <div class="sec-catergory  custom-select">
-                    <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Sub Category" >
-                            <option  value="0">Choose Category</option>
-                            <option  value="1">Category 1</option>
-                            <option  value="2">Category 2</option>
-                            <option  value="3">Category 3</option>
-                            <option  value="4">Category 4</option>
-                    
-                    </select>
-                    <span class="error update-cat-error">Some error</span>
-                </div>
-                <div class="update-btn" style="float: none; display: inline-block">
-                    <a href="javascript:void(0)">update</a>
+
+                <div class="funnel-points">
+                    <div class="funnel-step top">
+                        <figure class="icons-part"> </figure>
+                        <figcaption>
+
+                            <h4>TOP OF THE FUNNEL
+                                <span class="info-content" data-content="Your goal with Top Of The Funnel content should be to educate your audience on a specific question, need or pain point that they're looking to address, but without a sales tie-in. ">
+                                    <i class="material-icons">info_outline</i>
+                                </span>
+                            </h4>
+                            <ul id="top-funnel">
+                                <li *ngFor="let funnelItem of topFunnel">
+                                    <a href="javascript:void(0);">{{ funnelItem }}</a>
+                                </li>
+                            </ul>
+                        </figcaption>
+                    </div>
+                    <div class="funnel-step middle">
+                        <figure class="icons-part"> </figure>
+                        <figcaption>
+                            <h4>Middle OF THE FUNNEL
+                                <span class="info-content" data-content="In the Middle Of The Funnel stage, your content should continue to educate but also start the process of positioning your company as the solution to the lead's needs and challenges.">
+                                    <i class="material-icons">info_outline</i>
+                                </span>
+                            </h4>
+                            <ul id="mid-funnel">
+                                <li *ngFor="let funnelItem of middleFunnel">
+                                    <a href="javascript:void(0);">{{funnelItem}}</a>
+                                </li>
+                            </ul>
+                        </figcaption>
+                    </div>
+                    <div class="funnel-step bottom">
+                        <figure class="icons-part"> </figure>
+                        <figcaption>
+                            <h4>Bottom OF THE FUNNEL
+                                <span class="info-content" data-content="Now that the prospect has been engaged and informed about your product or service, in this stage, you can try and position your company/product as the preferred choice for your client.">
+                                    <i class="material-icons">info_outline</i>
+                                </span>
+                            </h4>
+                            <ul id="bottom-funnel">
+                                <li *ngFor="let funnelItem of bottomFunnel">
+                                    <a href="javascript:void(0);">{{funnelItem}}</a>
+                                </li>
+                            </ul>
+                        </figcaption>
+                    </div>
                 </div>
             </div>
-
-            <div class="funnel-points">
-                <div class="funnel-step top">
-                    <figure class="icons-part">                            </figure>
-                    <figcaption>
-                       
-                        <h4>TOP OF THE FUNNEL<span class="info-content" data-content="Your goal with Top Of The Funnel content should be to educate your audience on a specific question, need or pain point that they're looking to address, but without a sales tie-in. "><i class="material-icons">info_outline</i></span></h4>
-                        <ul id="top-funnel" ><li *ngFor="let funnelItem of topFunnel"><a href="javascript:void(0);">{{ funnelItem }}</a></li></ul>
-                    </figcaption>
-                </div>
-                <div class="funnel-step middle">
-                    <figure class="icons-part">                            </figure>
-                    <figcaption>
-                        <h4>Middle OF THE FUNNEL<span class="info-content" data-content="In the Middle Of The Funnel stage, your content should continue to educate but also start the process of positioning your company as the solution to the lead's needs and challenges."><i class="material-icons">info_outline</i></span></h4>
-                        <ul id="mid-funnel"><li *ngFor="let funnelItem of middleFunnel"><a href="javascript:void(0);">{{funnelItem}}</a></li></ul>
-                    </figcaption>
-                </div>
-                <div class="funnel-step bottom">
-                    <figure class="icons-part">                            </figure>
-                    <figcaption>
-                        <h4>Bottom OF THE FUNNEL<span class="info-content" data-content="Now that the prospect has been engaged and informed about your product or service, in this stage, you can try and position your company/product as the preferred choice for your client."><i class="material-icons">info_outline</i></span></h4>
-                        <ul id="bottom-funnel"><li *ngFor="let funnelItem of bottomFunnel"><a href="javascript:void(0);">{{funnelItem}}</a></li></ul>
-                    </figcaption>
-                </div>
-            </div>    
         </div>
-    </div>
-</section>
-            </div>
-
-   
+    </section>
+</div>

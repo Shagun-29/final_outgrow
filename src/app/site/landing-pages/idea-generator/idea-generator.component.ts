@@ -1,15 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, animate } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { SelectModule } from 'ng2-select';
-// import { IdeaGenService } from '../../../shared/services/idea-gen.service';
-import { GetDataService } from '../../../shared/service/get-data.service';
-import 'rxjs/add/operator/map';
-import { forEach } from '@angular/router/src/utils/collection';
-import {NgSelectizeModule} from 'ng-selectize';
-declare let jQuery: any;
-declare let selectize: any;
+import { ApiRequestService } from '../../../shared/services/api-request.service';
+import { IdeaGenService } from '../../../shared/service/idea-gen.service';
 
+declare let jQuery: any;
 
 @Component({
   selector: 'app-idea-generator',
@@ -18,31 +12,33 @@ declare let selectize: any;
 
 })
 export class IdeaGeneratorComponent implements OnInit {
-  selectCategory : string = ""
-  selectSubCategory : string = "";
-  categories =[];
-  subCategories =[];
-  topFunnel1:any= ['a','b'];
-   topFunnel=[];
-   middleFunnel=[];
-   bottomFunnel=[];
-
-  // middleFunnel1:any=[];
-  // bottomFunnel1:any=[]
-  // categoryKey="";
-  selectize : any;
-  list:any;
-  rawData=[];
+  selectedOption: { category: any; subCategory: any; category_new: any; subCategory_new: any; };
+  emailField: any;
+  categories = [];
+  subCategories = [];
+  tempVar: any;
+  section_1: boolean = false;
+  section_2: boolean = true;
+  section_3: boolean = true;
+  section_4: boolean = true;
+  emailError: boolean = false;
+  subCategoryError: boolean = false;
+  topFunnel = [];
+  middleFunnel = [];
+  bottomFunnel = [];
   loader = document.querySelector('.preloader');
-  // selectCategory : String = "Choose Category";
-  // selectSubcategory = "Choose Sub-Category";
-  item="";
-  
-  constructor(private router: Router, title: Title, private getData:GetDataService) {
-      title.setTitle("Idea Generator | Outgrow");
-   
+
+  constructor(public title: Title,
+    public apiRequestService: ApiRequestService,
+    public ideaGenService: IdeaGenService) {
+    title.setTitle("Idea Generator | Outgrow");
+    this.selectedOption = {
+      category: null,
+      subCategory: null,
+      category_new: null,
+      subCategory_new: null
+    }
   }
-  
 
   ngOnInit() {
     this.loader.classList.add('hide');
@@ -52,219 +48,118 @@ export class IdeaGeneratorComponent implements OnInit {
     footer.classList.add('show');
     let footer1 = document.querySelector('.section-14');
     footer1.classList.add('hide');
-    
-    
-    //console.log("::In Idea Geerator::",this.categories)
-    console.log("Categories")
-    this.getData.getCategories()
-     .subscribe((res:any)=>{
-      console.log("::Got Data::",res.values)
-       console.log("::Got Data[0]::",res.values[0])
-
-      res.values.forEach((dataCategory,i)=>{
-        console.log(i,dataCategory[0])
-        this.categories[i]=dataCategory[0];   
-      }); 
-      
-      
-    })
-
-
-     
-      // Function that validates email address through a regular expression.
-
-   
-
-  function clearAppendTabData (html = null) {
-    jQuery('#top-funnel').empty();
-    jQuery('#mid-funnel').empty();
-    jQuery('#bottom-funnel').empty();
-    if (html) {
-        jQuery('#top-funnel').append(html.top)
-        jQuery('#mid-funnel').append(html.middle)
-        jQuery('#bottom-funnel').append(html.bottom)
-    }
-}
-
-
-
-    jQuery(document).ready(function (){
-      jQuery(".sec1-button").click(function (){
-      jQuery(".sec1-bg").hide();
-      jQuery(".sec2-bg").removeClass("hide");
-      jQuery(".logo-top").removeClass("hide");
-      jQuery('html, body').animate({
-      scrollTop: jQuery('.sec2-bg').offset().top
-      }, 1000);
-      
-      setTimeout(function(){
-      jQuery(".sec1-bg").addClass("hide");
-      }, 1000)
-      });
-   
-      });
-
-    
-
-    let self=this;
-    setTimeout(function(){
-    // console.log("Adding",this.categories);
-        jQuery('.selectize-category').selectize({
-          create: false,
-          sortField: 'text',
-          placeholder : 'Choose Category',
-          onChange:function(event){ 
-             console.log("--event--",event)
-            jQuery(".selectize-category-result option[value='"+ event +"']").attr('selected', 'selected')
-            jQuery(".selectize-category-result").val(event);
-            // console.log("------>>>>>>>>>>>-------",this.selectCategory)
-            this.selectCategory=event;
-            console.log('-----Event-----',event);
-              // self.categoryKey=event.replace(/ +/g, "")+"-Key";
-              // console.log("::Event::",self.categoryKey);
-              self.getData.getSubCategories(event)
-              .subscribe((res:any)=>{
-               console.log("::Got Data::",res)
-                console.log("::Got Data[0]::",res.values[0])
-                let len = res.values.length;
-               
-                //working
-               res.values.forEach((dataSubCategory,i)=>{
-                 console.log(i,dataSubCategory[0]) 
-
-                if(dataSubCategory[0].slice(3) != "Custom"){
-                  if(self.subCategories[i] != "")
-                 self.subCategories[i]=dataSubCategory[0].slice(3); 
-
-                } 
-               }); 
-
-             
-              (async function subcat(){
-                setTimeout(()=>{
-                 console.log("------------------subcat-----------------------",self.subCategories);
-               jQuery(".selectize-sub-category").selectize({
-                create: false,
-                sortField: 'text',
-                placeholder : ' Choose Sub Category',
-                onChange:(event)=>{
-                  console.log("--subcat--",event)
-                  jQuery(".selectize-sub-category-result option[value='"+ event +"']").attr('selected', 'selected')
-                  jQuery(".selectize-sub-category-result").val(event);
-                 
-                  console.log(event, '....Selectize.....',res.values,event)
-                  // self.makeSubCategory(event);
-                  // self.item=event
-                  // this.selectSubCategory=event
-                  let keyValue = "key"+event;
-                  // let topFunnel=[];
-                  // let middleFunnel=[];
-                  // let bottomFunnel=[];
-                  let a1=[];
-
-                 res.values.forEach((element,index) => {
-                  //  console.log("Key"+event);
-                   element.forEach((key,i) => {
-                    // console.log(i,key);
-                    if(key=="keyCustom"){
-                      console.log("inside keycustom",key) 
-                      a1=element
-                      a1.forEach((keys,j) => {
-                        if(j==1){
-                          if(keys!="")
-                          self.topFunnel.push(keys);
-                        }else if(j==2){
-                          if(keys!="")
-                          self.middleFunnel.push(keys);
-                        }else if(j==3){
-                          if(keys!="")
-                          self.bottomFunnel.push(keys);
-                        }
-                        
-                      });
-                    }if(key===keyValue){
-                      console.log("inside selected key",keyValue);
-                      a1=element
-                      a1.forEach((keys,j) => {
-                        if(j==1){
-                          if(keys!="")
-                          self.topFunnel.push(keys);
-                        }else if(j==2){
-                          if(keys!="")
-                          self.middleFunnel.push(keys);
-                        }else if(j==3){
-                          if(keys!="")
-                          self.bottomFunnel.push(keys);
-                        }
-                        
-                      });
-                    }
-
-                   });
-                   
-                 });
-                 console.log("Top Funnel",self.topFunnel)
-                 console.log("Middle Funnel",self.middleFunnel)
-                 console.log("Bottom Funnel",self.bottomFunnel)
-                //  this.topFunnel1=topFunnel;
-                //  this.middleFunnel1=middleFunnel;
-                //  this.bottomFunnel1=bottomFunnel;
-                 
-                  jQuery(".sec4-bg").removeClass("hide");
-                  jQuery('html, body').animate({
-                      scrollTop: jQuery('.sec4-bg').offset().top
-                  }, 1000);
-                  setTimeout(function(){
-                      jQuery(".sec3-bg").addClass("hide");
-                  }, 1000)
-                }
-               })
-                },0)
-                // console.log("::---Choose Item---::",self.item)
-              })()
-             })
-
-              jQuery(".sec3-bg").removeClass("hide");
-              jQuery('html, body').animate({
-                  scrollTop: jQuery('.sec3-bg').offset().top
-              }, 1000);
-              setTimeout(function(){
-                  jQuery(".sec2-bg").addClass("hide");
-              }, 1000)
-             
-            //  jQuery('.selectize-category-result')[0].selectize.setValue(event);
-          }
-          
-      }); 
-    
-      
-      },2000)
-
-      // console.log("::Subcategory::",this.subCategories,this.selectCategory);
-      
-      
-        jQuery(".sec-button").click(function(){
-              jQuery(".new-sec-bg").fadeIn("slow", function() {
-                  jQuery(this).removeClass("hide");
-              });
-              jQuery(".sec4-bg").fadeOut("slow", function() {
-                  jQuery(this).addClass("hide");
-              });
-              jQuery(".logo-top").removeClass("hide");
-              jQuery('body').css('overflow-y','scroll');
-
-          })
-
-    jQuery(".selectize-category-result").selectize({
-      create: false,
-      sortField: 'text',
-      onChange:(event)=>{
-        // console.log("---->",this.categories);
-
-      }
-     })      
-         
-   
-    
+    this.getCategories();
   }
+
+  getCategories() {
+    this.apiRequestService.getCategories().subscribe((response) => {
+      this.tempVar = response.json().values;
+      this.tempVar.forEach(value => {
+        this.categories.push(value[0]);
+      });
+    },
+      (error: any) => {
+        console.log("error in getting categories is ::", error);
+      })
+  }
+
+  getStarted() {
+    this.section_2 = false;
+    this.animate('sec2-bg');
+    // setTimeout(function () {
+    //   this.section_1 = true;
+    // }, 1000);
+    this.section_1=true;
+  }
+
+  categorySelected(event) {
+    this.subCategories ? this.subCategories.splice(0, this.subCategories.length) : '';
+    this.tempVar.forEach(value => {
+      if (value[0] === event)
+        this.subCategories.push(...value.slice(1, value.length));
+    });
+    this.section_3 = false;
+    this.animate('sec3-bg');
+    // setTimeout(function () {
+    //   this.section_2 = true;
+    // }, 1000);
+    this.section_2 = true;
+  }
+
+  subCategorySelected(event) {
+    this.section_4 = false;
+    this.animate('sec4-bg');
+    // setTimeout(function () {
+    //   this.section_3 = true;
+    // }, 1000);
+    this.section_3 = true;
+  }
+
+  animate(className) {
+    jQuery('html, body').animate({
+      scrollTop: jQuery(`.${className}`).offset().top
+    }, 1000);
+  }
+  
+  showIdeas() {
+    let regex = new RegExp('[\\w\\W]+(@)\\w{2,}(\\.)\\w{2,}')
+    if (regex.test(this.emailField)) {
+      this.emailError = false;
+      jQuery(".new-sec-bg").fadeIn("slow", function () {
+        jQuery(this).removeClass("hide");
+      });
+      jQuery(".sec4-bg").fadeOut("slow", function () {
+        jQuery(this).addClass("hide");
+      });
+      this.parseFunnel(this.selectedOption.category, this.selectedOption.subCategory);
+    } else {
+      this.emailError = true;
+    }
+  }
+  
+  newCategoryChanges(event) {
+    if (this.selectedOption.category === this.selectedOption.category_new) {
+      this.subCategoryError = false;
+    }
+    else {
+      this.selectedOption.subCategory_new = null;
+      this.subCategoryError = true;
+    }
+    this.clearFunnels();
+    this.subCategories ? this.subCategories.splice(0, this.subCategories.length) : '';
+    this.tempVar.forEach(value => {
+      if (value[0] === event)
+        this.subCategories.push(...value.slice(1, value.length));
+    });
+  }
+
+  newSubCategoryChanges() {
+    this.clearFunnels();
+    this.subCategoryError = false;
+    this.parseFunnel(this.selectedOption.category_new ? this.selectedOption.category_new : this.selectedOption.category, this.selectedOption.subCategory_new);
+  }
+
+  clearFunnels() {
+    this.topFunnel ? this.topFunnel.splice(0, this.topFunnel.length) : null;
+    this.middleFunnel ? this.middleFunnel.splice(0, this.middleFunnel.length) : null;
+    this.bottomFunnel ? this.bottomFunnel.splice(0, this.bottomFunnel.length) : null;
+  }
+
+  parseFunnel(category, subCategory) {
+    let funnelCategory = category;
+    let funnelSubCategory = this.ideaGenService.getSubCategoryKey(subCategory);
+    this.apiRequestService.getSubCategories(funnelCategory).subscribe((response: any) => {
+      let data = response.json().values;
+      data.forEach(value => {
+        if (value[0] === funnelSubCategory) {
+          this.topFunnel.push(...value.slice(1, 2));
+          this.middleFunnel.push(...value.slice(2, 3));
+          this.bottomFunnel.push(...value.slice(3));
+        }
+      })
+    }, (error) => {
+      console.log("error in getting funnel data is ::", error);
+    })
+  }
+
 }

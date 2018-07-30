@@ -168,6 +168,10 @@ export class IndexHomeComponent implements OnInit {
     //   }
     // });
     this.iFrames=this.videoURLService.iFrames;
+    this.videoURL(this.frame);
+   }
+   ngAfterViewInit(){
+     
    }
 
    videoURL(frame, index = 0) {
@@ -216,10 +220,7 @@ changeHeightWebXL () {
             xDiv.style.height = '';
         }
         
-        ngAfterViewInit(){
-              // frame=document.getElementById('')
-              this.videoURL(this.frame);
-            }
+    
 
             changeHeightRes2 () {
               window.location.replace('#outgrow2')
