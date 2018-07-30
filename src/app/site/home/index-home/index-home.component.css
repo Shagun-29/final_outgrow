@@ -14,6 +14,9 @@
     float: left;
     width: 100%;
 }
+span.bb {
+    top: 40%!important;
+}
 .label,sub,sup{vertical-align:baseline}
 hr,img{border:0}
 body,figure{margin:0}
@@ -4341,7 +4344,12 @@ body .gform_wrapper .button.gform_button_select_files{height:31px;line-height:24
 	padding: 0px !important;
     background: rgba(0,0,0,0.6);
 }
-
+.c1{
+	height: 444px!important;
+}
+#c2{
+	width:100%!important;
+}
 #video-modal .modal-xlg{
 	float: left;
 	width: 100%;
@@ -4847,12 +4855,7 @@ span.icon-webcam {
     overflow-x: scroll;
 }
 
-img.video-img {
-    /*position: relative;
-    right: 0;
-    width: 100%;
-    float: right;*/
-}
+
 img.img-playIcon {
     position: absolute;
     top: 38%;
@@ -4873,7 +4876,7 @@ section.section.sec-targetedSale-title {
     width: 950px;
     margin: 0 auto;
 	cursor: pointer;
-	margin-top: 40px;
+	/* margin-top: 40px; */
 	box-shadow: 0px 11px 24px rgba(0,0,0,.28);
 }
 .video-img-inner {
@@ -4882,12 +4885,7 @@ section.section.sec-targetedSale-title {
     /*border: 2px solid #e1e1e1;*/
     position: relative;
 }
-img.video-img{
-	/*-webkit-transform: translateY(0);
-    transform: translateY(0px);
-    -webkit-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;*/
-}
+
 .video-img-wrapper:hover .video-img {
 	/*-webkit-transform: translateY(-20px);
     transform: translateY(-20px);*/
@@ -5480,13 +5478,15 @@ iframe.outgrow-video {
 
 
 .video-frame {
-    background: #fff;
+	background: #fff;
     padding: 20px;
     border: 2px solid #e1e1e1;
     border-radius: 25px;
-    /*box-shadow: 0 5px 28px 8px rgba(0,0,0,.4);*/
-	position: relative;
-	text-align: center;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 0;
 }
 .video-frame .embed-responsive{
 	background: #fff;
@@ -5496,6 +5496,7 @@ iframe.outgrow-video {
     border: 2px solid #e1e1e1;
 	box-shadow: none !important;
 }
+
 span.circle {
     position: absolute;
     background: #fff;
@@ -6016,6 +6017,12 @@ span.recom {
 	/* .buzzfeed-left-section{padding:25px 0 0 0!important;} */
 	span.tag2{line-height:10px!important}
 	
+}
+@media (min-width:991px) and (max-width:1199px)
+{  
+.c1 {
+    height: 360px!important;
+}
 }
 @media(min-width:997px) and (max-width:1024px)
 {
