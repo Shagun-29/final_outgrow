@@ -30,11 +30,13 @@ export class WhyInteractiveHomeComponent implements OnInit {
     this.href = window.location.href;
     console.log("---------------------->",this.href.split('/'));
     this.text=this.href.split('/');
-    this.activeHeader=this.text[3];
-    console.log('::Active Header::',this.activeHeader);
-    if(this.activeHeader == "why-interactive"){
-      this.active.classList.add('active')
-    }
+    this.text.forEach(element => {
+      console.log("::Element::",element)
+      if(element=="why-interactive"){
+          this.active.classList.add('active')
+      }
+    });
+   
 
     $(document).ready(function(){
 
