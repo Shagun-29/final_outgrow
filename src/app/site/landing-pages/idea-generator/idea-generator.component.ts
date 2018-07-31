@@ -39,6 +39,13 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    jQuery('.selectize-category-result').selectize({
+      create: true,
+      sortField: 'text'
+  });   
+
+         
     this.loader.classList.add('hide');
     let header = document.querySelector('.navbar-fixed-top');
     header.classList.add('show');
@@ -100,6 +107,9 @@ export class IdeaGeneratorComponent implements OnInit {
       scrollTop: jQuery(`.${className}`).offset().top
     }, 1000);
   }
+   
+  
+       
 
   showIdeas() {
     let regex = new RegExp('[\\w\\W]+(@)\\w{2,}(\\.)\\w{2,}')
