@@ -106,7 +106,7 @@
                             <option [ngValue]="null" selected>Choose Category</option>
                             <option *ngFor="let category of categories" [selected]="selectedOption.category===category">{{ category }}</option>
                         </select>
-                        <span *ngIf="categoryError" class="error update-cat-error" style="display:block">Please Choose a Category</span>
+                        <!-- <span *ngIf="categoryError" class="error update-cat-error" style="display:block">Please Choose a Category</span> -->
                     </div>
                     <div class="sec-catergory  custom-select">
                         <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Sub Category" [(ngModel)]="selectedOption.subCategory_new"
