@@ -22,6 +22,7 @@ import { HttpClient } from '@angular/common/http';
 import { ApiRequestService } from '../shared/services/api-request.service';
 import { FormsModule } from '@angular/forms';
 import { IdeaGenService } from '../shared/service/idea-gen.service';
+import { PricingService } from '../shared/services/pricing.service';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { IdeaGenService } from '../shared/service/idea-gen.service';
     GetDataService,
     IdeaGenService,
     HttpClient,
-    ApiRequestService
+    ApiRequestService,
+    PricingService
     // Script
     
    ],
