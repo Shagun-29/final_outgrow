@@ -20,11 +20,14 @@ import { GetDataService } from '../shared/service/get-data.service';
 import { HttpModule, Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 import { ApiRequestService } from '../shared/services/api-request.service';
+import { FormsModule } from '@angular/forms';
+import { IdeaGenService } from '../shared/service/idea-gen.service';
 
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     SelectModule,
     RouterModule.forChild(routes),
     HttpModule
@@ -35,7 +38,7 @@ import { ApiRequestService } from '../shared/services/api-request.service';
     VideoUrlService,
     CalcService,
     GetDataService,
-   
+    IdeaGenService,
     HttpClient,
     ApiRequestService
     // Script
