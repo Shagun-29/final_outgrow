@@ -60,6 +60,20 @@ export class IdeaGeneratorComponent implements OnInit {
       (error: any) => {
         console.log("error in getting categories is ::", error);
       })
+      setTimeout(() => {
+        let self=this
+        jQuery('.selectize-category').selectize({
+            create: false,
+            sortField: 'text',
+            placeholder : 'Choose Category',
+            onChange:function(event){ 
+               console.log("--event--",event)
+              self.categorySelected(event)
+            }
+          }
+        );
+      }, 2000);
+      
   }
 
   getStarted() {
@@ -80,10 +94,24 @@ export class IdeaGeneratorComponent implements OnInit {
     this.subCategories = this.sortArray(this.subCategories);
     this.section_3 = false;
     this.animate('sec3-bg');
+    this.section_2 = true;
+    setTimeout(() => {
+      let self=this
+      jQuery('.selectize-sub-category').selectize({
+          create: false,
+          sortField: 'text',
+          placeholder : 'Choose Sub-Category',
+          onChange:function(event){ 
+             console.log("--event--",event)
+            self.subCategorySelected(event)
+          }
+        }
+      );
+    }, 2000);
     // setTimeout(function () {
     //   this.section_2 = true;
     // }, 1000);
-    this.section_2 = true;
+   
   }
 
   subCategorySelected(event) {
