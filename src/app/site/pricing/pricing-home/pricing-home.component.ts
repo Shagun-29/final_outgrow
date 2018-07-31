@@ -59,7 +59,7 @@ export class PricingHomeComponent implements OnInit {
 
     planTab(planType, index = 0) {
         this.activePlan = index;
-        this.pricingToggle && this.pricingToggle.splice(0, this.pricingToggle.length);
+        // this.pricingToggle && this.pricingToggle.splice(0, this.pricingToggle.length);
         if (planType == 'annual') {
             this.annualActive = true;
         } else {
