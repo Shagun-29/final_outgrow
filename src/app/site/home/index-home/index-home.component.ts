@@ -188,7 +188,7 @@ export class IndexHomeComponent implements OnInit {
 
 
   changeHeightRes () {
-    window.location.replace('#bfrVid')
+    // window.location.replace('#bfrVid')
     document.getElementsByClassName("video-img-inner-res")[0].innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
     var xDiv = document.getElementById('video-main-rs');
     if (xDiv.style.height == '')
@@ -198,7 +198,7 @@ export class IndexHomeComponent implements OnInit {
 }
 
 changeHeightWeb1 () {
-  window.location.replace('#bfrVid')
+  // window.location.replace('#bfrVid')
   document.getElementById("him1").innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
   var xDiv = document.getElementById('video-main');
 
@@ -210,7 +210,7 @@ changeHeightWeb1 () {
 
 changeHeightWebXL () {
   
-          window.location.replace('#bfrVid')
+//           window.location.replace('#bfrVid')
           document.getElementById("him1-xl").innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
           var xDiv = document.getElementById('video-main-xl');
 
@@ -223,7 +223,7 @@ changeHeightWebXL () {
     
 
             changeHeightRes2 () {
-              window.location.replace('#outgrow2')
+              // window.location.replace('#outgrow2')
               document.getElementsByClassName("video-img-inner-res2")[0].innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/1Bkoqqp1lro?vq=hd720&rel=0&controls=0&showinfo=0;autoplay=1&iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
               var xDiv = document.getElementById('video-main-rs');
               if (xDiv.style.height == '')
@@ -233,7 +233,7 @@ changeHeightWebXL () {
           }
           
           changeHeightWeb2 () {
-            window.location.replace('#outgrow2')
+            // window.location.replace('#outgrow2')
             document.getElementById("him2").innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/1Bkoqqp1lro?vq=hd720&rel=0&controls=0&showinfo=0;autoplay=1&iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
             var xDiv = document.getElementById('video-main');
           
@@ -245,7 +245,7 @@ changeHeightWebXL () {
           
           changeHeightWebXL2 () {
             
-                    window.location.replace('#outgrow2')
+          //           window.location.replace('#outgrow2')
                     document.getElementById("him2-xl").innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/1Bkoqqp1lro?vq=hd720&rel=0&controls=0&showinfo=0;autoplay=1&iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
                     var xDiv = document.getElementById('video-main-xl2');
           
