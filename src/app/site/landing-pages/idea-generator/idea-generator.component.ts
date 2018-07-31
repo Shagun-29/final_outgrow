@@ -1,7 +1,6 @@
 import { Component, OnInit, animate } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
-import { IdeaGenService } from '../../../shared/service/idea-gen.service';
 
 declare let jQuery: any;
 
@@ -29,8 +28,7 @@ export class IdeaGeneratorComponent implements OnInit {
   loader = document.querySelector('.preloader');
 
   constructor(public title: Title,
-    public apiRequestService: ApiRequestService,
-    public ideaGenService: IdeaGenService) {
+    public apiRequestService: ApiRequestService) {
     title.setTitle("Idea Generator | Outgrow");
     this.selectedOption = {
       category: null,
@@ -57,6 +55,7 @@ export class IdeaGeneratorComponent implements OnInit {
       this.tempVar.forEach(value => {
         this.categories.push(value[0]);
       });
+      this.categories = this.sortArray(this.categories);
     },
       (error: any) => {
         console.log("error in getting categories is ::", error);
@@ -69,7 +68,7 @@ export class IdeaGeneratorComponent implements OnInit {
     // setTimeout(function () {
     //   this.section_1 = true;
     // }, 1000);
-    this.section_1=true;
+    this.section_1 = true;
   }
 
   categorySelected(event) {
@@ -78,6 +77,7 @@ export class IdeaGeneratorComponent implements OnInit {
       if (value[0] === event)
         this.subCategories.push(...value.slice(1, value.length));
     });
+    this.subCategories = this.sortArray(this.subCategories);
     this.section_3 = false;
     this.animate('sec3-bg');
     // setTimeout(function () {
@@ -100,7 +100,7 @@ export class IdeaGeneratorComponent implements OnInit {
       scrollTop: jQuery(`.${className}`).offset().top
     }, 1000);
   }
-  
+
   showIdeas() {
     let regex = new RegExp('[\\w\\W]+(@)\\w{2,}(\\.)\\w{2,}')
     if (regex.test(this.emailField)) {
@@ -116,7 +116,7 @@ export class IdeaGeneratorComponent implements OnInit {
       this.emailError = true;
     }
   }
-  
+
   newCategoryChanges(event) {
     if (this.selectedOption.category === this.selectedOption.category_new) {
       this.subCategoryError = false;
@@ -131,6 +131,7 @@ export class IdeaGeneratorComponent implements OnInit {
       if (value[0] === event)
         this.subCategories.push(...value.slice(1, value.length));
     });
+    this.subCategories = this.sortArray(this.subCategories);
   }
 
   newSubCategoryChanges() {
@@ -147,18 +148,39 @@ export class IdeaGeneratorComponent implements OnInit {
 
   parseFunnel(category, subCategory) {
     let funnelCategory = category;
-    let funnelSubCategory = this.ideaGenService.getSubCategoryKey(subCategory);
+    subCategory = subCategory.replace(/\s/, '');
+    let funnelSubCategory = 'key' + subCategory;
     this.apiRequestService.getSubCategories(funnelCategory).subscribe((response: any) => {
       let data = response.json().values;
+
       data.forEach(value => {
         if (value[0] === funnelSubCategory) {
-          this.topFunnel.push(...value.slice(1, 2));
-          this.middleFunnel.push(...value.slice(2, 3));
-          this.bottomFunnel.push(...value.slice(3));
+          value[1] && this.topFunnel.push(...value.slice(1, 2));
+          value[2] && this.middleFunnel.push(...value.slice(2, 3));
+          value[3] && this.bottomFunnel.push(...value.slice(3));
+
         }
-      })
+      });
+      data.forEach(value => {
+        if (value[0] === 'keyCustom') {
+          value[1] && this.topFunnel.push(...value.slice(1, 2));
+          value[2] && this.middleFunnel.push(...value.slice(2, 3));
+          value[3] && this.bottomFunnel.push(...value.slice(3));
+        }
+      });
     }, (error) => {
       console.log("error in getting funnel data is ::", error);
+    })
+  }
+
+  sortArray(newArray) {
+    return newArray.sort(function (a, b) {
+      var newArrayA = a.toLowerCase(), newArrayB = b.toLowerCase();
+      if (newArrayA < newArrayB)
+        return -1
+      if (newArrayA > newArrayB)
+        return 1
+      return 0
     })
   }
 
