@@ -43,6 +43,81 @@ export class PricingHomeComponent implements OnInit {
         this.footer.classList.remove('hide');
 
         this.planTab('annual');
+        jQuery(document).ready(function() {
+
+        jQuery('.toggle-more').click(function(event){
+            var $target = jQuery(event.target);
+            var d = jQuery(this).children("i").html();
+            if(d === 'add'){
+                jQuery(this).children("i").html('remove');
+                jQuery(this).children("p").html('show less');
+            }
+            else{
+                jQuery(this).children("i").html('add');
+                jQuery(this).children("p").html('show more');
+            }
+            jQuery(this).parents('.pricing-bottom').toggleClass('open');
+            $target.closest(".pricing-bottom").find(".features").slideToggle();  
+        });
+        
+        
+        jQuery('li').click(function() {
+            jQuery(this).addClass('active').siblings().removeClass('active'); 
+        });
+        jQuery('.expand-all').click( function(event){
+            if(jQuery(this).hasClass('open')){
+                jQuery('.expand').removeClass('open');
+                jQuery(".detail").slideUp("slow");
+            }
+            else{
+                jQuery('.expand').addClass('open');
+                jQuery(".detail").slideToggle();
+            }
+            jQuery(this).toggleClass('open');
+        });
+
+        jQuery(".expand").click( function(event) {
+            jQuery(this).toggleClass('open');
+            jQuery(this).parents('.expand').find('.detail').slideToggle();
+        });
+    
+        jQuery(".expand-rs").click( function(event) {
+            // jQuery(this).parents('.expand').toggleClass('open');
+            // jQuery(this).parents('.expand').find('.detail').slideToggle();
+            
+            var $target = jQuery(event.target);
+            jQuery(this).toggleClass('open');
+            // jQuery(this).parents('.expand').toggleClass('open');
+            jQuery(this).children(".detail").slideToggle();
+    
+            //jQuery('.expand .expand-child > .detail').slideToggle();
+        });  
+        
+        
+   
+       jQuery('a.toggle-dots-white').click(function(e) {
+           jQuery(this).parent().find('.billing-grey-bottom').slideToggle('slow');
+           jQuery(this).toggleClass('sliding');
+           if (jQuery(this).hasClass("sliding")) {
+               jQuery('a.toggle-dots-white p').html('Less info');
+               jQuery('a.toggle-dots-white i').html('keyboard_arrow_up');
+           } else {
+               jQuery('a.toggle-dots-white p').html('More info');
+               jQuery('a.toggle-dots-white i').html('keyboard_arrow_down');
+           }
+       });
+       jQuery('a.toggle-dots-grey').click(function(e) {
+           jQuery(this).parent().find('.billing-white-bottom').slideToggle('slow');
+           jQuery(this).toggleClass('slidings');
+           if (jQuery(this).hasClass("slidings")) {
+               jQuery('a.toggle-dots-grey p').html('Less info');
+               jQuery('a.toggle-dots-grey i').html('keyboard_arrow_up');
+           } else {
+               jQuery('a.toggle-dots-grey p').html('More info');
+               jQuery('a.toggle-dots-grey i').html('keyboard_arrow_down');
+           }
+       });
+    });
     }
 
     checkIdExists(id) {

@@ -45,6 +45,24 @@ export class IdeaGeneratorComponent implements OnInit {
       sortField: 'text'
   });   
 
+
+  jQuery(document).ready(function(){
+   jQuery(".sec1-button").click(function(){
+      //$(".sec1-bg").hide();
+    //  jQuery(".sec2-bg").removeClass("hide");
+    //  jQuery(".logo-top").removeClass("hide");
+     jQuery('html, body').animate({
+          scrollTop:jQuery('#bg-sec').offset().top
+      }, 1250);
+      // setTimeout(function(){
+      //    jQuery(".sec1-bg").addClass("hide");
+      // }, 1000)
+
+  });
+
+  
+
+  });
          
     this.loader.classList.add('hide');
     let header = document.querySelector('.navbar-fixed-top');
