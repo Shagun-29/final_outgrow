@@ -101,7 +101,7 @@
                 <div class="update-section">
 
                     <div class="sec-catergory  custom-select">
-                        <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Category" [(ngModel)]="selectedOption.category_new"
+                        <select class=" selectize-control demo-default selectize-category-result select-cat" data-placeholder="Choose Category" [(ngModel)]="optionCatSelected"
                             (ngModelChange)="newCategoryChanges($event)">
                             <option [ngValue]="null" selected>Choose Category</option>
                             <option *ngFor="let category of categories" [selected]="selectedOption.category===category">{{ category }}</option>
@@ -109,7 +109,7 @@
                         <!-- <span *ngIf="categoryError" class="error update-cat-error" style="display:block">Please Choose a Category</span> -->
                     </div>
                     <div class="sec-catergory  custom-select">
-                        <select class=" selectize-control demo-default selectize-category-result" data-placeholder="Choose Sub Category" [(ngModel)]="selectedOption.subCategory_new"
+                        <select class=" selectize-control demo-default selectize-category-result select-sub-cat" data-placeholder="Choose Sub Category" [(ngModel)]="optionSubCatSelected"
                             (ngModelChange)="newSubCategoryChanges()">
                             <option [ngValue]="null" selected>Choose Sub Category</option>
                             <option *ngFor="let subCategory of subCategories" [selected]="selectedOption.subCategory===subCategory">{{ subCategory }}</option>
