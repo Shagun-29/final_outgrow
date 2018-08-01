@@ -33,9 +33,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .sec {
     display: table-cell;
-    /* vertical-align: middle; */
+    vertical-align: middle;
 }
-
+.alert.alert-danger i.material-icons {
+    font-size: 14px;
+    float: left;
+    margin-right: 5px;
+}
 .sec1-bg .sec-container {
     text-align: center;
 }
@@ -44,6 +48,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0 auto;
     margin-top: 90px;
     width: 885px;
+    /* text-align: center; */
+}
+.sec2-bg .sec-container {
+    margin: 0 auto;
+    width: 885px;
+    position: relative;
+    text-align: center;
+}
+.sec3-bg .sec-container,.sec4-bg .sec-container {
+    position: relative;
+    margin-top: 0;
 }
 .sec1-text {
     float: left;
@@ -97,7 +112,7 @@ h1 {
     margin-top: 40px;
     min-height: 77px;
     min-width: 380px;
-    padding: 18px 60px 18px 90px;
+    padding: 15px 35px;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -840,13 +855,20 @@ figure.icons-part {
 .sec1-text + .sec1-button {
     background-position: 35px center;
 }
-.sec1-button,.sec-button{
+.sec1-button{
     font-size: 16px;
     margin-left: 0;
     margin-top: 40px;
     min-height: initial;
     min-width: initial;
     padding: 15px 40px 15px 60px;
+}
+.sec-button{
+    font-size: 16px;
+    padding: 15px 35px;
+    min-height: initial;
+    min-width: initial;
+    margin-top: 30px;
 }
 .sec2-text {
     font-size: 32px;
@@ -894,7 +916,7 @@ figure.icons-part {
 .sec1-text + .sec1-button {
     background-position: 35px center;
 }
-.sec1-button {
+.sec1-button,.sec-button {
     font-size: 15px;
     margin-left: 0;
     margin-top: 40px;
@@ -902,6 +924,7 @@ figure.icons-part {
     min-width: initial;
     padding: 13px 40px 13px 60px;
 }
+
 .sec2-step {
     left: -50px;
     position: absolute;

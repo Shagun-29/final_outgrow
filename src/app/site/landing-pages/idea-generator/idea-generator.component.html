@@ -63,7 +63,7 @@
                 <div class="sec-catergory">
                     <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" [(ngModel)]="selectedOption.subCategory"
                         (ngModelChange)="subCategorySelected()">
-                        <option [ngValue]="null" selected>Choose Sub Category</option>
+                        <!-- <option [ngValue]="null" selected>Choose Sub Category</option> -->
                         <option *ngFor="let subCategory of subCategories">{{ subCategory }}</option>
                     </select>
                 </div>

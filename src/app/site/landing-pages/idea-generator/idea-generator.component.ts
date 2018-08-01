@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
+declare var jQuery :any;
 @Component({
   selector: 'app-idea-generator',
   templateUrl: './idea-generator.component.html',
@@ -99,6 +100,13 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    jQuery('.selectize-category-result').selectize({
+      create: true,
+      sortField: 'text'
+  });   
+
+         
     this.loader.classList.add('hide');
     let header = document.querySelector('.navbar-fixed-top');
     header.classList.add('show');
@@ -121,6 +129,20 @@ export class IdeaGeneratorComponent implements OnInit {
       (error: any) => {
         console.log("error in getting categories is ::", error);
       })
+      setTimeout(() => {
+        let self=this
+        jQuery('.selectize-category').selectize({
+            create: false,
+            sortField: 'text',
+            placeholder : 'Choose Category',
+            onChange:function(event){ 
+               console.log("--event--",event)
+              self.categorySelected(event)
+            }
+          }
+        );
+      }, 2000);
+      
   }
 
   getStarted() {
@@ -143,6 +165,23 @@ export class IdeaGeneratorComponent implements OnInit {
       setTimeout(()=>{
         this.stateName_sec2 = 'hide';
       },1000);
+    setTimeout(() => {
+      let self=this
+      jQuery('.selectize-sub-category').selectize({
+          create: false,
+          sortField: 'text',
+          placeholder : 'Choose Sub-Category',
+          onChange:function(event){ 
+             console.log("--event--",event)
+            self.subCategorySelected()
+          }
+        }
+      );
+    }, 2000);
+    // setTimeout(function () {
+    //   this.section_2 = true;
+    // }, 1000);
+   
   }
 
   subCategorySelected() {
@@ -152,6 +191,9 @@ export class IdeaGeneratorComponent implements OnInit {
       this.stateName_sec3 = 'hide';
     },1000);
   }
+   
+  
+       
 
   showIdeas() {
     let regex = new RegExp('[\\w\\W]+(@)\\w{2,}(\\.)\\w{2,}')
