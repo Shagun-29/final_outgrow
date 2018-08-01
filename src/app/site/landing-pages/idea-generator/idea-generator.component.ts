@@ -178,6 +178,15 @@ export class IdeaGeneratorComponent implements OnInit {
         }
       );
     
+  
+
+  }
+
+  
+  newCategoryChanges(event) {
+    
+    console.log("--",event);
+    setTimeout(() => {
       jQuery('.select-sub-cat').selectize({
         create: false,
         sortField: 'text',
@@ -192,12 +201,8 @@ export class IdeaGeneratorComponent implements OnInit {
       
       }
     );
-
-  }
-
-  
-  newCategoryChanges(event) {
-    console.log("--",event)
+    }, 2000);
+    
     if (this.optionCatSelected === this.selectedOption_category_new) {
       console.log("In IF")
       this.subCategoryError = false;
@@ -219,7 +224,9 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   newSubCategoryChanges() {
+
     this.clearFunnels();
+    
     this.subCategoryError = false;
     this.parseFunnel(this.selectedOption_category_new ? this.selectedOption_category_new : this.optionCatSelected, this.selectedOption_subCategory_new);
   }
