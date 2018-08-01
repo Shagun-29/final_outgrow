@@ -1,6 +1,7 @@
 import { Component, OnInit, animate } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
+import { constants } from 'os';
 
 declare let jQuery: any;
 
@@ -28,8 +29,10 @@ export class IdeaGeneratorComponent implements OnInit {
   loader = document.querySelector('.preloader');
   optionCatSelected="";
   optionSubCatSelected="";
-  selectedOption_subCategory_new="";
+  subcategory2="";
   selectedOption_category_new="";
+  selectedOption_subCategory_new=""
+
 
   constructor(public title: Title,
     public apiRequestService: ApiRequestService) {
@@ -92,6 +95,7 @@ export class IdeaGeneratorComponent implements OnInit {
 
   categorySelected(event) {
     this.subCategories ? this.subCategories.splice(0, this.subCategories.length) : '';
+    console.log("-----Sub Category-----",this.subCategories)
     this.tempVar.forEach(value => {
       if (value[0] === event)
         this.subCategories.push(...value.slice(1, value.length));
@@ -155,35 +159,69 @@ export class IdeaGeneratorComponent implements OnInit {
       console.log(this.optionSubCatSelected, this.optionCatSelected);
       // this.parseFunnel(this.selectedOption.category, this.selectedOption.subCategory);
       this.parseFunnel(this.optionCatSelected, this.optionSubCatSelected);
+
     } else {
       this.emailError = true;
     }
+    let self=this
+    jQuery('.select-cat').selectize({
+          create: false,
+          sortField: 'text',
+          placeholder : 'Choose Category',
+          onChange:function(event){ 
+            
+             console.log("--event--",event);
+             self.optionCatSelected=event
+             self.selectedOption_category_new=event;
+            self.newCategoryChanges(event)
+          }
+        }
+      );
+    
+      jQuery('.select-sub-cat').selectize({
+        create: false,
+        sortField: 'text',
+        placeholder : 'Choose Sub-Category',
+        onChange:function(event){ 
+          
+           console.log("--event--",event);
+          //  self.selectedOption_subCategory_new=event;
+          //  self.optionSubCatSelected=event
+          // self.newSubCategoryChanges()
+        }
+      
+      }
+    );
+
   }
 
   
   newCategoryChanges(event) {
-    console.log("------------",event)
+    console.log("--",event)
+    if (this.optionCatSelected === this.selectedOption_category_new) {
+      console.log("In IF")
+      this.subCategoryError = false;
+    }
+    else {
+      console.log('ELSE')
+      this.selectedOption_subCategory_new = null;
+      this.subCategoryError = true;
+    }
+    this.clearFunnels();
+    console.log("-->",this.subCategories);
+    this.subCategories ? this.subCategories.splice(0, this.subCategories.length) : '';
+    this.tempVar.forEach(value => {
+      if (value[0] === event)
+        this.subCategories.push(...value.slice(1, value.length));
+    });
+    this.subCategories = this.sortArray(this.subCategories);
     
-    // if (this.optionCatSelected === this.selectedOption.category_new) {
-    //   this.subCategoryError = false;
-    // }
-    // else {
-    //   this.selectedOption.subCategory_new = null;
-    //   this.subCategoryError = true;
-    // }
-    // this.clearFunnels();
-    // this.subCategories ? this.subCategories.splice(0, this.subCategories.length) : '';
-    // this.tempVar.forEach(value => {
-    //   if (value[0] === event)
-    //     this.subCategories.push(...value.slice(1, value.length));
-    // });
-    // this.subCategories = this.sortArray(this.subCategories);
   }
 
   newSubCategoryChanges() {
-  //   this.clearFunnels();
-  //   this.subCategoryError = false;
-  //   this.parseFunnel(this.selectedOption.category_new ? this.selectedOption.category_new : this.optionCatSelected, this.selectedOption.subCategory_new);
+    this.clearFunnels();
+    this.subCategoryError = false;
+    this.parseFunnel(this.selectedOption_category_new ? this.selectedOption_category_new : this.optionCatSelected, this.selectedOption_subCategory_new);
   }
 
   clearFunnels() {
@@ -197,51 +235,11 @@ export class IdeaGeneratorComponent implements OnInit {
     subCategory = subCategory.replace(/\s/, '');
     let funnelSubCategory = 'key' + subCategory;
     console.log("::funnel category::"+funnelCategory+"::Funnel subCategory::"+funnelSubCategory)
-    this.apiRequestService.getSubCategories(funnelCategory).
-    subscribe((response: any) => {
-      console.log('-',response)
+    console.log("--00000-",funnelCategory,'---')
+    this.apiRequestService.getSubCategories(funnelCategory)
+    .subscribe((response: any) => {
+      console.log('-response-',response)
       let data = response.json().values;
-
-        let self=this
-        jQuery('.select-cat').selectize({
-            create: false,
-            sortField: 'text',
-            placeholder : 'Choose Sub-Category',
-            onChange:function(event){ 
-              console.log("------------",event)
-              this.selectedOption_category_new=event;
-              if (this.optionCatSelected === this.selectedOption_category_new) {
-                this.subCategoryError = false;
-              }
-              else {
-                this.selectedOption_subCategory_new = null;
-                this.subCategoryError = true;
-              }
-              self.clearFunnels();
-              self.subCategories ? self.subCategories.splice(0, self.subCategories.length) : '';
-              self.tempVar.forEach(value => {
-                if (value[0] === event)
-                  self.subCategories.push(...value.slice(1, value.length));
-              });
-              self.subCategories = self.sortArray(this.subCategories);
-            }
-          }
-        );
-        jQuery('.select-sub-cat').selectize({
-          create: false,
-          sortField: 'text',
-          placeholder : 'Choose Sub-Category',
-          onChange:function(event){ 
-            self.clearFunnels();
-    self.subCategoryError = false;
-    self.parseFunnel(this.selectedOption_category_new ? this.selectedOption_category_new : this.optionCatSelected, this.selectedOption_subCategory_new);
-  
-          //   self.optionSubCatSelected=event;
-          //    console.log("--event--",event)
-          //   self.subCategorySelected(event)
-          }
-        }
-      );
 
       data.forEach(value => {
         if (value[0] === funnelSubCategory) {
@@ -264,7 +262,6 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   sortArray(newArray) {
-    console.log("::ARRAY::",newArray);
     return newArray.sort(function (a, b) {
       var newArrayA = a.toLowerCase(), newArrayB = b.toLowerCase();
       if (newArrayA < newArrayB)
