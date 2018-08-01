@@ -1,13 +1,73 @@
-import { Component, OnInit, animate } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
-
-declare let jQuery: any;
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-idea-generator',
   templateUrl: './idea-generator.component.html',
-  styleUrls: ['./idea-generator.component.css']
+  styleUrls: ['./idea-generator.component.css'],
+  animations: [
+    trigger('popOverState1', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      state('move', style({
+        transform: 'translateY(-100%)',
+      })),
+      transition('show <=> hide', animate('1000ms ease')),
+      transition('* => move', animate('1500ms ease')),
+    ]),
+    trigger('popOverState2', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      state('move', style({
+        transform: 'translateY(-100%)',
+      })),
+      transition('show <=> hide', animate('1000ms ease')),
+      transition('* => *', animate('1500ms ease')),
+    ]),
+    trigger('popOverState3', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      state('move', style({
+        transform: 'translateY(-100%)',
+      })),
+      transition('show <=> hide', animate('1000ms ease')),
+      transition('* => *', animate('1500ms ease')),
+    ]),
+    trigger('popOverState4', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      transition('show => hide', animate('1000ms ease-out')),
+      transition('hide => show', animate('1000ms ease-in')),
+    ]),
+    trigger('popOverState5', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      transition('show => hide', animate('1000ms ease-out')),
+      transition('hide => show', animate('1000ms ease-in')),
+    ]),
+  ]
 
 })
 export class IdeaGeneratorComponent implements OnInit {
@@ -16,17 +76,17 @@ export class IdeaGeneratorComponent implements OnInit {
   categories = [];
   subCategories = [];
   tempVar: any;
-  section_1: boolean = false;
-  section_2: boolean = true;
-  section_3: boolean = true;
-  section_4: boolean = true;
   emailError: boolean = false;
   subCategoryError: boolean = false;
   topFunnel = [];
   middleFunnel = [];
   bottomFunnel = [];
   loader = document.querySelector('.preloader');
-
+  stateName_sec1 = 'show';
+  stateName_sec2 = 'hide';
+  stateName_sec3 = 'hide';
+  stateName_sec4 = 'hide';
+  stateName_secnew = 'hide';
   constructor(public title: Title,
     public apiRequestService: ApiRequestService) {
     title.setTitle("Idea Generator | Outgrow");
@@ -56,6 +116,7 @@ export class IdeaGeneratorComponent implements OnInit {
         this.categories.push(value[0]);
       });
       this.categories = this.sortArray(this.categories);
+      
     },
       (error: any) => {
         console.log("error in getting categories is ::", error);
@@ -63,12 +124,11 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   getStarted() {
-    this.section_2 = false;
-    this.animate('sec2-bg');
-    // setTimeout(function () {
-    //   this.section_1 = true;
-    // }, 1000);
-    this.section_1 = true;
+      this.stateName_sec1 = 'move';
+      this.stateName_sec2 = 'show';
+      setTimeout(()=>{
+        this.stateName_sec1 = 'hide';
+      },1000);
   }
 
   categorySelected(event) {
@@ -78,39 +138,27 @@ export class IdeaGeneratorComponent implements OnInit {
         this.subCategories.push(...value.slice(1, value.length));
     });
     this.subCategories = this.sortArray(this.subCategories);
-    this.section_3 = false;
-    this.animate('sec3-bg');
-    // setTimeout(function () {
-    //   this.section_2 = true;
-    // }, 1000);
-    this.section_2 = true;
+    this.stateName_sec2 = 'move';
+      this.stateName_sec3 = 'show';
+      setTimeout(()=>{
+        this.stateName_sec2 = 'hide';
+      },1000);
   }
 
-  subCategorySelected(event) {
-    this.section_4 = false;
-    this.animate('sec4-bg');
-    // setTimeout(function () {
-    //   this.section_3 = true;
-    // }, 1000);
-    this.section_3 = true;
-  }
-
-  animate(className) {
-    jQuery('html, body').animate({
-      scrollTop: jQuery(`.${className}`).offset().top
-    }, 1000);
+  subCategorySelected() {
+    this.stateName_sec3 = 'move';
+    this.stateName_sec4 = 'show';
+    setTimeout(()=>{
+      this.stateName_sec3 = 'hide';
+    },1000);
   }
 
   showIdeas() {
     let regex = new RegExp('[\\w\\W]+(@)\\w{2,}(\\.)\\w{2,}')
     if (regex.test(this.emailField)) {
       this.emailError = false;
-      jQuery(".new-sec-bg").fadeIn("slow", function () {
-        jQuery(this).removeClass("hide");
-      });
-      jQuery(".sec4-bg").fadeOut("slow", function () {
-        jQuery(this).addClass("hide");
-      });
+      this.stateName_secnew = 'show';
+      this.stateName_sec4 = 'hide';
       this.parseFunnel(this.selectedOption.category, this.selectedOption.subCategory);
     } else {
       this.emailError = true;

@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { routes } from './app.routing';
 import { Routes, RouterModule } from '@angular/router';
@@ -24,7 +24,7 @@ import { LoadingService } from './shared/service/loading.service';
     FooterComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(routes)  ],
   providers: [

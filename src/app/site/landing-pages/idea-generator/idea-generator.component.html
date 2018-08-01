@@ -1,5 +1,5 @@
 <div class="main-outr">
-    <section class="sec-outr sec1-bg mouse-bg" [class.hide]="section_1" >
+    <section [ngStyle]="{display:stateName_sec1=='hide'?'none':'table'}" class="sec-outr sec1-bg mouse-bg" [@popOverState1]="stateName_sec1">
         <div class="sec">
             <div class="logo">
                 <a href="javascript:void(0);">
@@ -19,16 +19,15 @@
             </div>
         </div>
     </section>
-    <div class="logo-top hide">
-        <!-- <a href="javascript:void(0);">
-            <img src="images/logo.png" alt="logo" />
-        </a> -->
-    </div>
-    <section class="sec-outr sec2-bg" [class.hide]="section_2">
+    <section [ngStyle]="{display:stateName_sec2=='hide'?'none':'table'}" class="sec-outr sec2-bg" [@popOverState2]="stateName_sec2">
         <div class="sec">
             <div class="sec-container">
                 <div class="sec2-step">
-                    <span>1/3</span>
+                    <span>
+                        <sup>1</sup>
+                        /
+                        <sup>3</sup>
+                    </span>
                 </div>
                 <div class="sec2-text">
                     Which category
@@ -39,16 +38,23 @@
                     <select class="demo-default selectize-category" placeholder="Choose Category" [(ngModel)]="selectedOption.category" (ngModelChange)="categorySelected($event)">
                         <option [ngValue]="null" selected>Choose Category</option>
                         <option *ngFor="let category of categories">{{ category }}</option>
+                        <!-- <option value="dgf">a</option>
+                        <option value="dgf">a</option>
+                        <option value="dgf">a</option> -->
                     </select>
                 </div>
             </div>
         </div>
     </section>
-    <section class="sec-outr sec3-bg" [class.hide]="section_3">
+    <section [ngStyle]="{display:stateName_sec3=='hide'?'none':'table'}" class="sec-outr sec3-bg" [@popOverState3]="stateName_sec3">
         <div class="sec">
             <div class="sec-container">
                 <div class="sec2-step">
-                    <span>2/3</span>
+                    <span>
+                        <sup>2</sup>
+                        /
+                        <sup>3</sup>
+                    </span>
                 </div>
                 <div class="sec2-text">
                     Select
@@ -56,7 +62,7 @@
                 </div>
                 <div class="sec-catergory">
                     <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" [(ngModel)]="selectedOption.subCategory"
-                        (ngModelChange)="subCategorySelected($event)">
+                        (ngModelChange)="subCategorySelected()">
                         <option [ngValue]="null" selected>Choose Sub Category</option>
                         <option *ngFor="let subCategory of subCategories">{{ subCategory }}</option>
                     </select>
@@ -64,11 +70,15 @@
             </div>
         </div>
     </section>
-    <section class="sec-outr sec4-bg" [class.hide]="section_4">
+    <section [ngStyle]="{display:stateName_sec4=='hide'?'none':'table'}" class="sec-outr sec4-bg" [@popOverState4]="stateName_sec4">
         <div class="sec">
             <div class="sec-container">
                 <div class="sec2-step">
-                    <span>3/3</span>
+                    <span>
+                        <sup>3</sup>
+                        /
+                        <sup>3</sup>
+                    </span>
                 </div>
                 <div class="sec2-text">
                     Your Email
@@ -87,7 +97,7 @@
     </section>
 
 
-    <section class="sec-outr new-sec-bg mouse-bg hide">
+    <section [ngStyle]="{display:stateName_secnew=='hide'?'none':'table'}" class="sec-outr new-sec-bg mouse-bg" [@popOverState5]="stateName_secnew">
         <div class="sec">
             <!--<div class="logo">
             <a href="/">
