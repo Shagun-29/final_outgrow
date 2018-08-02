@@ -1,14 +1,74 @@
-import { Component, OnInit, animate } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
-import { constants } from 'os';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
-declare let jQuery: any;
-
+declare var jQuery: any;
 @Component({
   selector: 'app-idea-generator',
   templateUrl: './idea-generator.component.html',
-  styleUrls: ['./idea-generator.component.css']
+  styleUrls: ['./idea-generator.component.css'],
+  animations: [
+    trigger('popOverState1', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      state('move', style({
+        transform: 'translateY(-100%)',
+      })),
+      transition('show <=> hide', animate('1000ms ease')),
+      transition('* => move', animate('1500ms ease')),
+    ]),
+    trigger('popOverState2', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      state('move', style({
+        transform: 'translateY(-100%)',
+      })),
+      transition('show <=> hide', animate('1000ms ease')),
+      transition('* => *', animate('1500ms ease')),
+    ]),
+    trigger('popOverState3', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      state('move', style({
+        transform: 'translateY(-100%)',
+      })),
+      transition('show <=> hide', animate('1000ms ease')),
+      transition('* => *', animate('1500ms ease')),
+    ]),
+    trigger('popOverState4', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      transition('show => hide', animate('1000ms ease-out')),
+      transition('hide => show', animate('1000ms ease-in')),
+    ]),
+    trigger('popOverState5', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      transition('show => hide', animate('1000ms ease-out')),
+      transition('hide => show', animate('1000ms ease-in')),
+    ]),
+  ]
 
 })
 export class IdeaGeneratorComponent implements OnInit {
@@ -17,23 +77,18 @@ export class IdeaGeneratorComponent implements OnInit {
   categories = [];
   subCategories = [];
   tempVar: any;
-  section_1: boolean = false;
-  section_2: boolean = true;
-  section_3: boolean = true;
-  section_4: boolean = true;
   emailError: boolean = false;
   subCategoryError: boolean = false;
   topFunnel = [];
   middleFunnel = [];
   bottomFunnel = [];
   loader = document.querySelector('.preloader');
-  optionCatSelected="";
-  optionSubCatSelected="";
-  subcategory2="";
-  selectedOption_category_new="";
-  selectedOption_subCategory_new=""
-
-
+  stateName_sec1 = 'show';
+  stateName_sec2 = 'hide';
+  stateName_sec3 = 'hide';
+  stateName_sec4 = 'hide';
+  stateName_secnew = 'hide';
+  loading: boolean = true;
   constructor(public title: Title,
     public apiRequestService: ApiRequestService) {
     title.setTitle("Idea Generator | Outgrow");
@@ -58,6 +113,7 @@ export class IdeaGeneratorComponent implements OnInit {
 
   getCategories() {
     this.apiRequestService.getCategories().subscribe((response) => {
+      this.loading = false;
       this.tempVar = response.json().values;
       this.tempVar.forEach(value => {
         this.categories.push(value[0]);
@@ -67,168 +123,143 @@ export class IdeaGeneratorComponent implements OnInit {
       (error: any) => {
         console.log("error in getting categories is ::", error);
       })
-      setTimeout(() => {
-        let self=this
-        jQuery('.selectize-category').selectize({
-            create: false,
-            sortField: 'text',
-            placeholder : 'Choose Category',
-            onChange:function(event){ 
-              self.optionCatSelected=event;
-               console.log("--event--",event)
-              self.categorySelected(event)
-            }
-          }
-        );
-      }, 2000);
-      
   }
 
   getStarted() {
-    this.section_2 = false;
-    this.animate('sec2-bg');
-    // setTimeout(function () {
-    //   this.section_1 = true;
-    // }, 1000);
-    this.section_1 = true;
+    let self = this;
+    this.stateName_sec1 = 'move';
+    this.stateName_sec2 = 'show';
+    setTimeout(() => {
+      this.stateName_sec1 = 'hide';
+      let options = [];
+      this.categories.map(category => {
+        options.push({ label: category, value: category })
+      })
+      jQuery('.selectize-category').selectize({
+        options: options,
+        labelField: 'label',
+        placeholder: 'Choose Category',
+        onChange: function (event) {
+          self.selectedOption.category = event;
+          self.categorySelected(event);
+        }
+      }
+      );
+      console.log(self, this)
+    }, 1000);
   }
 
   categorySelected(event) {
+    let self = this;
     this.subCategories ? this.subCategories.splice(0, this.subCategories.length) : '';
-    console.log("-----Sub Category-----",this.subCategories)
     this.tempVar.forEach(value => {
       if (value[0] === event)
         this.subCategories.push(...value.slice(1, value.length));
     });
     this.subCategories = this.sortArray(this.subCategories);
-    this.section_3 = false;
-    this.animate('sec3-bg');
-    this.section_2 = true;
+    this.stateName_sec2 = 'move';
+    this.stateName_sec3 = 'show';
     setTimeout(() => {
-      let self=this
+      self.stateName_sec2 = 'hide';
+      let options = [];
+      this.subCategories.map(subCategory => {
+        options.push({ label: subCategory, value: subCategory })
+      })
       jQuery('.selectize-sub-category').selectize({
-          create: false,
-          sortField: 'text',
-          placeholder : 'Choose Sub-Category',
-          onChange:function(event){ 
-            self.optionSubCatSelected=event;
-             console.log("--event--",event)
-            self.subCategorySelected(event)
-          }
+        options: options,
+        labelField: 'label',
+        placeholder: 'Choose Sub Category',
+        onChange: function (event) {
+          self.selectedOption.subCategory = event;
+          self.subCategorySelected()
         }
+      }
       );
-    }, 2000);
-    // setTimeout(function () {
-    //   this.section_2 = true;
-    // }, 1000);
-   
-  }
-
-  subCategorySelected(event) {
-    // let self=this;
-    console.log('--Sub Category--')
-    this.section_4 = false;
-    this.animate('sec4-bg');
-    // setTimeout(function () {
-    //   this.section_3 = true;
-    // }, 1000);
-
-    this.section_3 = true;
-    
-  }
-
-  animate(className) {
-    jQuery('html, body').animate({
-      scrollTop: jQuery(`.${className}`).offset().top
     }, 1000);
+  }
 
-    
+  subCategorySelected() {
+    this.stateName_sec3 = 'move';
+    this.stateName_sec4 = 'show';
+    setTimeout(() => {
+      this.stateName_sec3 = 'hide';
+    }, 1000);
   }
 
   showIdeas() {
-  
+    let self = this;
     let regex = new RegExp('[\\w\\W]+(@)\\w{2,}(\\.)\\w{2,}')
     if (regex.test(this.emailField)) {
       this.emailError = false;
-      jQuery(".new-sec-bg").fadeIn("slow", function () {
-        jQuery(this).removeClass("hide");
-      });
-      jQuery(".sec4-bg").fadeOut("slow", function () {
-        jQuery(this).addClass("hide");
-      });
-      console.log(this.optionSubCatSelected, this.optionCatSelected);
-      // this.parseFunnel(this.selectedOption.category, this.selectedOption.subCategory);
-      this.parseFunnel(this.optionCatSelected, this.optionSubCatSelected);
-
+      this.stateName_secnew = 'show';
+      this.stateName_sec4 = 'hide';
+      setTimeout(() => {
+        let options = []
+        this.categories.map(category => {
+          options.push({ label: category, value: category })
+        })
+        jQuery('.selectize-category-result').selectize({
+          options: options,
+          labelField: 'label',
+          placeholder: 'Choose Category',
+          onChange: function (event) {
+            self.selectedOption.category_new = event;
+            self.newCategoryChanges(event);
+            jQuery('.selectize-sub-category-result')[0].selectize.destroy();
+            setTimeout(() => {
+              self.initSelectize();
+            });
+          }
+        }
+        );
+        self.initSelectize();
+        jQuery('.selectize-category-result')[0].selectize.setValue(this.selectedOption.category);
+      }, 500);
+      this.parseFunnel(this.selectedOption.category, this.selectedOption.subCategory);
     } else {
       this.emailError = true;
     }
-    let self=this
-    jQuery('.select-cat').selectize({
-          create: false,
-          sortField: 'text',
-          placeholder : 'Choose Category',
-          onChange:function(event){ 
-            
-             console.log("--event--",event);
-             self.optionCatSelected=event
-             self.selectedOption_category_new=event;
-            self.newCategoryChanges(event)
-          }
-        }
-      );
-    
-  
-
   }
 
-  
-  newCategoryChanges(event) {
-    
-    console.log("--",event);
-    setTimeout(() => {
-      jQuery('.select-sub-cat').selectize({
-        create: false,
-        sortField: 'text',
-        placeholder : 'Choose Sub-Category',
-        onChange:function(event){ 
-          
-           console.log("--event--",event);
-          //  self.selectedOption_subCategory_new=event;
-          //  self.optionSubCatSelected=event
-          // self.newSubCategoryChanges()
-        }
-      
+  initSelectize() {
+    let self = this;
+    let options = []
+    this.subCategories.map(subCategory => {
+      options.push({ label: subCategory, value: subCategory })
+    })
+    jQuery('.selectize-sub-category-result').selectize({
+      options: options,
+      labelField: 'label',
+      placeholder: 'Choose Sub-Category',
+      onChange: function (event) {
+        self.selectedOption.subCategory_new = event;
+        self.newSubCategoryChanges();
       }
+    }
     );
-    }, 2000);
-    
-    if (this.optionCatSelected === this.selectedOption_category_new) {
-      console.log("In IF")
+    jQuery('.selectize-sub-category-result')[0].selectize.setValue(this.selectedOption.subCategory);
+  }
+
+  newCategoryChanges(event) {
+    if (this.selectedOption.category === this.selectedOption.category_new) {
       this.subCategoryError = false;
     }
     else {
-      console.log('ELSE')
-      this.selectedOption_subCategory_new = null;
+      this.selectedOption.subCategory_new = null;
       this.subCategoryError = true;
     }
     this.clearFunnels();
-    console.log("-->",this.subCategories);
     this.subCategories ? this.subCategories.splice(0, this.subCategories.length) : '';
     this.tempVar.forEach(value => {
       if (value[0] === event)
         this.subCategories.push(...value.slice(1, value.length));
     });
     this.subCategories = this.sortArray(this.subCategories);
-    
   }
 
   newSubCategoryChanges() {
-
-    this.clearFunnels();
-    
     this.subCategoryError = false;
-    this.parseFunnel(this.selectedOption_category_new ? this.selectedOption_category_new : this.optionCatSelected, this.selectedOption_subCategory_new);
+    this.parseFunnel(this.selectedOption.category_new ? this.selectedOption.category_new : this.selectedOption.category, this.selectedOption.subCategory_new);
   }
 
   clearFunnels() {
@@ -239,15 +270,11 @@ export class IdeaGeneratorComponent implements OnInit {
 
   parseFunnel(category, subCategory) {
     let funnelCategory = category;
-    subCategory = subCategory.replace(/\s/, '');
+    subCategory = subCategory.trim().replace(/\s/, '');
     let funnelSubCategory = 'key' + subCategory;
-    console.log("::funnel category::"+funnelCategory+"::Funnel subCategory::"+funnelSubCategory)
-    console.log("--00000-",funnelCategory,'---')
-    this.apiRequestService.getSubCategories(funnelCategory)
-    .subscribe((response: any) => {
-      console.log('-response-',response)
+    this.apiRequestService.getSubCategories(funnelCategory).subscribe((response: any) => {
       let data = response.json().values;
-
+      this.clearFunnels();
       data.forEach(value => {
         if (value[0] === funnelSubCategory) {
           value[1] && this.topFunnel.push(...value.slice(1, 2));
@@ -266,11 +293,12 @@ export class IdeaGeneratorComponent implements OnInit {
     }, (error) => {
       console.log("error in getting funnel data is ::", error);
     })
+
   }
 
   sortArray(newArray) {
     return newArray.sort(function (a, b) {
-      var newArrayA = a.toLowerCase(), newArrayB = b.toLowerCase();
+      var newArrayA = a.trim().toLowerCase(), newArrayB = b.trim().toLowerCase();
       if (newArrayA < newArrayB)
         return -1
       if (newArrayA > newArrayB)

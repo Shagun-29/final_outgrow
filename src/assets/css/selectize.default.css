@@ -213,6 +213,10 @@
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
+.sec1-bg .selectize-input > input{
+  font-size:16px!important;
+  width: 100%!important;
+}
 .selectize-input > input::-ms-clear {
   display: none;
 }
@@ -447,12 +451,12 @@
   text-transform: uppercase;
   box-shadow: 3px 0 40px rgba(0, 0, 0, 0.2);
 }
-.sec2-bg .sec-catergory .selectize-control.single .selectize-input{
+.sec2-bg .sec-catergory .selectize-control.single .selectize-input,.new-sec-bg .sec-catergory .selectize-control.single .selectize-input{
   
   color: #666!important;
   font-size: 16px!important;
   text-transform: none!important;
-  
+  box-shadow: none!important;
 }
 .selectize-control.single .selectize-input, .selectize-dropdown.single {
   border-color: #b8b8b8;

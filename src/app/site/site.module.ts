@@ -24,14 +24,13 @@ import { FormsModule } from '@angular/forms';
 import { IdeaGenService } from '../shared/service/idea-gen.service';
 import { PricingService } from '../shared/services/pricing.service';
 
-
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     SelectModule,
     RouterModule.forChild(routes),
-    HttpModule
+    HttpModule,
   ],
   providers:[
     // GoogleSheet,
