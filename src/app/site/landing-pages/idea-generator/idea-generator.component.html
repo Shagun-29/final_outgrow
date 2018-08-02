@@ -1,5 +1,5 @@
 <div class="main-outr">
-    <section class="sec-outr sec1-bg mouse-bg" [class.hide]="section_1" >
+    <section [ngStyle]="{display:stateName_sec1=='hide'?'none':'table'}" class="sec-outr sec1-bg mouse-bg" [@popOverState1]="stateName_sec1">
         <div class="sec">
             <div class="logo">
                 <a href="javascript:void(0);">
@@ -19,16 +19,18 @@
             </div>
         </div>
     </section>
-    <div class="logo-top hide">
-        <!-- <a href="javascript:void(0);">
-            <img src="images/logo.png" alt="logo" />
-        </a> -->
-    </div>
-    <section class="sec-outr sec2-bg" [class.hide]="section_2">
-        <div class="sec">
+    <section [ngStyle]="{display:stateName_sec2=='hide'?'none':'table'}" class="sec-outr sec2-bg" [@popOverState2]="stateName_sec2">
+        <div *ngIf="loading" id="premade-loader" class="preloader">
+            <div class="status">&nbsp;</div>
+        </div>
+        <div *ngIf="!loading" class="sec">
             <div class="sec-container">
                 <div class="sec2-step">
-                    <span><sup>1</sup>/<sub>3</sub></span>
+                    <span>
+                        <sup>1</sup>
+                        /
+                        <sub>3</sub>
+                    </span>
                 </div>
                 <div class="sec2-text">
                     Which category
@@ -36,39 +38,45 @@
                     <br> fall into?
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-category" placeholder="Choose Category" [(ngModel)]="selectedOption.category" (ngModelChange)="categorySelected($event)">
-                        <option [ngValue]="null" selected>Choose Category</option>
-                        <option *ngFor="let category of categories">{{ category }}</option>
+                    <select class="demo-default selectize-category">
+                        <!-- <option [ngValue]="null" selected>Choose Category</option>
+                        <option *ngFor="let category of categories">{{ category }}</option> -->
                     </select>
                 </div>
             </div>
         </div>
     </section>
-    <section class="sec-outr sec3-bg" [class.hide]="section_3">
+    <section [ngStyle]="{display:stateName_sec3=='hide'?'none':'table'}" class="sec-outr sec3-bg" [@popOverState3]="stateName_sec3">
         <div class="sec">
             <div class="sec-container">
                 <div class="sec2-step">
-                    <span><sup>2</sup>/<sub>3</sub></span>
+                    <span>
+                        <sup>2</sup>
+                        /
+                        <sub>3</sub>
+                    </span>
                 </div>
                 <div class="sec2-text">
                     Select
                     <br> Sub-Category
                 </div>
                 <div class="sec-catergory">
-                    <select class="demo-default selectize-sub-category" placeholder="Choose Sub Category" [(ngModel)]="selectedOption.subCategory"
-                        (ngModelChange)="subCategorySelected($event)">
-                        <!-- <option [ngValue]="null" selected>Choose Sub Category</option> -->
-                        <option *ngFor="let subCategory of subCategories">{{ subCategory }}</option>
+                    <select class="demo-default selectize-sub-category">
+                        <!-- <option [ngValue]="null" selected>Choose Sub Category</option>
+                        <option *ngFor="let subCategory of subCategories">{{ subCategory }}</option> -->
                     </select>
                 </div>
             </div>
         </div>
     </section>
-    <section class="sec-outr sec4-bg" [class.hide]="section_4">
+    <section [ngStyle]="{display:stateName_sec4=='hide'?'none':'table'}" class="sec-outr sec4-bg" [@popOverState4]="stateName_sec4">
         <div class="sec">
             <div class="sec-container">
                 <div class="sec2-step">
-                    <span><sup>3</sup>/<sub>3</sub></span>
+                    <span>
+                        <sup>3</sup>/
+                        <sub>3</sub>
+                    </span>
                 </div>
                 <div class="sec2-text">
                     Your Email
@@ -87,7 +95,7 @@
     </section>
 
 
-    <section class="sec-outr new-sec-bg mouse-bg hide">
+    <section [ngStyle]="{display:stateName_secnew=='hide'?'none':'table'}" class="sec-outr new-sec-bg mouse-bg" [@popOverState5]="stateName_secnew">
         <div class="sec">
             <!--<div class="logo">
             <a href="/">
@@ -101,20 +109,19 @@
                 <div class="update-section">
 
                     <div class="sec-catergory  custom-select">
-                        <select class=" selectize-control demo-default selectize-category-result select-cat" data-placeholder="Choose Category" [(ngModel)]="optionCatSelected"
-                            (ngModelChange)="newCategoryChanges($event)">
-                            <option [ngValue]="null" selected>Choose Category</option>
-                            <option *ngFor="let category of categories" [selected]="selectedOption.category===category">{{ category }}</option>
+                        <select class="demo-default selectize-category-result">
+                            <!-- <option [ngValue]="null" selected>Choose Category</option>
+                            <option *ngFor="let category of categories" [selected]="selectedOption.category===category">{{ category }}</option> -->
                         </select>
                         <!-- <span *ngIf="categoryError" class="error update-cat-error" style="display:block">Please Choose a Category</span> -->
                     </div>
                     <div class="sec-catergory  custom-select">
-                        <select class=" selectize-control demo-default selectize-category-result select-sub-cat" data-placeholder="Choose Sub Category" [(ngModel)]="optionSubCatSelected"
-                            (ngModelChange)="newSubCategoryChanges()">
-                            <option [ngValue]="null" selected>Choose Sub Category</option>
-                            <option *ngFor="let subCategory of subCategories" [selected]="selectedOption.subCategory===subCategory">{{ subCategory }}</option>
+                        <select class="demo-default selectize-sub-category-result">
+                            <!-- <option [ngValue]="null" selected>Choose Sub Category</option>
+                            <option *ngFor="let subCategory of subCategories" [selected]="selectedOption.subCategory===subCategory">{{ subCategory }}</option> -->
                         </select>
                         <span *ngIf="subCategoryError" class="error update-cat-error" style="display:block">Please choose a sub category</span>
+
                     </div>
                     <div class="update-btn" style="float: none; display: inline-block">
                         <a href="javascript:void(0)">update</a>
