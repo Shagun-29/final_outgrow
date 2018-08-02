@@ -94,6 +94,10 @@ MIT
 MIT
 MIT
 
+@angular/animations@5.2.9
+MIT
+MIT
+
 webpack@3.11.0
 MIT
 Copyright JS Foundation and other contributors
