@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PricingService } from '../../../shared/services/pricing.service';
 declare let jQuery: any;
@@ -9,7 +9,7 @@ declare let jQuery: any;
     styleUrls: ['./pricing-home.component.css']
 })
 export class PricingHomeComponent implements OnInit {
-    activePlan: any = 0;
+    activePlanIndex: any = 0;
     planTypes: Array<Object>;
     annualPlans: Array<Object>;
     monthlyPlans: Array<Object>;
@@ -41,25 +41,16 @@ export class PricingHomeComponent implements OnInit {
         this.load.classList.add('hide');
         this.header.classList.remove('hide');
         this.footer.classList.remove('hide');
-
+        
         this.planTab('annual');
     }
 
-    checkIdExists(id) {
-        return this.pricingToggle.includes(id) ? true : false;
-    }
-
-    runQueries(id) {
-        if (this.checkIdExists(id)) {
-            this.pricingToggle = this.pricingToggle.filter(x => (x !== id));
-        } else {
-            this.pricingToggle.push(id);
-        }
+    runQueries(ind) { 
+        jQuery(`#sliding${ind}`).find('.detail').slideToggle();
     }
 
     planTab(planType, index = 0) {
-        this.activePlan = index;
-        // this.pricingToggle && this.pricingToggle.splice(0, this.pricingToggle.length);
+        this.activePlanIndex = index;
         if (planType == 'annual') {
             this.annualActive = true;
         } else {
