@@ -37,7 +37,7 @@
                 </div>
                 <div class="sec-catergory">
                     <select class="demo-default selectize-category" placeholder="Choose Category" [(ngModel)]="selectedOption.category" (ngModelChange)="categorySelected($event)">
-                        <option [ngValue]="null" selected>Choose Category</option>
+                        <option [ngValue]="null" selected >Choose Category </option>
                         <option *ngFor="let category of categories">{{ category }}</option>
                     </select>
                 </div>
