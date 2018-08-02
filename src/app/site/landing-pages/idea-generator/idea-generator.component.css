@@ -54,7 +54,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0 auto;
     width: 885px;
     position: relative;
-    text-align: center;
+    /* text-align: center; */
 }
 .sec3-bg .sec-container,.sec4-bg .sec-container {
     position: relative;
@@ -207,7 +207,7 @@ preloader {
 }
 .update-section {
     float: left;
-    text-align: center;
+    /* text-align: center; */
     width: 100%;
     display: flex;
     justify-content: center;

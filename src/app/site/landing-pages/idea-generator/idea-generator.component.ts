@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
-declare var jQuery :any;
+declare var jQuery: any;
 @Component({
   selector: 'app-idea-generator',
   templateUrl: './idea-generator.component.html',
@@ -88,6 +88,7 @@ export class IdeaGeneratorComponent implements OnInit {
   stateName_sec3 = 'hide';
   stateName_sec4 = 'hide';
   stateName_secnew = 'hide';
+  loading: boolean = true;
   constructor(public title: Title,
     public apiRequestService: ApiRequestService) {
     title.setTitle("Idea Generator | Outgrow");
@@ -100,13 +101,6 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    jQuery('.selectize-category-result').selectize({
-      create: true,
-      sortField: 'text'
-  });   
-
-         
     this.loader.classList.add('hide');
     let header = document.querySelector('.navbar-fixed-top');
     header.classList.add('show');
@@ -119,41 +113,44 @@ export class IdeaGeneratorComponent implements OnInit {
 
   getCategories() {
     this.apiRequestService.getCategories().subscribe((response) => {
+      this.loading = false;
       this.tempVar = response.json().values;
       this.tempVar.forEach(value => {
         this.categories.push(value[0]);
       });
       this.categories = this.sortArray(this.categories);
-      
     },
       (error: any) => {
         console.log("error in getting categories is ::", error);
       })
-      setTimeout(() => {
-        let self=this
-        jQuery('.selectize-category').selectize({
-            create: false,
-            sortField: 'text',
-            placeholder : 'Choose Category',
-            onChange:function(event){ 
-               console.log("--event--",event)
-              self.categorySelected(event)
-            }
-          }
-        );
-      }, 2000);
-      
   }
 
   getStarted() {
-      this.stateName_sec1 = 'move';
-      this.stateName_sec2 = 'show';
-      setTimeout(()=>{
-        this.stateName_sec1 = 'hide';
-      },1000);
+    let self = this;
+    this.stateName_sec1 = 'move';
+    this.stateName_sec2 = 'show';
+    setTimeout(() => {
+      this.stateName_sec1 = 'hide';
+      let options = [];
+      this.categories.map(category => {
+        options.push({ label: category, value: category })
+      })
+      jQuery('.selectize-category').selectize({
+        options: options,
+        labelField: 'label',
+        placeholder: 'Choose Category',
+        onChange: function (event) {
+          self.selectedOption.category = event;
+          self.categorySelected(event);
+        }
+      }
+      );
+      console.log(self, this)
+    }, 1000);
   }
 
   categorySelected(event) {
+    let self = this;
     this.subCategories ? this.subCategories.splice(0, this.subCategories.length) : '';
     this.tempVar.forEach(value => {
       if (value[0] === event)
@@ -161,50 +158,86 @@ export class IdeaGeneratorComponent implements OnInit {
     });
     this.subCategories = this.sortArray(this.subCategories);
     this.stateName_sec2 = 'move';
-      this.stateName_sec3 = 'show';
-      setTimeout(()=>{
-        this.stateName_sec2 = 'hide';
-      },1000);
+    this.stateName_sec3 = 'show';
     setTimeout(() => {
-      let self=this
+      self.stateName_sec2 = 'hide';
+      let options = [];
+      this.subCategories.map(subCategory => {
+        options.push({ label: subCategory, value: subCategory })
+      })
       jQuery('.selectize-sub-category').selectize({
-          create: false,
-          sortField: 'text',
-          placeholder : 'Choose Sub-Category',
-          onChange:function(event){ 
-             console.log("--event--",event)
-            self.subCategorySelected()
-          }
+        options: options,
+        labelField: 'label',
+        placeholder: 'Choose Sub Category',
+        onChange: function (event) {
+          self.selectedOption.subCategory = event;
+          self.subCategorySelected()
         }
+      }
       );
-    }, 2000);
-    // setTimeout(function () {
-    //   this.section_2 = true;
-    // }, 1000);
-   
+    }, 1000);
   }
 
   subCategorySelected() {
     this.stateName_sec3 = 'move';
     this.stateName_sec4 = 'show';
-    setTimeout(()=>{
+    setTimeout(() => {
       this.stateName_sec3 = 'hide';
-    },1000);
+    }, 1000);
   }
-   
-  
-       
 
   showIdeas() {
+    let self = this;
     let regex = new RegExp('[\\w\\W]+(@)\\w{2,}(\\.)\\w{2,}')
     if (regex.test(this.emailField)) {
       this.emailError = false;
       this.stateName_secnew = 'show';
       this.stateName_sec4 = 'hide';
+      setTimeout(() => {
+        let options = []
+        this.categories.map(category => {
+          options.push({ label: category, value: category })
+        })
+        jQuery('.selectize-category-result').selectize({
+          options: options,
+          labelField: 'label',
+          placeholder: 'Choose Category',
+          onChange: function (event) {
+            self.selectedOption.category_new = event;
+            self.newCategoryChanges(event);
+            jQuery('.selectize-sub-category-result')[0].selectize.destroy();
+            setTimeout(() => {
+              self.initSelectize();
+            });
+          }
+        }
+        );
+        self.initSelectize();
+        jQuery('.selectize-category-result')[0].selectize.setValue(this.selectedOption.category);
+      }, 500);
       this.parseFunnel(this.selectedOption.category, this.selectedOption.subCategory);
     } else {
       this.emailError = true;
     }
+  }
+
+  initSelectize() {
+    let self = this;
+    let options = []
+    this.subCategories.map(subCategory => {
+      options.push({ label: subCategory, value: subCategory })
+    })
+    jQuery('.selectize-sub-category-result').selectize({
+      options: options,
+      labelField: 'label',
+      placeholder: 'Choose Sub-Category',
+      onChange: function (event) {
+        self.selectedOption.subCategory_new = event;
+        self.newSubCategoryChanges();
+      }
+    }
+    );
+    jQuery('.selectize-sub-category-result')[0].selectize.setValue(this.selectedOption.subCategory);
   }
 
   newCategoryChanges(event) {
@@ -225,7 +258,6 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   newSubCategoryChanges() {
-    this.clearFunnels();
     this.subCategoryError = false;
     this.parseFunnel(this.selectedOption.category_new ? this.selectedOption.category_new : this.selectedOption.category, this.selectedOption.subCategory_new);
   }
@@ -238,11 +270,11 @@ export class IdeaGeneratorComponent implements OnInit {
 
   parseFunnel(category, subCategory) {
     let funnelCategory = category;
-    subCategory = subCategory.replace(/\s/, '');
+    subCategory = subCategory.trim().replace(/\s/, '');
     let funnelSubCategory = 'key' + subCategory;
     this.apiRequestService.getSubCategories(funnelCategory).subscribe((response: any) => {
       let data = response.json().values;
-
+      this.clearFunnels();
       data.forEach(value => {
         if (value[0] === funnelSubCategory) {
           value[1] && this.topFunnel.push(...value.slice(1, 2));
@@ -261,11 +293,12 @@ export class IdeaGeneratorComponent implements OnInit {
     }, (error) => {
       console.log("error in getting funnel data is ::", error);
     })
+
   }
 
   sortArray(newArray) {
     return newArray.sort(function (a, b) {
-      var newArrayA = a.toLowerCase(), newArrayB = b.toLowerCase();
+      var newArrayA = a.trim().toLowerCase(), newArrayB = b.trim().toLowerCase();
       if (newArrayA < newArrayB)
         return -1
       if (newArrayA > newArrayB)
