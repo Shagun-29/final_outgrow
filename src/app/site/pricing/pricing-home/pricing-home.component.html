@@ -5,7 +5,7 @@
             <section id="plan-cycle" class="" style="font-family: montserratregular;">
                 <div class="col-md-12 col-sm-12 col-xs-12 np billing-plan-list" id="plans">
                     <ul>
-                        <li *ngFor="let planType of planTypes;let i=index " class="cycle-tab " [class.active]="activePlan==i" [id]='planType.id'>
+                        <li *ngFor="let planType of planTypes;let i=index " class="cycle-tab " [class.active]="activePlanIndex==i" [id]='planType.id'>
                             <a href="javascript:void(0)" class="hvr-sweep-to-right view" (click)="planTab(planType.id,i)">
                                 <i class="material-icons">check</i>
                                 {{planType.name}}
@@ -169,32 +169,32 @@
 
                     <tbody>
                         <ng-container *ngIf="annualActive">
-                            <tr *ngFor="let annualPlan of annualPlans;let i = index" class="expand" (click)="runQueries(annualPlan.id);">
+                            <tr *ngFor="let annualPlan of annualPlans;let i = index" [id]="'sliding'+i" class="expand" (click)="runQueries(i);">
                                 <th>
                                     {{annualPlan.name}}
                                     <i class="material-icons">help</i>
                                 </th>
                                 <td class="expand-child">
                                     <span [ngClass]="annualPlan.freelancerClass"></span>{{annualPlan.freelancerHead}}
-                                    <span class="detail" [ngStyle]="{display: checkIdExists(annualPlan.id) ?'inline':'none'}">{{annualPlan.freelancerDescription}}</span>
+                                    <span class="detail" >{{annualPlan.freelancerDescription}}</span>
                                 </td>
                                 <td class=" expand-child active-bg">
                                     <span [ngClass]="annualPlan.essentialsClass"></span>{{annualPlan.essentialsHead}}
-                                    <span class="detail" [ngStyle]="{display: checkIdExists(annualPlan.id) ?'inline':'none'}">{{annualPlan.essentialsDescription}}</span>
+                                    <span class="detail" >{{annualPlan.essentialsDescription}}</span>
                                 </td>
                                 <td class="expand-child">
                                     <span [ngClass]="annualPlan.businessClass"></span>{{annualPlan.businessHead}}
-                                    <span class="detail" [ngStyle]="{display: checkIdExists(annualPlan.id) ?'inline':'none'}">{{annualPlan.businessDescription}}</span>
+                                    <span class="detail" >{{annualPlan.businessDescription}}</span>
                                 </td>
                                 <td class="expand-child">
                                     <span [ngClass]="annualPlan.freelancerQuizClass"></span>{{annualPlan.freelancerQuizHead}}
-                                    <span class="detail" [ngStyle]="{display: checkIdExists(annualPlan.id) ?'inline':'none'}">{{annualPlan.freelancerQuizDescription}}</span>
+                                    <span class="detail" >{{annualPlan.freelancerQuizDescription}}</span>
                                 </td>
 
                             </tr>
                         </ng-container>
                         <ng-container *ngIf="!annualActive">
-                            <tr *ngFor="let monthlyPlan of monthlyPlans;let i=index" class="expand"  (click)="runQueries(monthlyPlan.id);">
+                            <tr *ngFor="let monthlyPlan of monthlyPlans;let i=index" [id]="'sliding'+i" class="expand"  (click)="runQueries(i);">
 
                                 <th>
                                     {{monthlyPlan.name}}
@@ -202,21 +202,21 @@
                                 </th>
                                 <td class="expand-child ">
                                     <span [ngClass]="monthlyPlan.freelancerClass"></span>{{monthlyPlan.freelancerHead}}
-                                    <span class="detail" [ngStyle]="{display:checkIdExists(monthlyPlan.id)?'inline':'none'}">{{monthlyPlan.freelancerDescription}}</span>
+                                    <span class="detail" >{{monthlyPlan.freelancerDescription}}</span>
                                 </td>
                                 <td class=" expand-child active-bg">
                                     <span [ngClass]="monthlyPlan.essentialsClass"></span>{{monthlyPlan.essentialsHead}}
-                                    <span class="detail" [ngStyle]="{display:checkIdExists(monthlyPlan.id)?'inline':'none'}">{{monthlyPlan.essentialsDescription}}</span>
+                                    <span class="detail" >{{monthlyPlan.essentialsDescription}}</span>
                                 </td>
                                 <td class="expand-child ">
                                     <span [ngClass]="monthlyPlan.businessClass"></span>{{monthlyPlan.businessHead}}
-                                    <span class="detail" [ngStyle]="{display:checkIdExists(monthlyPlan.id)?'inline':'none'}">{{monthlyPlan.businessDescription}}</span>
+                                    <span class="detail" >{{monthlyPlan.businessDescription}}</span>
                                 </td>
                                 <td class="expand-child ">
                                     <span [ngClass]="monthlyPlan.freelancerQuizClass"></span>{{monthlyPlan.freelancerQuizHead}}
-                                    <span class="detail" [ngStyle]="{display:checkIdExists(monthlyPlan.id)?'inline':'none'}">{{monthlyPlan.freelancerQuizDescription}}</span>
+                                    <span class="detail" >{{monthlyPlan.freelancerQuizDescription}}</span>
                                 </td>
-                            </tr>
+                           </tr>
                         </ng-container>
 
                     </tbody>
