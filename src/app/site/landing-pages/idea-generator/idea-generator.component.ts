@@ -14,17 +14,19 @@ declare var jQuery: any;
         opacity: 1
       })),
       state('hide', style({
-        opacity: 0
+        opacity: 0,
       })),
       state('move', style({
         transform: 'translateY(-100%)',
+        'max-height':'0px'
       })),
       transition('show <=> hide', animate('1000ms ease')),
-      transition('* => move', animate('1500ms ease')),
+      transition('* => move', animate('1000ms ease')),
     ]),
     trigger('popOverState2', [
       state('show', style({
-        opacity: 1
+        opacity: 1,
+        transform :'translateY(0%)'
       })),
       state('hide', style({
         opacity: 0
@@ -32,7 +34,8 @@ declare var jQuery: any;
       state('move', style({
         transform: 'translateY(-100%)',
       })),
-      transition('show <=> hide', animate('1000ms ease')),
+      transition('show => hide', animate('1000ms ease')),
+      transition('hide=>show',animate('1000ms ease')),
       transition('* => *', animate('1500ms ease')),
     ]),
     trigger('popOverState3', [

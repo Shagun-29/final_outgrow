@@ -17,6 +17,11 @@
 span.bb {
     top: 40%!important;
 }
+img.scrollimg1.wo {
+    width: auto!important;
+    margin-left: 20px!important;
+    margin-right: 20px!important;
+}
 .label,sub,sup{vertical-align:baseline}
 hr,img{border:0}
 body,figure{margin:0}
@@ -2341,7 +2346,9 @@ iframe[name=google_conversion_frame]{height:0!important;width:0!important;line-h
 	} */
 	.home-imgs li {margin: 40px 20px 10px 10px;}
 	/* .case-productHunt {padding-bottom: 0px !important;} */
-	
+	div.startTrial-outer i.material-icons {
+		left: 37px!important;
+	}
 
 }
 @media (min-width:320px) and (max-width:390px){
@@ -6189,7 +6196,7 @@ span.recom {
 	.home-imgs li img {margin: 0 auto 5px !important;}
 	.buzzfeed-left-section{width:100%!important}
 	.product-hunt-left{width:100%!important}
-	.img-wrapper img{width:24%!important; margin: 0px 10px 12px;}
+	.img-wrapper img{width:24%; margin: 0px 10px 12px;}
 	.interactive-subinner-left-section{width: 100%!important;display: flex;justify-content: center;}
 	.interactive-subinner-right-section{width:100%!important;   margin-left: 0px;     margin-top: 7px;}
 	.interactive-content{text-align:center!important;}
