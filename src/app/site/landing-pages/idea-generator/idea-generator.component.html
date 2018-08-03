@@ -1,6 +1,6 @@
 <div class="main-outr">
     <section [ngStyle]="{display:stateName_sec1=='hide'?'none':'table'}" class="sec-outr sec1-bg mouse-bg" [@popOverState1]="stateName_sec1">
-        <div class="sec">
+        <div class="sec" >
             <div class="logo">
                 <a href="javascript:void(0);">
                     <!-- <img src="images/logo.png" alt="logo" /> -->
@@ -15,15 +15,15 @@
                         <span>Calculator.</span>
                     </h1>
                 </div>
-                <a class="sec1-button" href="javascript:void(0);" (click)="getStarted()">Get Started</a>
+                <a class="sec1-button" href="javascript:void(0);" (click)="getStarted();">Get Started</a>
             </div>
         </div>
     </section>
-    <section [ngStyle]="{display:stateName_sec2=='hide'?'none':'table'}" class="sec-outr sec2-bg" [@popOverState2]="stateName_sec2">
+    <section [ngStyle]="{display:stateName_sec2=='hide'?'none':'table'}" class="sec-outr sec2-bg" >
         <div *ngIf="loading" id="premade-loader" class="preloader">
             <div class="status">&nbsp;</div>
         </div>
-        <div *ngIf="!loading" class="sec">
+        <div *ngIf="!loading" class="sec abc-2"  [@popOverState2]="stateName_sec2">
             <div class="sec-container">
                 <div class="sec2-step">
                     <span><sup>1</sup>/<sub>3</sub></span>
@@ -42,9 +42,9 @@
             </div>
         </div>
     </section>
-    <section [ngStyle]="{display:stateName_sec3=='hide'?'none':'table'}" class="sec-outr sec3-bg" [@popOverState3]="stateName_sec3">
-        <div class="sec">
-            <div class="sec-container">
+    <section [ngStyle]="{display:stateName_sec3=='hide'?'none':'table'}" class="sec-outr sec3-bg" >
+        <div class="sec" [@popOverState3]="stateName_sec3">
+            <div class="sec-container" >
                 <div class="sec2-step">
                     <span><sup>2</sup>/<sub>3</sub></span>
                 </div>
