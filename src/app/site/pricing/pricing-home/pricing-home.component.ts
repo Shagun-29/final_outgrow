@@ -19,7 +19,10 @@ export class PricingHomeComponent implements OnInit {
     slideEssentials: boolean = true;
     slideBusiness: boolean = true;
     slideFreelancerQuiz: boolean = true;
-
+    active = document.querySelector('.pricing');
+    activeHeader="";
+    href="";
+    text:any;
     pricingToggle = [];
 
     pricingToggle_res = [];
@@ -41,7 +44,16 @@ export class PricingHomeComponent implements OnInit {
         this.load.classList.add('hide');
         this.header.classList.remove('hide');
         this.footer.classList.remove('hide');
-        
+        this.href = window.location.href;
+        console.log("---------------------->",this.href.split('/'));
+        this.text=this.href.split('/');
+        this.text.forEach(element => {
+          console.log("::Element::",element)
+          if(element=="pricing"){
+              this.active.classList.add('active')
+          }
+        });
+    
         this.planTab('annual');
         jQuery(document).ready(function() {
 
