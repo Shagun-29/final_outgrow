@@ -191,8 +191,8 @@ export class IdeaGeneratorComponent implements OnInit {
 
   showIdeas() {
     let self = this;
-    let regex = new RegExp('[\\w\\W]+(@)\\w{2,}(\\.)\\w{2,}')
-    if (regex.test(this.emailField)) {
+    let enteredEmail=this.emailField.match(/[A-Za-z]+\w+([.\w]+)+@[a-z]+([.][a-z]+){1,2}/g)
+    if (enteredEmail==this.emailField) {
       this.emailError = false;
       this.stateName_secnew = 'show';
       this.stateName_sec4 = 'hide';
