@@ -21,7 +21,8 @@ export class AppComponent implements OnInit {
  
   constructor(private router: Router,private loadingService: LoadingService) { }
   ngOnInit() {
-
+     
+    
     //   setTimeout(()=>{
     //       this.show1=false;
     //       this.show2=true;
