@@ -1090,3 +1090,6 @@ li.nav-lead-input {
 .hvr-underline-from-left:active:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:hover:before {
     right: 0;
 }
+div#bs-example-navbar-collapse-1 {
+    height: 76px !important;
+}
