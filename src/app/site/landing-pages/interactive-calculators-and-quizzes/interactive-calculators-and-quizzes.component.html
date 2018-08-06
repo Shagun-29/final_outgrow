@@ -13,7 +13,7 @@
           <div class="col-md-12 col-xs-12 col-sm-12 np text-center startTrial-outer">
             <i class="material-icons">email</i>
             <input class="lead-form-email" name="emailId" type="email" placeholder="Please enter your email address">
-            <a href="//app.outgrow.co/signup/?email=" class="lead-email" onclick="callGA('CANNOT WAIT CTA')">
+            <a href="//app.outgrow.co/signup/?email=" class="lead-email" (click)="callGA('CANNOT WAIT CTA')">
               <span class="btn-buildcal fade-in lead-form-btn">
                 Start Free Trial
               </span>
@@ -46,12 +46,21 @@
     <div class="col-md-12 col-sm-12 col-xs-12 np rs-show text-center hide-height" id="video-main-rs-mob">
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
-          <div class="video-img-inner video-img-inner-mob">
-            <img class="video-img" src="https://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" />
-            <span class="img-overlay"></span>
-            <span class="video-playIcon" data-toggle="modal" data-target="#video-modal">
-              <span class="inside-circle"><i class="material-icons">play_arrow</i></span>
-            </span>
+          <div class="video-img-inner video-img-inner-mob" (click)="playFirstVideo('video-main-rs-mob')">
+            <div *ngIf="!clicked">
+							<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" />
+							<span class="img-overlay"></span>
+							<span class="video-playIcon">
+								<span class="inside-circle">
+									<i class="material-icons">play_arrow</i>
+								</span>
+							</span>
+						</div>
+						<div *ngIf="clicked">
+							<div class='embed-responsive embed-responsive-16by9'>
+								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
+							</div>
+						</div>
           </div>
         </div>
       </div>
@@ -60,12 +69,22 @@
     <div class="col-md-12 col-sm-12 col-xs-12 np rs-show text-center hide-height" id="video-main-rs">
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
-          <div class="video-img-inner video-img-inner-res">
-            <img class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" />
-            <span class="img-overlay"></span>
-            <span class="video-playIcon">
-              <span class="inside-circle" onclick="changeHeightRes()"><i class="material-icons">play_arrow</i></span>
-            </span>
+          <div class="video-img-inner video-img-inner-res" (click)="playFirstVideo('video-main-rs')">
+            <div *ngIf="!clicked">
+							<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="//dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg"
+							/>
+							<span class="img-overlay"></span>
+							<span class="video-playIcon">
+								<span class="inside-circle">
+									<i class="material-icons">play_arrow</i>
+								</span>
+							</span>
+						</div>
+						<div *ngIf="clicked">
+							<div class='embed-responsive embed-responsive-16by9'>
+								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
+							</div>
+						</div>
           </div>
         </div>
       </div>
@@ -74,19 +93,29 @@
     <div class="col-md-7 col-sm-12 col-xs-12 np rs-hide text-center hide-height" id="video-main">
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
-          <div class="video-img-inner video-img-inner-web" id="him1">
-            <img class="video-img" src="https://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="//dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" />
-            <span class="img-overlay"></span>
-            <span class="video-playIcon">
-              <span class="inside-circle" onclick="changeHeightWeb1()"><i class="material-icons">play_arrow</i></span>
-            </span>
+          <div class="video-img-inner video-img-inner-web" (click)="playFirstVideo('video-main')">
+            <div *ngIf="!clicked">
+							<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="//dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg"
+							/>
+							<span class="img-overlay"></span>
+							<span class="video-playIcon">
+								<span class="inside-circle">
+									<i class="material-icons">play_arrow</i>
+								</span>
+							</span>
+						</div>
+						<div *ngIf="clicked">
+							<div class='embed-responsive embed-responsive-16by9'>
+								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
+							</div>
+						</div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- <script>
-      document.getElementsByClassName("video-playIcon")[0].onclick = function () {
+      document.getElementsByClassName("video-playIcon")[0].(click) = function () {
         console.log('Some cick');
         document.getElementsByClassName("outgrow-video-mob")[0].src = 'https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3'
       }
@@ -276,7 +305,7 @@
 			<i class="material-icons">email</i>
 			<input class="lead-form-email-1" name="emailId" type="email" placeholder="Please enter your email address">
 			<span class="lead-form-btn">
-				<a href="//app.outgrow.co/signup/?email=" class="lead-email-1 btn-buildcal" onclick="callGA('CANNOT WAIT CTA'); ">
+				<a href="//app.outgrow.co/signup/?email=" class="lead-email-1 btn-buildcal" (click)="callGA('CANNOT WAIT CTA'); ">
 					Start Free Trial
 				</a>
 				<span class="live-demo">OR <a href="https://sample.outgrow.co/builder-demo/sample-calculator" class="">TAKE A LIVE DEMO</a></span>
@@ -1133,7 +1162,7 @@
 		<div class="lp-sign-inner">
 			<i class="material-icons">email</i>
 			<input class="lead-form-email-2" name="emailId" type="email" placeholder="Please enter your email address">
-			<a href="//app.outgrow.co/signup/?email=" class="lead-email-2" onclick="callGA('CANNOT WAIT CTA')">
+			<a href="//app.outgrow.co/signup/?email=" class="lead-email-2" (click)="callGA('CANNOT WAIT CTA')">
 				<span class="btn-buildcal fade-in lead-form-btn">
 					Start Free Trial
 				</span>
