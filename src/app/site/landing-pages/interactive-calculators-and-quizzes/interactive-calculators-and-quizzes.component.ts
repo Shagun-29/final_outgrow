@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CalcService } from '../../../shared/service/calc.service';
-import { Title } from '@angular/platform-browser';
+import { Title, DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 
@@ -12,44 +12,13 @@ import { Http } from '@angular/http';
 export class InteractiveCalculatorsAndQuizzesComponent implements OnInit {
   loader = document.querySelector('.preloader');
   public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
-  
-  constructor(router:Router, title:Title) {
+  youtubeLink: any;
+  clicked: boolean = false;
+
+  constructor(router:Router, title:Title,public sanitizer: DomSanitizer) {
     title.setTitle("Interactive calculators and quizes | Outgrow");
    }
 
-  
-  changeHeightRes () {
-    window.location.replace('#bfrVid')
-    document.getElementsByClassName("video-img-inner-res")[0].innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
-    var xDiv = document.getElementById('video-main-rs');
-    if (xDiv.style.height == '')
-      xDiv.style.height = '460px';
-    else
-      xDiv.style.height = '';
-}
-
-changeHeightWeb1 () {
-  window.location.replace('#bfrVid')
-  document.getElementById("him1").innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
-  var xDiv = document.getElementById('video-main');
-
-  if (xDiv.style.height == '')
-    xDiv.style.height = '574px';
-  else
-    xDiv.style.height = '';
-}
-
-changeHeightWebXL () {
-  
-          window.location.replace('#bfrVid')
-          document.getElementById("him1-xl").innerHTML = "<div class='embed-responsive embed-responsive-16by9'><iframe class='outgrow-video' src='https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3' frameborder='0' allowfullscreen></iframe></div>";
-          var xDiv = document.getElementById('video-main-xl');
-
-          if (xDiv.style.height == '')
-            xDiv.style.height = '1160px';
-          else
-            xDiv.style.height = '';
-        }
         triggerLiveStaticReviews () {
     
           var gridJS = document.createElement('script')
@@ -131,4 +100,18 @@ changeHeightWebXL () {
       g21.classList.add('testhide');
     }
   }
+
+  playFirstVideo(id) {
+    this.clicked = true;
+    var xDiv = document.getElementById(`${id}`);
+    this.youtubeLink = this.sanitize('https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3');
+    id == 'video-main-rs-mob' &&(xDiv.style.height == '' ? xDiv.style.height = '360px' : xDiv.style.height = '');
+    id == 'video-main-rs' && (xDiv.style.height == '' ? xDiv.style.height = '460px' : xDiv.style.height = '');
+    id == 'video-main' && (xDiv.style.height == '' ? xDiv.style.height = '574px' : xDiv.style.height = '');
+    id == 'video-main-xl' && (xDiv.style.height == '' ? xDiv.style.height = '1160px' : xDiv.style.height = '');
+  }
+  sanitize(frameUri) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(frameUri);
+  }
+
 }
