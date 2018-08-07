@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   text=[];
   activeHeader="";
   collapse: boolean = true;
+  emailId:any;
   constructor(private titleService: Title,private router:Router) {
     
    }
@@ -61,4 +62,10 @@ export class HeaderComponent implements OnInit {
     $('#toogle-menu').trigger('click');
   }
 
+  putEmailId(email:any){
+    this.emailId = email;
+    console.log("------- Email ID entered --------",email);
+    window.location.href="https://app.outgrow.co/signup/?email="+this.emailId;
+
+  }
 }
