@@ -13,8 +13,9 @@
           <div class="col-md-12 col-xs-12 col-sm-12 np text-center startTrial-outer">
             <i class="material-icons">email</i>
             <input class="lead-form-email" name="emailId" type="email" placeholder="Please enter your email address">
-            <a href="//app.outgrow.co/signup/?email=" class="lead-email" (click)="callGA('CANNOT WAIT CTA')">
-              <span class="btn-buildcal fade-in lead-form-btn">
+            <!-- <a href="//app.outgrow.co/signup/?email=" class="lead-email" (click)="callGA('CANNOT WAIT CTA')"> -->
+				<a href="//app.outgrow.co/signup/?email=" class="lead-email" >
+				<span class="btn-buildcal fade-in lead-form-btn">
                 Start Free Trial
               </span>
               <div class="btn-bottominfo fade-in">
@@ -305,7 +306,8 @@
 			<i class="material-icons">email</i>
 			<input class="lead-form-email-1" name="emailId" type="email" placeholder="Please enter your email address">
 			<span class="lead-form-btn">
-				<a href="//app.outgrow.co/signup/?email=" class="lead-email-1 btn-buildcal" (click)="callGA('CANNOT WAIT CTA'); ">
+				<!-- <a href="//app.outgrow.co/signup/?email=" class="lead-email-1 btn-buildcal" (click)="callGA('CANNOT WAIT CTA'); "> -->
+					<a href="//app.outgrow.co/signup/?email=" class="lead-email-1 btn-buildcal" >
 					Start Free Trial
 				</a>
 				<span class="live-demo">OR <a href="https://sample.outgrow.co/builder-demo/sample-calculator" class="">TAKE A LIVE DEMO</a></span>
@@ -501,53 +503,52 @@
 		
 	</div>
   <!--section testimonial -->
-	<div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1 hide"  id="liveReviews">
-		<div class="container mobile-container">
-			<div class="section-2-heading" style="color: rgb(34, 34, 34);">
-				Average Rating 4.9/5 <br/>450+ Reviews
-			</div>
-		 
-		
-			<div class="social-media">
-				<div class="social-media-section">
-					<div class="each-arrow-section">
-						<div id="fb-img" class="arrow_box fbActive testactive" (click)="openTestimonial('fb')">
-							<img  alt="Facebook image" src="http://dzvexx2x036l1.cloudfront.net/facebookim.png"/> 
-							<img alt="Facebook image" src="http://dzvexx2x036l1.cloudfront.net/facebookh.png" class="over over1"/>  
-						</div>
-			
-						<div id="capterra-img" class="arrow_box capterraActive" (click)="openTestimonial('capterra')">
-							<img alt="Capterra image" src="http://dzvexx2x036l1.cloudfront.net/capterraimg.png"/>
-							<img alt="Capterra image" src="http://dzvexx2x036l1.cloudfront.net/capterah.png" class="over over2"/>  
-						</div>
-			
-						<div id="g2-img" class="arrow_box g2Active" (click)="openTestimonial('g2')">
-							<img alt="G2 Crowd image" src="http://dzvexx2x036l1.cloudfront.net/crowd.png"/> 
-							<img alt="G2 Crowd image" src="http://dzvexx2x036l1.cloudfront.net/crowdh.png" class="over over3"/> 
-						</div>
 	
-						<div id="google-img" class="arrow_box googleActive" (click)="openTestimonial('google')">
-							<img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_logo.png"/> 
-							<img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_hover.png" class="over over4"/> 
-						</div>
-	
-					</div>
+  <div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1 hide" id="liveReviews">
+	<div class="container mobile-container">
+		<div class="section-2-heading" style="color: rgb(34, 34, 34);">
+			Critically Acclaimed
+		</div>
+		<div class="social-media-section">
+			<div class="each-arrow-section">
+				<div id="fb-img" class="arrow_box fbActive testactive" (click)="openTestimonial('fb')">
+					<img alt="Facebook image" src="http://dzvexx2x036l1.cloudfront.net/facebookim.png" />
+					<img alt="Facebook image" src="http://dzvexx2x036l1.cloudfront.net/facebookh.png" class="over over1" />
 				</div>
-		
-		<div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1">
-			<div class="container mobile-container protfolio-section">
-				
-				<div id="fb" class="protfolio-inner-section fb1 " data-repuso-grid="4406" data-website-id="0"></div>
 
-				<div id="capterra" class="protfolio-inner-section capterra1 testhide" data-repuso-grid="4407" data-website-id="0"></div>
+				<div id="capterra-img" class="arrow_box capterraActive" (click)="openTestimonial('capterra')">
+					<img alt="Capterra image" src="http://dzvexx2x036l1.cloudfront.net/capterraimg.png" />
+					<img alt="Capterra image" src="http://dzvexx2x036l1.cloudfront.net/capterah.png" class="over over2" />
+				</div>
 
-				<div id="g2" class="protfolio-inner-section g21 testhide" data-repuso-grid="4320" data-website-id="0"></div>
+				<div id="g2-img" class="arrow_box g2Active" (click)="openTestimonial('g2')">
+					<img alt="G2 Crowd image" src="http://dzvexx2x036l1.cloudfront.net/crowd.png" />
+					<img alt="G2 Crowd image" src="http://dzvexx2x036l1.cloudfront.net/crowdh.png" class="over over3" />
+				</div>
 
-				<div id="google" class="protfolio-inner-section google1 testhide" data-repuso-grid="5402" data-website-id="0"></div>
+				<div id="google-img" class="arrow_box googleActive" (click)="openTestimonial('google')">
+					<img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_logo.png" />
+					<img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_hover.png" class="over over4" />
+				</div>
+
 			</div>
 		</div>
 	</div>
+
+	<div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1">
+		<div class="container mobile-container protfolio-section">
+
+			<div id="fb" class="protfolio-inner-section fb1 " data-repuso-grid="4406" data-website-id="0"></div>
+
+			<div id="capterra" class="protfolio-inner-section capterra1 testhide" data-repuso-grid="4407" data-website-id="0"></div>
+
+			<div id="g2" class="protfolio-inner-section g21 testhide" data-repuso-grid="4320" data-website-id="0"></div>
+
+			<div id="google" class="protfolio-inner-section google1 testhide" data-repuso-grid="5402" data-website-id="0"></div>
+		</div>
+	</div>
 </div>
+
 	
 	<!-- <div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1">
 		<div class="container mobile-container protfolio-section">
@@ -1145,7 +1146,8 @@
 		<div class="lp-sign-inner">
 			<i class="material-icons">email</i>
 			<input class="lead-form-email-2" name="emailId" type="email" placeholder="Please enter your email address">
-			<a href="//app.outgrow.co/signup/?email=" class="lead-email-2" (click)="callGA('CANNOT WAIT CTA')">
+			<!-- <a href="//app.outgrow.co/signup/?email=" class="lead-email-2" (click)="callGA('CANNOT WAIT CTA')"> -->
+				<a href="//app.outgrow.co/signup/?email=" class="lead-email" >	
 				<span class="btn-buildcal fade-in lead-form-btn">
 					Start Free Trial
 				</span>
