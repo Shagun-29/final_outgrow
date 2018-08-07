@@ -37,9 +37,9 @@
 					<div class="col-md-12 col-sm-12 col-xs-12 np">
 						<div class="col-md-12 col-xs-12 col-sm-12 np text-center startTrial-outer startTrial-outer1">
 							<i class="material-icons">email</i>
-							<input class="lead-form-email" name="emailId" type="email" placeholder="Please enter your work email">
+							<input class="lead-form-email" name="emailId" type="email" placeholder="Please enter your work email" #emailId>
 							<span class="lead-form-btn">
-								<a href="http://app.outgrow.co/signup/?email=" class="lead-email btn-buildcal">
+								<a  class="lead-email btn-buildcal" (click)="putEmailId(emailId.value)">
 									Start Free Trial
 								</a>
 
@@ -474,7 +474,7 @@
 							<div class="overflow-hidden">
 								<div class="video-img-inner video-img-inner-web2" id="him2" (click)="playSecondVideo('video-main')">
 									<div *ngIf="!clicked1">
-										<img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-bb.jpg" data-src="//https://outgrow.co/images/video-thumbnail-bb.jpg"
+										<img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-bb.jpg" data-src="https://outgrow.co/images/video-thumbnail-bb.jpg"
 										/>
 										<span class="img-overlay"></span>
 										<span class="video-playIcon bb">

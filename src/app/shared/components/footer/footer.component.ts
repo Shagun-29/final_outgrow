@@ -76,25 +76,25 @@ export class FooterComponent implements OnInit {
     return this._cookieService.get('test');
   }
 
-  ngAfterViewInit(){
-    setTimeout(()=>{
-      let intercom = document.querySelector('.intercom-launcher-frame');
-    if(intercom){
-        if(this._cookieService.get('disableCookieDialog')){
-          console.log("inntercom is loaded and cookies is found")
-          // intercom.classList.remove('hide');
-        }else{
+  // ngAfterViewInit(){
+  //   setTimeout(()=>{
+  //     let intercom = document.querySelector('.intercom-launcher-frame');
+  //   if(intercom){
+  //       if(this._cookieService.get('disableCookieDialog')){
+  //         console.log("inntercom is loaded and cookies is found")
+  //         // intercom.classList.remove('hide');
+  //       }else{
           
-          console.log("inntercom is loaded and cookies is nnot found")
-          intercom.classList.add('intercom-margin');
+  //         console.log("inntercom is loaded and cookies is nnot found")
+  //         intercom.classList.add('intercom-margin');
          
-        }
-        console.log("intercom loaded")
+  //       }
+  //       console.log("intercom loaded")
       
-    }else{
-      console.log("intercom not loaded")
+  //   }else{
+  //     console.log("intercom not loaded")
       
-    } 
-  },6000)
-  }
+  //   } 
+  // },6000)
+  // }
 }

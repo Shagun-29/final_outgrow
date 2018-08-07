@@ -24,7 +24,7 @@ export class IndexHomeComponent implements OnInit {
   activeHeader: any;
   href: any;
   text: any;
-
+  emailId:any;
 
 
   iFrames: { name: string; media: string; url: string; }[];
@@ -113,6 +113,12 @@ export class IndexHomeComponent implements OnInit {
     }
   }
 
+  putEmailId(email:any){
+    this.emailId = email;
+    console.log("------- Email ID entered --------",email);
+    window.location.href="https://app.outgrow.co/signup/?email="+this.emailId;
+
+  }
   constructor(private videoURLService: VideoUrlService, title: Title, public loadingService: LoadingService, public sanitizer: DomSanitizer) {
 
     //   // var gridJS = document.createElement('script')

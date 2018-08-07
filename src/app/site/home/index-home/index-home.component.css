@@ -7034,3 +7034,6 @@ img.uni1 {
 		margin-left: 10px;
 	}
 
+	.lead-form-btn:hover{
+		cursor: pointer;
+	}

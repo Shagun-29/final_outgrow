@@ -2025,3 +2025,6 @@ div.custom-embeds .nav-tabs>li {
 .testactive .over {
     display: block;
 }
+.lead-form-btn:hover{
+    cursor: pointer;
+}

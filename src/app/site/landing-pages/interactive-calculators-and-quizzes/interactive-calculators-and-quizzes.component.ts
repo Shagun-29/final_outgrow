@@ -49,6 +49,11 @@ export class InteractiveCalculatorsAndQuizzesComponent implements OnInit {
     this.triggerLiveStaticReviews();
   }
 
+  href="//app.outgrow.co/signup/?email="
+  putEmailId(email){
+    window.location.href="https://app.outgrow.co/signup/?email="+email;
+  }
+
   openTestimonial(site:any){
     var fb1= document.querySelector('.fb1');
     var capterra1= document.querySelector('.capterra1');
