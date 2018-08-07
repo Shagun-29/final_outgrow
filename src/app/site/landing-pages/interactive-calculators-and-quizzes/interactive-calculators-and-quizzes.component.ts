@@ -14,6 +14,9 @@ export class InteractiveCalculatorsAndQuizzesComponent implements OnInit {
   public url="https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
   youtubeLink: any;
   clicked: boolean = false;
+  clicked_rs_mob: boolean = false;
+  clicked_rs: boolean = false;
+  clicked_xl: boolean = false;
 
   constructor(router:Router, title:Title,public sanitizer: DomSanitizer) {
     title.setTitle("Interactive calculators and quizes | Outgrow");
@@ -47,6 +50,11 @@ export class InteractiveCalculatorsAndQuizzesComponent implements OnInit {
   ngOnInit() {
     this.loader.classList.add('hide');
     this.triggerLiveStaticReviews();
+  }
+
+  href="//app.outgrow.co/signup/?email="
+  putEmailId(email){
+    window.location.href="https://app.outgrow.co/signup/?email="+email;
   }
 
   openTestimonial(site:any){
@@ -102,7 +110,15 @@ export class InteractiveCalculatorsAndQuizzesComponent implements OnInit {
   }
 
   playFirstVideo(id) {
-    this.clicked = true;
+    this.clicked_rs_mob = false;
+    this.clicked_rs = false;
+    this.clicked = false;
+    this.clicked_xl = false;
+
+    this.clicked_rs_mob = (id == 'video-main-rs-mob') && true;
+    this.clicked_rs = (id == 'video-main-rs') && true;
+    this.clicked = (id == 'video-main') && true;
+    this.clicked_xl = (id == 'video-main-xl') && true;
     var xDiv = document.getElementById(`${id}`);
     this.youtubeLink = this.sanitize('https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3');
     id == 'video-main-rs-mob' &&(xDiv.style.height == '' ? xDiv.style.height = '360px' : xDiv.style.height = '');

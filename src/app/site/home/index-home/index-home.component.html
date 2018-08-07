@@ -37,9 +37,9 @@
 					<div class="col-md-12 col-sm-12 col-xs-12 np">
 						<div class="col-md-12 col-xs-12 col-sm-12 np text-center startTrial-outer startTrial-outer1">
 							<i class="material-icons">email</i>
-							<input class="lead-form-email" name="emailId" type="email" placeholder="Please enter your work email">
+							<input class="lead-form-email" name="emailId" type="email" placeholder="Please enter your work email" #emailId>
 							<span class="lead-form-btn">
-								<a href="http://app.outgrow.co/signup/?email=" class="lead-email btn-buildcal">
+								<a  class="lead-email btn-buildcal" (click)="putEmailId(emailId.value)">
 									Start Free Trial
 								</a>
 
@@ -59,7 +59,7 @@
 				<div class="video-img-wrapper">
 					<div class="overflow-hidden">
 						<div class="video-img-inner video-img-inner-mob" (click)="playFirstVideo('video-main-rs-mob')">
-							<div *ngIf="!clicked">
+							<div *ngIf="!clicked_rs_mob">
 								<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" />
 								<span class="img-overlay"></span>
 								<span class="video-playIcon">
@@ -68,7 +68,7 @@
 									</span>
 								</span>
 							</div>
-							<div *ngIf="clicked">
+							<div *ngIf="clicked_rs_mob">
 								<div class='embed-responsive embed-responsive-16by9'>
 									<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
 								</div>
@@ -82,8 +82,8 @@
 				<div class="video-img-wrapper">
 					<div class="overflow-hidden">
 						<div class="video-img-inner video-img-inner-res" (click)="playFirstVideo('video-main-rs')">
-							<div *ngIf="!clicked">
-								<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg"
+							<div *ngIf="!clicked_rs">
+								<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="//dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg"
 								/>
 								<span class="img-overlay"></span>
 								<span class="video-playIcon">
@@ -92,7 +92,7 @@
 									</span>
 								</span>
 							</div>
-							<div *ngIf="clicked">
+							<div *ngIf="clicked_rs">
 								<div class='embed-responsive embed-responsive-16by9'>
 									<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
 								</div>
@@ -130,7 +130,7 @@
 				<div class="video-img-wrapper">
 					<div class="overflow-hidden">
 						<div class="video-img-inner video-img-inner-web" id="him1-xl" (click)="playFirstVideo('video-main-xl')">
-							<div *ngIf="!clicked">
+							<div *ngIf="!clicked_xl">
 								<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="//dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg"
 								/>
 								<span class="img-overlay"></span>
@@ -140,7 +140,7 @@
 									</span>
 								</span>
 							</div>
-							<div *ngIf="clicked">
+							<div *ngIf="clicked_xl">
 								<div class='embed-responsive embed-responsive-16by9'>
 									<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
 								</div>
@@ -426,7 +426,7 @@
 							<div class="video-img-wrapper">
 								<div class="overflow-hidden">
 									<div class="video-img-inner video-img-inner-mob" (click)="playSecondVideo('video-main-rs-mob')">
-										<div *ngIf="!clicked1">
+										<div *ngIf="!clicked1_rs_mob">
 										<img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-bb.jpg" />
 										<span class="img-overlay"></span>
 										<span class="video-playIcon">
@@ -435,7 +435,7 @@
 											</span>
 										</span>
 									</div>
-									<div *ngIf="clicked1">
+									<div *ngIf="clicked1_rs_mob">
 										<div class='embed-responsive embed-responsive-16by9'>
 											<iframe class='outgrow-video' [src]="youtubeLink1" frameborder='0' allowfullscreen></iframe>
 										</div>
@@ -449,7 +449,7 @@
 						<div class="video-img-wrapper">
 							<div class="overflow-hidden">
 								<div class="video-img-inner video-img-inner-res2" (click)="playSecondVideo('video-main-rs')">
-									<div *ngIf="!clicked1">
+									<div *ngIf="!clicked1_rs">
 										<img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-bb.jpg" data-src="https://outgrow.co/images/video-thumbnail-bb.jpg"
 										/>
 										<span class="img-overlay"></span>
@@ -459,7 +459,7 @@
 											</span>
 										</span>
 									</div>
-									<div *ngIf="clicked1">
+									<div *ngIf="clicked1_rs">
 										<div class='embed-responsive embed-responsive-16by9'>
 											<iframe class='outgrow-video' [src]="youtubeLink1" frameborder='0' allowfullscreen></iframe>
 										</div>
@@ -474,7 +474,7 @@
 							<div class="overflow-hidden">
 								<div class="video-img-inner video-img-inner-web2" id="him2" (click)="playSecondVideo('video-main')">
 									<div *ngIf="!clicked1">
-										<img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-bb.jpg" data-src="//https://outgrow.co/images/video-thumbnail-bb.jpg"
+										<img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-bb.jpg" data-src="https://outgrow.co/images/video-thumbnail-bb.jpg"
 										/>
 										<span class="img-overlay"></span>
 										<span class="video-playIcon bb">
@@ -497,7 +497,7 @@
 						<div class="video-img-wrapper">
 							<div class="overflow-hidden">
 								<div class="video-img-inner video-img-inner-web2" id="him2-xl" (click)="playSecondVideo('video-main-xl')">
-									<div *ngIf="!clicked1">
+									<div *ngIf="!clicked1_xl">
 										<img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-bb.jpg" data-src="https://outgrow.co/images/video-thumbnail-bb.jpg"
 										/>
 										<span class="img-overlay"></span>
@@ -507,7 +507,7 @@
 											</span>
 										</span>
 									</div>
-									<div *ngIf="clicked1">
+									<div *ngIf="clicked1_xl">
 										<div class='embed-responsive embed-responsive-16by9'>
 											<iframe class='outgrow-video' [src]="youtubeLink1" frameborder='0' allowfullscreen></iframe>
 										</div>
