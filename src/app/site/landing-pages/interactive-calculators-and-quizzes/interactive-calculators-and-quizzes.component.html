@@ -47,7 +47,7 @@
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
           <div class="video-img-inner video-img-inner-mob" (click)="playFirstVideo('video-main-rs-mob')">
-            <div *ngIf="!clicked">
+            <div *ngIf="!clicked_rs_mob">
 							<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" />
 							<span class="img-overlay"></span>
 							<span class="video-playIcon">
@@ -56,7 +56,7 @@
 								</span>
 							</span>
 						</div>
-						<div *ngIf="clicked">
+						<div *ngIf="clicked_rs_mob">
 							<div class='embed-responsive embed-responsive-16by9'>
 								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
 							</div>
@@ -70,7 +70,7 @@
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
           <div class="video-img-inner video-img-inner-res" (click)="playFirstVideo('video-main-rs')">
-            <div *ngIf="!clicked">
+            <div *ngIf="!clicked_rs">
 							<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="//dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg"
 							/>
 							<span class="img-overlay"></span>
@@ -80,7 +80,7 @@
 								</span>
 							</span>
 						</div>
-						<div *ngIf="clicked">
+						<div *ngIf="clicked_rs">
 							<div class='embed-responsive embed-responsive-16by9'>
 								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
 							</div>
@@ -511,21 +511,6 @@
 			<div>
 			<div class="social-media-section">
 				<div class="each-arrow-section">
-<<<<<<< HEAD
-					<div id="fb-img" class="arrow_box fbActive testactive" (click)="openTestimonial('fb')">
-						<img  alt="Facebook image" src="https://dzvexx2x036l1.cloudfront.net/facebookim.png"/> 
-						<img alt="Facebook image" src="https://dzvexx2x036l1.cloudfront.net/facebookh.png" class="over over1"/>  
-					</div>
-		
-					<div id="capterra-img" class="arrow_box capterraActive" (click)="openTestimonial('capterra')">
-						<img alt="Capterra image" src="https://dzvexx2x036l1.cloudfront.net/capterraimg.png"/>
-						<img alt="Capterra image" src="https://dzvexx2x036l1.cloudfront.net/capterah.png" class="over over2"/>  
-					</div>
-		
-					<div id="g2-img" class="arrow_box g2Active" (click)="openTestimonial('g2')">
-						<img alt="G2 Crowd image" src="https://dzvexx2x036l1.cloudfront.net/crowd.png"/> 
-						<img alt="G2 Crowd image" src="https://dzvexx2x036l1.cloudfront.net/crowdh.png" class="over over3"/> 
-=======
 					<div id="fb-img" class="arrow_box fbActive testactive" >
 						<img  alt="Facebook image" src="http://dzvexx2x036l1.cloudfront.net/facebookim.png"/> 
 						<img alt="Facebook image" src="http://dzvexx2x036l1.cloudfront.net/facebookh.png" class="over over1"/>  
@@ -539,7 +524,6 @@
 					<div id="g2-img" class="arrow_box g2Active" >
 						<img alt="G2 Crowd image" src="http://dzvexx2x036l1.cloudfront.net/crowd.png"/> 
 						<img alt="G2 Crowd image" src="http://dzvexx2x036l1.cloudfront.net/crowdh.png" class="over over3"/> 
->>>>>>> 9cf43ba8651f932cd9dd5416bf6dd88aa119858e
 					</div>
 
 					<div id="google-img" class="arrow_box googleActive" >
