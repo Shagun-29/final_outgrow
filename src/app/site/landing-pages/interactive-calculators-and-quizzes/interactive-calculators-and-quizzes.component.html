@@ -48,7 +48,7 @@
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
           <div class="video-img-inner video-img-inner-mob" (click)="playFirstVideo('video-main-rs-mob')">
-            <div *ngIf="!clicked">
+            <div *ngIf="!clicked_rs_mob">
 							<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" />
 							<span class="img-overlay"></span>
 							<span class="video-playIcon">
@@ -57,7 +57,7 @@
 								</span>
 							</span>
 						</div>
-						<div *ngIf="clicked">
+						<div *ngIf="clicked_rs_mob">
 							<div class='embed-responsive embed-responsive-16by9'>
 								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
 							</div>
@@ -71,7 +71,7 @@
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
           <div class="video-img-inner video-img-inner-res" (click)="playFirstVideo('video-main-rs')">
-            <div *ngIf="!clicked">
+            <div *ngIf="!clicked_rs">
 							<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="//dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg"
 							/>
 							<span class="img-overlay"></span>
@@ -81,7 +81,7 @@
 								</span>
 							</span>
 						</div>
-						<div *ngIf="clicked">
+						<div *ngIf="clicked_rs">
 							<div class='embed-responsive embed-responsive-16by9'>
 								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
 							</div>
