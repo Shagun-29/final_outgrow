@@ -12,9 +12,9 @@
         <div class="col-md-12 col-sm-12 col-xs-12 np">
           <div class="col-md-12 col-xs-12 col-sm-12 np text-center startTrial-outer">
             <i class="material-icons">email</i>
-            <input class="lead-form-email" name="emailId" type="email" placeholder="Please enter your email address" #emailId>
+            <input class="lead-form-email" name="emailId" type="email" placeholder="Please enter your email address">
             <!-- <a href="//app.outgrow.co/signup/?email=" class="lead-email" (click)="callGA('CANNOT WAIT CTA')"> -->
-				<a class="lead-email" (click)="putEmailId(emailId.value)">
+				<a href="//app.outgrow.co/signup/?email=" class="lead-email" >
 				<span class="btn-buildcal fade-in lead-form-btn">
                 Start Free Trial
               </span>
@@ -48,7 +48,7 @@
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
           <div class="video-img-inner video-img-inner-mob" (click)="playFirstVideo('video-main-rs-mob')">
-            <div *ngIf="!clicked_rs_mob">
+            <div *ngIf="!clicked">
 							<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" />
 							<span class="img-overlay"></span>
 							<span class="video-playIcon">
@@ -57,7 +57,7 @@
 								</span>
 							</span>
 						</div>
-						<div *ngIf="clicked_rs_mob">
+						<div *ngIf="clicked">
 							<div class='embed-responsive embed-responsive-16by9'>
 								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
 							</div>
@@ -71,7 +71,7 @@
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
           <div class="video-img-inner video-img-inner-res" (click)="playFirstVideo('video-main-rs')">
-            <div *ngIf="!clicked_rs">
+            <div *ngIf="!clicked">
 							<img alt="video thumbnail image" class="video-img" src="http://dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg" data-src="//dzvexx2x036l1.cloudfront.net/video-thumbnail.jpg"
 							/>
 							<span class="img-overlay"></span>
@@ -81,7 +81,7 @@
 								</span>
 							</span>
 						</div>
-						<div *ngIf="clicked_rs">
+						<div *ngIf="clicked">
 							<div class='embed-responsive embed-responsive-16by9'>
 								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
 							</div>
@@ -304,10 +304,10 @@
   <div class="col-md-12 col-sm-12 col-xs-12 np bg1-img lp-bg-freeTrial">
 		<div class="col-md-12 col-xs-12 col-sm-12 np text-center startTrial-outer startTrial-outer1">
 			<i class="material-icons">email</i>
-			<input class="lead-form-email-1" name="emailId" type="email" placeholder="Please enter your email address" #emailId>
+			<input class="lead-form-email-1" name="emailId" type="email" placeholder="Please enter your email address">
 			<span class="lead-form-btn">
 				<!-- <a href="//app.outgrow.co/signup/?email=" class="lead-email-1 btn-buildcal" (click)="callGA('CANNOT WAIT CTA'); "> -->
-					<a (click)="putEmailId(emailId.value)" class="lead-email" >
+					<a href="//app.outgrow.co/signup/?email=" class="lead-email-1 btn-buildcal" >
 					Start Free Trial
 				</a>
 				<span class="live-demo">OR <a href="https://sample.outgrow.co/builder-demo/sample-calculator" class="">TAKE A LIVE DEMO</a></span>
@@ -1145,9 +1145,9 @@
   <div class="col-md-12 col-xs-12 col-sm-12 np startTrial-outer lp-sign">
 		<div class="lp-sign-inner">
 			<i class="material-icons">email</i>
-			<input class="lead-form-email-2" name="emailId" type="email" placeholder="Please enter your email address" #emailId>
+			<input class="lead-form-email-2" name="emailId" type="email" placeholder="Please enter your email address">
 			<!-- <a href="//app.outgrow.co/signup/?email=" class="lead-email-2" (click)="callGA('CANNOT WAIT CTA')"> -->
-				<a (click)="putEmailId(emailId.value)" class="lead-email" >	
+				<a href="//app.outgrow.co/signup/?email=" class="lead-email" >	
 				<span class="btn-buildcal fade-in lead-form-btn">
 					Start Free Trial
 				</span>

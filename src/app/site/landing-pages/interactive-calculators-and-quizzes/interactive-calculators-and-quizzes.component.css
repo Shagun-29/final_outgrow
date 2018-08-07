@@ -1007,7 +1007,11 @@ span.testi-desig {
     display: none;
 }
 
-
+.lp-bg-freeTrial .startTrial-outer .btn-buildcal:hover,.section-1-left .btn-buildcal:hover,.lp-sign.startTrial-outer .btn-buildcal:hover {
+    background: #fb757b;
+    color: #fff;
+    border-color: #f8434b;
+}
 
 
 

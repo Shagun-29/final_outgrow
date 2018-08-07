@@ -112,7 +112,7 @@ h1 {
     margin-top: 25px;
     margin-left: -25px;
 }
-
+88
 .section-banner p {
     font-size: 15px;
     color: #fff;
@@ -1169,6 +1169,11 @@ span.testi-desig {
         background: url('https://dzvexx2x036l1.cloudfront.net/lp-section-six-bg-lg-img.png') no-repeat top right;
         height: 463px;
     }
+    .section-banner {
+        background-position: 0 -235px;
+    }
+    
+    
 }
 
 @media(min-width:0px) and (max-width:1024px) {
@@ -1395,6 +1400,7 @@ span.testi-desig {
         font-size: 22px !important;
         text-align: center;
         padding: 0px 10px;
+        margin-top: 0px!important;
     }
     .btn-red-new {
         font-size: 13px;
@@ -1539,6 +1545,9 @@ span.testi-desig {
         margin-top: 25px !important;
         width: 100% !important;
     }
+    .banner-jacket img {
+        border-radius: 15px;
+    }
 }
 
 /* @media (min-width: 1200px)
@@ -1577,6 +1586,9 @@ span.testi-desig {
     }
     .arrow_box {
         min-width: 75px!important
+    }
+    .over3, .over2, .over1, .over4 {
+        left: 0px!important;
     }
 }
 
