@@ -13,14 +13,19 @@ export class FooterComponent implements OnInit {
 
   public disableCookieDialog='false';
   public isVisible=true;
-
+  public loaded:any;
   ngOnInit() {
    
    let footerShow = document.querySelector('.footer-14');
    let footerShowAdjust = document.querySelector('.footer-social');
     footerShow.classList.add('hide');
+
+    
+
+    
    
     if(this._cookieService.get('disableCookieDialog')){
+      this.loaded=true;
       console.log("----->>>>",this._cookieService.get('disableCookieDialog'))
       this.isVisible=false;
       footerShowAdjust.classList.remove('footer-adjust');
@@ -70,5 +75,26 @@ export class FooterComponent implements OnInit {
   getCookie(key: string){
     return this._cookieService.get('test');
   }
-}
 
+  ngAfterViewInit(){
+    setTimeout(()=>{
+      let intercom = document.querySelector('.intercom-launcher-frame');
+    if(intercom){
+        if(this._cookieService.get('disableCookieDialog')){
+          console.log("inntercom is loaded and cookies is found")
+          // intercom.classList.remove('hide');
+        }else{
+          
+          console.log("inntercom is loaded and cookies is nnot found")
+          intercom.classList.add('intercom-margin');
+         
+        }
+        console.log("intercom loaded")
+      
+    }else{
+      console.log("intercom not loaded")
+      
+    } 
+  },6000)
+  }
+}
