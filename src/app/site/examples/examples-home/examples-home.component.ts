@@ -166,6 +166,7 @@ export class ExamplesHomeComponent implements OnInit {
   videoURL(frame, index = 0) {
     this.activeFrame = index;
     this.frameUrl = this.iFrames[index]['url'];
+    screen.width <= 800 && window.open(this.frameUrl, '_blank');
     this.sanitize(this.frameUrl);
     this.videoURLService.resizeIframe(frame);
   }

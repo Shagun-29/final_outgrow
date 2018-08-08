@@ -248,7 +248,7 @@
                         </span>
                     </div>
                     <div class="pricing-bottom open">
-                        <ul *ngIf="annualActive" class="features rs-hide">
+                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideFreelancer">
                             <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
                                 <span class="feature-title">{{annualPlan.name}}
                                     <i class="material-icons">help</i>
@@ -258,7 +258,7 @@
                                 <span class="detail">{{annualPlan.freelancerDescription}} </span>
                             </li>
                         </ul>
-                        <ul *ngIf="!annualActive" class="features rs-hide">
+                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideFreelancer">
                             <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
                                 <span class="feature-title">{{monthlyPlan.name}}
                                     <i class="material-icons">help</i>
@@ -303,7 +303,7 @@
                         </span>
                     </div>
                     <div class="pricing-bottom open">
-                        <ul *ngIf="annualActive" class="features rs-hide">
+                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideEssentials">
                             <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
                                 <span class="feature-title">{{annualPlan.name}}
                                     <i class="material-icons">help</i>
@@ -313,7 +313,7 @@
                                 <span class="detail">{{annualPlan.essentialsDescription}} </span>
                             </li>
                         </ul>
-                        <ul *ngIf="!annualActive" class="features rs-hide">
+                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideEssentials">
                             <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
                                 <span class="feature-title">{{monthlyPlan.name}}
                                     <i class="material-icons">help</i>
@@ -357,7 +357,7 @@
                         </span>
                     </div>
                     <div class="pricing-bottom open">
-                        <ul *ngIf="annualActive" class="features rs-hide">
+                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideBusiness">
                             <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
                                 <span class="feature-title">{{annualPlan.name}}
                                     <i class="material-icons">help</i>
@@ -367,7 +367,7 @@
                                 <span class="detail">{{annualPlan.businessDescription}} </span>
                             </li>
                         </ul>
-                        <ul *ngIf="!annualActive" class="features rs-hide">
+                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideBusiness">
                             <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
                                 <span class="feature-title">{{monthlyPlan.name}}
                                     <i class="material-icons">help</i>
@@ -412,7 +412,7 @@
                         </span>
                     </div>
                     <div class="pricing-bottom open">
-                        <ul *ngIf="annualActive" class="features rs-hide">
+                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideFreelancerQuiz">
                             <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
                                 <span class="feature-title">{{annualPlan.name}}
                                     <i class="material-icons">help</i>
@@ -422,7 +422,7 @@
                                 <span class="detail">{{annualPlan.freelancerQuizDescription}} </span>
                             </li>
                         </ul>
-                        <ul *ngIf="!annualActive" class="features rs-hide">
+                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideFreelancerQuiz">
                             <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
                                 <span class="feature-title">{{monthlyPlan.name}}
                                     <i class="material-icons">help</i>
