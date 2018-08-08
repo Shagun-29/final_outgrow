@@ -15,8 +15,7 @@ export class FooterComponent implements OnInit {
   public isVisible=true;
   public loaded:any;
   ngOnInit() {
-    const value: string = this._cookieService.get('storage');
-    console.log(value);
+   
    let footerShow = document.querySelector('.footer-14');
    let footerShowAdjust = document.querySelector('.footer-social');
     footerShow.classList.add('hide');

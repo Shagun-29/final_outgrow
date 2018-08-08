@@ -2,6 +2,7 @@ import { Component, OnInit  } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { LoadingService } from './shared/service/loading.service';
+import { CookieService } from '../../node_modules/ngx-cookie-service';
 
 declare var window:any;
 @Component({
@@ -19,8 +20,16 @@ export class AppComponent implements OnInit {
     show2:boolean=false;
 
  
-  constructor(private router: Router,private loadingService: LoadingService) { }
+  constructor(private router: Router,private loadingService: LoadingService,private _cookieService:CookieService) { }
   ngOnInit() {
+      console.log("-------cookie-------",this._cookieService.get('storage'));
+      if(this._cookieService.get('storage')){
+        let login = document.querySelector('.login');
+        login.classList.add('hide');
+          console.log("cookie found");
+      }else{
+          console.log('cookie not found');
+      }
     
     //   setTimeout(()=>{
     //       this.show1=false;
