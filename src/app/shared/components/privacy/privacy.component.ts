@@ -15,6 +15,8 @@ export class PrivacyComponent implements OnInit {
   }
 
   ngOnInit() {
+    let load = document.querySelector('.preloader');
+    load.classList.add('hide');
   }
 
 }
