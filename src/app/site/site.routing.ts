@@ -8,6 +8,7 @@ import { IncreaseRoiComponent } from './landing-pages/increase-roi/increase-roi.
 import {InteractiveCalculatorsAndQuizzesComponent} from './landing-pages/interactive-calculators-and-quizzes/interactive-calculators-and-quizzes.component';
 import { IncreaseConversionsComponent } from './landing-pages/increase-conversions/increase-conversions.component';
 import { IdeaGeneratorComponent } from './landing-pages/idea-generator/idea-generator.component';
+import { Ltd1Component } from './landing-pages/ltd-1/ltd-1.component';
 export const routes: Routes = [
     { path: '', loadChildren: './home/home.module#HomeModule' },
     { path: 'calculator', component: CalculatorComponent },
@@ -22,6 +23,7 @@ export const routes: Routes = [
     { path: 'quiz', component: QuizComponent },
     { path: 'survey', component: SurveyComponent },
     { path: 'why-interactive', loadChildren: './why-interactive/why-interactive.module#WhyInteractiveModule' },
+    { path: 'ldt-1', component: Ltd1Component }
 
 ];
 
