@@ -655,6 +655,10 @@ li.nav-lead-input {
     line-height: normal !important;
     padding: 7px 12px !important;
 }
+.navbar-nav>li {
+    float: left;
+    width: 100%;
+}
 }
 
 @media (max-width: 990px) and (min-width: 769px)

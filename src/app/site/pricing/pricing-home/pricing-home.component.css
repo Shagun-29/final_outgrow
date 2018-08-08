@@ -446,7 +446,7 @@ background: url(https://cdn.filestackcontent.com/I9cqiZQTQyKo3uGT28WZ);
 tr.expand.open td.expand-child.active-bg {
 background: #f5fbff!important;
 box-shadow: 2px 3px 7px rgba(0, 0, 0, .10);
-border-bottom: 2px solid #f5fbff;
+border-bottom: 1px solid #f5fbff;
 
 }
 tr.expand.open td.active-bg {
@@ -828,6 +828,7 @@ box-shadow: none;
 float: right;
 text-transform: uppercase;
 margin-top: 4px;
+text-decoration: none;
 }
 .enterprise_pos {
 /* background: #fff; */
@@ -1587,7 +1588,7 @@ th.active {
   tr.expand.open td.expand-child.active-bg {
   
  
-    border-bottom: 2px solid #dadade !important;
+    border-bottom: 1px solid #dadade !important;
 }
 
 }
