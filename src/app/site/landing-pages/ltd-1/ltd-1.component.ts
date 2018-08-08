@@ -10,6 +10,8 @@ export class Ltd1Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let load = document.querySelector('.preloader');
+    load.classList.add('hide');
   }
 
 }
