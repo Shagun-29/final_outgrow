@@ -302,7 +302,13 @@ margin-bottom: 0px;
  }
 
 }
-
+@media only screen and (max-width: 380px)
+{
+.start-trial-cta .btn-buildcal p {
+    line-height: 18px;
+    float: none;
+}
+}
 
 @media (min-width:320px) and (max-width:330px){
 #pricing .section-1-right {
@@ -1292,7 +1298,7 @@ color: #2b93be;
 background: #eff0f1;
 padding: 3px;
 /* margin-top: 7px; */
-font-family: Roboto-Regular;
+font-family: Roboto;
 }
 .pricing-bottom a.toggle-more i {
 vertical-align: middle;

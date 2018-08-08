@@ -248,7 +248,7 @@
                         </span>
                     </div>
                     <div class="pricing-bottom open">
-                        <ul *ngIf="annualActive" class="features rs-hide">
+                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideFreelancer">
                             <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
                                 <span class="feature-title">{{annualPlan.name}}
                                     <i class="material-icons">help</i>
@@ -258,7 +258,7 @@
                                 <span class="detail">{{annualPlan.freelancerDescription}} </span>
                             </li>
                         </ul>
-                        <ul *ngIf="!annualActive" class="features rs-hide">
+                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideFreelancer">
                             <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
                                 <span class="feature-title">{{monthlyPlan.name}}
                                     <i class="material-icons">help</i>
@@ -270,15 +270,9 @@
                             </li>
                         </ul>
 
-                        <a href="javascript:void(0);" class="toggle-more" (click)="togglePlan('freelancer')">
-                            <div *ngIf="slideFreelancer">
-                                <i class="material-icons">add</i>
-                                <p class="more-info">Show More</p>
-                            </div>
-                            <div *ngIf="!slideFreelancer">
-                                <i class="material-icons">remove</i>
-                                <p class="more-info">Show Less</p>
-                            </div>
+                        <a href="javascript:void(0);" class="toggle-more">
+                            <i class="material-icons">add</i>
+                            <p class="more-info">Show more</p>
                         </a>
                     </div>
                 </div>
@@ -309,7 +303,7 @@
                         </span>
                     </div>
                     <div class="pricing-bottom open">
-                        <ul *ngIf="annualActive" class="features rs-hide">
+                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideEssentials">
                             <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
                                 <span class="feature-title">{{annualPlan.name}}
                                     <i class="material-icons">help</i>
@@ -319,7 +313,7 @@
                                 <span class="detail">{{annualPlan.essentialsDescription}} </span>
                             </li>
                         </ul>
-                        <ul *ngIf="!annualActive" class="features rs-hide">
+                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideEssentials">
                             <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
                                 <span class="feature-title">{{monthlyPlan.name}}
                                     <i class="material-icons">help</i>
@@ -331,15 +325,9 @@
                             </li>
                         </ul>
 
-                        <a href="javascript:void(0);" id="slideEssentials" class="toggle-more" (click)="togglePlan('essentials')">
-                            <div *ngIf="slideEssentials">
-                                <i class="material-icons">add</i>
-                                <p class="more-info">Show More</p>
-                            </div>
-                            <div *ngIf="!slideEssentials">
-                                <i class="material-icons">remove</i>
-                                <p class="more-info">Show Less</p>
-                            </div>
+                        <a href="javascript:void(0);" class="toggle-more">
+                            <i class="material-icons">add</i>
+                            <p class="more-info">Show more</p>
                         </a>
                     </div>
                 </div>
@@ -369,7 +357,7 @@
                         </span>
                     </div>
                     <div class="pricing-bottom open">
-                        <ul *ngIf="annualActive" class="features rs-hide">
+                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideBusiness">
                             <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
                                 <span class="feature-title">{{annualPlan.name}}
                                     <i class="material-icons">help</i>
@@ -379,7 +367,7 @@
                                 <span class="detail">{{annualPlan.businessDescription}} </span>
                             </li>
                         </ul>
-                        <ul *ngIf="!annualActive" class="features rs-hide">
+                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideBusiness">
                             <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
                                 <span class="feature-title">{{monthlyPlan.name}}
                                     <i class="material-icons">help</i>
@@ -391,15 +379,9 @@
                             </li>
                         </ul>
 
-                        <a href="javascript:void(0);" id="slideBusiness" class="toggle-more" (click)="togglePlan('business')">
-                            <div *ngIf="slideBusiness">
-                                <i class="material-icons">add</i>
-                                <p class="more-info">Show More</p>
-                            </div>
-                            <div *ngIf="!slideBusiness">
-                                <i class="material-icons">remove</i>
-                                <p class="more-info">Show Less</p>
-                            </div>
+                        <a href="javascript:void(0);" class="toggle-more">
+                            <i class="material-icons">add</i>
+                            <p class="more-info">Show more</p>
                         </a>
                     </div>
                 </div>
@@ -430,7 +412,7 @@
                         </span>
                     </div>
                     <div class="pricing-bottom open">
-                        <ul *ngIf="annualActive" class="features rs-hide">
+                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideFreelancerQuiz">
                             <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
                                 <span class="feature-title">{{annualPlan.name}}
                                     <i class="material-icons">help</i>
@@ -440,7 +422,7 @@
                                 <span class="detail">{{annualPlan.freelancerQuizDescription}} </span>
                             </li>
                         </ul>
-                        <ul *ngIf="!annualActive" class="features rs-hide">
+                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideFreelancerQuiz">
                             <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
                                 <span class="feature-title">{{monthlyPlan.name}}
                                     <i class="material-icons">help</i>
@@ -452,15 +434,9 @@
                             </li>
                         </ul>
 
-                        <a href="javascript:void(0);" id="slideFreelancerQuiz" class="toggle-more" (click)="togglePlan('freelancerQuiz')">
-                            <div *ngIf="slideFreelancerQuiz">
-                                <i class="material-icons">add</i>
-                                <p class="more-info">Show More</p>
-                            </div>
-                            <div *ngIf="!slideFreelancerQuiz">
-                                <i class="material-icons">remove</i>
-                                <p class="more-info">Show Less</p>
-                            </div>
+                        <a href="javascript:void(0);" class="toggle-more">
+                            <i class="material-icons">add</i>
+                            <p class="more-info">Show more</p>
                         </a>
                     </div>
                 </div>

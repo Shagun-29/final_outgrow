@@ -4117,8 +4117,15 @@ iframe[name=google_conversion_frame] {
 
 /* Responsive feature  */
 /*################### Feature Page responsive css start ###################*/
+
 @media (min-width: 320px) and (max-width:768px) {
 
+	#feature .section.section-10.sec-help {
+		padding-bottom: 50px;
+	}
+	#feature .section.section-10.sec-help .start-trial-cta {
+		margin-bottom: 0;
+	}
 	.feature-blue-brand {
 		padding-bottom: 140px;
 		padding-top: 40px !important;
@@ -4600,9 +4607,21 @@ iframe[name=google_conversion_frame] {
 	#feature .section.section-10.sec-help .start-trial-cta .btn-buildcal p {line-height: 22px; font-size: 13px;}
 
 	/* end: feature page responsive by arti */
+	#feature .section.section-10.sec-help .start-trial-cta .btn-buildcal p {
+		line-height: 22px;
+		font-size: 13px;
+	}
 
 
+}
+@media  (max-width: 380px)
+and (max-width: 480px){
 
+.start-trial-cta .btn-buildcal {
+    font-size: 13px !important;
+    padding: 10px 25px !important;
+	line-height: 22px !important;
+}
 }
 @media (max-width:480px){
 	.rs-hide-int-res {display: none !important;}
