@@ -9,6 +9,7 @@ import {InteractiveCalculatorsAndQuizzesComponent} from './landing-pages/interac
 import { IncreaseConversionsComponent } from './landing-pages/increase-conversions/increase-conversions.component';
 import { IdeaGeneratorComponent } from './landing-pages/idea-generator/idea-generator.component';
 import { Ltd1Component } from './landing-pages/ltd-1/ltd-1.component';
+import { LtdComponent } from './landing-pages/ltd/ltd.component';
 export const routes: Routes = [
     { path: '', loadChildren: './home/home.module#HomeModule' },
     { path: 'calculator', component: CalculatorComponent },
@@ -23,7 +24,8 @@ export const routes: Routes = [
     { path: 'quiz', component: QuizComponent },
     { path: 'survey', component: SurveyComponent },
     { path: 'why-interactive', loadChildren: './why-interactive/why-interactive.module#WhyInteractiveModule' },
-    { path: 'ltd-1', component: Ltd1Component }
+    { path: 'ltd-1', component: Ltd1Component },
+    { path: 'ltd', component: LtdComponent }
 
 ];
 

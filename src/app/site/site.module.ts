@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { IdeaGenService } from '../shared/service/idea-gen.service';
 import { PricingService } from '../shared/services/pricing.service';
 import { Ltd1Component } from './landing-pages/ltd-1/ltd-1.component';
+import { LtdComponent } from './landing-pages/ltd/ltd.component';
 
 @NgModule({
   imports: [
@@ -46,6 +47,6 @@ import { Ltd1Component } from './landing-pages/ltd-1/ltd-1.component';
     // Script
     
    ],
-  declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent,InteractiveCalculatorsAndQuizzesComponent, Ltd1Component]
+  declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent,InteractiveCalculatorsAndQuizzesComponent, Ltd1Component, LtdComponent]
 })
 export class SiteModule { }
