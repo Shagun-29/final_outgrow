@@ -11,7 +11,7 @@ export class FooterComponent implements OnInit {
   constructor(private _cookieService:CookieService) { }
 
 
-  public disableCookieDialog='false';
+  public disableCookieDialog=false;
   public isVisible=true;
   public loaded:any;
   ngOnInit() {
