@@ -14,6 +14,7 @@ export class FooterComponent implements OnInit {
   public disableCookieDialog=false;
   public isVisible=true;
   public loaded:any;
+  public intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
   ngOnInit() {
    
    let footerShow = document.querySelector('.footer-14');
@@ -33,24 +34,10 @@ export class FooterComponent implements OnInit {
     }
     
 
-    $(document).ready(function(){
-        $(".icon-close").click(function() {
-          $('body').removeClass('footer-cookies');
-          });
-          //  $(".btn-understand").click(function(){
-          //   // this._cookieService.put('test', 'true');
-          //   $(".sec-cookies").hide();
-          //   }); $(".btn-understand").click(function(){
-          //   // this._cookieService.put('test', 'true');
-          //   $(".sec-cookies").hide();
-          //   });
-  
-      });
-
-    
   }
 
   saveCookie(){
+    this.intercomTest[0].style.bottom="";
     let footerShowAdjust = document.querySelector('.footer-social');
     this._cookieService.set('disableCookieDialog', 'true');
   //  let x =this.getCookie('disableCookieDialog');
@@ -65,32 +52,29 @@ export class FooterComponent implements OnInit {
     let footerShowAdjust = document.querySelector('.footer-social');
     this.isVisible=false;
     footerShowAdjust.classList.remove('footer-adjust');
-
+    this.intercomTest[0].style.bottom="";
   }
 
   getCookie(key: string){
     return this._cookieService.get(key);
   }
 
-  // ngAfterViewInit(){
-  //   setTimeout(()=>{
-  //     let intercom = document.querySelector('.intercom-launcher-frame');
-  //   if(intercom){
-  //       if(this._cookieService.get('disableCookieDialog')){
-  //         console.log("inntercom is loaded and cookies is found")
-  //         // intercom.classList.remove('hide');
-  //       }else{
-          
-  //         console.log("inntercom is loaded and cookies is nnot found")
-  //         intercom.classList.add('intercom-margin');
-         
-  //       }
-  //       console.log("intercom loaded")
+  ngAfterViewInit(){
+    setInterval(()=>{
+      console.log(":: Intercom Test::",this.intercomTest)
+      let intercom : any= document.querySelector('.intercom-launcher-frame');
+    if(intercom){
+        
+        if(this.isVisible){
+          this.intercomTest[0].style.bottom="95px";
+        }else{
+          this.intercomTest[0].style.bottom="";
+        }
       
-  //   }else{
-  //     console.log("intercom not loaded")
+    }else{
+      console.log("intercom not loaded")
       
-  //   } 
-  // },6000)
-  // }
+    } 
+  },0)
+  }
 }
