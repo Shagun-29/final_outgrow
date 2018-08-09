@@ -23,7 +23,7 @@ export const routes: Routes = [
     { path: 'quiz', component: QuizComponent },
     { path: 'survey', component: SurveyComponent },
     { path: 'why-interactive', loadChildren: './why-interactive/why-interactive.module#WhyInteractiveModule' },
-    { path: 'ldt-1', component: Ltd1Component }
+    { path: 'ltd-1', component: Ltd1Component }
 
 ];
 
