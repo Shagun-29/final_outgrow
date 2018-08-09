@@ -583,7 +583,12 @@ tr.expand.open th {
 .faq-section-ltd .faq-section-content:last-child p {
     margin-bottom: 0px;
 }
-
+tr.expand.open {
+    background: #f5fbff;
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, .10);
+    border-bottom: 1px solid #e0f2fe;
+    border-top: 1px solid #e0f2fe;
+}
 
 @media (max-width: 1920px) and (min-width: 1440px)
 {
