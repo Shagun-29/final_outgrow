@@ -427,6 +427,7 @@ a {
 .footer-adjust{
     padding-bottom:80px;
 }
-.intercom-margin{
-margin-bottom : 80px !important;
+.extra-margin-intercom{
+bottom : 80px !important;
+background-color: black !important;
 }
