@@ -47,11 +47,9 @@ export class ExamplesHomeComponent implements OnInit {
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
     this.href = window.location.href;
-    console.log("---------------------->",this.href.split('/'));
     this.text=this.href.split('/');
     this.activeHeader=this.text[3];
     this.text.forEach(element => {
-      console.log("::Element::",element)
       if(element=="examples"){
           this.active.classList.add('active')
       }

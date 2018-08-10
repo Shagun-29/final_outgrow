@@ -9,10 +9,8 @@ export class IdeaGenService {
 
   callGoogleSheet(link):any{
     fetch(link).then((res)=>{
-      console.log(res.json())
       return res.json();
     }).catch((err)=>{
-      console.log(err);
       return err;
     })
   }

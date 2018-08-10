@@ -123,7 +123,6 @@ export class IndexHomeComponent implements OnInit {
 
   putEmailId(email:any){
     this.emailId = email;
-    console.log("------- Email ID entered --------",email);
     window.location.href="https://app.outgrow.co/signup/?email="+this.emailId;
 
   }

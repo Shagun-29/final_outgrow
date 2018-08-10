@@ -28,10 +28,8 @@ export class WhyInteractiveHomeComponent implements OnInit {
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
     this.href = window.location.href;
-    console.log("---------------------->",this.href.split('/'));
     this.text=this.href.split('/');
     this.text.forEach(element => {
-      console.log("::Element::",element)
       if(element=="why-interactive"){
           this.active.classList.add('active')
       }
