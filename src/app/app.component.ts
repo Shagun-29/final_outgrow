@@ -22,18 +22,13 @@ export class AppComponent implements OnInit {
  
   constructor(private router: Router,private loadingService: LoadingService,private _cookieService:CookieService) { }
   ngOnInit() {
-      
-      console.log("-------cookie-------",this._cookieService.get('storage'));
       if(this._cookieService.get('storage')){
         let login = document.querySelector('.login');
         login.classList.add('hide');
-          console.log("cookie found");
       }else{
-          console.log('cookie not found');
       }
     
     this.href = window.location.href;
-    console.log("---------------------->",this.href.split('/'));
     this.text=this.href.split('/');
     if(this.text[this.text.length-1] == "idea-generator"){
         this.flag=false;
@@ -53,7 +48,6 @@ ngAfterViewInit(){
     
     this.loadingService.isLoading
     .subscribe((res)=>{
-        console.log('in Subscription',res)
         if(res){
         this.show=true;
         this.show1=false;

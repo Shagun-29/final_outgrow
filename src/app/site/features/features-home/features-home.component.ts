@@ -37,10 +37,8 @@ export class FeaturesHomeComponent implements OnInit {
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
     this.href = window.location.href;
-    console.log("---------------------->",this.href.split('/'));
     this.text=this.href.split('/');
     this.text.forEach(element => {
-      console.log("::Element::",element)
       if(element=="features"){
           this.active.classList.add('active')
       }
@@ -97,13 +95,11 @@ export class FeaturesHomeComponent implements OnInit {
   }
   imageShift(item){
     if(item=="a"){
-      console.log("1")
       this.temp0=this.f_slide1;
       this.f_slide1=this.f_slide2;
       this.f_slide2=this.temp0;
     }
     else if(item=="b"){
-      console.log("2")
       this.temp1=this.f_slide3;
       this.f_slide3=this.f_slide4;
       this.f_slide4=this.temp1;

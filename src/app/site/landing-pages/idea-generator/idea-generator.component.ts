@@ -124,7 +124,6 @@ export class IdeaGeneratorComponent implements OnInit {
       this.categories = this.sortArray(this.categories);
     },
       (error: any) => {
-        console.log("error in getting categories is ::", error);
       })
   }
 
@@ -148,7 +147,6 @@ export class IdeaGeneratorComponent implements OnInit {
         }
       }
       );
-      console.log(self, this)
     }, 1000);
   }
 
@@ -294,7 +292,6 @@ export class IdeaGeneratorComponent implements OnInit {
         }
       });
     }, (error) => {
-      console.log("error in getting funnel data is ::", error);
     })
 
   }

@@ -113,7 +113,6 @@ var head = document.querySelector('head');
   }
   
  markAsActive = function (calcId) {
-  console.log(calcId)
   this.myId=calcId;
    var currentActiveCalc = document.querySelector('#gallery-content-center li.active');
    // currentActiveCalc.classList.remove('active');
@@ -122,7 +121,6 @@ var head = document.querySelector('head');
    let calc = this.calcService.calcs.find(function (calc) {
        return calc.id === calcId
    });	
-   console.log(calc)
    var premadeGif = document.getElementById('premade-gif');
    var premadePreview = document.getElementById('premade-preview-link');
   //  var premadeName = document.getElementById('premade-calc-name');
@@ -148,8 +146,7 @@ changeActiveCalcCategory = function (id) {
 }
 
 shuffleCalcs = function (filterName) {
-   this.changeActiveCalcCategory(filterName);
-   console.log(this.calcService.calcs);
+   this.changeActiveCalcCategory(filterName);;
    this.objLength=this.calcService.calcs.length;
    this.obj=this.calcService.calcs;
 
@@ -158,8 +155,6 @@ shuffleCalcs = function (filterName) {
    }
    
     this.filteredObj = this.obj.filter(filter_obj);
-   console.log(this.filteredObj)
-   console.log("hhhhhh",this.filteredObj[0].id)
    this.markAsActive(this.filteredObj[0].id);    
 }
 

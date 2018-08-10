@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import  * as $ from 'jquery';
 // import { CookieService } from 'angular2-cookie/core';
 import { CookieService } from 'ngx-cookie-service';
 @Component({
@@ -15,6 +14,7 @@ export class FooterComponent implements OnInit {
   public isVisible=true;
   public loaded:any;
   public intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
+  public intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
   ngOnInit() {
    
    let footerShow = document.querySelector('.footer-14');
@@ -23,12 +23,9 @@ export class FooterComponent implements OnInit {
 
     if(this._cookieService.get('disableCookieDialog')){
       this.loaded=true;
-      console.log("----->>>>",this._cookieService.get('disableCookieDialog'))
       this.isVisible=false;
       footerShowAdjust.classList.remove('footer-adjust');
     }else{
-      
-      console.log("::else::")
       
       footerShowAdjust.classList.add('footer-adjust');
     }
@@ -38,6 +35,7 @@ export class FooterComponent implements OnInit {
 
   saveCookie(){
     this.intercomTest[0].style.bottom="";
+    this.intercomTestPart[0].style.bottom="";
     let footerShowAdjust = document.querySelector('.footer-social');
     this._cookieService.set('disableCookieDialog', 'true');
   //  let x =this.getCookie('disableCookieDialog');
@@ -53,6 +51,7 @@ export class FooterComponent implements OnInit {
     this.isVisible=false;
     footerShowAdjust.classList.remove('footer-adjust');
     this.intercomTest[0].style.bottom="";
+    this.intercomTestPart[0].style.bottom="";
   }
 
   getCookie(key: string){
@@ -61,19 +60,18 @@ export class FooterComponent implements OnInit {
 
   ngAfterViewInit(){
     setInterval(()=>{
-      console.log(":: Intercom Test::",this.intercomTest)
       let intercom : any= document.querySelector('.intercom-launcher-frame');
     if(intercom){
         
         if(this.isVisible){
           this.intercomTest[0].style.bottom="95px";
+          this.intercomTestPart[0].style.bottom="95px";
         }else{
           this.intercomTest[0].style.bottom="";
+          this.intercomTestPart[0].style.bottom="95px";
         }
       
     }else{
-      console.log("intercom not loaded")
-      
     } 
   },0)
   }
