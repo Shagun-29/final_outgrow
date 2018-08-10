@@ -871,7 +871,7 @@ padding-bottom: 70px!important;
 #pricing .enterprise-box-new h2.title{font-family:montserratregular;color:#fff;font-size:30px;margin:0;height:auto;text-align:center}
 #pricing .enterprise-box-new span.border-center{border-bottom:2px solid #fb545b;display:inline-block;width:28px;position:relative;top:-5px;margin-right:8px}
 #pricing .enterprise-box-new p{color:rgba(255,255,255,.5);font-size:12px;font-family:montserratregular;padding:10px 0 0;line-height:18px}
-#pricing .enterprise-box-new .btn-white-red-outline{color:#fff;background-color:#fb545b;border-color:#ffb5b8;border-radius:0;font-size:11px;padding:6px 20px;margin:0;transition:all .3s ease 0s;font-family:montserratregular;text-transform:uppercase;float:none}
+#pricing .enterprise-box-new .btn-white-red-outline{color:#fff;background-color:#fb545b;border-color:#ffb5b8;border-radius:0;font-size:11px;padding:6px 20px;margin:0;transition:all .3s ease 0s;font-family:montserratregular;text-transform:uppercase;float:none;text-decoration:none;}
 #pricing .enterprise-box-new .btn-white-red-outline:hover{-webkit-transition:.5s ease-in-out;transition:.5s ease-in-out;background:#fdb6b9!important;color:#fb545b!important;border-color:#fdb6b9!important}
 #pricing .enterprise-box-new span.sub-title{font-size:14px;color:#fff;font-family:montserratregular;text-transform:uppercase;display:block;padding-top:10px}
 #pricing .section-faq {
