@@ -43,7 +43,7 @@ a {
 .sticky .navbar-nav>li>a {
     line-height: 25px;
 }
-.sticky.custom-navbar .signUp a {
+.sticky.custom-navbar .signUp a ,.sticky.dashboard a{
     margin-top: 13px!important;
 }
 .sticky li.nav-lead-input {
@@ -136,7 +136,7 @@ a {
     display: block;
 }
 
-.custom-navbar .signUp-style a{
+.custom-navbar .signUp-style a,.dashboard a{
     border-radius: 20px;
     background: #fb5f66 !important;
     color: #fff!important;
@@ -367,7 +367,7 @@ input.lead-form-email::placeholder {
     border-color: #e7e7e7;
 }
 
-.custom-navbar .signUp a {
+/* .custom-navbar .signUp a {
     border-radius: 20px;
     background: #fb5f66 !important;
     color: #fff!important;
@@ -379,7 +379,7 @@ input.lead-form-email::placeholder {
     margin-right: 15px;
     margin-left: 6px;
     font-family: montserratregular;
-}
+} */
 .custom-navbar a.link-login {
     font-size: 14px;
     font-family: montserratregular;
@@ -521,7 +521,7 @@ input.lead-form-email::placeholder {
 }
 
 .custom-navbar .link-login {
-    color: #fb6c73!important;
+    /* color: #fb6c73!important; */
     font-family: montserratbold;
 }
 li.nav-lead-input {
@@ -624,7 +624,7 @@ li.nav-lead-input {
     .custom-navbar.navbar-fixed-top {
         position: relative;
     }
-    .custom-navbar .signUp a {
+    .custom-navbar .signUp a,.dashboard a {
         display: inline-block;
         margin-top: 0px;
     }
@@ -713,7 +713,7 @@ li.nav-lead-input {
     .navbar-toggle {
         display: block!important;
     }
-    li.signUp.signUp-style a.link-login {
+    li.signUp.signUp-style a.link-login, .dashboard a.link-login {
         margin: 0px !important;
         font-size: 14px !important;
         padding: 6px 13px !important;
@@ -722,7 +722,7 @@ li.nav-lead-input {
     .custom-navbar a.link-login {
         border-bottom: none;
     }
-    li.signUp.signUp-style {
+    li.signUp.signUp-style ,.dashboard{
         margin: 0px !important;
         line-height: normal;
         border-bottom: none;
@@ -822,7 +822,7 @@ li.dropdown.open a {
     width: 100%;
     margin: 7.5px 0px !important;
 }
-.custom-navbar .signUp-style a {
+.custom-navbar .signUp-style a ,.dashboard a {
     background: none;
     color: #fff!important;
     border: none !important;
@@ -845,7 +845,7 @@ li.nav-lead-input {
 .custom-navbar.navbar-default .navbar-nav>li {
     margin-right: 0px;
 }
-.custom-navbar .signUp-style a {
+.custom-navbar .signUp-style a ,.dashboard a{
     margin-top: 0px;
 }
 }
@@ -923,7 +923,7 @@ div#bs-example-navbar-collapse-1 {
 @media (max-width: 1250px) and (min-width: 1024px)
 {
 
-   .sticky.custom-navbar .signUp a {
+   .sticky.custom-navbar .signUp a ,.dashboard a{
         
         margin-top: 14px!important;
     }
@@ -975,7 +975,7 @@ div#bs-example-navbar-collapse-1 {
 @media (min-width: 1250px) and (max-width:1480px){
 
    
-    .custom-navbar .signUp a {
+    .custom-navbar .signUp a ,.dashboard a{
         
         margin-top: 18px!important;
     }
@@ -994,13 +994,13 @@ div#bs-example-navbar-collapse-1 {
 /* .custom-navbar .signUp a {
     margin-top: 22px!important;
 } */
-.sticky.custom-navbar .signUp a {
-    margin-top: 17px!important;
+.sticky.custom-navbar .signUp a ,.sticky.custom-navbar .dashboard a {
+    margin-top: 14px!important;
 }
 .sticky .navbar-brand {
     padding-top: 12px!important;
 }
-.custom-navbar .signUp a {
+.custom-navbar .signUp a,.dashboard a {
     margin-top: 22px!important;
 }
 }
@@ -1070,7 +1070,7 @@ div#bs-example-navbar-collapse-1 {
     .custom-navbar.navbar-default .navbar-nav>li>a, .section-1-left .btn-bottominfo label, .section-1-left .btn-bottominfo span {
         font-size: 16px;
     }
-    .custom-navbar .signUp-style a {
+    .custom-navbar .signUp-style a,.dashboard a {
         padding: 10px 14px;
         /* top: -5px; */
         font-size: 16px !important;
