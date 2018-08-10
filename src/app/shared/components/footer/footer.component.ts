@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import  * as $ from 'jquery';
 // import { CookieService } from 'angular2-cookie/core';
 import { CookieService } from 'ngx-cookie-service';
 @Component({
