@@ -18,13 +18,16 @@ export class AppComponent implements OnInit {
     show:boolean=false;
     show1:boolean=true;
     show2:boolean=false;
-
  
   constructor(private router: Router,private loadingService: LoadingService,private _cookieService:CookieService) { }
   ngOnInit() {
       if(this._cookieService.get('storage')){
         let login = document.querySelector('.login');
+        let dashboard = document.querySelector('.dashboard');
+        let getStarted = document.querySelector('.nav-lead-input');
         login.classList.add('hide');
+        dashboard.classList.remove('hide');
+        getStarted.classList.add('hide')
       }else{
       }
     
