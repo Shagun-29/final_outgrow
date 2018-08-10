@@ -173,9 +173,13 @@ text-transform: uppercase;
 background: transparent!important;
 padding: 0!important;
 padding-top: 7px!important;
-display: block;
+/* display: block; */
 font-family: montserratlight!important;
 }
+.intercom_trigger {
+display:inline-block!important;
+}
+
 a.link-contact.intercom_trigger:hover {
 color: #ea101d;
 }
@@ -1440,6 +1444,9 @@ float: none;
 /* .section-1 .container-fluid {
 background: #fff;
 } */
+.pricing-block:last-child {
+  margin-bottom: 0px;
+}
 
 }
 @media (max-width: 1366px)
