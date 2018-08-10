@@ -13,8 +13,6 @@ export class FooterComponent implements OnInit {
   public disableCookieDialog=false;
   public isVisible=true;
   public loaded:any;
-  public intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
-  public intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
   ngOnInit() {
    
    let footerShow = document.querySelector('.footer-14');
@@ -34,8 +32,11 @@ export class FooterComponent implements OnInit {
   }
 
   saveCookie(){
-    this.intercomTest[0].style.bottom="";
-    this.intercomTestPart[0].style.bottom="";
+    let intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
+  let intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
+  
+    intercomTest[0].style.bottom="";
+    intercomTestPart[0].style.bottom="";
     let footerShowAdjust = document.querySelector('.footer-social');
     this._cookieService.set('disableCookieDialog', 'true');
   //  let x =this.getCookie('disableCookieDialog');
@@ -47,11 +48,14 @@ export class FooterComponent implements OnInit {
   }
 
   showMsg(){
+    let intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
+  let intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
+  
     let footerShowAdjust = document.querySelector('.footer-social');
     this.isVisible=false;
     footerShowAdjust.classList.remove('footer-adjust');
-    this.intercomTest[0].style.bottom="";
-    this.intercomTestPart[0].style.bottom="";
+    intercomTest[0].style.bottom="";
+    intercomTestPart[0].style.bottom="";
   }
 
   getCookie(key: string){
@@ -61,14 +65,17 @@ export class FooterComponent implements OnInit {
   ngAfterViewInit(){
     setInterval(()=>{
       let intercom : any= document.querySelector('.intercom-launcher-frame');
+      let intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
+  let intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
+  
     if(intercom){
         
         if(this.isVisible){
-          this.intercomTest[0].style.bottom="95px";
-          this.intercomTestPart[0].style.bottom="95px";
+          intercomTest[0].style.bottom="95px";
+          intercomTestPart[0].style.bottom="95px";
         }else{
-          this.intercomTest[0].style.bottom="";
-          this.intercomTestPart[0].style.bottom="95px";
+          intercomTest[0].style.bottom="";
+          intercomTestPart[0].style.bottom="95px";
         }
       
     }else{
