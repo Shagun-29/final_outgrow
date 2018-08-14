@@ -176,9 +176,9 @@ padding-top: 7px!important;
 /* display: block; */
 font-family: montserratlight!important;
 }
-.intercom_trigger {
+/* .intercom_trigger {
 display:inline-block!important;
-}
+} */
 
 a.link-contact.intercom_trigger:hover {
 color: #ea101d;

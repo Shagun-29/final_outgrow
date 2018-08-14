@@ -32,11 +32,7 @@ export class FooterComponent implements OnInit {
   }
 
   saveCookie(){
-    let intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
-  let intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
-  
-    intercomTest[0].style.bottom="";
-    intercomTestPart[0].style.bottom="";
+    
     let footerShowAdjust = document.querySelector('.footer-social');
     this._cookieService.set('disableCookieDialog', 'true');
   //  let x =this.getCookie('disableCookieDialog');
@@ -45,6 +41,11 @@ export class FooterComponent implements OnInit {
       // this.showMsg();
       footerShowAdjust.classList.remove('footer-adjust');
     }
+
+    let intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
+  let intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
+    intercomTest[0].style.bottom="";
+    intercomTestPart[0].style.bottom="";
   }
 
   showMsg(){
@@ -66,16 +67,19 @@ export class FooterComponent implements OnInit {
     setInterval(()=>{
       let intercom : any= document.querySelector('.intercom-launcher-frame');
       let intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
-  let intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
-  
+      let intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
+      let intercomTestPart2 = document.getElementsByClassName('intercom-messenger-frame-enter-done') as HTMLCollectionOf<HTMLElement>;
+
     if(intercom){
-        
+      
         if(this.isVisible){
           intercomTest[0].style.bottom="100px";
           intercomTestPart[0].style.bottom="95px";
+          intercomTestPart2[0].style.bottom="180px";
         }else{
           intercomTest[0].style.bottom="";
           intercomTestPart[0].style.bottom="";
+          intercomTestPart2[0].style.bottom="";
         }
       
     }else{

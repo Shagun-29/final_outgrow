@@ -589,7 +589,13 @@ tr.expand.open {
     border-bottom: 1px solid #e0f2fe;
     border-top: 1px solid #e0f2fe;
 }
-
+.pricing-outer-ltdSales li span.check {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    vertical-align: sub;
+}
 @media (max-width: 1920px) and (min-width: 1440px)
 {
     .section-1 {
@@ -701,8 +707,8 @@ table {
     padding: 0px 20px;
 }
 .faq-section-ltd {
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
     margin-top: 40px;
     margin-bottom: 10px;
 }
@@ -775,8 +781,8 @@ table {
     display: none;
 }
 .section-1 {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
 }
 .start-trial-cta .btn-buildcal {
     padding: 10px 25px;
