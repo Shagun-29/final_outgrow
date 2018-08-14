@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-xs-12 col-md-12 col-sm-12 mobile-container rs-hide calc-links text-center iframe-small">
                     <ng-container *ngFor="let iFrame of iFrames;let i=index">
-                        <a [class.active]="activeFrame === i" (click)="videoURL(frame,i)">
+                        <a [class.active]="activeFrame === i" (click)="videoURL(frame,i,'onclick')">
                             <img alt="Calculator thumb image" class="thumb-calc" [src]="iFrame.media" />
                         </a>
                     </ng-container>

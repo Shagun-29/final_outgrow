@@ -161,10 +161,10 @@ export class ExamplesHomeComponent implements OnInit {
     this.loading = false;
   }
 
-  videoURL(frame, index = 0) {
+  videoURL(frame, index = 0,str='') {
     this.activeFrame = index;
     this.frameUrl = this.iFrames[index]['url'];
-    window.outerWidth <= 1000 && window.open(this.frameUrl, '_blank');
+    window.outerWidth <= 1000 && str == 'onclick' && window.open(this.frameUrl, '_blank');
     this.sanitize(this.frameUrl);
     this.videoURLService.resizeIframe(frame);
   }
