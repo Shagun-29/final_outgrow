@@ -157,4 +157,14 @@ export class PricingHomeComponent implements OnInit {
         }
     }
 
+    triggerIntercom(){   
+        setInterval(()=>{
+            let intercomTrigger = document.getElementsByClassName('intercom-launcher') as HTMLCollectionOf<HTMLElement>;
+
+        console.log(intercomTrigger)
+        },4000) 
+        
+        // intercomTrigger.classList.add('intercom-launcher-active');
+    }
+
 }
