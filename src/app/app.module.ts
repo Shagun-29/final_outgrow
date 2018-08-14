@@ -21,7 +21,7 @@ import { LoadingService } from './shared/service/loading.service';
     HeaderComponent,
     PrivacyComponent,
     TermsComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserAnimationsModule,

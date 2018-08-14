@@ -8,7 +8,7 @@ export const routes: Routes = [
   
   { path: '', loadChildren: './site/site.module#SiteModule' },
   { path: 'privacy-policy', component: PrivacyComponent },
-  { path: 'tos', component: TermsComponent },  
+  { path: 'tos', component: TermsComponent } 
 ];
 
 // export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
