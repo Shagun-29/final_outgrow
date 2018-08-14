@@ -71,11 +71,11 @@ export class FooterComponent implements OnInit {
     if(intercom){
         
         if(this.isVisible){
-          intercomTest[0].style.bottom="95px";
+          intercomTest[0].style.bottom="100px";
           intercomTestPart[0].style.bottom="95px";
         }else{
           intercomTest[0].style.bottom="";
-          intercomTestPart[0].style.bottom="95px";
+          intercomTestPart[0].style.bottom="";
         }
       
     }else{
