@@ -2629,3 +2629,6 @@ body{background:#fff !important;}
 	.pre-temp-view .content.temp-info .btn.btn-red{margin-left: 5px; margin-bottom: 10px;}
 
 }
+.iframe-small:hover{
+	cursor:pointer;
+}
