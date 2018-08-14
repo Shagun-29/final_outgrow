@@ -2413,6 +2413,7 @@ body{background:#fff !important;}
 		.sec-outgrowMagic img.thumb-calc {
 			margin-right: 8px;
 			margin-bottom: 30px;
+			border: 2px solid transparent;
 		}
 		.sec-example .sec-outgrowMagic-title {margin-top: 0px !important; margin-bottom: 0px;}
 		.sec-example .section-2-subheading{display:  block;}
