@@ -18,17 +18,17 @@ export class ApiRequestService {
   }
 
   getAllCalculators(data: any) {
-    let response = this._http.post('https://api.outgrow.co/api/v1/admin/getCalculators', data, this.post_options())
+    let response = this._http.post('https://api.outgrow.co/api/v1/admin/getCalculators', data)
     return response;
   }
 
   getCategories() {
-    return this._http.get("https://sheets.googleapis.com/v4/spreadsheets/1V954ZsJkGJ-AUYw62oefS8orYFZKk3Lzktjmyq6dG1w/values/category?key=AIzaSyAAH-UAXp3vTaZjwJkfdjqpOKzssWSmYNY&range=Category!A2:Z", this.get_options());
+    return this._http.get("https://sheets.googleapis.com/v4/spreadsheets/1V954ZsJkGJ-AUYw62oefS8orYFZKk3Lzktjmyq6dG1w/values/category?key=AIzaSyAAH-UAXp3vTaZjwJkfdjqpOKzssWSmYNY&range=Category!A2:Z");
   }
 
   getSubCategories(category) {
     let categoryKey = category.replace(" ", "") + "-Key";
     let url = "https://sheets.googleapis.com/v4/spreadsheets/1V954ZsJkGJ-AUYw62oefS8orYFZKk3Lzktjmyq6dG1w/values/category?key=AIzaSyAAH-UAXp3vTaZjwJkfdjqpOKzssWSmYNY&range=" + categoryKey + "!A2:Z";
-    return this._http.get(url, this.get_options())
+    return this._http.get(url)
   }
 }
