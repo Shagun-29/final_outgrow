@@ -5,10 +5,10 @@ import { TermsComponent } from './shared/components/terms/terms.component';
 
 export const routes: Routes = [
   
-  
-  { path: '', loadChildren: './site/site.module#SiteModule' },
   { path: 'privacy-policy', component: PrivacyComponent },
-  { path: 'tos', component: TermsComponent } 
+  { path: 'tos', component: TermsComponent } ,
+  { path: '', loadChildren: './site/site.module#SiteModule' },
+  
 ];
 
 // export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

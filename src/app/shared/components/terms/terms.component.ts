@@ -15,6 +15,8 @@ export class TermsComponent implements OnInit {
    }
 
   ngOnInit() {
+    let load = document.querySelector('.preloader');
+    load.classList.add('hide');
   }
 
 }
