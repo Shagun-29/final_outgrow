@@ -1202,9 +1202,12 @@ span.testi-desig {
 
 @media (max-width:580px) {
     ul.pre-temp-cat li {
-        margin: 0 5px 5px
+        margin: 0 5px 5px;
     }
-    ;
+    .pre-temp-view .content.temp-info .btn.btn-red {
+        margin-left: 5px!important;
+        margin-bottom: 10px!important;
+    }
     .pre-temp-view .content.temp-info .btn.btn-red {
         margin-left: 5px;
         margin-bottom: 10px;
@@ -1481,12 +1484,17 @@ span.testi-desig {
     .rs-show {
         display: block!important;
     }
-    .section-heading {
-        font-size: 22px;
+    .section-heading,.section-2-heading {
+        font-size: 22px!important;
         padding: 0;
-        line-height: 26px;
+        line-height: 26px!important;
         text-align: center;
         width: 100% !important;
+    }
+    .section-2-heading {
+
+        margin-top: 0!important;
+
     }
     .section-second ul, .section-six ul {
         width: 100%;
@@ -1615,6 +1623,7 @@ span.testi-desig {
         width: 90%;
     }
 }
+
 
 @media (min-width:320px) and (max-width:375px) {
     .reading-block {

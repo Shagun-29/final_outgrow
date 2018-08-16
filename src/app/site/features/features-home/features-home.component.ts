@@ -68,10 +68,10 @@ export class FeaturesHomeComponent implements OnInit {
 });
 
 
-    this.f_slide1="//dzvexx2x036l1.cloudfront.net/f-slide1.jpg";
-    this.f_slide2="//dzvexx2x036l1.cloudfront.net/f-slide2.jpg";
-    this.f_slide3="//dzvexx2x036l1.cloudfront.net/slide1.jpg"
-    this.f_slide4="//dzvexx2x036l1.cloudfront.net/slide2.jpg"
+    this.f_slide1="https://dzvexx2x036l1.cloudfront.net/f-slide1.jpg";
+    this.f_slide2="https://dzvexx2x036l1.cloudfront.net/f-slide2.jpg";
+    this.f_slide3="https://dzvexx2x036l1.cloudfront.net/slide1.jpg"
+    this.f_slide4="https://dzvexx2x036l1.cloudfront.net/slide2.jpg"
     this.temp0=null;
     this.temp1=null;
 
@@ -88,8 +88,8 @@ export class FeaturesHomeComponent implements OnInit {
 
     this.isActive8=true;
 
-    this.isActiveSlide="//dzvexx2x036l1.cloudfront.net/f-slide1.jpg";
-    this.isActiveSlide1="//dzvexx2x036l1.cloudfront.net/slide1.jpg";
+    this.isActiveSlide="https://dzvexx2x036l1.cloudfront.net/f-slide1.jpg";
+    this.isActiveSlide1="https://dzvexx2x036l1.cloudfront.net/slide1.jpg";
     this.isActiveSlide2="https://dzvexx2x036l1.cloudfront.net/features-graphsCharts-01.jpg";
     this.isActiveSlide3="https://dzvexx2x036l1.cloudfront.net/features-graphsCharts-01.jpg";
   }

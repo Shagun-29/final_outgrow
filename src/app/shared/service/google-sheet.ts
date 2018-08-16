@@ -19,7 +19,7 @@ sheetId = "1V954ZsJkGJ-AUYw62oefS8orYFZKk3Lzktjmyq6dG1w";
 	}
 
 	getBuildLink(){
-		return "http://localhost:3000/api/v1/demo_app/create";
+		return "https://localhost:3000/api/v1/demo_app/create";
 	}
 
 	titleValue(){

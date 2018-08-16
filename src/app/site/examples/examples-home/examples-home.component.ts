@@ -61,7 +61,6 @@ export class ExamplesHomeComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-
     this.getAllCalculators();
   }
 
