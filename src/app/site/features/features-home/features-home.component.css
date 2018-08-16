@@ -9,7 +9,7 @@
 {
 #feature .secf2-2 {
     width: 55%!important;
-    left: 43% !important;
+    left: 42.3% !important;
 }
 #feature .feature-9-1.feature-blue .secf2-2 {
     width: 60%!important;
@@ -788,6 +788,9 @@ label {
 .section-7 .btn-buildcal i, .section-8 .btn-buildcal i, .section-9 .btn-buildcal i {
 	position: relative;
 	top: 3px
+}
+img.col-md-6.np.box-shadow.w100 {
+    width: 100%;
 }
 .circle-value p {
 	color: #62696d;
@@ -4246,7 +4249,7 @@ iframe[name=google_conversion_frame] {
 	#feature .section-f2 .section-f2-left span span{
 	width: 85%;
 	    text-align: left;
-	    float: right;
+	    float: left;
 	    text-transform: uppercase;
 	    font-size: 14px;
 	}
@@ -4633,7 +4636,7 @@ and (max-width: 480px){
 @media (min-width:440px) and (max-width:768px){
 	#feature .secf2-2 {
 		width: 60%;
-		left: 43% !important;
+		left: 42.5% !important;
 	}
 	#feature .span-style{
 	width:100% !important;
@@ -4653,6 +4656,7 @@ and (max-width: 480px){
 	}
 	#feature .sec4-2{
 	width:58%;
+	left: 39.4%;
 	}
 	#feature .secf2-2 {
 	width: 60%;
@@ -4675,6 +4679,7 @@ and (max-width: 480px){
 	}
 	#feature .secf3-2 {
 	width: 58%;
+	left: 39.4%;
 	}
 	#feature .section-f2 {
 	margin-top: 30px;
@@ -4712,7 +4717,7 @@ and (max-width: 480px){
 @media (min-width:768px) and (max-width:768px){
 	#feature .sec4-2 {
 	width: 55%;
-	left: 43%;
+	left: 42.4%;
 	}
 	#feature .section-17 {
 	margin-top: 0;
@@ -4721,7 +4726,7 @@ and (max-width: 480px){
 	width:100%;
 	}
 	#feature .sec15-2 {
-	left: 2%;
+	left: 2.7%;
 	width: 40%;
 	}
 	#feature .section-6.sec-integration p {

@@ -1175,6 +1175,14 @@ span.testi-desig {
     
     
 }
+@media (max-width:360px) {
+    .btn-white-new[_ngcontent-c3] {
+        font-size: 11px!important;
+        padding: 13px 46px 13px 12px!important;
+
+
+}
+}
 
 @media(min-width:0px) and (max-width:1024px) {
     .case-breathers1 {
@@ -1191,9 +1199,9 @@ span.testi-desig {
 
 @media (max-width:580px) {
     ul.pre-temp-cat li {
-        margin: 0 5px 5px
+        margin: 0 5px 5px;
     }
-    ;
+   
     .pre-temp-view .content.temp-info .btn.btn-red {
         margin-left: 5px;
         margin-bottom: 10px;
@@ -1223,6 +1231,11 @@ span.testi-desig {
     .section-quotes_CR blockquote {
         max-width: 85%;
     }
+    
+   .pre-temp-view .content.temp-info .btn.btn-red {
+    margin-left: 5px!important;
+    margin-bottom: 10px!important;
+}
 }
 
 @media (max-width:1024px) {
@@ -1548,6 +1561,14 @@ span.testi-desig {
     .banner-jacket img {
         border-radius: 15px;
     }
+}
+@media (max-width: 360px)
+{
+    .btn-white-new {
+        font-size: 11px;
+        padding: 13px 46px 13px 12px;
+    }
+
 }
 
 /* @media (min-width: 1200px)

@@ -1012,8 +1012,18 @@ span.testi-desig {
     color: #fff;
     border-color: #f8434b;
 }
+input.lead-form-email::placeholder {
+    color: 666!important;
+    opacity: 0.5; 
+}
 
+.lead-form-email:-ms-input-placeholder { 
+    color: #666;
+}
 
+.lead-form-email::-ms-input-placeholder { 
+    color: #666;
+}
 
 
 @media (max-width: 2999px) and (min-width: 1480px)
@@ -1952,6 +1962,10 @@ div.custom-embeds .nav-tabs>li {
 }
 .over3, .over2, .over1, .over4 {
     left: 0px !important;
+}
+.video-img-inner span.inside-circle {
+   
+    border: 1px solid #fb6c73;
 }
 }
 @media (max-width: 1366px)
