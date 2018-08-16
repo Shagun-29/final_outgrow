@@ -68,22 +68,22 @@ export class FooterComponent implements OnInit {
       let intercom : any= document.querySelector('.intercom-launcher-frame');
       let intercomTest = document.getElementsByClassName('intercom-launcher-frame') as HTMLCollectionOf<HTMLElement>;
       let intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
-      let intercomTestPart2 = document.getElementsByClassName('intercom-messenger-frame-enter-done') as HTMLCollectionOf<HTMLElement>;
+      // let intercomTestPart2 = document.getElementsByClassName('intercom-messenger-frame-enter-done') as HTMLCollectionOf<HTMLElement>;
 
     if(intercom){
       
         if(this.isVisible){
           intercomTest[0].style.bottom="100px";
           intercomTestPart[0].style.bottom="95px";
-          intercomTestPart2[0].style.bottom="180px";
+          // intercomTestPart2[0].style.bottom="180px";
         }else{
           intercomTest[0].style.bottom="";
           intercomTestPart[0].style.bottom="";
-          intercomTestPart2[0].style.bottom="";
+          // intercomTestPart2[0].style.bottom="";
         }
       
     }else{
     } 
-  },0)
+  },4000)
   }
 }
