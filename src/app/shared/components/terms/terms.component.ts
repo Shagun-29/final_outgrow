@@ -17,6 +17,10 @@ export class TermsComponent implements OnInit {
   ngOnInit() {
     let load = document.querySelector('.preloader');
     load.classList.add('hide');
+    let header = document.querySelector('.navbar-fixed-top');
+    header.classList.add('show');
+    let footer = document.querySelector('.footer-14');
+    footer.classList.add('show');
   }
 
 }
