@@ -13,7 +13,7 @@ export class VideoUrlService {
     {
       name: 'calc2',
       media: 'https://dzvexx2x036l1.cloudfront.net/calc01.jpg',
-      url: 'https://Access-Control-Allow-Headers:outgrow.us/website.outgrow.us/Which-engineering-major-is-right-for-you?vHeight=1'
+      url: 'https://website.outgrow.us/Which-engineering-major-is-right-for-you?vHeight=1'
     },
     {
       name: 'calc3',
