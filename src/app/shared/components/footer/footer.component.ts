@@ -4,18 +4,19 @@ import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
   constructor(private _cookieService:CookieService) { }
 
-
+Intercom:any;
+// window:any;
   public disableCookieDialog=false;
   public isVisible=true;
   public loaded:any;
   ngOnInit() {
-   
-   let footerShow = document.querySelector('.footer-14');
+  
+    let footerShow = document.querySelector('.footer-14');
    let footerShowAdjust = document.querySelector('.footer-social');
     footerShow.classList.add('hide');
 
@@ -62,6 +63,23 @@ export class FooterComponent implements OnInit {
   getCookie(key: string){
     return this._cookieService.get(key);
   }
+
+  // openIntercom(){
+    // let intercom : any= document.getElementsByClassName("intercom-app-launcher-enabled")[0].querySelectorAll('div');
+
+    // console.log("::Intercom::");
+    // this.Intercom('show')
+    // intercom[0].classList.add('intercom-launcher');
+    // intercom[1].classList.add('intercom-gradient');
+   
+
+    // let intercomGradient = document.querySelector("intercom-gradient")
+    // console.log(intercomGradient)
+    // intercomGradient.classList.add('intercom-gradient-enter-done');
+    // let intercomLauncher=document.querySelector("intercom-launcher")
+    // console.log(intercomLauncher)
+    // intercomLauncher.classList.add(' intercom-launcher-active');
+  // }
 
   ngAfterViewInit(){
     setInterval(()=>{
