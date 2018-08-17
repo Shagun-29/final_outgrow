@@ -1469,12 +1469,15 @@ span.testi-desig {
     .rs-show {
         display: block!important;
     }
-    .section-heading {
-        font-size: 22px;
+    .section-heading,.section-2-heading {
+        font-size: 22px!important;
         padding: 0;
-        line-height: 26px;
+        line-height: 26px!important;
         text-align: center;
         width: 100% !important;
+    }
+    .section-2-heading {
+       margin-top:0!important; 
     }
     .section-second ul, .section-six ul {
         width: 100%;

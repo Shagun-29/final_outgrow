@@ -1,13 +1,115 @@
 
-li{
-    list-style-type: disc;
-    height: 40px;
-    color:#62696d;
-}
+
 .p_lists{
 color:#62696d;
 font-size:13px;
 }
-p{
-    color: #FB757B
-  }
+ p {
+    color: #62696d;
+    font-size: 13px;
+    float: left;
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+}
+  .c1 {
+    margin-top: 76px;
+    margin-bottom: 60px;
+}
+ .Privacy-heading {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #fb5f66!important;
+    font-size: 42px;
+    line-height: 0px;
+    font-family: montserratultra_light;
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+.Privacy-subheading {
+    color: #fb6c73;
+    font-size: 24px;
+    font-family: montserratlight;
+    text-align: left;
+    width: 100%;
+    float: left;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+  p,h5,.li-style {
+    font-family: montserratlight;
+}
+ h5 {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #fb6c73;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+ .Privacy-subheading {
+    color: #fb6c73;
+    font-size: 24px;
+    font-family: montserratlight;
+    text-align: left;
+    width: 100%;
+    float: left;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.li-style {
+    color: #62696d;
+    font-size: 13px;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    list-style: disc;
+}
+.l1 {
+    margin-bottom: 27px;
+}
+.Privacy-subheading {
+    color: #fb6c73;
+    font-size: 24px;
+    font-family: montserratlight;
+    text-align: left;
+    width: 100%;
+    float: left;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+ p a:hover, p a:visited {
+    text-decoration: none;
+}
+ p a {
+    color: #fb5f66;
+}
+
+@media (min-width:320px) and (max-width:720px){
+
+   .c1{
+        margin-top: 0;
+       
+    }
+    .container{
+        padding: 0 30px;
+    }
+     .Privacy-heading{
+        display: block;
+        font-size: 30px!important;
+        margin-top: 60px!important;
+    }
+    .Privacy-subheading {
+        font-size: 18px !important;
+        line-height: 24px!important;
+        margin-bottom: 10px;
+    }
+   h5, p {
+        line-height: 1.6!important;
+    }
+}
