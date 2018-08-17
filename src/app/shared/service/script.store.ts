@@ -15,6 +15,6 @@ interface Scripts {
     { name : 'swiper', src:'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js'},
     { name: 'jquery', src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' },
     { name: 'bootstrap', src: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' },
-    { name : 'intercom', src: "../../../../assets/js/intercom2.js"}
+    { name : 'intercom', src: "../../../../assets/js/intercom.js"}
   ];
   
