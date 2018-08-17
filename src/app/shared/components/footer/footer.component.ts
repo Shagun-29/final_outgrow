@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 // import { CookieService } from 'angular2-cookie/core';
 import { CookieService } from 'ngx-cookie-service';
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css'],
+  styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
   constructor(private _cookieService:CookieService) { }
 
-Intercom:any;
-// window:any;
   public disableCookieDialog=false;
   public isVisible=true;
   public loaded:any;
@@ -95,13 +94,13 @@ Intercom:any;
           intercomTestPart[0].style.bottom="95px";
           // intercomTestPart2[0].style.bottom="180px";
         }else{
-          intercomTest[0].style.bottom="";
-          intercomTestPart[0].style.bottom="";
+          intercomTest[0].style.bottom="0px";
+          intercomTestPart[0].style.bottom="0px";
           // intercomTestPart2[0].style.bottom="";
         }
       
     }else{
     } 
-  },4000)
+  },6000)
   }
 }
