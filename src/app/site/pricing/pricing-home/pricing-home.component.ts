@@ -127,6 +127,7 @@ export class PricingHomeComponent implements OnInit {
                jQuery('a.toggle-dots-grey i').html('keyboard_arrow_down');
            }
        });
+       
     });
     }
 
@@ -158,11 +159,11 @@ export class PricingHomeComponent implements OnInit {
     }
 
     triggerIntercom(){   
-        setInterval(()=>{
+        setTimeout(()=>{
             let intercomTrigger = document.getElementsByClassName('intercom-launcher') as HTMLCollectionOf<HTMLElement>;
 
         console.log(intercomTrigger)
-        },4000) 
+        },8000) 
         
         // intercomTrigger.classList.add('intercom-launcher-active');
     }

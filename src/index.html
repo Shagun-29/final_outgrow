@@ -152,11 +152,19 @@
   <!-- End Google Tag Manager -->
 
 
-  <script>
-    window.intercomSettings = { app_id: "r841gnag" };
-  </script>
+  
 
   <script>
+    var url			=	window.location.href;
+	var intercom_id	=	'om2goh5g';
+	 if (url.toLowerCase().indexOf("outgrow.co") >= 0 && url.toLowerCase().indexOf("outgrow.co.in") < 0){
+		intercom_id	=	'r841gnag';
+	}
+	window.intercomSettings = {
+		app_id: intercom_id,
+		custom_launcher_selector: '.intercom_trigger',
+		 hide_default_launcher: false
+	};
     (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); 
     ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; 
     i.q = []; i.c = function (args) { i.q.push(args) };
