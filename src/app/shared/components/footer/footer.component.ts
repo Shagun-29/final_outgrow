@@ -94,8 +94,8 @@ export class FooterComponent implements OnInit {
           intercomTestPart[0].style.bottom="95px";
           // intercomTestPart2[0].style.bottom="180px";
         }else{
-          intercomTest[0].style.bottom="0px";
-          intercomTestPart[0].style.bottom="0px";
+          intercomTest[0].style.bottom="";
+          intercomTestPart[0].style.bottom="";
           // intercomTestPart2[0].style.bottom="";
         }
       
