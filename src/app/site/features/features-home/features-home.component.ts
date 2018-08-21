@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import * as $ from 'jquery';
+import { ApiRequestService } from '../../../shared/services/api-request.service';
 declare let Swiper: any;
 @Component({
  selector: 'app-features-home',
@@ -28,7 +29,7 @@ export class FeaturesHomeComponent implements OnInit {
  href="";
  text:any;
 
-  constructor(router:Router, title:Title) { 
+  constructor(router:Router, title:Title, public apiRequestService:ApiRequestService) { 
     title.setTitle("Product Features | Outgrow");
   }
 
@@ -36,13 +37,10 @@ export class FeaturesHomeComponent implements OnInit {
     this.load.classList.add('hide');
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
-    this.href = window.location.href;
-    this.text=this.href.split('/');
-    this.text.forEach(element => {
-      if(element=="features"){
-          this.active.classList.add('active')
-      }
-    });
+    this.href = this.apiRequestService.gethref();
+    if (this.href == "features") {
+      this.active.classList.add('active')
+    }
 
     $(document).ready(function(){
 

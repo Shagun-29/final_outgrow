@@ -3,6 +3,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { VideoUrlService } from '../../../shared/service/video-url.service'
 import { Title, DomSanitizer } from '@angular/platform-browser';
 import { LoadingService } from '../../../shared/service/loading.service';
+import { ApiRequestService } from '../../../shared/services/api-request.service';
 declare let jQuery: any;
 
 @Component({
@@ -126,7 +127,7 @@ export class IndexHomeComponent implements OnInit {
     window.location.href="https://app.outgrow.co/signup/?email="+this.emailId;
 
   }
-  constructor(private videoURLService: VideoUrlService, title: Title, public loadingService: LoadingService, public sanitizer: DomSanitizer) {
+  constructor(private videoURLService: VideoUrlService, title: Title, public loadingService: LoadingService, public sanitizer: DomSanitizer, public apiRequestService:ApiRequestService) {
 
     //   // var gridJS = document.createElement('script')
     title.setTitle("Interactive Calculators and Quizzes | Outgrow");
@@ -140,10 +141,8 @@ export class IndexHomeComponent implements OnInit {
     header.classList.remove('hide');
     footer.classList.remove('hide');
     load.classList.add('hide');
-
-    this.href = window.location.href;
-    this.activeHeader = this.href.toString().split('/')[3];
-    if (this.activeHeader == "") {
+    this.href = this.apiRequestService.gethref();
+    if (this.href == "") {
       this.menu1.classList.remove('active');
       this.menu2.classList.remove('active');
       this.menu3.classList.remove('active');
