@@ -5,6 +5,12 @@ export class ApiRequestService {
   
   constructor(public _http: Http) {
   }
+  
+  gethref() {
+    let href = window.location.href;
+    let activeHeader = href.toString().split('/')[3];
+    return activeHeader;
+  }
 
   getAllCalculators(data: any) {
     let response = this._http.post('https://api.outgrow.co/api/v1/admin/getCalculators', data)

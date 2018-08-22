@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PricingService } from '../../../shared/services/pricing.service';
+import { ApiRequestService } from '../../../shared/services/api-request.service';
 declare let jQuery: any;
 
 @Component({
@@ -33,7 +34,8 @@ export class PricingHomeComponent implements OnInit {
     openClassActive: any;
 
     constructor(public title: Title,
-        public pricingService: PricingService) {
+        public pricingService: PricingService,
+        public apiRequestService: ApiRequestService) {
         title.setTitle("Pricing | Outgrow");
         this.planTypes = this.pricingService.planTypes;
         this.annualPlans = this.pricingService.annualPlans;
@@ -43,14 +45,10 @@ export class PricingHomeComponent implements OnInit {
     ngOnInit() {
         this.load.classList.add('hide');
         this.header.classList.remove('hide');
-        this.footer.classList.remove('hide');
-        this.href = window.location.href;
-        this.text=this.href.split('/');
-        this.text.forEach(element => {
-          if(element=="pricing"){
-              this.active.classList.add('active')
-          }
-        });
+        this.href = this.apiRequestService.gethref();
+        if (this.href == "pricing") {
+            this.active.classList.add('active')
+        }
     
         this.planTab('annual');
         jQuery(document).ready(function() {

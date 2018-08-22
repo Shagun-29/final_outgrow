@@ -46,15 +46,10 @@ export class ExamplesHomeComponent implements OnInit {
     this.load.classList.add('hide');
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
-    this.href = window.location.href;
-    this.text=this.href.split('/');
-    this.activeHeader=this.text[3];
-    this.text.forEach(element => {
-      if(element=="examples"){
-          this.active.classList.add('active')
-      }
-    });
-   
+    this.href = this.apiRequestService.gethref();
+    if (this.href == "examples") {
+      this.active.classList.add('active')
+    }
     this.iFrames = this.videoURLService.iFrames;
     this.videoURL(this.frame);
 
