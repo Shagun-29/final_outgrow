@@ -4636,7 +4636,7 @@ and (max-width: 480px){
 @media (min-width:440px) and (max-width:768px){
 	#feature .secf2-2 {
 		width: 60%;
-		left: 42.5% !important;
+		left: 37.5% !important;
 	}
 	#feature .span-style{
 	width:100% !important;
@@ -4689,9 +4689,9 @@ and (max-width: 480px){
 	position: absolute;
 	left: -7%;
 	top: 6%;
-	left: 0%;
+	left: 2.6%;
 	top: 0%;
-	width: 50%;
+	width: 42%;
 	box-shadow: 2px 0px 8px 2px rgba(0,0,0,0.1);
 	}
 	#feature .feature-heading-1 h3{

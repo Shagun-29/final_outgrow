@@ -41,7 +41,9 @@ margin-top: 30px;
 float: left;
 width: 100%;
 }
-
+.create-exp .container {
+  width: 990px;
+}
 /* #plan-cycle {
   z-index: 9;
   position: relative;
@@ -328,6 +330,10 @@ margin-top:70px;
 
 #pricing .section-1 {
 margin-top: 0;
+}
+#pricing .container-faqs {
+  width: 100%;
+  padding: 0px 25px;
 }
 }
 @media (min-width:1810px) and (max-width:1920px) {

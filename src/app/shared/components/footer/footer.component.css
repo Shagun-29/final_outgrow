@@ -379,9 +379,9 @@ a {
 }
 @media only screen and (max-width: 767px) and (min-width: 480px)
 {
-.footer-link ul li {
+/* .footer-link ul li {
     width: 50%;
-}
+} */
 }
 @media (max-width: 1200px) and (min-width: 1024px)
 {

@@ -1398,6 +1398,9 @@ span.testi-desig {
         text-align: center;
         padding: 0px 10px;
     }
+    .banner-jacket img {
+        border-radius: 15px;
+    }
     .btn-red-new {
         font-size: 13px;
         padding: 13px 65px 13px 25px;
@@ -1490,6 +1493,11 @@ span.testi-desig {
         margin-top: 0px;
     }
     .btn-white-new i.material-icons, .btn-red-new i.material-icons {
+        font-size: 14px;
+        top: 1px;
+        right: 2px;
+    }
+    .btn-red-new i.material-icons {
         font-size: 14px;
         top: 2px;
         right: 2px;
