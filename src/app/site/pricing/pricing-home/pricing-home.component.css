@@ -42,7 +42,7 @@ float: left;
 width: 100%;
 }
 .create-exp .container {
-  width: 990px;
+  width: 960px;
 }
 /* #plan-cycle {
   z-index: 9;
@@ -269,7 +269,7 @@ float: left;
 width: 100%;
 }
 .pricing-outer.pricing-col-four {
-width: 990px;
+width: 960px;
 }
 .pricing-outer {
    clear: both;
@@ -891,7 +891,7 @@ margin-bottom: 0;
 padding-bottom: 35px;
 } 
 #pricing .container-faqs {
-width: 990px;
+width: 960px;
 margin: 30px auto 0;
 }
 #pricing .section-faq .section-2-heading {
