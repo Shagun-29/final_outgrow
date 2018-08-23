@@ -1179,6 +1179,7 @@ span.testi-desig {
     .btn-white-new {
         font-size: 11px!important;
         padding: 13px 46px 13px 12px!important;
+        left: -10px;
     }
 
 }
@@ -1586,7 +1587,7 @@ span.testi-desig {
         margin: 0 5px 0 5px !important;
     }
     .arrow_box {
-        min-width: 75px!important
+        min-width: 65px!important
     }
 }
 

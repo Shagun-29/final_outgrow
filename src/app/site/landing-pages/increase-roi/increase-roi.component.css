@@ -112,7 +112,7 @@ h1 {
     margin-top: 25px;
     margin-left: -25px;
 }
-88
+
 .section-banner p {
     font-size: 15px;
     color: #fff;
@@ -1179,6 +1179,7 @@ span.testi-desig {
     .btn-white-new[_ngcontent-c3] {
         font-size: 11px!important;
         padding: 13px 46px 13px 12px!important;
+        left: -10px;
 
 
 }
@@ -1506,7 +1507,12 @@ span.testi-desig {
         padding-top: 50px;
         margin-top: 0px;
     }
-    .btn-white-new i.material-icons, .btn-red-new i.material-icons {
+    .btn-white-new i.material-icons{
+        font-size: 14px;
+        top: 1px;
+        right: 2px;
+    }
+    .btn-red-new i.material-icons {
         font-size: 14px;
         top: 2px;
         right: 2px;
@@ -1606,7 +1612,7 @@ span.testi-desig {
         margin: 0 5px 0 5px !important;
     }
     .arrow_box {
-        min-width: 75px!important
+        min-width: 65px!important
     }
     .over3, .over2, .over1, .over4 {
         left: 0px!important;

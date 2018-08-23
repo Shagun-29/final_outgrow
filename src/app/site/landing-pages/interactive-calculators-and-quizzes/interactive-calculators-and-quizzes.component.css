@@ -1944,12 +1944,19 @@ div.custom-embeds .nav-tabs>li {
 }
 }
 
+@media only screen and (max-width: 480px) and (min-width: 321px)
+{
+    .arrow_box {
+        min-width: 75px!important;
+    }
+}
+
 @media only screen and (max-width: 480px)
 {
 #video-main-rs-mob {
     display: block !important;
     /* height: 210px; */
-    height: auto;
+    height: auto!important;
 }
 .sec-integrations {
     display: none;
