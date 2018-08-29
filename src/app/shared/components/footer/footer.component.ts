@@ -137,7 +137,7 @@ export class FooterComponent implements OnInit {
         if(this.isVisible){
           intercomTest[0].style.bottom="100px";
           intercomTestPart[0].style.bottom="95px";
-          intercomBlack[0].style.marginBottom='80px';
+          intercomBlack[0].style.marginBottom='70px';
           // intercomTestPart2[0].style.bottom="180px";
         }else{
           intercomTest[0].style.bottom="";
