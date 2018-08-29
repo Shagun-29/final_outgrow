@@ -107,7 +107,7 @@ a:active, a:hover {
     background: #fafafa;
     margin: 0;
     padding-top: 30px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
 }
 
 .section {
