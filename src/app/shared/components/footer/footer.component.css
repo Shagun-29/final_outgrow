@@ -228,9 +228,21 @@ img {
 .footer-link ul li a:hover {
     color: #fb5f66;
 }
-.footer-copyright {
+/* .footer-copyright {
     margin-top: 10px;
     margin-bottom: 10px
+} */
+
+.footer-copyright {
+    margin-top: 9px;
+    margin-bottom: 0;
+}
+.footer-copyright .border-left {
+    line-height: 0px;
+    display: inline;
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid rgba(189,197,200,.99);
 }
 .footer-copyright p {
     display: inline;
@@ -302,6 +314,34 @@ img {
 a {
     color: #337ab7;
     text-decoration: none;
+}
+.footer-bottom-left {
+    float: left;
+}
+.footer-social ul li:first-child {
+    padding-left: 0px;
+}
+.footer-social {
+    text-align: left;
+    background: #f5f5f5;
+    padding: 50px;
+}
+.company-address, .footer-copyright {
+    float: left;
+}
+
+.company-address {
+    font-family: montserratlight;
+    font-size: 13px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+.footer-badge {
+    float: right;
+    margin-top: 10px;
+}
+.footer-badge img {
+    margin-left: 5px;
 }
 @media (max-width: 990px) and (min-width: 769px)
 {
