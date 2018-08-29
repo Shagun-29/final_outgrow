@@ -133,19 +133,22 @@ export class FooterComponent implements OnInit {
       // let intercomTestPart2 = document.getElementsByClassName('intercom-messenger-frame-enter-done') as HTMLCollectionOf<HTMLElement>;
 
     if(intercom){
+      let intercomBlack = document.getElementsByClassName('intercom-messenger-frame-enter-done') as HTMLCollectionOf<HTMLElement>;
         if(this.isVisible){
           intercomTest[0].style.bottom="100px";
           intercomTestPart[0].style.bottom="95px";
+          intercomBlack[0].style.marginBottom='80px';
           // intercomTestPart2[0].style.bottom="180px";
         }else{
           intercomTest[0].style.bottom="";
           intercomTestPart[0].style.bottom="";
+          intercomBlack[0].style.marginBottom='0px';
           // intercomTestPart2[0].style.bottom="";
         }
       
     }else{
     } 
-  },2000)
+  },1000)
   }
 
   
