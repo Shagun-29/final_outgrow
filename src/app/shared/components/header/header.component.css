@@ -1040,7 +1040,9 @@ div#bs-example-navbar-collapse-1 {
 
 @media   (max-width: 1480px)
 {
-   
+    div#bs-example-navbar-collapse-1 {
+        height: 66px!important;
+    }
     /* .sticky a.params.hvr-underline-from-left {
         padding: 13px 12px 13px 12px!important;
     }
