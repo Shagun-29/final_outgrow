@@ -19,8 +19,11 @@
     padding-bottom: 120px !important;
 }
 }
-
-
+ img.share {
+	-webkit-box-shadow: 0px -5px 24px rgba(0,0,0,.15);
+    box-shadow: -3px 8px 24px rgba(0,0,0,.15);
+    border-radius: 25px;
+}
 .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
