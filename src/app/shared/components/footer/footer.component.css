@@ -107,7 +107,7 @@ a:active, a:hover {
     background: #fafafa;
     margin: 0;
     padding-top: 30px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
 }
 
 .section {
@@ -281,6 +281,7 @@ img {
 .footer-social ul {
     display: inline-block;
     padding-left: 0
+
 }
 .footer-social ul li {
     display: inline-block;
@@ -349,6 +350,36 @@ a {
     margin-top: 0;
 }
 }
+@media (max-width: 990px) and (min-width: 0px)
+{
+    .footer-social {
+        text-align: center;
+        line-height: normal;
+        padding: 50px 0px;
+    }
+    .footer-bottom-left {
+        float: none;
+    }
+    .company-address, .footer-copyright {
+        display: inline-block;
+        float: none;
+    }
+    .footer-badge {
+        float: left;
+        margin-top: 20px !important;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .footer-badge img:first-child {
+        margin-left: 0;
+    }
+    .footer-social ul {
+       margin-bottom: 0;
+    
+    }
+}
+
 @media (min-width:1921px) and (max-width:6500px){
     #footer{padding-top: 80px; padding-bottom: 30px;}
     .footer-link h4 {font-size: 36px; margin-bottom: 40px;}
@@ -464,8 +495,33 @@ a {
      }
 }
 
+@media (max-width: 375px) and (min-width: 0px)
+{
+    .footer-social ul li {
+        padding-bottom: 5px !important;
+    }
+    .footer-social ul li {
+        padding-bottom: 5px !important;
+    }
+    .footer-copyright {
+        margin-top: 10px;
+    }
+    .footer-badge {
+        margin-top: 10px !important;
+    }
+}
+@media (max-width: 480px) and (min-width: 0px)
+{
+
+    .footer-copyright .border-left {
+        border-left: none !important;
+    }
+}
+
+
+
 .footer-adjust{
-    padding-bottom:80px;
+    padding-bottom:50px;
 }
 .extra-margin-intercom{
 bottom : 80px !important;
