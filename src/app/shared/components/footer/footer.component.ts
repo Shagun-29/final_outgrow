@@ -15,25 +15,30 @@ export class FooterComponent implements OnInit {
   public isVisible=true;
   public loaded:any;
   ngOnInit() {
-  
+    let footerBadge=document.getElementsByClassName('footer-badge-spacing') as HTMLCollectionOf<HTMLElement>;
+    console.log("---",footerBadge)
     let footerShow = document.querySelector('.footer-14');
    let footerShowAdjust = document.querySelector('.footer-social');
     footerShow.classList.add('hide');
 
     if(this._cookieService.get('disableCookieDialog')){
+      footerBadge[0].style.paddingBottom="50px";
       this.loaded=true;
       this.isVisible=false;
       footerShowAdjust.classList.remove('footer-adjust');
     }else{
-      
-      footerShowAdjust.classList.add('footer-adjust');
+     // footerBadge.classList.add('footer-badge-spacing');
+     footerBadge[0].style.paddingBottom="140px";
+    //  footerBadge[0].style.top="12px";
+           footerShowAdjust.classList.add('footer-adjust');
     }
     
     
   }
 
   saveCookie(){
-    
+    let footerBadge=document.getElementsByClassName('footer-badge-spacing') as HTMLCollectionOf<HTMLElement>;
+    footerBadge[0].style.paddingBottom="50px";
     let footerShowAdjust = document.querySelector('.footer-social');
     this._cookieService.set('disableCookieDialog', 'true');
   //  let x =this.getCookie('disableCookieDialog');
@@ -87,6 +92,8 @@ export class FooterComponent implements OnInit {
   // let intercomTestPart = document.getElementsByClassName('intercom-launcher-discovery-frame') as HTMLCollectionOf<HTMLElement>;
   
   //   let footerShowAdjust = document.querySelector('.footer-social');
+  let footerBadge=document.getElementsByClassName('footer-badge-spacing') as HTMLCollectionOf<HTMLElement>;
+  footerBadge[0].style.paddingBottom="50px";
     this.isVisible=false;
   //   footerShowAdjust.classList.remove('footer-adjust');
   //   intercomTest[0].style.bottom="";
