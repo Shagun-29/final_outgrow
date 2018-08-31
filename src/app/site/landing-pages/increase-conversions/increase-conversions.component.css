@@ -920,7 +920,7 @@ blockquote::after {
 .section-btn {
     float: left;
     width: 100%;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
 }
 
 .section-btn span {
@@ -946,7 +946,7 @@ blockquote::after {
     font-family: montserratultra_light;
     text-transform: none;
     margin: 0px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     margin-bottom: 25px;
 }
 

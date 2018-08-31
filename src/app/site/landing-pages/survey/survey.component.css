@@ -915,7 +915,7 @@ blockquote::after {
 .section-btn {
     float: left;
     width: 100%;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
 }
 
 .section-btn span {
@@ -941,7 +941,7 @@ blockquote::after {
     font-family: montserratultra_light;
     text-transform: none;
     margin: 0px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     margin-bottom: 25px;
 }
 
@@ -1181,9 +1181,9 @@ span.testi-desig {
 
 @media (max-width:580px) {
     ul.pre-temp-cat li {
-        margin: 0 5px 5px
+        margin: 0 5px 5px;
     }
-    ;
+    
     .pre-temp-view .content.temp-info .btn.btn-red {
         margin-left: 5px;
         margin-bottom: 10px;
