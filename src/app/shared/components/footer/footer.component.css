@@ -530,3 +530,7 @@ bottom : 80px !important;
 .black-intercom{
     bottom:90px;
 }
+
+.footer-badge-spacing{
+    /* margin-top: -20px !important; */
+}
