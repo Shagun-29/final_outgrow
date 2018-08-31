@@ -41,11 +41,12 @@
 span.swiper-pagination-bullet {
     margin-right: 5px;
 }
-@media (min-width:770px){
+@media (min-width:1024px){
 	.topSpace{
         margin-top: 65px;
         }
 }
+
 
 .hello{
         background: #f3f8fb;

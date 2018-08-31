@@ -172,7 +172,7 @@ a {
     overflow: visible;
 }
 .hide-height {
-    height: 400px;
+    height: 400px!important;
     overflow: hidden;
     transition: height 0.5s;
 }
@@ -1371,6 +1371,9 @@ section.section-old .video-img-wrapper {
         padding: 0;
         margin-top: 30px;
     }
+    #video-main-rs-mob {
+        display: none!important;
+    }
     .section-5-left h4 {
         text-align: left;
         margin-top: 0xp;
@@ -1533,6 +1536,9 @@ section.section-old .inside-circle i.material-icons {
 }
 @media (max-width: 768px) and (min-width: 320px)
 {
+    .sec-new-table:first-child {
+        margin-top: 0;
+    }
 .custom-navbar.navbar-default, .section-1 {
     margin-bottom: 0px;
 }

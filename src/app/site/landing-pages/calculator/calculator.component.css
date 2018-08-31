@@ -51,7 +51,7 @@
 }
 
 .section-banner h1.main-heading {
-    margin-top: 90px;
+    margin-top: 120px;
     display: block;
     font-size: 42px;
     color: #fff !important;
@@ -937,7 +937,7 @@ blockquote::after {
 .section-btn {
     float: left;
     width: 100%;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
 }
 
 .section-btn span {
@@ -963,7 +963,7 @@ blockquote::after {
     font-family: montserratultra_light;
     text-transform: none;
     margin: 0px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     margin-bottom: 25px;
 }
 
