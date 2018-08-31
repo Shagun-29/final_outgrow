@@ -14,11 +14,24 @@ export class HeaderComponent implements OnInit {
   activeHeader="";
   collapse: boolean = true;
   emailId:any;
+  menu1 = document.querySelector('.interactive');
+  menu2 = document.querySelector('.features');
+  menu3 = document.querySelector('.pricing');
+  menu4 = document.querySelector('.examples');
+  active = document.querySelector('.home');
+  
   constructor(private titleService: Title,private router:Router) {
     
    }
    public setTitle0(){
-    this.titleService.setTitle("Interactive Calculators and Quizzes | Outgrow")
+    this.titleService.setTitle("Interactive Calculators and Quizzes | Outgrow");
+    if(this.menu1 || this.menu2 || this.menu3 || this.menu4){
+      this.menu1.classList.remove('active');
+      this.menu2.classList.remove('active');
+      this.menu3.classList.remove('active');
+      this.menu4.classList.remove('active');
+    }
+      
   }
    public setTitle1(){
      this.titleService.setTitle("Why Interactive Content ? | Outgrow")
