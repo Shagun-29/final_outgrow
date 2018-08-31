@@ -147,6 +147,11 @@ export class IndexHomeComponent implements OnInit {
       this.menu2.classList.remove('active');
       this.menu3.classList.remove('active');
       this.menu4.classList.remove('active');
+    }if(this.active){
+      this.menu1.classList.remove('active');
+      this.menu2.classList.remove('active');
+      this.menu3.classList.remove('active');
+      this.menu4.classList.remove('active');
     }
 
     this.loadingService.isLoading.next(false);

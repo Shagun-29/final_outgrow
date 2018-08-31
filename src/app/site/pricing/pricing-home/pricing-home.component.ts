@@ -160,7 +160,7 @@ export class PricingHomeComponent implements OnInit {
         setTimeout(()=>{
             let intercomTrigger = document.getElementsByClassName('intercom-launcher') as HTMLCollectionOf<HTMLElement>;
 
-        console.log(intercomTrigger)
+        // console.log(intercomTrigger)
         },8000) 
         
         // intercomTrigger.classList.add('intercom-launcher-active');
