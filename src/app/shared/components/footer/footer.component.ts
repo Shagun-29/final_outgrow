@@ -60,18 +60,18 @@ export class FooterComponent implements OnInit {
       const cookieSection = document.querySelector('.section.sec-cookies');
       const intercomBorderlessFrame = document.querySelector('.intercom-borderless-frame');
 
-      if (!cookieSection.classList.contains('hide')) {
-          if (iframe) {
-              jQuery('.intercom-messenger-frame').css('bottom', '160px');
-          }
-          if (launcherBadge) {
-              jQuery('.intercom-launcher-badge-frame').css('bottom','134px');
-          }
-          if(intercomBorderlessFrame) {
-              jQuery('.intercom-borderless-frame').css('bottom', '160px');
-          }
+      // if (!cookieSection.classList.contains('hide')) {
+      //     if (iframe) {
+      //         jQuery('.intercom-messenger-frame').css('bottom', '160px');
+      //     }
+      //     if (launcherBadge) {
+      //         jQuery('.intercom-launcher-badge-frame').css('bottom','134px');
+      //     }
+      //     if(intercomBorderlessFrame) {
+      //         jQuery('.intercom-borderless-frame').css('bottom', '160px');
+      //     }
 
-      }
+      // }
   }, 1000)
   const interval = setInterval(() => {
     console.log('testing');
@@ -141,15 +141,25 @@ export class FooterComponent implements OnInit {
 
     if(intercom){
       let intercomBlack = document.getElementsByClassName('intercom-messenger-frame-enter-done') as HTMLCollectionOf<HTMLElement>;
-        if(this.isVisible){
-          intercomTest[0].style.bottom="100px";
+        if(this.isVisible ){
+          if(intercomTest[0]){
+            intercomTest[0].style.bottom="100px";
           intercomTestPart[0].style.bottom="95px";
-          intercomBlack[0].style.marginBottom='70px';
+          if(intercomBlack[0]){
+            intercomBlack[0].style.marginBottom='70px';
+          }
           // intercomTestPart2[0].style.bottom="180px";
+          }
+          
         }else{
-          intercomTest[0].style.bottom="";
-          intercomTestPart[0].style.bottom="";
-          intercomBlack[0].style.marginBottom='0px';
+          if(intercomTest[0]){
+            intercomTest[0].style.bottom="";
+            intercomTestPart[0].style.bottom="";
+          }
+          if(intercomBlack[0]){
+            intercomBlack[0].style.marginBottom='0px';
+          }
+          
           // intercomTestPart2[0].style.bottom="";
         }
       
