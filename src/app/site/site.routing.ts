@@ -11,6 +11,7 @@ import { IdeaGeneratorComponent } from './landing-pages/idea-generator/idea-gene
 import { Ltd1Component } from './landing-pages/ltd-1/ltd-1.component';
 import { LtdComponent } from './landing-pages/ltd/ltd.component';
 import { NotFoundComponent } from './landing-pages/not-found/not-found.component';
+import { EcommerceQuizesComponent } from './landing-pages/ecommerce-quizes/ecommerce-quizes.component';
 export const routes: Routes = [
     { path: '', loadChildren: './home/home.module#HomeModule' },
     { path: 'calculator', component: CalculatorComponent },
@@ -27,8 +28,9 @@ export const routes: Routes = [
     { path: 'why-interactive', loadChildren: './why-interactive/why-interactive.module#WhyInteractiveModule' },
     { path: 'ltd-1', component: Ltd1Component },
     { path: 'ltd', component: LtdComponent },
+    { path: 'ecommerce-quizes', component: EcommerceQuizesComponent },
     { path: '**',component: NotFoundComponent}
-
+      
 ];
 
 // export const routing: ModuleWithProviders = RouterModule.forChild(routes);

@@ -26,6 +26,7 @@ import { PricingService } from '../shared/services/pricing.service';
 import { Ltd1Component } from './landing-pages/ltd-1/ltd-1.component';
 import { LtdComponent } from './landing-pages/ltd/ltd.component';
 import { NotFoundComponent } from './landing-pages/not-found/not-found.component';
+import { EcommerceQuizesComponent } from './landing-pages/ecommerce-quizes/ecommerce-quizes.component';
 
 @NgModule({
   imports: [
@@ -48,6 +49,6 @@ import { NotFoundComponent } from './landing-pages/not-found/not-found.component
     // Script
     
    ],
-  declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent,InteractiveCalculatorsAndQuizzesComponent, Ltd1Component, LtdComponent, NotFoundComponent]
+  declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent,InteractiveCalculatorsAndQuizzesComponent, Ltd1Component, LtdComponent, NotFoundComponent, EcommerceQuizesComponent]
 })
 export class SiteModule { }
