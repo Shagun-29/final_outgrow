@@ -16,7 +16,6 @@ export class FooterComponent implements OnInit {
   public loaded:any;
   ngOnInit() {
     let footerBadge=document.getElementsByClassName('footer-badge-spacing') as HTMLCollectionOf<HTMLElement>;
-    console.log("---",footerBadge)
     let footerShow = document.querySelector('.footer-14');
    let footerShowAdjust = document.querySelector('.footer-social');
     footerShow.classList.add('hide');
@@ -74,7 +73,7 @@ export class FooterComponent implements OnInit {
       // }
   }, 1000)
   const interval = setInterval(() => {
-    console.log('testing');
+   
     const cookieSection = document.querySelector('.section.sec-cookies');
     const iframe = document.querySelector('.intercom-launcher-discovery-frame');
     // if (iframe && !cookieSection.classList.contains('hide')) {

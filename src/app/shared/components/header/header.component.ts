@@ -25,12 +25,20 @@ export class HeaderComponent implements OnInit {
    }
    public setTitle0(){
     this.titleService.setTitle("Interactive Calculators and Quizzes | Outgrow");
-   
+    if(this.menu1){
       this.menu1.classList.remove('active');
+    }
+    if(this.menu2){
       this.menu2.classList.remove('active');
+    }
+    if(this.menu3){
       this.menu3.classList.remove('active');
+    }
+    if(this.menu4){
       this.menu4.classList.remove('active');
-   
+    }
+      
+     
       
   }
    public setTitle1(){
