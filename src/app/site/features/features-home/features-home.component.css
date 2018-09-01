@@ -4739,6 +4739,9 @@ and (max-width: 480px){
 	}
 }
 @media (min-width:769px) and (max-width:990px){
+	.feature-blue-formulas {
+		padding-top: 30px !important;
+	}
 	#feature .rs-hide{
 	display:none !important;
 	}
@@ -4776,6 +4779,7 @@ and (max-width: 480px){
 	}
 	#feature .section-f1 {
 	margin-top: 40px;
+	padding-bottom: 30px;
 	}
 	#feature .section-f1-left {
 	padding-right: 20px;
@@ -4809,8 +4813,11 @@ and (max-width: 480px){
 	height: auto;
 	}
 	#feature .section-f2 {
-	margin-top: 0px;
-	margin-bottom: 30px;
+		
+			margin-top: 0px;
+			margin-bottom: 30px;
+			padding-bottom: 130px !important;
+		
 	}
 	#feature .section-f2 .section-f2-left span span{
 	width:83%;
@@ -4874,21 +4881,22 @@ and (max-width: 480px){
 	}
 	#feature .section-15-left {
 	padding: 0 20px;
-	margin-top:20px;
+	margin-top:0px;
 	}
 	#feature .section-15-right{
 	margin-top:30px;
 	padding: 0 20px;
 	}
 	#feature .section-15 {
-	margin-top: 40px;
-	margin-bottom: 50px;
+	margin-top: 0px;
+	margin-bottom: 100px;
 	}
 	#feature .section-15-left span i{
 	font-size:40px;
 	}
 	#feature .section-15-left span{
 	margin-bottom:10px;
+	margin-top: 0;
 	}
 	#feature .sec15-2 {
 	position: absolute;
@@ -4917,7 +4925,7 @@ and (max-width: 480px){
 	}
 	#feature .section-17-left {
 	padding: 0 20px;
-	margin-top:0px;
+	margin-top:20px;
 	margin-bottom:10px;
 	}
 	#feature .section-17-right{
@@ -5045,7 +5053,7 @@ and (max-width: 480px){
 	#feature .section-f2 .section-f2-left h4{
 	line-height:normal;
 	font-size:24px;
-	margin-top:30px;
+	margin-top:0px;
 	}
 	#feature .secf2-test {
 	margin-bottom: 10px;

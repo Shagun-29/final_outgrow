@@ -115,7 +115,14 @@ label {
 .rs-show {
 	display: none
 }
-
+.sec-example .sec-outgrowMagic {
+    /* height: 90vh; */
+    background: #fff;
+    margin-top: 65px;
+    /* position: relative; */
+    margin-bottom: 0px;
+    padding-top: 50px;
+}
 .section, .section-1 {
 	margin-top: 30px;
 	float: left;
@@ -2287,7 +2294,7 @@ body{background:#fff !important;}
 
 
 /* Responsiveness */
-@media (min-width:768px){
+@media (min-width:990px){
 	.topSpace{
         margin-top: 125px;
         }
@@ -2491,7 +2498,13 @@ body{background:#fff !important;}
 		display: block;
 		margin-top: 0px;
 	}
-
+	.sec-example .sec-outgrowMagic {
+		margin-top: 0;
+	}
+	 .calc-links {
+		display: block;
+		margin-top: 0px;
+	}
 	/* end: example page responsive css by Arti */
 
 }
