@@ -58,6 +58,7 @@
     font-family: montserratregular;
     padding: 0px 140px;
     line-height: 48px;
+    margin-bottom: 10px;
 }
 
 a:focus, a:hover {
@@ -1194,7 +1195,7 @@ span.testi-desig {
     .section-2-heading {
         line-height: 35px!important;
         font-size: 30px !important;
-        margin-top: 40px!important;
+        /* margin-top: 40px!important; */
         text-transform: none!important;
         font-size: 30px!important;
     }
@@ -1293,6 +1294,7 @@ span.testi-desig {
     .premade-template {
         padding-bottom: 50px;
     }
+ 
     .section-second-calc img {
         top: 100px !important;
     }
@@ -1300,6 +1302,9 @@ span.testi-desig {
         font-size: 32px;
         padding: 0;
         line-height: 38px;
+    }
+    .section-2-heading{
+        margin-top:0px!important;
     }
     .btn-white-new i.material-icons, .btn-red-new i.material-icons {
         font-size: 14px;
@@ -1327,7 +1332,7 @@ span.testi-desig {
         height: auto;
     }
     .section-banner h1.main-heading {
-        margin-top: 40px;
+        margin-top: 80px;
         font-size: 22px;
         padding: 0;
         line-height: 26px;
@@ -1383,6 +1388,16 @@ span.testi-desig {
     width: 90px !important;
 }
 }
+@media (max-width: 991px) and (min-width: 770px)
+{
+.section-six img {
+    top: 70px;
+    right: 80px;
+}
+.section-six ul {
+    width: 70%;
+}
+}
 
 @media (max-width: 990px) and (min-width: 769px) {
     .section {
@@ -1394,6 +1409,7 @@ span.testi-desig {
     .rs-hide {
         display: none;
     }
+  
 }
 
 @media (max-width: 767px) {

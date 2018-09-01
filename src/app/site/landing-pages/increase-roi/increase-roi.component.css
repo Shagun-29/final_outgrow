@@ -1,6 +1,6 @@
 .section-banner {
     background: url('https://dzvexx2x036l1.cloudfront.net/lp-banner-bg.png') no-repeat;
-    height: 580px;
+    height: 610px;
     margin: 0px!important;
     float: left;
     width: 100%;
@@ -49,7 +49,7 @@ li {
 }
 
 .section-banner h1.main-heading {
-    margin-top: 90px;
+    margin-top: 120px;
     display: block;
     font-size: 42px;
     color: #fff !important;
@@ -58,6 +58,7 @@ li {
     line-height: 48px;
     margin-bottom: 10px;
 }
+
 
 a:focus, a:hover {
     text-decoration: none!important;
@@ -1192,7 +1193,7 @@ span.testi-desig {
     .section-2-heading {
         line-height: 35px!important;
         font-size: 30px !important;
-        margin-top: 40px!important;
+        /* margin-top: 40px!important; */
         text-transform: none!important;
         font-size: 30px!important;
     }
@@ -1323,7 +1324,7 @@ span.testi-desig {
         height: auto;
     }
     .section-banner h1.main-heading {
-        margin-top: 40px;
+        margin-top: 80px;
         font-size: 22px;
         padding: 0;
         line-height: 26px;
@@ -1715,11 +1716,15 @@ span.testi-desig {
     }
 }
 
-@media (max-width: 991px) and (min-width: 770px) {
-    .section-six img {
-        top: 70px;
-        right: 80px;
-    }
+@media (max-width: 991px) and (min-width: 770px)
+{
+.section-six img {
+    top: 70px;
+    right: 80px;
+}
+.section-six ul {
+    width: 70%;
+}
 }
 
 @media (min-width:768px) and (max-width:991px) {

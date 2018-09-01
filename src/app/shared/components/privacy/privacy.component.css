@@ -113,3 +113,33 @@ font-size:13px;
         line-height: 1.6!important;
     }
 }
+@media (max-width: 990px) and (min-width: 769px)
+{
+    .c1 {
+        margin-top: 0px;
+        margin-bottom: 60px;
+        padding: 0 30px;
+    }
+     .Privacy-heading, .err .section-1 {
+        margin-top: 60px;
+    }
+     .Privacy-heading, .err .section-1 {
+        display: block;
+        font-size: 30px;
+    }
+     .Privacy-subheading {
+        font-size: 18px !important;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+   h5,  p {
+        line-height: 1.6;
+    }
+
+    .l1 {
+        margin-bottom: 15px;
+    }
+    ul{
+        margin-bottom: 0px!important;
+    }
+}
