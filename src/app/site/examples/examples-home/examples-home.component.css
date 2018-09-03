@@ -2296,7 +2296,7 @@ body{background:#fff !important;}
 /* Responsiveness */
 @media (min-width:990px){
 	.topSpace{
-        margin-top: 125px;
+        margin-top: 66px;
         }
 }
 @media (max-width: 768px)
@@ -2421,6 +2421,10 @@ body{background:#fff !important;}
 			margin-right: 8px;
 			margin-bottom: 30px;
 			border: 2px solid transparent;
+		}
+		.sec-example .sec-outgrowMagic {
+		
+			padding-top: 0px;
 		}
 		.sec-example .sec-outgrowMagic-title {margin-top: 0px !important; margin-bottom: 0px;}
 		.sec-example .section-2-subheading{display:  block;}

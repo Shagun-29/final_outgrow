@@ -1172,7 +1172,7 @@ div.lp-sign .lp-sign-inner {
 .section-2-heading {
     text-transform: none!important;
     font-size: 30px!important;
-    /* margin-top: 40px!important; */
+    margin-top: 40px!important;
 }
 .section-2-heading {
     line-height: 35px!important;
@@ -1200,6 +1200,11 @@ div.lp-sign .lp-sign-inner {
         font-size: 26px !important;
         line-height: 36px;
         padding: 0px 20px;
+    }
+    section.sec-grey .container.container-center h1 {
+        font-size: 30px!important;
+        line-height: 35px!important;
+        text-transform: none!important;
     }
     section.sec-grey .container.container-center h1 {
         font-size: 30px !important;

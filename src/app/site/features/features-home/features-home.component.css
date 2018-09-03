@@ -4137,6 +4137,11 @@ iframe[name=google_conversion_frame] {
 		padding-bottom: 140px;
 		padding-top: 40px !important;
 	}
+	#feature .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+		left: 0px;
+		width: 100%;
+		margin-top: 10px;
+	}
 	.feature-9-1 img.secf2-2 {
 	left: 35% !important;
 	}
