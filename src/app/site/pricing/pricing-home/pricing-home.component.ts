@@ -45,6 +45,8 @@ export class PricingHomeComponent implements OnInit {
     ngOnInit() {
         this.load.classList.add('hide');
         this.header.classList.remove('hide');
+        this.footer.classList.remove('hide');
+
         this.href = this.apiRequestService.gethref();
         if (this.href == "pricing") {
             this.active.classList.add('active')

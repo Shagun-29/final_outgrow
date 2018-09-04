@@ -103,6 +103,7 @@ export class IdeaGeneratorComponent implements OnInit {
     }
   }
 
+  
   ngOnInit() {
     this.loader.classList.add('hide');
     let header = document.querySelector('.navbar-fixed-top');
@@ -113,7 +114,7 @@ export class IdeaGeneratorComponent implements OnInit {
     footer1.classList.add('hide');
     this.getCategories();
   }
-
+  
   getCategories() {
     this.apiRequestService.getCategories().subscribe((response) => {
       this.loading = false;
@@ -128,6 +129,7 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   getStarted() {
+    
     let self = this;
     this.stateName_sec1 = 'move';
     this.stateName_sec2 = 'show';

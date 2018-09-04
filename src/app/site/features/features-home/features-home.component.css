@@ -4747,6 +4747,11 @@ and (max-width: 480px){
 	.feature-blue-formulas {
 		padding-top: 30px !important;
 	}
+	#feature .section-10 {
+		margin-top: 0px!important;
+		margin-bottom: 50px!important;
+	
+	}
 	#feature .rs-hide{
 	display:none !important;
 	}
@@ -4966,6 +4971,13 @@ and (max-width: 480px){
 	margin-top: 0;
 	width:100%;
 	}
+	.sec10-testimonial {
+		margin: 0 auto 40px;
+		width: 100%;
+		display: inline-block;
+		padding-top: 30px;
+		text-align: center;
+	}
 	#feature .section.section-10 i.material-icons{
 	font-size:48px;
 	}
@@ -4976,7 +4988,7 @@ and (max-width: 480px){
 	#feature .section-10{
 	margin-top:30px;
 	margin-bottom:50px;
-	padding-bottom: 0px !important;
+	/* padding-bottom: 0px !important; */
 	}
 	#feature .sec-style{
 	margin-top:0px;
