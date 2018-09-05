@@ -487,7 +487,10 @@ span.no-card {
     border-radius: 7px;
     transition: .3s ease-in-out;
     margin-right: 45px;
-    margin-bottom: 50px;
+  
+}
+ .reading-block {
+    margin-bottom: 50px!important;
 }
 .img-scaler {
     position: relative;
@@ -663,6 +666,9 @@ img.rs-hide {
  .reading-content {
     min-height: 270px;
 }
+ .reading-content {
+    min-height: 270px;
+}
 }
 @media (max-width: 1250px) and (min-width: 1024px)
 {
@@ -701,6 +707,9 @@ img.rs-hide {
 .custom-container {
     width: 100%!important;
     padding: 0 20px!important;
+}
+.section-premade-temp .container, .section-second .container, .section-six .container, .section-reading .container, .section-quotes .container, .section-banner .container {
+    width: 100%;
 }
 }
 @media (max-width: 1200px) and (min-width: 991px)
@@ -759,5 +768,9 @@ img.rs-hide {
     font-size: 32px;
     padding: 0;
     line-height: 38px;
+}
+.reading-block {
+    width: 30%;
+    margin: 0 14px;
 }
 }
