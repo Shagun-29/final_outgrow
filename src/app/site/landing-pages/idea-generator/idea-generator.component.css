@@ -35,6 +35,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: table-cell;
     vertical-align: middle;
 }
+section.mouse-bg.sec-outr.new-sec-bg .sec {
+    vertical-align: top;
+}
 .alert.alert-danger i.material-icons {
     font-size: 14px;
     float: left;
@@ -903,10 +906,10 @@ figure.icons-part {
     font-size: 36px;
 }
 .sec-catergory input.sec-input {
-    padding: 15px 20px;
     font-size: 16px;
     margin-top: 25px;
     min-height: 50px;
+    padding: 12px 20px;
 }
 .middle figure.icons-part {
     background-position: -155px center;
