@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ecommerce-quizes',
@@ -8,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class EcommerceQuizesComponent implements OnInit {
   public url = "https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
   
-  constructor() { }
+  constructor(public sanitizer: DomSanitizer) { }
+  youtubeLink: any;
+  clicked_rs_mob: boolean = false;
+  clicked_rs: boolean = false;
+  clicked: boolean = false;
+  clicked_xl: boolean = false;
+  clicked1_rs_mob: boolean = false;
+  clicked1_rs: boolean = false;
+  clicked1: boolean = false;
+  clicked1_xl: boolean = false;
+  showDiv:boolean = true;
 
   loader = document.querySelector('.preloader');
   ngOnInit() {
@@ -96,6 +107,23 @@ export class EcommerceQuizesComponent implements OnInit {
       google1.classList.remove('testhide');
       g21.classList.add('testhide');
     }
+  }
+
+  sanitize(frameUri) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(frameUri);
+  }
+
+  playVideo(id){
+    this.showDiv=false;
+    this.clicked_rs_mob = true;
+    this.clicked_rs = false;
+    this.clicked = false;
+    this.clicked_xl = false;
+    var xDiv = document.getElementById(`${id}`);
+    this.youtubeLink = this.sanitize("https://www.youtube.com/embed/Sl3G0nsbemQ?vq=hd720&rel=0&controls=0&showinfo=0;autoplay=1&iv_load_policy=3");
+    id == 'video-ecommerce' && (xDiv.style.height == '' ? xDiv.style.height = '574px' : xDiv.style.height = '');
+    
+
   }
 
 }
