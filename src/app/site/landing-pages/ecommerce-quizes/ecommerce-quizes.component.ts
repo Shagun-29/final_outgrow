@@ -124,7 +124,7 @@ export class EcommerceQuizesComponent implements OnInit {
     this.clicked_xl = false;
     var xDiv = document.getElementById(`${id}`);
     this.youtubeLink = this.sanitize("https://www.youtube.com/embed/Sl3G0nsbemQ?vq=hd720&rel=0&controls=0&showinfo=0;autoplay=1&iv_load_policy=3");
-    id == 'video-ecommerce' && (xDiv.style.height == '' ? xDiv.style.height = '660px' : xDiv.style.height = '600px');
+    id == 'video-ecommerce' && (xDiv.style.height == '' ? xDiv.style.height = '660px' : xDiv.style.height = '');
     
 
   }
