@@ -53,15 +53,26 @@
     <div class="col-md-12 col-sm-12 col-xs-12 np text-center hide-height video-img-shadow" id="video-main">
       <div class="video-img-wrapper">
         <div class="overflow-hidden">
-          <div class="video-img-inner video-img-inner-web" id="him1" onclick="changeHeightWeb1()">
+          <!-- <div class="video-img-inner video-img-inner-web" id="him1" onclick="changeHeightWeb1()"> -->
+							<div  *ngIf="showDiv" class="video-img-inner video-img-inner-web" id="him1" (click)="playVideo(video-ecommerce)">
+          
             <img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-ecomm.jpg" data-src="https://outgrow.co/images/video-thumbnail-ecomm.jpg">
             <span class="img-overlay"></span>
             <span class="video-playIcon">
               <span class="inside-circle"><i class="material-icons">play_arrow</i></span>
-            </span>
+						</span>
+						
             <!-- <img class="video-arrow" src="//dzvexx2x036l1.cloudfront.net/video-arrow.png" /> -->
-          </div>
-        </div>
+					</div>
+
+					<div *ngIf="clicked_rs_mob">
+							<div class='embed-responsive embed-responsive-16by9'>
+								<iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
+							</div>
+						</div>
+				
+				</div>
+				
       </div>
     </div>
 
