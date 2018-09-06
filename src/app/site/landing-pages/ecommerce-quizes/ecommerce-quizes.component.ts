@@ -10,15 +10,14 @@ export class EcommerceQuizesComponent implements OnInit {
   public url = "https://api.repuso.com/v1/widgets/posts/4406?callback=jQuery111205308389182797406_1512564953651&website_id=0&_=1512564953652";
   
   constructor(public sanitizer: DomSanitizer) { }
+  iFrames: { name: string; media: string; url: string; }[];
+  activeFrame: number;
+  frameUrl: any;
   youtubeLink: any;
   clicked_rs_mob: boolean = false;
   clicked_rs: boolean = false;
   clicked: boolean = false;
   clicked_xl: boolean = false;
-  clicked1_rs_mob: boolean = false;
-  clicked1_rs: boolean = false;
-  clicked1: boolean = false;
-  clicked1_xl: boolean = false;
   showDiv:boolean = true;
 
   loader = document.querySelector('.preloader');
@@ -114,6 +113,10 @@ export class EcommerceQuizesComponent implements OnInit {
   }
 
   playVideo(id){
+    let videoStream=document.getElementsByClassName("video-img-shadow") as HTMLCollectionOf<HTMLElement>;console.log(videoStream);
+    videoStream[0].style.height="600px";
+    // videoStream.classList.remove('hide-height');
+
     this.showDiv=false;
     this.clicked_rs_mob = true;
     this.clicked_rs = false;
@@ -121,9 +124,28 @@ export class EcommerceQuizesComponent implements OnInit {
     this.clicked_xl = false;
     var xDiv = document.getElementById(`${id}`);
     this.youtubeLink = this.sanitize("https://www.youtube.com/embed/Sl3G0nsbemQ?vq=hd720&rel=0&controls=0&showinfo=0;autoplay=1&iv_load_policy=3");
-    id == 'video-ecommerce' && (xDiv.style.height == '' ? xDiv.style.height = '360px' : xDiv.style.height = '');
+    id == 'video-ecommerce' && (xDiv.style.height == '' ? xDiv.style.height = '660px' : xDiv.style.height = '600px');
     
 
   }
+
+
+  // playFirstVideo(id) {
+  //   this.clicked_rs_mob = false;
+  //   this.clicked_rs = false;
+  //   this.clicked = false;
+  //   this.clicked_xl = false;
+
+  //   this.clicked_rs_mob = (id == 'video-main-rs-mob') && true;
+  //   this.clicked_rs = (id == 'video-main-rs') && true;
+  //   this.clicked = (id == 'video-main') && true;
+  //   this.clicked_xl = (id == 'video-main-xl') && true;
+  //   var xDiv = document.getElementById(`${id}`);
+  //   this.youtubeLink = this.sanitize('https://www.youtube.com/embed/PmN_MY5kNrE?vq=hd720&amp;rel=0&amp;controls=0&amp;showinfo=0;autoplay=1&amp;iv_load_policy=3');
+  //   id == 'video-main-rs-mob' && (xDiv.style.height == '' ? xDiv.style.height = '360px' : xDiv.style.height = '');
+  //   id == 'video-main-rs' && (xDiv.style.height == '' ? xDiv.style.height = '460px' : xDiv.style.height = '');
+  //   id == 'video-main' && (xDiv.style.height == '' ? xDiv.style.height = '574px' : xDiv.style.height = '');
+  //   id == 'video-main-xl' && (xDiv.style.height == '' ? xDiv.style.height = '1160px' : xDiv.style.height = '');
+  // }
 
 }
