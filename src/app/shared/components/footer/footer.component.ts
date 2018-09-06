@@ -141,7 +141,7 @@ export class FooterComponent implements OnInit {
     if(intercom){
       let intercomBlack = document.getElementsByClassName('intercom-messenger-frame-enter-done') as HTMLCollectionOf<HTMLElement>;
         if(this.isVisible ){
-          if(intercomTest[0]){
+          if(intercomTest[0] && intercomTestPart[0]){
             intercomTest[0].style.bottom="100px";
           intercomTestPart[0].style.bottom="95px";
           if(intercomBlack[0]){
@@ -151,7 +151,7 @@ export class FooterComponent implements OnInit {
           }
           
         }else{
-          if(intercomTest[0]){
+          if(intercomTest[0] && intercomTestPart[0]){
             intercomTest[0].style.bottom="";
             intercomTestPart[0].style.bottom="";
           }
