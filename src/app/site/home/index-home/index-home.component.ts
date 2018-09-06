@@ -48,7 +48,7 @@ export class IndexHomeComponent implements OnInit {
 
     var gridJS = document.createElement('script')
     gridJS.src = 'https://repuso.com/widgets/grid.js';
-
+  
 
     var live = document.querySelector('#liveReviews');
     var static1 = document.querySelector('#staticReviews');
