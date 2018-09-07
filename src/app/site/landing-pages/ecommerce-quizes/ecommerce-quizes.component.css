@@ -185,7 +185,7 @@ span.live-demo a {
 }
 .video-img-inner {
     background: #fff;
-    position: relative;
+    /* position: relative; */
 }
 span.img-overlay {
     background: rgba(0,0,0,.5);

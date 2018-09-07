@@ -1020,6 +1020,9 @@ div#bs-example-navbar-collapse-1 {
         
         margin-top: 18px!important;
     }
+    .sticky.custom-navbar .signUp a ,.sticky.custom-navbar .dashboard a {
+        margin-top: 12px!important;
+    }
 }
 @media (max-width: 2999px) and (min-width: 1480px)
 {
@@ -1036,13 +1039,13 @@ div#bs-example-navbar-collapse-1 {
     margin-top: 22px!important;
 } */
 .sticky.custom-navbar .signUp a ,.sticky.custom-navbar .dashboard a {
-    margin-top: 14px!important;
+    margin-top: 12px!important;
 }
 .sticky .navbar-brand {
     padding-top: 12px!important;
 }
 .custom-navbar .signUp a,.dashboard a {
-    margin-top: 22px!important;
+    margin-top: 21px!important;
 }
 }
 @media   (min-width: 1024px) and (max-width: 1480px)
