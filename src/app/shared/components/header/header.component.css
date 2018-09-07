@@ -140,7 +140,7 @@ a {
     border-radius: 20px;
     background: #fb5f66 !important;
     color: #fff!important;
-    padding: 5px 10px !important;
+    padding: 6px 15px !important;
     line-height: 1 !important;
     font-size: 14px!important;
     border: 2px solid #f8434b !important;
@@ -389,6 +389,15 @@ input.lead-form-email::placeholder {
     top: 0;
     border-width: 0 0 1px;
 }
+li.dashboard a:hover {
+    background: #fdb6b9 !important;
+    color: #fff !important;
+    border: 2px solid transparent !important;
+    opacity: 1 !important;
+}
+.dash{
+    color:#fff!important;
+}
 .navbar-fixed-bottom, .navbar-fixed-top
 {
     position: fixed;
@@ -521,7 +530,7 @@ input.lead-form-email::placeholder {
 }
 
 .custom-navbar .link-login {
-    color: #fb6c73!important;
+    color: #fb6c73;
     font-family: montserratbold;
 }
 li.nav-lead-input {
@@ -573,6 +582,7 @@ li.nav-lead-input {
     color: #fb545b !important;
     border-color: #fdb6b9 !important;
 }
+
 @media (min-width: 768px)
 {
 .navbar-fixed-bottom, .navbar-fixed-top, .navbar-static-top {
@@ -846,7 +856,9 @@ li.dropdown.open a {
     float: left !important;
     width: 100%;
     margin: 7.5px 0px !important;
+    
 }
+
 .custom-navbar .signUp-style a ,.dashboard a {
     background: none;
     color: #fff!important;
@@ -858,6 +870,10 @@ li.dropdown.open a {
 }
 li.nav-lead-input {
     margin: 10px !important;
+}
+.dashboard a {
+    margin: 0px 0px 10px 10px!important;
+    display: inline-block !important;
 }
 }
 @media (max-width: 1023px) and (min-width: 991px)
@@ -1094,7 +1110,7 @@ div#bs-example-navbar-collapse-1 {
     padding-bottom: 25px;
 }
 .custom-navbar.navbar-default .navbar-nav>li>a, .section-1-left .btn-bottominfo label, .section-1-left .btn-bottominfo span {
-    font-size: 16px;
+    font-size: 16px!important;
 }
 }
 
