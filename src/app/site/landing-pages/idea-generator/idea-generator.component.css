@@ -348,12 +348,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover!important;
 }
 
-.sec-outr {
+/* .sec-outr {
     display: none;
     height: 100vh;
     width: 100%;
     background: #000;
-}
+} */
  .selectize-input {
 
     box-shadow: none!important;

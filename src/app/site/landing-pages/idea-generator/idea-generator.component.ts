@@ -7,71 +7,7 @@ declare var jQuery: any;
 @Component({
   selector: 'app-idea-generator',
   templateUrl: './idea-generator.component.html',
-  styleUrls: ['./idea-generator.component.css'],
-  animations: [
-    trigger('popOverState1', [
-      state('show', style({
-        opacity: 1
-      })),
-      state('hide', style({
-        opacity: 0,
-      })),
-      state('move', style({
-        transform: 'translateY(-100%)',
-        'max-height':'0px'
-      })),
-      transition('show <=> hide', animate('1000ms ease')),
-      transition('* => move', animate('1000ms ease')),
-    ]),
-    trigger('popOverState2', [
-      state('show', style({
-        opacity: 1,
-        transform :'translateY(0%)'
-      })),
-      state('hide', style({
-        opacity: 0
-      })),
-      state('move', style({
-        transform: 'translateY(-100%)',
-      })),
-      transition('show => hide', animate('1000ms ease')),
-      transition('hide=>show',animate('1000ms ease')),
-      transition('* => *', animate('1500ms ease')),
-    ]),
-    trigger('popOverState3', [
-      state('show', style({
-        opacity: 1
-      })),
-      state('hide', style({
-        opacity: 0
-      })),
-      state('move', style({
-        transform: 'translateY(-100%)',
-      })),
-      transition('show <=> hide', animate('1000ms ease')),
-      transition('* => *', animate('1500ms ease')),
-    ]),
-    trigger('popOverState4', [
-      state('show', style({
-        opacity: 1
-      })),
-      state('hide', style({
-        opacity: 0
-      })),
-      transition('show => hide', animate('1000ms ease-out')),
-      transition('hide => show', animate('1000ms ease-in')),
-    ]),
-    trigger('popOverState5', [
-      state('show', style({
-        opacity: 1
-      })),
-      state('hide', style({
-        opacity: 0
-      })),
-      transition('show => hide', animate('1000ms ease-out')),
-      transition('hide => show', animate('1000ms ease-in')),
-    ]),
-  ]
+  styleUrls: ['./idea-generator.component.css']
 
 })
 export class IdeaGeneratorComponent implements OnInit {
@@ -129,12 +65,15 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   getStarted() {
-    
+    jQuery('.sec2-bg').removeClass('hide');
+    jQuery('html, body').animate({
+      scrollTop: jQuery('.sec2-bg').offset().top
+    }, 1000);
+    setTimeout(function () {
+      jQuery(".sec1-bg").addClass("hide");
+    }, 1000)
     let self = this;
-    this.stateName_sec1 = 'move';
-    this.stateName_sec2 = 'show';
     setTimeout(() => {
-      this.stateName_sec1 = 'hide';
       let options = [];
       this.categories.map(category => {
         options.push({ label: category, value: category })
@@ -160,10 +99,14 @@ export class IdeaGeneratorComponent implements OnInit {
         this.subCategories.push(...value.slice(1, value.length));
     });
     this.subCategories = this.sortArray(this.subCategories);
-    this.stateName_sec2 = 'move';
-    this.stateName_sec3 = 'show';
+    jQuery('.sec3-bg').removeClass('hide');
+    jQuery('html, body').animate({
+      scrollTop: jQuery('.sec3-bg').offset().top
+    }, 1000);
+    setTimeout(function () {
+      jQuery(".sec2-bg").addClass("hide");
+    }, 1000)
     setTimeout(() => {
-      self.stateName_sec2 = 'hide';
       let options = [];
       this.subCategories.map(subCategory => {
         options.push({ label: subCategory, value: subCategory })
@@ -182,11 +125,13 @@ export class IdeaGeneratorComponent implements OnInit {
   }
 
   subCategorySelected() {
-    this.stateName_sec3 = 'move';
-    this.stateName_sec4 = 'show';
-    setTimeout(() => {
-      this.stateName_sec3 = 'hide';
+    jQuery('.sec4-bg').removeClass('hide');
+    jQuery('html, body').animate({
+      scrollTop: jQuery('.sec4-bg').offset().top
     }, 1000);
+    setTimeout(function () {
+      jQuery(".sec3-bg").addClass("hide");
+    }, 1000)
   }
 
   showIdeas() {
@@ -194,8 +139,13 @@ export class IdeaGeneratorComponent implements OnInit {
     let enteredEmail=this.emailField.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g)
     if (enteredEmail==this.emailField) {
       this.emailError = false;
-      this.stateName_secnew = 'show';
-      this.stateName_sec4 = 'hide';
+      jQuery(".new-sec-bg").fadeIn("slow", function () {
+        jQuery(this).removeClass("hide");
+      });
+      jQuery(".sec4-bg").fadeOut("slow", function () {
+        jQuery(this).addClass("hide");
+      });
+      jQuery('body').css('overflow-y', 'scroll');
       setTimeout(() => {
         let options = []
         this.categories.map(category => {
