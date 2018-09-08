@@ -414,7 +414,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-size: cover!important;
 }
 .sec-container.custom-conatiner {
-    margin: 76px auto 0;
+    margin: 90px auto 0;
     width: 100%;
     max-width: 1200px;
 }
@@ -1045,3 +1045,10 @@ figure.icons-part {
         justify-content: initial!important;
     }
 }
+
+.sec-catergory .selectize-input.items.has-options.full.has-items .item + input {
+    height: 0px!important;
+}
+.new-sec-bg{
+    padding-left:120px;
+} 
