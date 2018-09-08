@@ -555,3 +555,6 @@
 .sec-catergory.custom-select .selectize-control.single .selectize-dropdown {
   top: 65px !important;
 }
+.selectize-input.items.has-options.full.has-items .item +input {
+  height: 0!important;
+}
