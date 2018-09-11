@@ -534,3 +534,9 @@ bottom : 80px !important;
 .footer-badge-spacing{
     /* margin-top: -20px !important; */
 }
+@media (max-width: 1280px) and (min-width: 1024px)
+{
+.footer-social {
+    padding-left: 27px;
+}
+}
