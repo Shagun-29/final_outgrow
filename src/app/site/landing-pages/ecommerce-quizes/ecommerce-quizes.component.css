@@ -613,8 +613,14 @@ span.no-card {
     display: flex;
 }
 
-
-
+.reading-block:hover {
+    box-shadow: 0 10px 40px rgba(73,142,182,.3);
+}
+.img-scaler:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
 
 @media (max-width: 2999px) and (min-width: 1480px)
 {
@@ -1252,5 +1258,16 @@ iframe.outgrow-video {
     top: 0;
     left: 0;
 	z-index: 9;
+}
+}
+@media (max-width: 1920px) and (min-width: 1810px)
+{
+.section-1-left h3, .section-1-left h1.section1-firstheadnoab {
+    font-size: 42px!important;
+    line-height: 55px;
+    margin-top: 80px;
+}
+.sec-clients-logos .container.mobile-container {
+    width: 1366px!important;
 }
 }

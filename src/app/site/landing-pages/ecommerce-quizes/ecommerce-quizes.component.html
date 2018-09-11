@@ -13,20 +13,20 @@
           <ul>
             <li>
               <img src="https://outgrow.co/images/ecom_landing-top1.png" alt="Unique Shopping Experience">
-              <img class="rs-hide" src="https://outgrow.co/images/ecom_landing-top1.png" alt="Unique Shopping Experience">
-              Unique Shopping <br>Experience</li>
+              <img class="rs-hide" src="https://outgrow.co/images/ecom_landing-top1.png" alt="Unique Shopping Experience"> Unique Shopping
+              <br>Experience</li>
             <li>
               <img src="https://outgrow.co/images/ecom_landing-top2.png" alt="Improved Customer Engagement">
-              <img class="rs-hide" src="https://outgrow.co/images/ecom_landing-top2.png" alt="Improved Customer Engagement">
-              Improved Customer <br>Engagement</li>
+              <img class="rs-hide" src="https://outgrow.co/images/ecom_landing-top2.png" alt="Improved Customer Engagement"> Improved Customer
+              <br>Engagement</li>
             <li>
               <img src="https://outgrow.co/images/ecom_landing-top3.png" alt="Higher Average Order Value (AOV)">
-              <img class="rs-hide" src="https://outgrow.co/images/ecom_landing-top3.png" alt="Higher Average Order Value (AOV)">
-              Higher Average <br>Order Value (AOV) </li>
+              <img class="rs-hide" src="https://outgrow.co/images/ecom_landing-top3.png" alt="Higher Average Order Value (AOV)"> Higher Average
+              <br>Order Value (AOV) </li>
             <li class="recmd">
               <img src="https://outgrow.co/images/ecom_landing-top4.png" alt="Eliminate Abandoned Carts">
-              <img class="rs-hide" src="https://outgrow.co/images/ecom_landing-top4.png" alt="Eliminate Abandoned Carts">
-              Eliminate Abandoned <br>Carts</li>
+              <img class="rs-hide" src="https://outgrow.co/images/ecom_landing-top4.png" alt="Eliminate Abandoned Carts"> Eliminate Abandoned
+              <br>Carts</li>
           </ul>
         </div>
 
@@ -39,37 +39,47 @@
                 Get Started for free
               </a>
 
-              
-              <span class="live-demo">OR <a href="https://sample.outgrow.co/builder-demo/sample-calculator" class="">TAKE A LIVE DEMO</a></span>
+
+              <span class="live-demo">OR
+                <a href="https://sample.outgrow.co/builder-demo/sample-calculator" class="">TAKE A LIVE DEMO</a>
+              </span>
             </span>
             <div id="bfrVid"></div>
           </div>
         </div>
+      </div>
+    </div>
+
+
+
+    <!-- video section -->
+
+    <div class="col-md-12 col-sm-12 col-xs-12 np text-center hide-height video-img-shadow" id="video-main">
+      <div class="video-img-wrapper">
+        <div class="overflow-hidden">
+
+          <div *ngIf="showDiv" class="video-img-inner video-img-inner-web" id="him1" (click)="playVideo(video-ecommerce)">
+            <img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-ecomm.jpg" data-src="https://outgrow.co/images/video-thumbnail-ecomm.jpg">
+            <span class="img-overlay"></span>
+            <span class="video-playIcon">
+              <span class="inside-circle">
+                <i class="material-icons">play_arrow</i>
+              </span>
+            </span>
+          </div>
+
+          <div *ngIf="clicked_rs_mob">
+
+            <div class='embed-responsive embed-responsive-16by9'>
+
+              <iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
-        </div>
+      </div>
+    </div>
 
-       
-
- <!-- video section -->
-
- <div class="col-md-12 col-sm-12 col-xs-12 np text-center hide-height video-img-shadow" id="video-main">
-	<div class="video-img-wrapper">
-		<div class="overflow-hidden">
-    <div  *ngIf="showDiv" class="video-img-inner video-img-inner-web" id="him1" (click)="playVideo(video-ecommerce)">
-				<img alt="video thumbnail image" class="video-img" src="https://outgrow.co/images/video-thumbnail-ecomm.jpg" data-src="https://outgrow.co/images/video-thumbnail-ecomm.jpg">
-				<span class="img-overlay"></span>
-				<span class="video-playIcon"><span class="inside-circle"><i class="material-icons">play_arrow</i></span></span>
-          </div>
-          <div *ngIf="clicked_rs_mob">
-              <div class='embed-responsive embed-responsive-16by9'>
-                <iframe class='outgrow-video' [src]='youtubeLink' frameborder='0' allowfullscreen></iframe>
-              </div>
-            </div>
-        </div>
-	</div>
-</div>
-
- <!-- video section ends -->
+    <!-- video section ends -->
 
   </div>
 </section>
@@ -158,7 +168,8 @@
   <div class="col-md-12 col-sm-12 col-xs-12 text-center np">
     <div class="container custom-container mobile-container">
       <div class="section-2-heading" style="color: rgb(34, 34, 34);">
-        A New Marketing Toolkit for <br>Ecommerce Growth
+        A New Marketing Toolkit for
+        <br>Ecommerce Growth
       </div>
       <div class="col-md-12 col-sm-12 col-xs-12 np ecomm-outer">
         <div class="col-sm-6">
@@ -264,7 +275,8 @@
 <section class="section col-md-12 col-sm-12 col-xs-12 text-center np sec-ecomm">
   <div class="container custom-container mobile-container">
     <div class="section-2-heading" style="color: rgb(34, 34, 34);">
-      Beautiful High-Converting Ecommerce Quizzes, <br>Built with Outgrow
+      Beautiful High-Converting Ecommerce Quizzes,
+      <br>Built with Outgrow
     </div>
     <!-- <div class="col-md-12 col-sm-12 col-xs-12 np ecomm-outer">
       <div class="col-sm-6">
@@ -359,20 +371,23 @@
           <div class="content">
             <span class="content-sec col-sm-8 col-xs-8 np">
               <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-                <!----> Use Layout</button>
+                <!---->Use Layout</button>
               <h2>The Greek </h2>
               <span class="hide">
                 SUPPORTS:
-                <!----><span>
-                <span class="dot"></span>a </span><span>
-                <span class="dot"></span>b </span><span>
-                <span class="dot"></span>c </span>
+                <!---->
+                <span>
+                  <span class="dot"></span>a </span>
+                <span>
+                  <span class="dot"></span>b </span>
+                <span>
+                  <span class="dot"></span>c </span>
               </span>
             </span>
             <button class="btn btn-red btn-hover rs-hide" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-            <!----> Use Layout</button>
+              <!---->Use Layout</button>
             <a class="btn btn-red btn-hover rs-hide temp-iframe-preview" target="_blank" href="https://premade.outgrow.us/premade-1038">
-            Preview</a>
+              Preview</a>
           </div>
         </div>
       </div>
@@ -380,26 +395,29 @@
         <div class="temp-demo">
           <a class="" href="javascript:void(0);" target="_blank">
             <span class="image-bg">
-            <span class="image-scroll temp-img" style="background-image: url(&quot;https://dlvkyia8i4zmz.cloudfront.net/PniTHStMS9WrAy8sGNSy_numerical.jpg&quot;);"></span>
+              <span class="image-scroll temp-img" style="background-image: url(&quot;https://dlvkyia8i4zmz.cloudfront.net/PniTHStMS9WrAy8sGNSy_numerical.jpg&quot;);"></span>
             </span>
           </a>
           <div class="content">
             <span class="content-sec col-sm-8 col-xs-8 np">
-            <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-              <!----> Use Layout</button>
-            <h2>The Madrid </h2>
-            <span class="hide">
-              SUPPORTS:
-              <!----><span>
-              <span class="dot"></span>a </span><span>
-              <span class="dot"></span>b </span><span>
-              <span class="dot"></span>c </span>
-            </span>
+              <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
+                <!---->Use Layout</button>
+              <h2>The Madrid </h2>
+              <span class="hide">
+                SUPPORTS:
+                <!---->
+                <span>
+                  <span class="dot"></span>a </span>
+                <span>
+                  <span class="dot"></span>b </span>
+                <span>
+                  <span class="dot"></span>c </span>
+              </span>
             </span>
             <button class="btn btn-red btn-hover rs-hide" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-            <!----> Use Layout</button>
+              <!---->Use Layout</button>
             <a class="btn btn-red btn-hover rs-hide temp-iframe-preview" target="_blank" href="https://premade.outgrow.us/premade-1044">
-            Preview</a>
+              Preview</a>
           </div>
         </div>
       </div>
@@ -407,26 +425,29 @@
         <div class="temp-demo">
           <a class="" href="javascript:void(0);" target="_blank">
             <span class="image-bg">
-            <span class="image-scroll temp-img" style="background-image: url(&quot;https://dlvkyia8i4zmz.cloudfront.net/gf3NAt9QTaqRtVWpxsmE_Numercal.jpg&quot;);"></span>
+              <span class="image-scroll temp-img" style="background-image: url(&quot;https://dlvkyia8i4zmz.cloudfront.net/gf3NAt9QTaqRtVWpxsmE_Numercal.jpg&quot;);"></span>
             </span>
           </a>
           <div class="content">
             <span class="content-sec col-sm-8 col-xs-8 np">
-            <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-              <!----> Use Layout</button>
-            <h2>The Stockholm </h2>
-            <span class="hide">
-              SUPPORTS:
-              <!----><span>
-              <span class="dot"></span>a </span><span>
-              <span class="dot"></span>b </span><span>
-              <span class="dot"></span>c </span>
-            </span>
+              <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
+                <!---->Use Layout</button>
+              <h2>The Stockholm </h2>
+              <span class="hide">
+                SUPPORTS:
+                <!---->
+                <span>
+                  <span class="dot"></span>a </span>
+                <span>
+                  <span class="dot"></span>b </span>
+                <span>
+                  <span class="dot"></span>c </span>
+              </span>
             </span>
             <button class="btn btn-red btn-hover rs-hide" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-            <!----> Use Layout</button>
+              <!---->Use Layout</button>
             <a class="btn btn-red btn-hover rs-hide temp-iframe-preview" target="_blank" href="https://premade.outgrow.us/premade-1051">
-            Preview</a>
+              Preview</a>
           </div>
         </div>
       </div>
@@ -434,26 +455,29 @@
         <div class="temp-demo">
           <a class="" href="javascript:void(0);" target="_blank">
             <span class="image-bg">
-            <span class="image-scroll temp-img" style="background-image: url(&quot;https://cdn.filestackcontent.com/o3RKaOxTaugRnNy2lPL3&quot;);"></span>
+              <span class="image-scroll temp-img" style="background-image: url(&quot;https://cdn.filestackcontent.com/o3RKaOxTaugRnNy2lPL3&quot;);"></span>
             </span>
           </a>
           <div class="content">
             <span class="content-sec col-sm-8 col-xs-8 np">
-            <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-              <!----> Use Layout</button>
-            <h2>The Venice </h2>
-            <span class="hide">
-              SUPPORTS:
-              <!----><span>
-              <span class="dot"></span>a </span><span>
-              <span class="dot"></span>b </span><span>
-              <span class="dot"></span>c </span>
-            </span>
+              <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
+                <!---->Use Layout</button>
+              <h2>The Venice </h2>
+              <span class="hide">
+                SUPPORTS:
+                <!---->
+                <span>
+                  <span class="dot"></span>a </span>
+                <span>
+                  <span class="dot"></span>b </span>
+                <span>
+                  <span class="dot"></span>c </span>
+              </span>
             </span>
             <button class="btn btn-red btn-hover rs-hide" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-            <!----> Use Layout</button>
+              <!---->Use Layout</button>
             <a class="btn btn-red btn-hover rs-hide temp-iframe-preview" target="_blank" href="https://premade.outgrow.us/premade-1056">
-            Preview</a>
+              Preview</a>
           </div>
         </div>
       </div>
@@ -471,20 +495,23 @@
           <div class="content">
             <span class="content-sec col-sm-8 col-xs-8 np">
               <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-                <!----> Use Layout</button>
+                <!---->Use Layout</button>
               <h2>Which sports watch is best suited to your needs? </h2>
               <span class="hide">
                 SUPPORTS:
-                <!----><span>
-                <span class="dot"></span>a </span><span>
-                <span class="dot"></span>b </span><span>
-                <span class="dot"></span>c </span>
+                <!---->
+                <span>
+                  <span class="dot"></span>a </span>
+                <span>
+                  <span class="dot"></span>b </span>
+                <span>
+                  <span class="dot"></span>c </span>
               </span>
             </span>
             <button class="btn btn-red btn-hover rs-hide" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-            <!----> Use Layout</button>
+              <!---->Use Layout</button>
             <a class="btn btn-red btn-hover rs-hide temp-iframe-preview" target="_blank" href="https://premade.outgrow.us/which-sports-watch-is-best-suited-to-your-needs">
-            Preview</a>
+              Preview</a>
           </div>
         </div>
       </div>
@@ -499,21 +526,24 @@
           </a>
           <div class="content">
             <span class="content-sec col-sm-8 col-xs-8 np">
-            <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-              <!----> Use Layout</button>
-            <h2>Which sunglasses suit your face the best? </h2>
-            <span class="hide">
-              SUPPORTS:
-              <!----><span>
-              <span class="dot"></span>a </span><span>
-              <span class="dot"></span>b </span><span>
-              <span class="dot"></span>c </span>
-            </span>
+              <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
+                <!---->Use Layout</button>
+              <h2>Which sunglasses suit your face the best? </h2>
+              <span class="hide">
+                SUPPORTS:
+                <!---->
+                <span>
+                  <span class="dot"></span>a </span>
+                <span>
+                  <span class="dot"></span>b </span>
+                <span>
+                  <span class="dot"></span>c </span>
+              </span>
             </span>
             <button class="btn btn-red btn-hover rs-hide" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-            <!----> Use Layout</button>
+              <!---->Use Layout</button>
             <a class="btn btn-red btn-hover rs-hide temp-iframe-preview" target="_blank" href="https://premade.outgrow.us/premadeWhich-Sunglasses-Suit-Your-Face-the-Best">
-            Preview</a>
+              Preview</a>
           </div>
         </div>
       </div>
@@ -528,21 +558,24 @@
           </a>
           <div class="content">
             <span class="content-sec col-sm-8 col-xs-8 np">
-            <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-              <!----> Use Layout</button>
-            <h2>Which makeup set suits your face the best? </h2>
-            <span class="hide">
-              SUPPORTS:
-              <!----><span>
-              <span class="dot"></span>a </span><span>
-              <span class="dot"></span>b </span><span>
-              <span class="dot"></span>c </span>
-            </span>
+              <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
+                <!---->Use Layout</button>
+              <h2>Which makeup set suits your face the best? </h2>
+              <span class="hide">
+                SUPPORTS:
+                <!---->
+                <span>
+                  <span class="dot"></span>a </span>
+                <span>
+                  <span class="dot"></span>b </span>
+                <span>
+                  <span class="dot"></span>c </span>
+              </span>
             </span>
             <button class="btn btn-red btn-hover rs-hide" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-            <!----> Use Layout</button>
+              <!---->Use Layout</button>
             <a class="btn btn-red btn-hover rs-hide temp-iframe-preview" target="_blank" href="https://premade.outgrow.us/Which-makeup-set-suits-your-face-the-best">
-            Preview</a>
+              Preview</a>
           </div>
         </div>
       </div>
@@ -557,21 +590,24 @@
           </a>
           <div class="content">
             <span class="content-sec col-sm-8 col-xs-8 np">
-            <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-              <!----> Use Layout</button>
-            <h2>What is the best smartphone that you can afford? </h2>
-            <span class="hide">
-              SUPPORTS:
-              <!----><span>
-              <span class="dot"></span>a </span><span>
-              <span class="dot"></span>b </span><span>
-              <span class="dot"></span>c </span>
-            </span>
+              <button class="btn btn-red btn-hover rs-show" type="button" onclick="location.href = '//app.outgrow.co/signup'">
+                <!---->Use Layout</button>
+              <h2>What is the best smartphone that you can afford? </h2>
+              <span class="hide">
+                SUPPORTS:
+                <!---->
+                <span>
+                  <span class="dot"></span>a </span>
+                <span>
+                  <span class="dot"></span>b </span>
+                <span>
+                  <span class="dot"></span>c </span>
+              </span>
             </span>
             <button class="btn btn-red btn-hover rs-hide" type="button" onclick="location.href = '//app.outgrow.co/signup'">
-            <!----> Use Layout</button>
+              <!---->Use Layout</button>
             <a class="btn btn-red btn-hover rs-hide temp-iframe-preview" target="_blank" href="https://premade.outgrow.us/what-is-the-best-smartphone-that-you-can-afford">
-            Preview</a>
+              Preview</a>
           </div>
         </div>
       </div>
@@ -582,7 +618,8 @@
 <section class="section sec-recom-quiz">
   <div class="container custom-container mobile-container">
     <div class="section-2-heading">
-    Get Started Building Interactive Product <br>Recommendation Quizzes
+      Get Started Building Interactive Product
+      <br>Recommendation Quizzes
     </div>
     <div class="col-md-12 col-sm-12 col-xs-12 np">
       <div class="col-md-12 col-xs-12 col-sm-12 np text-center startTrial-outer startTrial-outer1">
@@ -591,7 +628,7 @@
         <span class="lead-form-btn">
           <a href="//app.outgrow.co/signup/?email=" class="lead-email btn-buildcal" onclick="callGA('CANNOT WAIT CTA'); ">
             Start Free Trial
-          </a>	
+          </a>
         </span>
         <span class="no-card">No Credit Card Required</span>
       </div>
@@ -610,8 +647,11 @@
         </div>
         <div class="col-md-12 np reading-content">
           <h4>[Ebook] 25 List Building Strategies to Amplify your Ecommerce Brand</h4>
-          <p>Generating traffic and leads is the biggest marketing challenge for 60% of marketers. In this ebook, read about 25 innovative list building strategies for ecommerce to help you meet this challenge! </p>
-          <a href="https://get.outgrow.co/ebook-ecommerce-list-building-strategies/" target="_blank" class="btn btn-readmore-link">Read more <i class="material-icons">keyboard_arrow_right</i></a>
+          <p>Generating traffic and leads is the biggest marketing challenge for 60% of marketers. In this ebook, read about
+            25 innovative list building strategies for ecommerce to help you meet this challenge! </p>
+          <a href="https://get.outgrow.co/ebook-ecommerce-list-building-strategies/" target="_blank" class="btn btn-readmore-link">Read more
+            <i class="material-icons">keyboard_arrow_right</i>
+          </a>
         </div>
       </div>
       <div class="col-md-4 col-sm-4 col-xs-12 np reading-block">
@@ -620,8 +660,11 @@
         </div>
         <div class="col-md-12 np reading-content">
           <h4>The Ultimate Conversion Rate Optimization Checklist for Ecommerce </h4>
-          <p>75+ CRO hacks. This lineup takes you through the minutest of details of ecommerce conversions. Simply tick 'em all off and you're sorted! </p>
-          <a href="https://get.outgrow.co/ultimate-ecommerce-cro-checklist/" target="_blank" class="btn btn-readmore-link">Read more <i class="material-icons">keyboard_arrow_right</i></a>
+          <p>75+ CRO hacks. This lineup takes you through the minutest of details of ecommerce conversions. Simply tick 'em
+            all off and you're sorted! </p>
+          <a href="https://get.outgrow.co/ultimate-ecommerce-cro-checklist/" target="_blank" class="btn btn-readmore-link">Read more
+            <i class="material-icons">keyboard_arrow_right</i>
+          </a>
         </div>
       </div>
       <div class="col-md-4 col-sm-4 col-xs-12 np reading-block">
@@ -630,40 +673,53 @@
         </div>
         <div class="col-md-12 np reading-content">
           <h4>Why Product Recommendation Quizzes Drive Ecommerce Sales in 2018 </h4>
-          <p>Product recommendations engage your website visitors by helping them find the EXACT products they're looking for. Find out why product recommendation quizzes work and why every ecommerce store needs to have one. </p>
-          <a href="https://outgrow.co/blog/product-recommendation-quizzes-drive-ecommerce-sales" target="_blank" class="btn btn-readmore-link">Read more <i class="material-icons">keyboard_arrow_right</i></a>
+          <p>Product recommendations engage your website visitors by helping them find the EXACT products they're looking for.
+            Find out why product recommendation quizzes work and why every ecommerce store needs to have one. </p>
+          <a href="https://outgrow.co/blog/product-recommendation-quizzes-drive-ecommerce-sales" target="_blank" class="btn btn-readmore-link">Read more
+            <i class="material-icons">keyboard_arrow_right</i>
+          </a>
         </div>
       </div>
     </div>
-    <div class="col-md-12 col-sm-12 col-xs-12 np">			
+    <div class="col-md-12 col-sm-12 col-xs-12 np">
       <div class="col-md-4 col-sm-4 col-xs-12 np reading-block">
         <div class="img-scaler">
-          <img src="https://outgrow.co/images/ecom-reading4.png" alt="From a Bookselling Website to an Ecommerce Giant - A Critical View of Amazon's Growth Story"> 
+          <img src="https://outgrow.co/images/ecom-reading4.png" alt="From a Bookselling Website to an Ecommerce Giant - A Critical View of Amazon's Growth Story">
         </div>
         <div class="col-md-12 np reading-content">
           <h4>From a Bookselling Website to an Ecommerce Giant - A Critical View of Amazon's Growth Story </h4>
-          <p>Riding on an $800 billion net worth, the Amazon empire is headed for an upward growth. Take a look at the Amazon growth story to understand why we think 'Amazon' should be spelled as A-M-A-Z-I-N-G. </p>
-          <a href="https://outgrow.co/blog/amazon-growth-story" target="_blank" class="btn btn-readmore-link">Read more <i class="material-icons">keyboard_arrow_right</i></a>
+          <p>Riding on an $800 billion net worth, the Amazon empire is headed for an upward growth. Take a look at the Amazon
+            growth story to understand why we think 'Amazon' should be spelled as A-M-A-Z-I-N-G. </p>
+          <a href="https://outgrow.co/blog/amazon-growth-story" target="_blank" class="btn btn-readmore-link">Read more
+            <i class="material-icons">keyboard_arrow_right</i>
+          </a>
         </div>
       </div>
       <div class="col-md-4 col-sm-4 col-xs-12 np reading-block">
         <div class="img-scaler">
-          <img src="https://outgrow.co/images/ecom-reading5.png" alt="10 Must Read Books for a Thriving Ecommerce Business"> 
+          <img src="https://outgrow.co/images/ecom-reading5.png" alt="10 Must Read Books for a Thriving Ecommerce Business">
         </div>
         <div class="col-md-12 np reading-content">
           <h4>10 Must Read Books for a Thriving Ecommerce Business </h4>
-          <p>Looking for relevant insights to build an ecommerce business from scratch? Or digging resources to take your e-store to the next stage? Check out this list of 10 books every ecommerce marketer should read. </p>
-          <a href="https://outgrow.co/blog/10-must-read-books-ecommerce-business" target="_blank" class="btn btn-readmore-link">Read more <i class="material-icons">keyboard_arrow_right</i></a>
+          <p>Looking for relevant insights to build an ecommerce business from scratch? Or digging resources to take your e-store
+            to the next stage? Check out this list of 10 books every ecommerce marketer should read. </p>
+          <a href="https://outgrow.co/blog/10-must-read-books-ecommerce-business" target="_blank" class="btn btn-readmore-link">Read more
+            <i class="material-icons">keyboard_arrow_right</i>
+          </a>
         </div>
       </div>
       <div class="col-md-4 col-sm-4 col-xs-12 np reading-block">
         <div class="img-scaler">
-          <img src="https://outgrow.co/images/ecom-reading6.png" alt="9 Reasons Why Your E-store Visitors Don't Convert &amp; What You Can Do About It"> 
+          <img src="https://outgrow.co/images/ecom-reading6.png" alt="9 Reasons Why Your E-store Visitors Don't Convert &amp; What You Can Do About It">
         </div>
         <div class="col-md-12 np reading-content">
           <h4>9 Reasons Why Your E-store Visitors Don't Convert &amp; What You Can Do About It </h4>
-          <p>The average conversion rate in the ecommerce industry is just 3%. Which means that, 97% of visitors bail out on you. In this post, we discuss 9 reasons which your visitors don't convert and what you can do about it. </p>
-          <a href="https://outgrow.co/blog/9-reasons-why-your-estore-visitors-dont-convert-and-what-you-can-do-about-it" target="_blank" class="btn btn-readmore-link">Read more <i class="material-icons">keyboard_arrow_right</i></a>
+          <p>The average conversion rate in the ecommerce industry is just 3%. Which means that, 97% of visitors bail out on
+            you. In this post, we discuss 9 reasons which your visitors don't convert and what you can do about it. </p>
+          <a href="https://outgrow.co/blog/9-reasons-why-your-estore-visitors-dont-convert-and-what-you-can-do-about-it" target="_blank"
+            class="btn btn-readmore-link">Read more
+            <i class="material-icons">keyboard_arrow_right</i>
+          </a>
         </div>
       </div>
     </div>
@@ -671,706 +727,711 @@
 </section>
 
 <div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1 hide" id="liveReviews">
-	<div class="container mobile-container">
-		<div class="section-2-heading" style="color: rgb(34, 34, 34);">
-			Average Rating 4.9/5. 500+ Reviews
-		</div>
-		<div class="social-media-section">
-			<div class="each-arrow-section">
-				<div id="fb-img" class="arrow_box fbActive testactive" (click)="openTestimonial('fb')">
-					<img alt="Facebook image" src="https://dzvexx2x036l1.cloudfront.net/facebookim.png" />
-					<img alt="Facebook image" src="https://dzvexx2x036l1.cloudfront.net/facebookh.png" class="over over1" />
-				</div>
+  <div class="container mobile-container">
+    <div class="section-2-heading" style="color: rgb(34, 34, 34);">
+      Average Rating 4.9/5. 500+ Reviews
+    </div>
+    <div class="social-media-section">
+      <div class="each-arrow-section">
+        <div id="fb-img" class="arrow_box fbActive testactive" (click)="openTestimonial('fb')">
+          <img alt="Facebook image" src="https://dzvexx2x036l1.cloudfront.net/facebookim.png" />
+          <img alt="Facebook image" src="https://dzvexx2x036l1.cloudfront.net/facebookh.png" class="over over1" />
+        </div>
 
-				<div id="capterra-img" class="arrow_box capterraActive" (click)="openTestimonial('capterra')">
-					<img alt="Capterra image" src="https://dzvexx2x036l1.cloudfront.net/capterraimg.png" />
-					<img alt="Capterra image" src="https://dzvexx2x036l1.cloudfront.net/capterah.png" class="over over2" />
-				</div>
+        <div id="capterra-img" class="arrow_box capterraActive" (click)="openTestimonial('capterra')">
+          <img alt="Capterra image" src="https://dzvexx2x036l1.cloudfront.net/capterraimg.png" />
+          <img alt="Capterra image" src="https://dzvexx2x036l1.cloudfront.net/capterah.png" class="over over2" />
+        </div>
 
-				<div id="g2-img" class="arrow_box g2Active" (click)="openTestimonial('g2')">
-					<img alt="G2 Crowd image" src="https://dzvexx2x036l1.cloudfront.net/crowd.png" />
-					<img alt="G2 Crowd image" src="https://dzvexx2x036l1.cloudfront.net/crowdh.png" class="over over3" />
-				</div>
+        <div id="g2-img" class="arrow_box g2Active" (click)="openTestimonial('g2')">
+          <img alt="G2 Crowd image" src="https://dzvexx2x036l1.cloudfront.net/crowd.png" />
+          <img alt="G2 Crowd image" src="https://dzvexx2x036l1.cloudfront.net/crowdh.png" class="over over3" />
+        </div>
 
-				<div id="google-img" class="arrow_box googleActive" (click)="openTestimonial('google')">
-					<img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_logo.png" />
-					<img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_hover.png" class="over over4" />
-				</div>
+        <div id="google-img" class="arrow_box googleActive" (click)="openTestimonial('google')">
+          <img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_logo.png" />
+          <img alt="Google image" src="https://dzvexx2x036l1.cloudfront.net/google_hover.png" class="over over4" />
+        </div>
 
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 
-	<div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1">
-		<div class="container mobile-container protfolio-section">
+  <div class="col-md-12 col-sm-12 col-xs-12 text-center np case-breathers1">
+    <div class="container mobile-container protfolio-section">
 
-			<div id="fb" class="protfolio-inner-section fb1 " data-repuso-grid="4406" data-website-id="0"></div>
+      <div id="fb" class="protfolio-inner-section fb1 " data-repuso-grid="4406" data-website-id="0"></div>
 
-			<div id="capterra" class="protfolio-inner-section capterra1 testhide" data-repuso-grid="4407" data-website-id="0"></div>
+      <div id="capterra" class="protfolio-inner-section capterra1 testhide" data-repuso-grid="4407" data-website-id="0"></div>
 
-			<div id="g2" class="protfolio-inner-section g21 testhide" data-repuso-grid="4320" data-website-id="0"></div>
+      <div id="g2" class="protfolio-inner-section g21 testhide" data-repuso-grid="4320" data-website-id="0"></div>
 
-			<div id="google" class="protfolio-inner-section google1 testhide" data-repuso-grid="5402" data-website-id="0"></div>
-		</div>
-	</div>
+      <div id="google" class="protfolio-inner-section google1 testhide" data-repuso-grid="5402" data-website-id="0"></div>
+    </div>
+  </div>
 </div>
 
 <!-- start static HTML of fb, capterra and g2 crowd -->
 <div class="col-md-12 col-sm-12 col-xs-12 text-center np custom-embeds hide" id="staticReviews">
-	<div class="container mobile-container">
-		<div class="section-2-heading" style="color: rgb(34, 34, 34);">
-			Average Rating 4.9/5. 500+ Reviews
-		</div>
+  <div class="container mobile-container">
+    <div class="section-2-heading" style="color: rgb(34, 34, 34);">
+      Average Rating 4.9/5. 500+ Reviews
+    </div>
 
-		<ul class="nav nav-tabs">
-			<li class="active">
-				<a data-toggle="tab" href="#fb-tab"></a>
-			</li>
-			<li>
-				<a data-toggle="tab" href="#capterra-tab"></a>
-			</li>
-			<li>
-				<a data-toggle="tab" href="#g2crowd-tab"></a>
-			</li>
-			<li>
-				<a data-toggle="tab" href="#google-tab"></a>
-			</li>
-		</ul>
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a data-toggle="tab" href="#fb-tab"></a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#capterra-tab"></a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#g2crowd-tab"></a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#google-tab"></a>
+      </li>
+    </ul>
 
-		<div class="tab-content" style="font-family: montserratregular;">
-			<div id="fb-tab" class="tab-pane fade in active">
-				<div class="col-md-12 col-sm-12 col-xs-12 np">
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">If you are an A+ marketer, you will love this beast! It looks simple but the intelligence you get out of it is incredible.
-							Makes generation of qualified leads a lot easier and even fun. A lot of thought has gone into building this piece
-							of software. For sure.</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Dapo Bankole</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
-									</a>
-								</div>
+    <div class="tab-content" style="font-family: montserratregular;">
+      <div id="fb-tab" class="tab-pane fade in active">
+        <div class="col-md-12 col-sm-12 col-xs-12 np">
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">If you are an A+ marketer, you will love this beast! It looks simple but the intelligence you get out of it is
+              incredible. Makes generation of qualified leads a lot easier and even fun. A lot of thought has gone into building
+              this piece of software. For sure.</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Dapo Bankole</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
+                  </a>
+                </div>
 
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">Such a great idea for conversion rate optimization on landing pages! These are the benefits that I found were great
-							for us: - When you've maximized good quality traffic, this is a great idea to optimize conversion rates on your landing
-							pages - When used intelligently, visual content mixed with calculators and quizzes leads to better engagement and
-							completion rates - Integrates with most important tools out there. </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Jonathan Naccache</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-jona.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">Great calculator quiz building tool with various field types and well-designed modern templates. The resources section
-							and support is great too. Very happy with the software.</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Va Barber Hua</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-va.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">You can't beat outgrow for creating advanced quizzes that help you generate leads. It's like the facebook quizzes we
-							used to do for fun, but now you can use them to generate top quality leads for your business. If you do some thinking,
-							you'd be shocked how many different quizzes you can come up with. Super customisable and easy to use, would definitely
-							recommend checking it out!</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Bryce York</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-bryce.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">These guys are so cool! Their product is fun and easy to use and obviously developed by a team of creative geniuses
-							that care about their customers.</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Rachel Kornak</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-rachel.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">The next generation of content marketing This software is extremely agile and allows us to build any type of calculator
-							or quiz we can imagine. This is one of the best options out there to create engaging content, especially in a time
-							when blog posts are being dull.</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Jake Anderson</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
-									</a>
-								</div>
-								<img alt="user image" src="assets/images/testimonial-userImg-jake.png">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="capterra-tab" class="tab-pane fade">
-				<div class="col-md-12 col-sm-12 col-xs-12 np">
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">Such a great idea for conversion rate optimization Pros: - When you've maximized good quality traffic, this is a great
-							idea to optimize conversion rates on your landing pages - When used intelligently, visual content mixed with calculators
-							and quizzes leads to better engagement and completion rates - Integrates with most important tools out there Cons:
-							- Wish there was more visual mapping for different outcomes, but I am confident this will be available in the near
-							future.
-						</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Verified Reviewer</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
-									</a>
-								</div>
-								<!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg"> -->
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">You can't beat Outgrow for quizzes Pros: You can't beat Outgrow for creating advanced quizzes that help you generate
-							leads. It's like the facebook quizzes we used to do for fun, but now you can use them to generate top quality leads
-							for your business. Highly recommend testing it out. Cons: It can be a little expensive (especially if you want the
-							more advanced features), but if you're using it properly it'll pay for itself in no time.</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Verified Reviewer</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
-									</a>
-								</div>
-								<!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg"> -->
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">Easy to Set-up, Great Converter Pros: Converting visitors to leads at a rate of 10x vs. not using Outgrow. Further,
-							we're dropping these leads into a drip campaign specific to the results of their quiz. Cons: Cosmetically the tempalte
-							we are using has shadows. Outgrow was quick to suggest an alternative template.</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Ryan Zagata</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
-									</a>
-								</div>
-								<!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg"> -->
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">Outgrow is on to having a great product! Pros: I love that I can build a quiz in minutes. I love that I can mix different
-							types of questions: Multiple choice, open ended, or select all that apply. Cons: I would like more page editing features
-							rather than to depend on templates. Also, when I want to embed the Quiz on one of my pages I cannot (I don't know
-							CSS or am a programmer) change the background color of the Quiz to reflect my site colors. This would be nice to do.
-							I hear the new version coming out may solve this... Overall: Quizzes are the future of internet marketing. People
-							love quizzes and they help you build a relationship with someone easier. If you don't use quizzes you are missing
-							a great tool to market your products.</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Ed Ferrigan</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<!-- <img alt="G2Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-ed.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">Pros: The Outgrow software is something I have been looking for in the market for a long time. However, I could only
-							find unglamorous, 'ugly' designs and bad user interfaces.... Then, I found Outgrow. Outgrow provide a really easy
-							solution to the problems of marketing and engaging with consumers in 2017. The team are a really dedicated support
-							who get back to you within a few minutes on live chat. Cons: Nothing. Everything is great. I would like to see more
-							features being added though, to add even more value, but otherwise really great! Overall: Being able to really engage
-							with my consumers and give them fun ways to know more about my brand.</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<!-- <span class="testi-desig ellipsis"></span> -->
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
-									</a>
-								</div>
-								<!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg">  -->
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<!-- <div class="testimonial-question">What do you like best?</div> -->
-						<div class="testimonial-answer">The next generation of content marketing Pros: This software is extremely agile and allows us to build any type of
-							calculator or quiz we can imagine. This is one of the best options out there to create engaging content, especially
-							in a time when blog posts are being dull. Cons: I wish the lead generation module was more agile in terms of placement.
-							Also I would like to see an advanced drag and drop editor. Overall: Generate more leads. Capture the attention of
-							my customers and build goodwill with great content.</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Jake Anderson</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
-									</a>
-								</div>
-								<!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg">  -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="g2crowd-tab" class="tab-pane fade">
-				<div class="col-md-12 col-sm-12 col-xs-12 np">
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-question">What do you like best?</div>
-						<div class="testimonial-answer">I think these quizzes are fabulous! I can do a variety of quizzes to intrigue my blog readers, and make different ones
-							to fit the need at that time. Sometimes humorous, serious, or simply interesting. I love the social share so once
-							the reader gets their outcome, they can share on social media. Also, it can take them back directly to my website.
-						</div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="G2Crwod logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-question">What do you like best?</div>
-						<div class="testimonial-answer">Outgrow is the gamification of online customer engagement, a conversion machine that improves the experience of our
-							visitors. At Bazaar10X.com we track the most effective growth strategies and Outgrow comes at the top of our list
-							for online marketing and customer engagement. Their platform is flexible, easy to use and fully customizable making
-							every experience unique and relevant to our target audience. We use Outgrow to drive conversion, add value or educate
-							our audience and to pre-qualify leads. The follow-up process for our leads is much more targetted with Outgrow because
-							we already collected key information to make the content and value proposition more relevant. We collect more leads
-							with more relevant info. I term of SEO, the platform includes all the bells and whistles to rank and it can be used
-							both as a standalone landing page or embedded on a website. All and all relly impressed with Outgrow, right now at
-							the centre of our online engagement strategy. </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="G2Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg2.jpg">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-question">What do you like best?</div>
-						<div class="testimonial-answer">Outgrow is best thought of as a very powerful calculator. Imagine a very intelligent person sitting across from you
-							with a computer asking questions, calculating results, and feeding the results back to you in an easy-to-understand
-							form. Outgrow is all of that and more. The best part about Outgrow is that it is equally useful for beginners and
-							advanced users alike. You can get started creating simple calculators and quizzes in no time. You can make those calculators
-							and quizzes gorgeous with little effort. You can do it in less than 15 minutes. But it doesn't stop there. The advanced
-							calculation features allow you to design highly complex apps without needing to do any coding. The possibilities for
-							lead magnets and premium products are infinite and exciting. </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg3.jpg">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-question">What do you like best?</div>
-						<div class="testimonial-answer">I like to use my time to work on my business but tactical are just as important so being able to learn a piece of software
-							in the shortest space of time make sense. But that's not all. I have used all sorts of software , from page builders,
-							to trackers, to heatmappers, to webinars software. What impresses me most about Outgrow is that it delivers on it's
-							promises. All functionalities work and the support turnaround is fast and personal. I find i am not wasting time waiting
-							2 months plus for bug fixes and poor excuses. When i have an issue or i am not sure about a particular function -
-							i just send a chat ticket and invariably it gets answered with 40 minutes. Money likes speed and money is fuel for
-							a business. I like things that work! </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg4.jpg">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-question">What do you like best?</div>
-						<div class="testimonial-answer">This tool was so easy to use. We've tried other calculator tools but Outgrow had a variety of templates and designs
-							as well as the flexibility of making our own formulated results. Plus the customer support team was extremely helpful
-							in getting our calculator perfected before launch. </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg5.jpg">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-question">What do you like best?</div>
-						<div class="testimonial-answer">Their customization was really great, their template selection was excellent as it let me customize my quiz exactly
-							the way I wanted. Their drag and drip feature made it really easy for anyone in my team to be able to modify the quiz
-							and customize it to our needs. At one point I had some questions about the platform and needed technical support,
-							they were very helpful through the phone and were willing to work with me. The fact that the sales rep had researched
-							my company prior to our call and gave us suggestions as to how to better implement Outgrow into our website to increase
-							our leads was impressive. I don't think I've had a company do its research on a customer before jumping on a call.
-							It also really helped in terms of context, since I avoided having to explain who we are and what we do. </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg6.jpg">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="google-tab" class="tab-pane fade">
-				<div class="col-md-12 col-sm-12 col-xs-12 np">
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-answer">Love Outgrow as the marketing tool to get profile and health profiling of our customers. Getting to know our Health
-							Bootcamp members well is critical as it enables us to customize the experience. Our success depends on how well we
-							know the issues they are facing. Outgrow has great templates and branded designs as well as a very simple beautiful
-							user experience. We have had 96% response rate using Outgrow Quiz. </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Reena Jadhav</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-reenaJ.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-answer">We've been using Outgrow to create interactive content for a range of clients. It's a great tool for creating interesting
-							ways to add leads to the top of the funnel, whilst staying away from the overused free PDF guides, etc. The content
-							builder is very easy to use, but extremely powerful. The scoring logic is really useful, especially the "if most answers
-							are A, give the outcome X". There are a number of potential integrations, including to the most popular email marketing
-							systems. The native integration with Active Campaign was perfect for our clients. </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Robert Peters</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-robertP.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-answer">Put simply - why will your audience leave - once they start interacting with an Outgrow calculator. Simply outstanding
-							.. guys you have created an amazing engaging platform where the clients get massive value. Also 24 hrs support and
-							simply superb. great to see a company investing in great platform but also on customer service .. </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Vicky Singh</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-vickyS.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-answer">Love the easy function for building a Quiz and the ability for branding. Your new leads are coming! We have searched
-							for this for a couple of years and now it´s here. Thanks, Outgrow! Fantastic software. Easy to use, meet needs and
-							are enjoyable! The customer service is fast with high knowledge and flexible mindset. To fully meet our brand book,
-							and tone of voice, there have to be more fonts. Such as Open Sans and top Google font family. Meet needs, easy to
-							use and enjoyable! </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Joakim Thörn</span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-joakimT.png">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
-						<div class="testimonial-quote"></div>
-						<div class="testimonial-answer">Great product for creating quizzes, surveys with viral power. Love the calculator option, we can create powerful assessments
-							for our clients which calculate scores, then use that score to assign an assessment or gap value. Amazingly powerful.
-							Support is great, really great, they always answer, always help with things we are doing even when it's a weird request.
-							Not many cons, new features show up, but it's pretty powerful now. We've had a few growing pains as we learn to create
-							assessments and quizzes, but support has helped us through them. </div>
-						<div class="testimonial-bottom">
-							<div class="testimonial-bottom-left">
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-								<i class="material-icons">star_rate</i>
-							</div>
-							<div class="testimonial-bottom-right">
-								<div class="testi-content">
-									<span class="testi-desig ellipsis">Tom Lyons </span>
-									<a href="javascript:void(0);" class="view-post ellipsis">View Post
-										<img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
-									</a>
-								</div>
-								<img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-tomL.png">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">Such a great idea for conversion rate optimization on landing pages! These are the benefits that I found were
+              great for us: - When you've maximized good quality traffic, this is a great idea to optimize conversion rates
+              on your landing pages - When used intelligently, visual content mixed with calculators and quizzes leads to
+              better engagement and completion rates - Integrates with most important tools out there. </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Jonathan Naccache</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-jona.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">Great calculator quiz building tool with various field types and well-designed modern templates. The resources
+              section and support is great too. Very happy with the software.</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Va Barber Hua</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-va.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">You can't beat outgrow for creating advanced quizzes that help you generate leads. It's like the facebook quizzes
+              we used to do for fun, but now you can use them to generate top quality leads for your business. If you do
+              some thinking, you'd be shocked how many different quizzes you can come up with. Super customisable and easy
+              to use, would definitely recommend checking it out!</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Bryce York</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-bryce.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">These guys are so cool! Their product is fun and easy to use and obviously developed by a team of creative geniuses
+              that care about their customers.</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Rachel Kornak</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-rachel.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">The next generation of content marketing This software is extremely agile and allows us to build any type of
+              calculator or quiz we can imagine. This is one of the best options out there to create engaging content, especially
+              in a time when blog posts are being dull.</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Jake Anderson</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="Facebook logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-fb-mini.png">
+                  </a>
+                </div>
+                <img alt="user image" src="assets/images/testimonial-userImg-jake.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="capterra-tab" class="tab-pane fade">
+        <div class="col-md-12 col-sm-12 col-xs-12 np">
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">Such a great idea for conversion rate optimization Pros: - When you've maximized good quality traffic, this is
+              a great idea to optimize conversion rates on your landing pages - When used intelligently, visual content mixed
+              with calculators and quizzes leads to better engagement and completion rates - Integrates with most important
+              tools out there Cons: - Wish there was more visual mapping for different outcomes, but I am confident this
+              will be available in the near future.
+            </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Verified Reviewer</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
+                  </a>
+                </div>
+                <!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg"> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">You can't beat Outgrow for quizzes Pros: You can't beat Outgrow for creating advanced quizzes that help you generate
+              leads. It's like the facebook quizzes we used to do for fun, but now you can use them to generate top quality
+              leads for your business. Highly recommend testing it out. Cons: It can be a little expensive (especially if
+              you want the more advanced features), but if you're using it properly it'll pay for itself in no time.</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Verified Reviewer</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
+                  </a>
+                </div>
+                <!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg"> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">Easy to Set-up, Great Converter Pros: Converting visitors to leads at a rate of 10x vs. not using Outgrow. Further,
+              we're dropping these leads into a drip campaign specific to the results of their quiz. Cons: Cosmetically the
+              tempalte we are using has shadows. Outgrow was quick to suggest an alternative template.</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Ryan Zagata</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
+                  </a>
+                </div>
+                <!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg"> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">Outgrow is on to having a great product! Pros: I love that I can build a quiz in minutes. I love that I can mix
+              different types of questions: Multiple choice, open ended, or select all that apply. Cons: I would like more
+              page editing features rather than to depend on templates. Also, when I want to embed the Quiz on one of my
+              pages I cannot (I don't know CSS or am a programmer) change the background color of the Quiz to reflect my
+              site colors. This would be nice to do. I hear the new version coming out may solve this... Overall: Quizzes
+              are the future of internet marketing. People love quizzes and they help you build a relationship with someone
+              easier. If you don't use quizzes you are missing a great tool to market your products.</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Ed Ferrigan</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <!-- <img alt="G2Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-ed.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">Pros: The Outgrow software is something I have been looking for in the market for a long time. However, I could
+              only find unglamorous, 'ugly' designs and bad user interfaces.... Then, I found Outgrow. Outgrow provide a
+              really easy solution to the problems of marketing and engaging with consumers in 2017. The team are a really
+              dedicated support who get back to you within a few minutes on live chat. Cons: Nothing. Everything is great.
+              I would like to see more features being added though, to add even more value, but otherwise really great! Overall:
+              Being able to really engage with my consumers and give them fun ways to know more about my brand.</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <!-- <span class="testi-desig ellipsis"></span> -->
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
+                  </a>
+                </div>
+                <!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg">  -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <!-- <div class="testimonial-question">What do you like best?</div> -->
+            <div class="testimonial-answer">The next generation of content marketing Pros: This software is extremely agile and allows us to build any type
+              of calculator or quiz we can imagine. This is one of the best options out there to create engaging content,
+              especially in a time when blog posts are being dull. Cons: I wish the lead generation module was more agile
+              in terms of placement. Also I would like to see an advanced drag and drop editor. Overall: Generate more leads.
+              Capture the attention of my customers and build goodwill with great content.</div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Jake Anderson</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <!-- <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg"> -->
+                  </a>
+                </div>
+                <!-- <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg">  -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="g2crowd-tab" class="tab-pane fade">
+        <div class="col-md-12 col-sm-12 col-xs-12 np">
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-question">What do you like best?</div>
+            <div class="testimonial-answer">I think these quizzes are fabulous! I can do a variety of quizzes to intrigue my blog readers, and make different
+              ones to fit the need at that time. Sometimes humorous, serious, or simply interesting. I love the social share
+              so once the reader gets their outcome, they can share on social media. Also, it can take them back directly
+              to my website.
+            </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="G2Crwod logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg1.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-question">What do you like best?</div>
+            <div class="testimonial-answer">Outgrow is the gamification of online customer engagement, a conversion machine that improves the experience
+              of our visitors. At Bazaar10X.com we track the most effective growth strategies and Outgrow comes at the top
+              of our list for online marketing and customer engagement. Their platform is flexible, easy to use and fully
+              customizable making every experience unique and relevant to our target audience. We use Outgrow to drive conversion,
+              add value or educate our audience and to pre-qualify leads. The follow-up process for our leads is much more
+              targetted with Outgrow because we already collected key information to make the content and value proposition
+              more relevant. We collect more leads with more relevant info. I term of SEO, the platform includes all the
+              bells and whistles to rank and it can be used both as a standalone landing page or embedded on a website. All
+              and all relly impressed with Outgrow, right now at the centre of our online engagement strategy. </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="G2Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg2.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-question">What do you like best?</div>
+            <div class="testimonial-answer">Outgrow is best thought of as a very powerful calculator. Imagine a very intelligent person sitting across from
+              you with a computer asking questions, calculating results, and feeding the results back to you in an easy-to-understand
+              form. Outgrow is all of that and more. The best part about Outgrow is that it is equally useful for beginners
+              and advanced users alike. You can get started creating simple calculators and quizzes in no time. You can make
+              those calculators and quizzes gorgeous with little effort. You can do it in less than 15 minutes. But it doesn't
+              stop there. The advanced calculation features allow you to design highly complex apps without needing to do
+              any coding. The possibilities for lead magnets and premium products are infinite and exciting. </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg3.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-question">What do you like best?</div>
+            <div class="testimonial-answer">I like to use my time to work on my business but tactical are just as important so being able to learn a piece
+              of software in the shortest space of time make sense. But that's not all. I have used all sorts of software
+              , from page builders, to trackers, to heatmappers, to webinars software. What impresses me most about Outgrow
+              is that it delivers on it's promises. All functionalities work and the support turnaround is fast and personal.
+              I find i am not wasting time waiting 2 months plus for bug fixes and poor excuses. When i have an issue or
+              i am not sure about a particular function - i just send a chat ticket and invariably it gets answered with
+              40 minutes. Money likes speed and money is fuel for a business. I like things that work! </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg4.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-question">What do you like best?</div>
+            <div class="testimonial-answer">This tool was so easy to use. We've tried other calculator tools but Outgrow had a variety of templates and designs
+              as well as the flexibility of making our own formulated results. Plus the customer support team was extremely
+              helpful in getting our calculator perfected before launch. </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg5.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-question">What do you like best?</div>
+            <div class="testimonial-answer">Their customization was really great, their template selection was excellent as it let me customize my quiz exactly
+              the way I wanted. Their drag and drip feature made it really easy for anyone in my team to be able to modify
+              the quiz and customize it to our needs. At one point I had some questions about the platform and needed technical
+              support, they were very helpful through the phone and were willing to work with me. The fact that the sales
+              rep had researched my company prior to our call and gave us suggestions as to how to better implement Outgrow
+              into our website to increase our leads was impressive. I don't think I've had a company do its research on
+              a customer before jumping on a call. It also really helped in terms of context, since I avoided having to explain
+              who we are and what we do. </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Administrator in Information Technology and Services</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="G2 Crowd logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-g2crowd-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg6.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="google-tab" class="tab-pane fade">
+        <div class="col-md-12 col-sm-12 col-xs-12 np">
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-answer">Love Outgrow as the marketing tool to get profile and health profiling of our customers. Getting to know our
+              Health Bootcamp members well is critical as it enables us to customize the experience. Our success depends
+              on how well we know the issues they are facing. Outgrow has great templates and branded designs as well as
+              a very simple beautiful user experience. We have had 96% response rate using Outgrow Quiz. </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Reena Jadhav</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-reenaJ.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-answer">We've been using Outgrow to create interactive content for a range of clients. It's a great tool for creating
+              interesting ways to add leads to the top of the funnel, whilst staying away from the overused free PDF guides,
+              etc. The content builder is very easy to use, but extremely powerful. The scoring logic is really useful, especially
+              the "if most answers are A, give the outcome X". There are a number of potential integrations, including to
+              the most popular email marketing systems. The native integration with Active Campaign was perfect for our clients.
+            </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Robert Peters</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-robertP.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-answer">Put simply - why will your audience leave - once they start interacting with an Outgrow calculator. Simply outstanding
+              .. guys you have created an amazing engaging platform where the clients get massive value. Also 24 hrs support
+              and simply superb. great to see a company investing in great platform but also on customer service .. </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Vicky Singh</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-vickyS.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-answer">Love the easy function for building a Quiz and the ability for branding. Your new leads are coming! We have searched
+              for this for a couple of years and now it´s here. Thanks, Outgrow! Fantastic software. Easy to use, meet needs
+              and are enjoyable! The customer service is fast with high knowledge and flexible mindset. To fully meet our
+              brand book, and tone of voice, there have to be more fonts. Such as Open Sans and top Google font family. Meet
+              needs, easy to use and enjoyable! </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Joakim Thörn</span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-joakimT.png">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 np testimonial-block">
+            <div class="testimonial-quote"></div>
+            <div class="testimonial-answer">Great product for creating quizzes, surveys with viral power. Love the calculator option, we can create powerful
+              assessments for our clients which calculate scores, then use that score to assign an assessment or gap value.
+              Amazingly powerful. Support is great, really great, they always answer, always help with things we are doing
+              even when it's a weird request. Not many cons, new features show up, but it's pretty powerful now. We've had
+              a few growing pains as we learn to create assessments and quizzes, but support has helped us through them.
+            </div>
+            <div class="testimonial-bottom">
+              <div class="testimonial-bottom-left">
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+                <i class="material-icons">star_rate</i>
+              </div>
+              <div class="testimonial-bottom-right">
+                <div class="testi-content">
+                  <span class="testi-desig ellipsis">Tom Lyons </span>
+                  <a href="javascript:void(0);" class="view-post ellipsis">View Post
+                    <img alt="gplus logo image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-gplus-mini.jpg">
+                  </a>
+                </div>
+                <img alt="user image" src="https://dzvexx2x036l1.cloudfront.net/testimonial-userImg-tomL.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <section class="section sec-last">
   <div class="container custom-container mobile-container">
     <div class="section-2-heading">
-    Interactive Product Recommendations &amp; Product <br>Finders for Increased Engagement and Sales
+      Interactive Product Recommendations &amp; Product
+      <br>Finders for Increased Engagement and Sales
     </div>
     <div class="col-md-12 col-sm-12 col-xs-12 np">
       <div class="col-md-12 col-xs-12 col-sm-12 np text-center startTrial-outer startTrial-outer1">
@@ -1379,7 +1440,7 @@
         <span class="lead-form-btn">
           <a href="//app.outgrow.co/signup/?email=" class="lead-email btn-buildcal" onclick="callGA('CANNOT WAIT CTA'); ">
             Start Free Trial
-          </a>	
+          </a>
         </span>
         <span class="no-card">No Credit Card Required</span>
       </div>

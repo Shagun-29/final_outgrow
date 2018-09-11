@@ -114,7 +114,7 @@ export class EcommerceQuizesComponent implements OnInit {
 
   playVideo(id){
     let videoStream=document.getElementsByClassName("video-img-shadow") as HTMLCollectionOf<HTMLElement>;console.log(videoStream);
-    videoStream[0].style.height="600px";
+    videoStream[0].style.height="574px";
     // videoStream.classList.remove('hide-height');
 
     this.showDiv=false;
