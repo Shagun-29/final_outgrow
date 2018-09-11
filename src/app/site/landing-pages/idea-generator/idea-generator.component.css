@@ -14,6 +14,9 @@
     background: url("/assets/images/sec1-bg1.jpg") no-repeat 40% center !important;
     background-size: cover!important;
 }
+.update-section .sec-catergory .selectize-input.items.has-options.full.has-items .item +input {
+    height: 0!important;
+}
 .sec-outr {
     display: table;
     height: 100vh;
@@ -27,7 +30,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: block;
 }
 .sec-outr.sec1-bg .sec {
-    display: table-cell;
+    /* display: table-cell; */
     vertical-align: top;
 }
 
@@ -37,6 +40,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 section.mouse-bg.sec-outr.new-sec-bg .sec {
     vertical-align: top;
+    display: block;
 }
 .alert.alert-danger i.material-icons {
     font-size: 14px;
@@ -115,6 +119,7 @@ h1 {
     margin-left: 0;
     margin-top: 40px;
     min-height: 77px;
+    line-height: 1;
     min-width: 380px;
     padding: 15px 35px;
     text-decoration: none;
@@ -569,6 +574,31 @@ span.alert.alert-danger {
     position: absolute;
     bottom: -20px;
     left: 10px;
+}
+.floating-btn {
+    position: relative;
+    margin: -20px auto 120px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    /* bottom: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    /* z-index: 9; */
+}
+.floating-btn .btn-white-new {
+    background: #62696d;
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 40px;
+    border: 2px solid #62696d;
+    transition: .5s ease-in-out;
+    border-radius: 25px;
+    font-family: montserratregular;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.08);
+    letter-spacing: 0.01em;
+    margin-top: 0;
 }
 @media (max-width: 639px)
 {
