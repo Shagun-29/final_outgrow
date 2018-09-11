@@ -606,6 +606,9 @@ span.alert.alert-danger {
         padding-top: 3px !important;
         line-height: initial;
     }
+    section.mouse-bg.sec-outr.new-sec-bg .sec {
+        text-align: center;
+    }
 .sec-outr.sec1-bg .sec {
     padding: 0 15px;
     text-align: center;
@@ -802,6 +805,9 @@ figure.icons-part {
 .sec1-text h1 {
     font-size: 32px;
 }
+.sec1-text h2 {
+    font-size: 28px;
+}
 .sec1-button,.sec-button {
     font-size: 14px;
     margin-left: 0;
@@ -897,6 +903,13 @@ figure.icons-part {
     margin-top: 20px;
     min-height: 45px;
 }
+.sec2-bg .sec-container, .sec3-bg .sec-container, .sec4-bg .sec-container {
+    padding-left: 70px;
+}
+.sec2-bg .sec-container, .sec3-bg .sec-container, .sec4-bg .sec-container {
+    margin: 0 auto;
+    width: 90%;
+}
 }
 @media (max-width: 1679px) and (min-width: 1366px)
 {
@@ -963,6 +976,9 @@ figure.icons-part {
 {
 .sec1-text h1 {
     font-size: 36px;
+}
+.sec1-text h2 {
+    font-size: 32px;
 }
 .sec1-text + .sec1-button {
     background-position: 35px center;
@@ -1049,6 +1065,6 @@ figure.icons-part {
 .sec-catergory .selectize-input.items.has-options.full.has-items .item + input {
     height: 0px!important;
 }
-.new-sec-bg{
+/* .new-sec-bg{
     padding-left:120px;
-} 
+}  */
