@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 
 declare var jQuery: any;
 @Component({
