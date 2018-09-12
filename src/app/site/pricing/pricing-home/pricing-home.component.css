@@ -307,7 +307,7 @@ ul.features.rs-hide {
 @media (max-width:1023px){
 
 #pricing .section-1 {
-   margin-top: 55px;
+   margin-top: 50px!important;
    padding-bottom: 0px;
  }
 
@@ -333,12 +333,21 @@ margin-top:70px;
 @media (min-width:769px) and (max-width:990px) {
 
 #pricing .section-1 {
-margin-top: 0;
+margin-top: 0!important;
 }
 #pricing .container-faqs {
   width: 100%;
   padding: 0px 25px;
 }
+.section-2-heading {
+  text-transform: none;
+  line-height: normal;
+  font-size: 28px !important;
+  text-align: center;
+}
+
+
+
 }
 @media (min-width:1810px) and (max-width:1920px) {
 #pricing .section-1 {margin-top: 66px !important;}

@@ -872,8 +872,17 @@ li.nav-lead-input {
     margin: 10px !important;
 }
 .dashboard a {
-    margin: 0px 0px 10px 10px!important;
+    margin: 5px 0px 10px 10px!important;
     display: inline-block !important;
+}
+.custom-navbar.navbar-default .navbar-nav>li>a {
+    font-size: 12px !important;
+    line-height: 18px!important;
+}
+.custom-navbar.navbar-default .navbar-nav>li.dashboard>a {
+   font-weight: 800;
+   font-size: 12px !important;
+   line-height: normal!important;
 }
 }
 @media (max-width: 1023px) and (min-width: 991px)

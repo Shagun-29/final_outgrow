@@ -280,7 +280,8 @@ img {
 }
 .footer-social ul {
     display: inline-block;
-    padding-left: 0
+    padding-left: 0;
+    margin-bottom: 0px;
 
 }
 .footer-social ul li {
