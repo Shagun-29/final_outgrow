@@ -540,3 +540,7 @@ bottom : 80px !important;
     padding-left: 27px;
 }
 }
+
+.sumome-image-sharer{
+    display: none;
+}
