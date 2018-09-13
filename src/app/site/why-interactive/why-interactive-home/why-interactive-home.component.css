@@ -1168,7 +1168,7 @@ a:focus, a:hover {
         height: 294px;
     }
 }
-@media (min-width: 768px) and (max-width:768px){
+@media (min-width: 750px) and (max-width:768px){
     iframe {
         position: absolute;
         top: 22px;
@@ -1190,7 +1190,9 @@ a:focus, a:hover {
      min-height: 150px;
      margin-bottom: 20px;
     }
-    
+    .mobile-sec3 .sec3-box2 {
+        text-align: center;
+    }
 }
 @media (min-width: 769px) and (max-width: 990px){
     .section-top h3 {
@@ -1423,12 +1425,7 @@ a:focus, a:hover {
     float: left;
     margin-right: 5px;
 }
-@media (max-width: 768px) and (min-width: 768px)
-{
-.mobile-sec3 .sec3-box2 {
-    text-align: center;
-}
-}
+
 
 @media (min-width:991px) and (max-width:991px){
     .calc-table .container {

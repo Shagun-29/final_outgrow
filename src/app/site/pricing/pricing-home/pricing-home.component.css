@@ -1524,7 +1524,7 @@ line-height: 20px;
 font-size: 12px;
 }
 #pricing .section-1{
-margin-top: 0;
+margin-top: 0!important;
 margin-bottom: 0;
 }
 #pricing .need-custom-plan i.material-icons {

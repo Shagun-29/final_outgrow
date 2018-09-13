@@ -164,7 +164,12 @@ span.live-demo a {
     position: relative;
     top: 0;
 }
-
+.custom-embeds .nav-tabs>li>a:hover {
+    background-color: transparent;
+}
+.arrow_box:hover .over1,.arrow_box:hover .over2,.arrow_box:hover .over3,.arrow_box:hover .over4 {
+    display: block;
+}
 .hide-height {
     height: 400px;
     overflow: hidden;
