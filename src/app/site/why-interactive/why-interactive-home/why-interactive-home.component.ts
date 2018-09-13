@@ -15,7 +15,10 @@ export class WhyInteractiveHomeComponent implements OnInit {
   load = document.querySelector('.preloader');
   header = document.querySelector('.navbar-fixed-top');
  footer = document.querySelector('.footer-14');
- active = document.querySelector('.interactive');
+ features = document.querySelector('.features');
+ interactive = document.querySelector('.interactive');
+  pricing = document.querySelector('.pricing');
+  examples = document.querySelector('.examples');
  activeHeader="";
  href="";
  text:any;
@@ -29,8 +32,19 @@ export class WhyInteractiveHomeComponent implements OnInit {
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
     this.href = this.apiRequestService.gethref();
+    console.log("---------------------->",this.href)
     if (this.href == "why-interactive") {
-        this.active.classList.add('active')
+      this.interactive.classList.add('active');
+      if(this.examples){
+        this.examples.classList.remove('active');  
+      }
+      if(this.features){
+        this.features.classList.remove('active');
+      }
+      if(this.pricing){
+        this.pricing.classList.remove('active');
+      }
+     
     }
    
 

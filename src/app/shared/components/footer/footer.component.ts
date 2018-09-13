@@ -29,7 +29,7 @@ export class FooterComponent implements OnInit {
      // footerBadge.classList.add('footer-badge-spacing');
      footerBadge[0].style.paddingBottom="140px";
     //  footerBadge[0].style.top="12px";
-           footerShowAdjust.classList.add('footer-adjust');
+     footerShowAdjust.classList.add('footer-adjust');
     }
     
     

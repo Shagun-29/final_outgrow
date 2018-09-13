@@ -24,7 +24,11 @@ export class FeaturesHomeComponent implements OnInit {
   load = document.querySelector('.preloader');
   header = document.querySelector('.navbar-fixed-top');
  footer = document.querySelector('.footer-14');
- active = document.querySelector('.features');
+ features = document.querySelector('.features');
+ interactive = document.querySelector('.interactive');
+  pricing = document.querySelector('.pricing');
+  examples = document.querySelector('.examples');
+
  activeHeader="";
  href="";
  text:any;
@@ -38,15 +42,29 @@ export class FeaturesHomeComponent implements OnInit {
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
     this.href = this.apiRequestService.gethref();
+    console.log("---------------------->",this.href)
+    // if (this.href == "features") {
+    //   this.examples.classList.remove('active');
+    //   this.interactive.classList.remove('active');
+    //   this.features.classList.add('active');
+    //   this.pricing.classList.remove('active');
+    // }
+
     if (this.href == "features") {
-      this.active.classList.add('active')
+      this.features.classList.add('active');
+      if(this.examples){
+        this.examples.classList.remove('active');  
+      }
+      if(this.pricing){
+        this.pricing.classList.remove('active');
+      }
+      if(this.interactive){
+        this.interactive.classList.remove('active');
+      }
+     
     }
 
     $(document).ready(function(){
-
-    
-     
-
     setTimeout(function() {
 
       var swipera = new Swiper('.swiper-container', {
