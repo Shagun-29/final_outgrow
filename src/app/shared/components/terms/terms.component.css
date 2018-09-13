@@ -134,6 +134,9 @@ p {
     font-size: 18px !important;
     line-height: 24px;
 }
+.heading{
+    margin-bottom: 16px;
+}
 }
 @media (max-width: 1024px) and (min-width: 0px)
 {

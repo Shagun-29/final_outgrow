@@ -619,7 +619,7 @@ a:focus, a:hover {
 @media only screen and (max-width: 380px)
 {
 .start-trial-cta .btn-buildcal p {
-    line-height: 18px;
+    line-height: 24px;
     float: none;
 }
 }
