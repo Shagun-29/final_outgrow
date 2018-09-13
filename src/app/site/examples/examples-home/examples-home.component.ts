@@ -18,7 +18,14 @@ export class ExamplesHomeComponent implements OnInit {
   load = document.querySelector('.preloader');
   header = document.querySelector('.navbar-fixed-top');
   footer = document.querySelector('.footer-14');
-  active = document.querySelector('.examples')
+
+  examples = document.querySelector('.examples');
+  interactive = document.querySelector('.interactive');
+  pricing = document.querySelector('.pricing');
+  features = document.querySelector('.features');
+
+
+
   allCalcs: any;
   industries: any = [];
   calculators: any;
@@ -47,9 +54,30 @@ export class ExamplesHomeComponent implements OnInit {
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
     this.href = this.apiRequestService.gethref();
+    console.log("---------------------->",this.href)
+    // if (this.href == "examples") {
+    //   this.examples.classList.add('active');
+    //   this.interactive.classList.remove('active');
+    //   this.features.classList.remove('active');
+    //   this.pricing.classList.remove('active');
+
+    // }
+
     if (this.href == "examples") {
-      this.active.classList.add('active')
+      this.examples.classList.add('active');
+      if(this.pricing){
+        console.log('innside exaples...inn priicng')
+        this.pricing.classList.remove('active');  
+      }
+      if(this.features){
+        this.features.classList.remove('active');
+      }
+      if(this.interactive){
+        this.interactive.classList.remove('active');
+      }
+     
     }
+
     this.iFrames = this.videoURLService.iFrames;
     this.videoURL(this.frame);
 

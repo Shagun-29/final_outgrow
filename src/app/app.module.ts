@@ -14,6 +14,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { LoadingService } from './shared/service/loading.service';
 // import { GoogleSheet } from './shared/interfaces/GoogleSheet';
 // import { IdeaGenService } from './shared/services/idea-gen.service';
+import { ApiRequestService } from './shared/services/api-request.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LoadingService } from './shared/service/loading.service';
   providers: [
     // Script
     CookieService,
-    LoadingService
+    LoadingService,
+    ApiRequestService
   ],
   bootstrap: [AppComponent]
 })

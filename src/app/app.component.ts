@@ -18,6 +18,10 @@ export class AppComponent implements OnInit {
     show:boolean=false;
     show1:boolean=true;
     show2:boolean=false;
+    features = document.querySelector('.features');
+ interactive = document.querySelector('.interactive');
+  pricing = document.querySelector('.pricing');
+  examples = document.querySelector('.examples');
  
   constructor(private router: Router,private loadingService: LoadingService,private _cookieService:CookieService) { }
   ngOnInit() {
@@ -33,8 +37,53 @@ export class AppComponent implements OnInit {
     
     this.href = window.location.href;
     this.text=this.href.split('/');
+    console.log("--------current route-------",this.text[this.text.length-1])
     if(this.text[this.text.length-1] == "idea-generator"){
         this.flag=false;
+    }else if(this.text[this.text.length-1] == "why-interactive"){
+        this.interactive.classList.add('active');
+      if(this.examples){
+        this.examples.classList.remove('active');  
+      }
+      if(this.features){
+        this.features.classList.remove('active');
+      }
+      if(this.pricing){
+        this.pricing.classList.remove('active');
+      }
+    }else if(this.text[this.text.length-1] == "features"){
+        this.features.classList.add('active');
+      if(this.examples){
+        this.examples.classList.remove('active');  
+      }
+      if(this.interactive){
+        this.interactive.classList.remove('active');
+      }
+      if(this.pricing){
+        this.pricing.classList.remove('active');
+      }
+    }else if(this.text[this.text.length-1] == "examples"){
+        this.examples.classList.add('active');
+      if(this.interactive){
+        this.interactive.classList.remove('active');  
+      }
+      if(this.features){
+        this.features.classList.remove('active');
+      }
+      if(this.pricing){
+        this.pricing.classList.remove('active');
+      }
+    }else if(this.text[this.text.length-1] == "pricing"){
+        this.pricing.classList.add('active');
+      if(this.examples){
+        this.examples.classList.remove('active');  
+      }
+      if(this.features){
+        this.features.classList.remove('active');
+      }
+      if(this.interactive){
+        this.interactive.classList.remove('active');
+      }
     }
     else{
         this.flag=true;

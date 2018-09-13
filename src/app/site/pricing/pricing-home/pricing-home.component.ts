@@ -20,7 +20,10 @@ export class PricingHomeComponent implements OnInit {
     slideEssentials: boolean = true;
     slideBusiness: boolean = true;
     slideFreelancerQuiz: boolean = true;
-    active = document.querySelector('.pricing');
+    features = document.querySelector('.features');
+ interactive = document.querySelector('.interactive');
+  pricing = document.querySelector('.pricing');
+  examples = document.querySelector('.examples');
     activeHeader="";
     href="";
     text:any;
@@ -48,9 +51,27 @@ export class PricingHomeComponent implements OnInit {
         this.footer.classList.remove('hide');
 
         this.href = this.apiRequestService.gethref();
+        console.log("---------------------->",this.href)
+        // if (this.href == "pricing") {
+        // this.examples.classList.remove('active');
+        // this.interactive.classList.remove('active');
+        // this.features.classList.remove('active');
+        // this.pricing.classList.add('active');
+        // }
+
         if (this.href == "pricing") {
-            this.active.classList.add('active')
-        }
+            this.pricing.classList.add('active');
+            if(this.examples){
+              this.examples.classList.remove('active');  
+            }
+            if(this.features){
+              this.features.classList.remove('active');
+            }
+            if(this.interactive){
+              this.interactive.classList.remove('active');
+            }
+           
+          }
     
         this.planTab('annual');
         jQuery(document).ready(function() {
