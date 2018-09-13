@@ -799,6 +799,19 @@ span.testi-desig {
     float: right;
     margin-left: 10px;
 }
+.custom-embeds .nav-tabs>li:nth-child(1)>a:hover {
+    background-image: url(assets/images/facebookh.png);
+}
+.custom-embeds .nav-tabs>li:nth-child(2)>a:hover {
+    background-image: url(assets/images/capterah.png);
+}
+.custom-embeds .nav-tabs>li:nth-child(3)>a:hover {
+    background-image: url(assets/images/crowdh.png);
+}
+.custom-embeds .nav-tabs>li:nth-child(4)>a:hover {
+    background-image: url(assets/images/google_hover.png);
+}
+
 
 
 @media (max-width: 2999px) and (min-width: 1480px)
@@ -978,6 +991,10 @@ span.testi-desig {
 }
 .btn-hover.rs-hide {
     display: block !important;
+}
+span.video-playIcon {
+   
+    top: 40%;
 }
 }
 @media (max-width: 990px) and (min-width: 769px)

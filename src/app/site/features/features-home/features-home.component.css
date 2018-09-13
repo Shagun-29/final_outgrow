@@ -2892,7 +2892,7 @@ h4.mk-animate-element.right-to-left.publish {width: 85%;}
 }
 #feature .section.section-10.sec-help {
 	background: #fb6c73;
-	margin-bottom: 0;
+	margin-bottom: 0!important;
 	min-height: 290px;
 	margin-top: 0
 }
@@ -4108,7 +4108,7 @@ iframe[name=google_conversion_frame] {
 }
 .feature-9-1.feature-blue {
     margin-top: 70px !important;
-	padding-bottom: 60px;
+	padding-bottom:75px;
 	margin-bottom: 20px !important;
 	padding-top: 60px !important;
 }
@@ -5237,6 +5237,7 @@ and (max-width: 480px){
 	}
 	#feature .secf2-2{
 	left:36% !important;
+	width: 70%;
 	}
 	#feature .section-f2-left {
 	padding-left: 60px;
