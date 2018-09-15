@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import * as $ from 'jquery';
@@ -33,7 +32,7 @@ export class FeaturesHomeComponent implements OnInit {
  href="";
  text:any;
 
-  constructor(router:Router, title:Title, public apiRequestService:ApiRequestService) { 
+  constructor(private router: Router, title:Title, public apiRequestService:ApiRequestService) { 
     title.setTitle("Product Features | Outgrow");
   }
 
@@ -41,19 +40,10 @@ export class FeaturesHomeComponent implements OnInit {
     this.load.classList.add('hide');
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
-    this.href = this.apiRequestService.gethref();
-    console.log("---------------------->",this.href);
+    this.href = this.router.url;
     this.text=this.href.split('/');
-    console.log("current array route",this.text);
-    
-    // if (this.href == "features") {
-    //   this.examples.classList.remove('active');
-    //   this.interactive.classList.remove('active');
-    //   this.features.classList.add('active');
-    //   this.pricing.classList.remove('active');
-    // }
 
-    if (this.href == "features") {
+    if (this.text[this.text.length-1] == "features") {
       this.features.classList.add('active');
       if(this.examples){
         this.examples.classList.remove('active');  

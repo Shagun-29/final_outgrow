@@ -35,11 +35,8 @@ export class AppComponent implements OnInit {
       }else{
       }
     
-    this.href = window.location.href;
-    console.log("----href----",this.href)
+      this.href = this.router.url;
     this.text=this.href.split('/');
-    console.log("current array route",this.text);
-    // console.log("--------current route-------",this.text[this.text.length-1])
     if(this.text[this.text.length-1] == "idea-generator"){
         this.flag=false;
     }else if(this.text[this.text.length-1] == "why-interactive"){

@@ -23,7 +23,7 @@ export class WhyInteractiveHomeComponent implements OnInit {
  href="";
  text:any;
 
- constructor(router:Router, title:Title, public apiRequestService:ApiRequestService) {
+ constructor(private router: Router, title:Title, public apiRequestService:ApiRequestService) {
  title.setTitle("Why Interactive Content ? | Outgrow");
  }
 
@@ -31,12 +31,10 @@ export class WhyInteractiveHomeComponent implements OnInit {
     this.load.classList.add('hide');
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
-    this.href = this.apiRequestService.gethref();
-    console.log("---------------------->",this.href);
+    this.href = this.router.url;
     this.text=this.href.split('/');
-    console.log("current array route",this.text);
-    
-    if (this.href == "why-interactive") {
+
+    if (this.text[this.text.length-1] == "why-interactive") {
       this.interactive.classList.add('active');
       if(this.examples){
         this.examples.classList.remove('active');  
