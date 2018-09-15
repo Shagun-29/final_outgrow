@@ -42,7 +42,10 @@ export class FeaturesHomeComponent implements OnInit {
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
     this.href = this.apiRequestService.gethref();
-    console.log("---------------------->",this.href)
+    console.log("---------------------->",this.href);
+    this.text=this.href.split('/');
+    console.log("current array route",this.text);
+    
     // if (this.href == "features") {
     //   this.examples.classList.remove('active');
     //   this.interactive.classList.remove('active');

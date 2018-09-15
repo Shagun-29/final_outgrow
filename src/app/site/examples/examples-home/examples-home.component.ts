@@ -54,7 +54,10 @@ export class ExamplesHomeComponent implements OnInit {
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
     this.href = this.apiRequestService.gethref();
-    console.log("---------------------->",this.href)
+    console.log("---------------------->",this.href);
+    this.text=this.href.split('/');
+    console.log("current array route",this.text);
+    
     // if (this.href == "examples") {
     //   this.examples.classList.add('active');
     //   this.interactive.classList.remove('active');
