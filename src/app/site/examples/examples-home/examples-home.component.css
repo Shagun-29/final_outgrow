@@ -869,7 +869,7 @@ label {
 	float: left;
 	margin-right: 10px;
 	position: relative;
-	top: 3px
+	top: -1px
 }
 .start-trial-cta label {
 	float: none;
@@ -2294,7 +2294,12 @@ body{background:#fff !important;}
 
 
 /* Responsiveness */
-@media (min-width:990px){
+@media (max-width:990px){
+	.topSpace{
+        margin-top: 0px!important;
+        }
+}
+@media (min-width:991px){
 	.topSpace{
         margin-top: 66px;
         }
@@ -2480,7 +2485,9 @@ body{background:#fff !important;}
 		padding-left:15px;
 		padding-right:50px;
 	}
-
+	.section {
+		margin-top: 0;
+	}
 	/* example page responsive css by Arti */
 	.tab-inner-frame iframe {display: none;}
 	.calc-links a {
