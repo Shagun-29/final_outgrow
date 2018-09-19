@@ -41,7 +41,17 @@ export class FeaturesHomeComponent implements OnInit {
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
     this.href = this.router.url;
+    // this.href = this.apiRequestService.gethref();
+    console.log("---------------------->",this.href);
     this.text=this.href.split('/');
+    console.log("current array route",this.text);
+
+    // if (this.href == "features") {
+    //   this.examples.classList.remove('active');
+    //   this.interactive.classList.remove('active');
+    //   this.features.classList.add('active');
+    //   this.pricing.classList.remove('active');
+    // }
 
     if (this.text[this.text.length-1] == "features") {
       this.features.classList.add('active');

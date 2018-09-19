@@ -19,6 +19,10 @@ export class EcommerceQuizesComponent implements OnInit {
   clicked: boolean = false;
   clicked_xl: boolean = false;
   showDiv:boolean = true;
+  features = document.querySelector('.features');
+ interactive = document.querySelector('.interactive');
+  pricing = document.querySelector('.pricing');
+  examples = document.querySelector('.examples');
 
   loader = document.querySelector('.preloader');
   ngOnInit() {
@@ -27,6 +31,12 @@ export class EcommerceQuizesComponent implements OnInit {
     let footer = document.querySelector('.footer-14');
     footer.classList.add('show');
     this.loader.classList.add('hide');
+
+    this.interactive.classList.remove('active');
+    this.features.classList.remove('active');
+    this.pricing.classList.remove('active');
+    this.examples.classList.remove('active');
+    
     this.triggerLiveStaticReviews();
   }
 
