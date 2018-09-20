@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PricingService } from '../../../shared/services/pricing.service';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
+import { Router } from '@angular/router';
 declare let jQuery: any;
 
 @Component({
@@ -36,7 +37,8 @@ export class PricingHomeComponent implements OnInit {
     expandDesc: number;
     openClassActive: any;
 
-    constructor(public title: Title,
+    constructor(private router: Router,
+        public title: Title,
         public pricingService: PricingService,
         public apiRequestService: ApiRequestService) {
         title.setTitle("Pricing | Outgrow");
@@ -50,16 +52,10 @@ export class PricingHomeComponent implements OnInit {
         this.header.classList.remove('hide');
         this.footer.classList.remove('hide');
 
-        this.href = this.apiRequestService.gethref();
-        console.log("---------------------->",this.href)
-        // if (this.href == "pricing") {
-        // this.examples.classList.remove('active');
-        // this.interactive.classList.remove('active');
-        // this.features.classList.remove('active');
-        // this.pricing.classList.add('active');
-        // }
+        this.href = this.router.url;
+        this.text=this.href.split('/');
 
-        if (this.href == "pricing") {
+        if (this.text[this.text.length-1] == "pricing") {
             this.pricing.classList.add('active');
             if(this.examples){
               this.examples.classList.remove('active');  
@@ -182,8 +178,6 @@ export class PricingHomeComponent implements OnInit {
     triggerIntercom(){   
         setTimeout(()=>{
             let intercomTrigger = document.getElementsByClassName('intercom-launcher') as HTMLCollectionOf<HTMLElement>;
-
-        // console.log(intercomTrigger)
         },8000) 
         
         // intercomTrigger.classList.add('intercom-launcher-active');

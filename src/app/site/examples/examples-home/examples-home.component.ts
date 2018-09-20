@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
 import { VideoUrlService } from '../../../shared/service/video-url.service';
@@ -44,6 +45,7 @@ export class ExamplesHomeComponent implements OnInit {
     public title: Title,
     public apiRequestService: ApiRequestService,
     public sanitizer: DomSanitizer,
+    private router: Router
   ) {
     title.setTitle("Examples | Outgrow");
   }
@@ -53,20 +55,12 @@ export class ExamplesHomeComponent implements OnInit {
     this.load.classList.add('hide');
     this.header.classList.remove('hide');
     this.footer.classList.remove('hide');
-    this.href = this.apiRequestService.gethref();
-    console.log("---------------------->",this.href)
-    // if (this.href == "examples") {
-    //   this.examples.classList.add('active');
-    //   this.interactive.classList.remove('active');
-    //   this.features.classList.remove('active');
-    //   this.pricing.classList.remove('active');
+    this.href = this.router.url;
+    this.text=this.href.split('/');
 
-    // }
-
-    if (this.href == "examples") {
+    if (this.text[this.text.length-1] == "examples") {
       this.examples.classList.add('active');
       if(this.pricing){
-        console.log('innside exaples...inn priicng')
         this.pricing.classList.remove('active');  
       }
       if(this.features){
