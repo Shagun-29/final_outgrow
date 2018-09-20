@@ -2476,6 +2476,9 @@ body{background:#fff !important;}
 	.useCase-heading{
 		margin-top: 30px;
 	}
+	.section {
+		margin-top: 0;
+	}
 	.usecase .section-usecase1-left{
 		padding-left:15px;
 		padding-right:50px;
