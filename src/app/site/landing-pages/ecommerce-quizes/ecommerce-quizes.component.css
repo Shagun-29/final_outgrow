@@ -182,6 +182,9 @@ span.live-demo a {
     margin-top: 40px;
     box-shadow: 0 11px 24px rgba(0,0,0,.28);
 }
+.video-img-inner:hover {
+    cursor: url("//dzvexx2x036l1.cloudfront.net/video-arrow.png"), auto;
+}
 .overflow-hidden {
     overflow: hidden;
     position: relative;

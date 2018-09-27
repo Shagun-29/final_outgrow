@@ -54,7 +54,8 @@ export class IndexHomeComponent implements OnInit {
     var static1 = document.querySelector('#staticReviews');
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
+      // if (this.readyState == 4 && this.status == 200) {
+        if(this.status == 200){
         live.classList.remove('hide');
         static1.classList.add('hide');
       } else {
@@ -156,7 +157,11 @@ export class IndexHomeComponent implements OnInit {
 
     this.loadingService.isLoading.next(false);
     this.triggerLiveStaticReviews();
-
+    if(this.triggerLiveStaticReviews){
+      console.log("-----------request fulfilled-----------");
+    }else{
+      console.log("-----------request denied-----------");
+    }
     this.iFrames = this.videoURLService.iFrames;
     this.videoURL(this.frame);
   }
