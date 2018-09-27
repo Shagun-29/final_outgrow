@@ -530,7 +530,7 @@ li.dashboard a:hover {
 }
 
 .custom-navbar .link-login {
-    color: #fb6c73;
+    color: #fb6c73!important;
     font-family: montserratbold;
 }
 li.nav-lead-input {

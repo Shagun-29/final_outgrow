@@ -5244,7 +5244,7 @@ and (max-width: 480px){
 	padding-left: 50px;
 	}
 	#feature .secf2-2{
-	left:36% !important;
+	left:37% !important;
 	width: 70%;
 	}
 	#feature .section-f2-left {
@@ -5291,6 +5291,12 @@ and (max-width: 480px){
 	min-height: 160px;
 	float: left;
 	margin-bottom: 15px;
+	}
+	#feature .feature-blue-brand .secf2-2 {
+		width: 65%;
+	}
+	#feature .section-7 .slider-sa, #feature .section-f1 .slider-sa {
+		min-height: 370px;
 	}
 }
 @media (min-width: 1024px) and (max-width: 1250px) {

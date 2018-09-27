@@ -487,7 +487,9 @@ span.no-card {
     margin-top: 15px;
     display: block;
 }
-
+.video-img-inner:hover {
+    cursor: url(//dzvexx2x036l1.cloudfront.net/video-arrow.png),auto;
+}
 
 .section-reading {
     float: left;
@@ -660,7 +662,7 @@ span.no-card {
     height: 170px;
 }
 .testimonial-quote {
-    background-image: url(assets/images/icon-testimonial-quote.png);
+    background-image: url(/assets/images/icon-testimonial-quote.png);
     width: 28px;
     height: 24px;
     position: absolute;
@@ -723,16 +725,16 @@ span.no-card {
     margin-bottom: -1px;
 }
 .custom-embeds .nav-tabs>li.active:nth-child(1)>a {
-    background-image: url(assets/images/facebookh.png);
+    background-image: url(/assets/images/facebookh.png);
 }
 .custom-embeds .nav-tabs>li:nth-child(1)>a {
-    background-image: url(assets/images/facebookim.png);
+    background-image: url(/assets/images/facebookim.png);
     background-repeat: no-repeat;
     width: 142px;
     height: 77px;
 }
 .custom-embeds .nav-tabs>li:nth-child(2)>a {
-    background-image: url(assets/images/capterraimg.png);
+    background-image: url(/assets/images/capterraimg.png);
     background-repeat: no-repeat;
     width: 142px;
     height: 77px;
@@ -745,13 +747,13 @@ span.no-card {
     transition: none!important;
 }
 .custom-embeds .nav-tabs>li:nth-child(3)>a {
-    background-image: url(assets/images/crowd.png);
+    background-image: url(/assets/images/crowd.png);
     background-repeat: no-repeat;
     width: 142px;
     height: 77px;
 }
 .custom-embeds .nav-tabs>li:nth-child(4)>a {
-    background-image: url(assets/images/google_logo.png);
+    background-image: url(/assets/images/google_logo.png);
     background-repeat: no-repeat;
     width: 142px;
     height: 77px;
@@ -805,16 +807,16 @@ span.testi-desig {
     margin-left: 10px;
 }
 .custom-embeds .nav-tabs>li:nth-child(1)>a:hover {
-    background-image: url(assets/images/facebookh.png);
+    background-image: url(/assets/images/facebookh.png);
 }
 .custom-embeds .nav-tabs>li:nth-child(2)>a:hover {
-    background-image: url(assets/images/capterah.png);
+    background-image: url(/assets/images/capterah.png);
 }
 .custom-embeds .nav-tabs>li:nth-child(3)>a:hover {
-    background-image: url(assets/images/crowdh.png);
+    background-image: url(/assets/images/crowdh.png);
 }
 .custom-embeds .nav-tabs>li:nth-child(4)>a:hover {
-    background-image: url(assets/images/google_hover.png);
+    background-image: url(/assets/images/google_hover.png);
 }
 
 
