@@ -4832,7 +4832,7 @@ and (max-width: 480px){
 		
 			margin-top: 0px;
 			margin-bottom: 30px;
-			padding-bottom: 130px !important;
+			/* padding-bottom: 130px !important; */
 		
 	}
 	.section-f4.feature-blue {
