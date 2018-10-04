@@ -5687,7 +5687,7 @@ span.live-demo a {
 	    outline: none;
 }
 .case-breathers-imgRight .case-breathers-rightSide {
-	margin-top:47px;
+	margin-top:32px;
     margin-left: 0;
     margin-right:68px;
 	width: 50%;
@@ -5696,6 +5696,9 @@ span.live-demo a {
 .case-breathers.case-breathers-imgRight {
 	margin-top: 30px;
 	/* padding-top: 52px; */
+}
+.cb{
+	padding-top: 50px;
 }
 .sec-outgrowMagic-title {
     margin-top: 30px;
@@ -6723,7 +6726,7 @@ h4.mk-animate-element.right-to-left.publish {
 	.section-2-heading{text-transform:none!important;font-size: 30px!important;margin-top: 40px!important;}
 	span.marketing-tool{font-size:15px!important;    margin-top: 8px;}
 	.section-2-subheading{margin-top:8px!important;}
-	.case-breathers-rightSide .heading{font-size:30px!important; padding-top: 30px;}
+	.case-breathers-rightSide .heading{font-size:30px!important; padding-top: 20px;}
 	.case-breathers-rightSide h5.subheading{font-size:15px!important;}
 	.section-4-left h4, .section-5-left h4, .section-6-left h4 {font-size: 18px !important; line-height: 24px;}
 	section .section-2-heading{font-size:30px!important;}
