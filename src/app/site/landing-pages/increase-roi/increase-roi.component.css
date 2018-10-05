@@ -1293,7 +1293,7 @@ span.testi-desig {
     .section-second-roi img {
         top: 120px!important;
     }
-    .section-heading {
+    .section-heading,.section-2-heading {
         font-size: 32px;
         padding: 0;
         line-height: 38px;

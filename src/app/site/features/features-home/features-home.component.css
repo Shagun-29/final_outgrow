@@ -41,12 +41,19 @@
 span.swiper-pagination-bullet {
     margin-right: 5px;
 }
-@media (min-width:1024px){
+@media (min-width:1024px) and (min-width:1366px)
+{
 	.topSpace{
         margin-top: 65px;
         }
 }
 
+@media (min-width:1367px) 
+{
+	.topSpace{
+        margin-top: 77px;
+        }
+}
 
 .hello{
         background: #f3f8fb;
@@ -3522,7 +3529,7 @@ iframe[name=google_conversion_frame] {
 	margin-top: 90px !important;
 }
 .feature-9-1 img.secf2-2{
-	top: -27px !important;
+	top: -33px !important;
     left: 50% !important;
     box-shadow: none !important;
 }
