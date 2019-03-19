@@ -1128,7 +1128,7 @@ div#bs-example-navbar-collapse-1 {
 
 @media (min-width: 1800px)
 {
-    .custom-navbar.navbar-default .navbar-nav>li>a, .section-1-left .btn-bottominfo label, .section-1-left .btn-bottominfo span {
+    .section-1-left .btn-bottominfo label, .section-1-left .btn-bottominfo span {
         font-size: 16px;
     }
     .custom-navbar .signUp-style a,.dashboard a {
