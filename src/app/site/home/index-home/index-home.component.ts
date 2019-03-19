@@ -93,29 +93,24 @@ export class IndexHomeComponent implements OnInit {
 
     if (site == 'fb') {
       fbActive.classList.add('testactive');
-
       fb1.classList.remove('testhide');
       capterra1.classList.add('testhide');
       google1.classList.add('testhide');
       g21.classList.add('testhide');
-
     } else if (site == "capterra") {
       capterraActive.classList.add('testactive');
-
       fb1.classList.add('testhide');
       capterra1.classList.remove('testhide');
       google1.classList.add('testhide');
       g21.classList.add('testhide');
     } else if (site == "g2") {
       g2Active.classList.add('testactive');
-
       fb1.classList.add('testhide');
       capterra1.classList.add('testhide');
       google1.classList.add('testhide');
       g21.classList.remove('testhide');
     } else if (site == "google") {
       googleActive.classList.add('testactive');
-
       fb1.classList.add('testhide');
       capterra1.classList.add('testhide');
       google1.classList.remove('testhide');

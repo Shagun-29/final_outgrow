@@ -24,10 +24,39 @@
                     <li>
                         <a routerLink="pricing"  (click)="fadeOut()" class="params hvr-underline-from-left pricing">Pricing</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a routerLink="examples"  (click)="fadeOut()" class="params hvr-underline-from-left examples">Examples</a>
-                    </li>
-
+                    </li> -->
+                    <!-- new menu -->
+                    <li class="dropdown" id="getInspired">
+                            <a href="javascript:void(0);" id="nav-get-inspired" onclick="callGA('USECASE')" class="params hvr-underline-from-left">Get Inspired <i class="material-icons">arrow_drop_down</i></a>
+                            <div class="dropdown-content">
+                                <a href="/examples" onclick="callGA('USECASE')" class="params" id="nav-examples">Interactive Examples </a>
+                                <div class="drop-sub-menu">
+                                    <a href="javascript:void(0);" onclick="callGA('USECASES')" class="params" id="nav-use-cases">Use Cases <i class="material-icons">chevron_right</i></a>
+                                    <div class="dropdown-sub-content">
+                                        <a href="/calculator" class="nav-use-cases-list">Calculators</a>
+                                        <a href="/quiz" class="nav-use-cases-list">Quizzes </a>
+                                        <a href="/survey" class="nav-use-cases-list">Surveys</a>
+                                        <a href="/chatbots" class="nav-use-cases-list">Chatbots</a>
+                                        <a href="/increase-conversions" class="nav-use-cases-list">Increase Conversions</a>
+                                        <a href="/increase-roi" class="nav-use-cases-list">Increase ROI</a>
+                                        <a href="/increase-sales" class="nav-use-cases-list">Increase Sales</a>
+                                    </div>
+                                </div>
+                                <div class="drop-sub-menu drop-sub-menu-stories">
+                                    <a href="javascript:void(0);" onclick="callGA('CASESTUDIES')" class="params" id="nav-case-studies">Success Stories <i class="material-icons">chevron_right</i></a>
+                                    <div class="dropdown-sub-content">
+                                        <a href="#" class="params nav-case nav-link-tag">TAG </a>
+                                        <a href="#" class="params nav-case nav-link-gpyp">Get Paid for Your Pad </a>
+                                        <a href="#" class="params nav-case nav-link-vp">VenturePact </a>
+                                        <a href="#" class="params nav-case nav-link-macro">Macroscape </a>
+                                        <a href="#" class="params nav-case nav-link-wingman">Professional Wingman </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    <!-- new menu ends -->
                     <li class="dashboard hide " >
                        
                         <a href="//app.outgrow.co/login" class=" params" onclick="">Dashboard</a>
