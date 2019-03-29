@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { CookieService } from 'angular2-cookie/core';
 import { CookieService } from 'ngx-cookie-service';
-
+import { Intercom } from 'ng-intercom';
 declare let jQuery: any;
 
 @Component({
@@ -9,8 +9,12 @@ declare let jQuery: any;
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
+
 export class FooterComponent implements OnInit {
-  constructor(private _cookieService:CookieService) { }
+  public intercom: Intercom;
+  constructor(private _cookieService:CookieService) { 
+    console.log("--------Intercom----------",this.intercom);
+  }
 
   public disableCookieDialog=false;
   public isVisible=true;
