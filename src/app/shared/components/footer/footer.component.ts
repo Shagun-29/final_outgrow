@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { CookieService } from 'angular2-cookie/core';
 import { CookieService } from 'ngx-cookie-service';
+
 declare let jQuery: any;
 
 @Component({
@@ -167,5 +168,5 @@ export class FooterComponent implements OnInit {
   },1000)
   }
 
-  
+ 
 }

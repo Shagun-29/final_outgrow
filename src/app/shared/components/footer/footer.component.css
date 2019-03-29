@@ -106,7 +106,7 @@ a:active, a:hover {
     width: 100%;
     background: #fafafa;
     margin: 0;
-    padding-top: 30px;
+    padding-top: 70px;
     /* padding-bottom: 30px; */
 }
 
@@ -544,4 +544,12 @@ bottom : 80px !important;
 
 .sumome-image-sharer{
     display: none;
+}
+.badge-g2crowd {
+    position: relative;
+    top: -135px;
+    width: 100px;
+    /* left: 46%; */
+    margin: 0 auto;
+    height: 0;
 }
