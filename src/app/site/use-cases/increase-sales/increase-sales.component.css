@@ -1,16 +1,54 @@
+@font-face {
+	font-family: sintony-regular;
+    src: url("/assets/fonts/sintony-regular-webfont"),
+     url("/assets/fonts/sintony-regular-webfont.woff2") format('woff2'), 
+     url("/assets/fonts/sintony-regular-webfont.woff") format('woff'),
+      url("/assets/fonts/sintony-regular-webfont.ttf") format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+	font-family: sintony-bold;
+    src: url("/assets/fonts/sintony-bold-webfont"), 
+    url("/assets/fonts/sintony-bold-webfont.woff2") format('woff2'),
+     url("/assets/fonts/sintony-bold-webfont.woff") format('woff'), 
+     url("/assets/fonts/sintony-bold-webfont.ttf") format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+	font-family: satisfy-regular;
+    src: url("/assets/fonts/satisfy-regular-webfont"),
+     url("/assets/fonts/satisfy-regular-webfont.woff2") format('woff2'),
+      url("/assets/fonts/satisfy-regular-webfont.woff") format('woff'),
+       url("/assets/fonts/satisfy-regular-webfont.ttf") format('truetype');
+	font-weight: 400;
+	font-style: normal;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+}
+
 .section-banner {
-    background: url('https://dzvexx2x036l1.cloudfront.net/lp-banner-bg.png') no-repeat;
-    height: 610px;
+    /* background: url('https://dzvexx2x036l1.cloudfront.net/lp-banner-bg.png') no-repeat;
+    height: 610px; */
     margin: 0px!important;
     float: left;
     width: 100%;
     background-size: cover;
-    background-color: #fff;
+    background-color: #f3f8fb;
+    padding-bottom: 90px;
 }
+
 
 .section-banner p {
     font-size: 15px;
-    color: #fff;
+    color: #63696d;
     font-family: montserratlight;
     line-height: 23px;
 }
@@ -50,12 +88,11 @@
 .section-banner h1.main-heading {
     margin-top: 120px;
     display: block;
-    font-size: 42px;
-    color: #fff !important;
-    font-family: montserratregular;
-    padding: 0px 140px;
+    font-size: 38px;
+    color: #fb5f66 !important;
+    font-family: montserratbold;
+    padding: 30px 80px 0px;
     line-height: 48px;
-    margin-bottom: 10px
 }
 
 .section-banner-sales .banner-content {
@@ -107,29 +144,24 @@ h1 {
 }
 
 .banner-content {
-    color: #fff;
+    color: #63696d;
     font-family: montserratlight;
     margin-top: 25px;
     margin-left: -25px;
 }
 
-.section-banner p {
-    font-size: 15px;
-    color: #fff;
-    font-family: montserratlight;
-    line-height: 23px;
-}
+
 
 span.profile-detail {
     font-size: 13px;
-    color: #fff;
+    color: #63696d;
     opacity: 0.7;
 }
 
 .company-detail {
     font-size: 15px;
     font-family: montserratregular;
-    background: rgba(175, 42, 50, 0.1);
+    background: rgba(51, 152, 204, 0.1);
     border-radius: 8px;
     padding: 10px;
     line-height: 25px;
@@ -838,48 +870,45 @@ p#premade-calc-name i {
     margin-top: 0px;
     padding-top: 70px;
 }
-
 .section-quotes blockquote {
-    font-size: 16px;
-    color: #fb5f66;
-    font-family: montserratlight;
-    line-height: 26px;
+    font-size: 18px;
+    color: #4793c5;
+    font-family: sintony-bold;
+    line-height: 30px;
     border: none;
     padding-top: 0px;
     margin-bottom: 0px;
     display: block;
-    max-width: 80%;
+    max-width: 87%;
     margin: 0 auto;
     padding: 0px 30px 14px;
+    font-style: italic;
 }
 
 blockquote::before {
     content: "“";
-    /*Unicode for Left Double Quote*/
-    /*Font*/
-    font-family: Satisfy, serif;
-    font-size: 60px;
-    font-weight: bold;
-    color: #fb5f66;
-    /*Positioning*/
-    position: absolute;
-    left: -10px;
-    top: 5px;
+font-family: satisfy-regular;
+font-weight: normal;
+font-size: 72px;
+color: rgb(251, 95, 102);
+position: relative;
+top: 25px;
+left: 0;
+margin-right: 5px !important;
+font-style: normal;
 }
 
 blockquote::after {
-    /*Reset to make sure*/
-    content: "”";
-    /*Unicode for Left Double Quote*/
-    /*Font*/
-    font-family: Satisfy, serif;
-    font-size: 60px;
-    font-weight: bold;
-    color: #fb5f66;
-    /*Positioning*/
+    content: "“";
+    font-family: satisfy-regular;
+    font-weight: normal;
+    font-size: 72px;
+    color: rgb(251, 95, 102);
+    transform: rotate(-180deg);
     position: absolute;
-    right: -5px;
-    top: 5px;
+    bottom: 50px;
+    margin-left: 10px !important;
+    font-style: normal;
 }
 
 .section-quotes span {
@@ -890,7 +919,6 @@ blockquote::after {
     line-height: 24px;
     font-family: montserratlight;
 }
-
 .section-quotes-border {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 40px;
@@ -1737,4 +1765,65 @@ span.testi-desig {
 img.rs-hide {
     margin-top: 23px !important;
 }
+}
+.section-banner .startTrial-outer label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #63696d;
+    font-family: montserratregular;
+    padding-left: 10px;
+    margin-bottom: 5px !important;
+    font-weight: normal;
+}
+.section-banner .startTrial-outer {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    position: relative;
+}
+.section-banner .startTrial-outer i.material-icons {
+    position: absolute;
+    left: 23px;
+    top: 12px;
+    font-size: 18px;
+    color: #fb5f66;
+    top: 38px;
+}
+.section-banner .startTrial-outer input {
+    background: #fff;
+    border: 1px solid #b4b4b4;
+    border-radius: 25px;
+    min-height: 46px;
+    margin: 0;
+    width: 100%;
+    float: none;
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.08);
+    padding-left: 50px;
+    padding-right: 20px;
+    color: #858f94;
+    font-family: montserratlight;
+    min-width: 400px;
+    font-size: 14px;
+}
+.section-banner .lead-form-btn {
+    position: absolute;
+    right: -30px;
+    top: 25px;
+}
+.section-banner .startTrial-outer .btn-buildcal {
+    background: #fb5f66;
+    color: #fff;
+    font-size: 12px !important;
+    padding: 13px 28px !important;
+    border: 2px solid #fb5f66;
+    transition: .5s ease-in-out;
+    line-height: normal;
+    box-shadow: none;
+    margin-top: 0px;
+    border-radius: 25px;
+    display: inline-block;
+    float: none;
+    font-family: montserratlight;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.08);
+    margin-left: 0;
 }

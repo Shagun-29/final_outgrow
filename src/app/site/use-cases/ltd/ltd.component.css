@@ -424,7 +424,7 @@ tbody tr:last-child td.active-bg {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 70px 0;
+    padding: 70px 0 100px;
 }
 .bg1-img .btn-buildcal {
     background: #fb6c73;

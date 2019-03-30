@@ -1,0 +1,138 @@
+/* intercom page  */
+.intercom{
+    padding-bottom:70px;
+    background: #f3f8fb;
+    margin-top: 75px !important;
+    margin-bottom:0px!important;
+}
+.chatbot-heading{
+ float: left;
+ width: 100%;
+ font-family: montserratregular;
+ margin-bottom: 0;
+ padding-right: 0px;
+ text-transform: none;
+ color: #fb5f66 !important;
+ font-size: 38px !important;
+ line-height: 48px;
+ margin-top: 80px;
+}
+.inter1{
+ margin-bottom: 70px;
+}
+.intercom-chatbot{
+ font-family: montserratsemibold;
+}
+.section-whyMerticsAwesome .bot-head{
+ font-family: montserratultra_light!important;
+ color: #fb5f66 !important;
+ margin: 0px!important;
+ font-size: 42px!important;
+ float: left;
+ width: 100%;
+ text-align: center;
+ line-height: 52px;
+ text-transform: none;
+ margin-bottom: 40px!important;
+ padding-bottom: 40px;
+}
+.intercom-para{
+ margin: 0;
+ padding-left: 5px;
+ max-width: 530px;
+ font-size: 14px;
+color: #626a6d;
+font-family: montserratlight;
+line-height: 22px;
+margin-bottom: 25px;
+list-style: none;
+float: left;
+}
+.bot-heading{
+  float:left;
+}
+  .inter-bot{
+     margin: 0 auto;
+     width: 100%;
+     float: left;
+ }
+ .interbot-content{
+ margin: 0 auto;
+ position: relative;
+ max-width: 572px;
+ }
+ .chatbot-readingsec-row {
+     float: left;
+     width: 100%;
+    
+ }
+ .chatbot-img {
+     height:214px;
+ }
+ .chatbot-img img{
+     height:100%;
+     float:left;
+ }
+ .chatbot-readingsec-row .reading-content p{
+     min-height:0!important;
+     display: -webkit-box;
+ -webkit-line-clamp: 3;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+
+}
+.chatbot-readingsec-row:first-child{
+margin-top:15px;
+margin-bottom: 40px;
+}
+.intercom-chat .chatbot-red{
+ color: #fb5f66!important;
+ font-family: montserratultra_light;
+ font-size:42px;
+}
+.sec-chatbot{
+   margin-bottom:0!important;
+   margin-top:0!important;
+}
+.sec-chatbot.section-premade-temp{
+    background: #fff!important;
+}
+.sec-chatbot.section-whyMerticsAwesome,.sec-chatbot.section-reviews{
+   background: #f3f8fb!important;
+}
+.sec-chatbot .bot-head{
+        padding-bottom: 0px!important;
+ margin-top: 60px!important;
+}
+.sec-chatbot .whyMerticsAwesome-inner-row:last-child {
+ margin-bottom: 70px;
+}
+.sec-chatbot.ns{
+margin-top:0!important;
+background:#fff!important;
+}
+.sec-chatbot.sec-clients-logos{
+  background:#fff!important;
+}
+.inter1 h1{
+ margin-top: 55px!important;
+ font-family: montserratultra_light;
+}
+.sec-chatbot .intercom-chat {
+ padding-top: 40px;
+}
+.sec-chatbot.intercom:last-child{
+ padding-bottom:130px!important;
+}
+.inter3{
+ padding-bottom:130px!important;
+}
+.chatbots-image-section {
+ float: left;
+ width: 100%;
+ text-align: center;
+ margin-bottom: 70px;
+}
+.bot-head{
+ font-family: montserratregular!important;  
+}

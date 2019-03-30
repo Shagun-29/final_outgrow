@@ -91,7 +91,7 @@ export class ExamplesHomeComponent implements OnInit {
   }
 
   typeOfCalculator(type: string) {
-    this.tabHeading = `There is a ${type} for that!`;
+    // this.tabHeading = `There is a ${type} for that!`;
     this.industries.splice(0, this.industries.length); //to clear industries array on this function call
     this.calculators = this.allCalcs.filter(calc => {
       if (calc['type'] == type)

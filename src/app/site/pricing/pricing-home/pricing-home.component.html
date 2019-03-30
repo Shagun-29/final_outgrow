@@ -28,6 +28,41 @@
                                     &nbsp;Show Detailed Pricing
                                 </span>
                             </th>
+                            <th class="c1">
+                                <h2>Freelancer</h2>
+                                <label class="quiz-only">Quiz Only</label>
+                                <ng-container *ngIf="annualActive">
+                                    <span class="annual-price">
+                                        <p class="strike-price">$22<sub> mo.</sub>
+                                         
+                                        </p>
+                                        <p class="price">
+                                            <sup>$</sup>14<sub> mo.</sub>
+                                         
+                                        </p>
+                                    </span>
+                                    <span class="s-annual-price" style="display: none;">
+                                        <p class="strike-price">$45 
+                                            <sub>mo.</sub>
+                                         
+                                        </p>
+                                        <p class="price">
+                                            <sup>$</sup>30<sub> mo.</sub>
+                                         
+                                        </p>
+                                    </span>
+                                </ng-container>
+                                <span *ngIf="!annualActive" class="monthly-price">
+                                    <!--<p class="strike-price">$45<sub> mo.</sub></p>-->
+                                    <p class="price">
+                                        <sup>$</sup>22<sub> mo.</sub>
+                                     
+                                    </p>
+                                </span>
+                                <span class="">
+                                    <a href="https://app.outgrow.co/" target="_blank" class="signuplink params btn-hover">Start trial</a>
+                                </span>
+                            </th>
                             <th>
                                 <h2>Freelancer</h2>
                                 <ng-container *ngIf="annualActive">
@@ -132,41 +167,7 @@
                                     <a href="javascript:void(0);" class="link-contact intercom_trigger" id="intercom_trigger">Contact us</a>
                                 </span>
                             </th>
-                            <th class="c1">
-                                <h2>Freelancer</h2>
-                                <label class="quiz-only">Quiz Only</label>
-                                <ng-container *ngIf="annualActive">
-                                    <span class="annual-price">
-                                        <p class="strike-price">$22<sub> mo.</sub>
-                                         
-                                        </p>
-                                        <p class="price">
-                                            <sup>$</sup>14<sub> mo.</sub>
-                                         
-                                        </p>
-                                    </span>
-                                    <span class="s-annual-price" style="display: none;">
-                                        <p class="strike-price">$45 
-                                            <sub>mo.</sub>
-                                         
-                                        </p>
-                                        <p class="price">
-                                            <sup>$</sup>30<sub> mo.</sub>
-                                         
-                                        </p>
-                                    </span>
-                                </ng-container>
-                                <span *ngIf="!annualActive" class="monthly-price">
-                                    <!--<p class="strike-price">$45<sub> mo.</sub></p>-->
-                                    <p class="price">
-                                        <sup>$</sup>22<sub> mo.</sub>
-                                     
-                                    </p>
-                                </span>
-                                <span class="">
-                                    <a href="https://app.outgrow.co/" target="_blank" class="signuplink params btn-hover">Start trial</a>
-                                </span>
-                            </th>
+                           
                         </tr>
                     </thead>
 
@@ -177,6 +178,10 @@
                                     {{annualPlan.name}}
                                     <i class="material-icons">help</i>
                                 </th>
+                                <td class="expand-child">
+                                    <span [ngClass]="annualPlan.freelancerQuizClass"></span>{{annualPlan.freelancerQuizHead}}
+                                    <span class="detail" >{{annualPlan.freelancerQuizDescription}}</span>
+                                </td>
                                 <td class="expand-child">
                                     <span [ngClass]="annualPlan.freelancerClass"></span>{{annualPlan.freelancerHead}}
                                     <span class="detail" >{{annualPlan.freelancerDescription}}</span>
@@ -189,10 +194,7 @@
                                     <span [ngClass]="annualPlan.businessClass"></span>{{annualPlan.businessHead}}
                                     <span class="detail" >{{annualPlan.businessDescription}}</span>
                                 </td>
-                                <td class="expand-child">
-                                    <span [ngClass]="annualPlan.freelancerQuizClass"></span>{{annualPlan.freelancerQuizHead}}
-                                    <span class="detail" >{{annualPlan.freelancerQuizDescription}}</span>
-                                </td>
+                                
 
                             </tr>
                         </ng-container>
@@ -203,6 +205,10 @@
                                     {{monthlyPlan.name}}
                                     <i class="material-icons">help</i>
                                 </th>
+                                <td class="expand-child ">
+                                    <span [ngClass]="monthlyPlan.freelancerQuizClass"></span>{{monthlyPlan.freelancerQuizHead}}
+                                    <span class="detail" >{{monthlyPlan.freelancerQuizDescription}}</span>
+                                </td>
                                 <td class="expand-child ">
                                     <span [ngClass]="monthlyPlan.freelancerClass"></span>{{monthlyPlan.freelancerHead}}
                                     <span class="detail" >{{monthlyPlan.freelancerDescription}}</span>
@@ -215,10 +221,7 @@
                                     <span [ngClass]="monthlyPlan.businessClass"></span>{{monthlyPlan.businessHead}}
                                     <span class="detail" >{{monthlyPlan.businessDescription}}</span>
                                 </td>
-                                <td class="expand-child ">
-                                    <span [ngClass]="monthlyPlan.freelancerQuizClass"></span>{{monthlyPlan.freelancerQuizHead}}
-                                    <span class="detail" >{{monthlyPlan.freelancerQuizDescription}}</span>
-                                </td>
+                             
                            </tr>
                         </ng-container>
 
@@ -227,6 +230,61 @@
                 </table>
 
                 <!-- start: for responsive -->
+                
+                <!-- freelancer Quiz starts-->
+                <div class="col-md-12 col-sm-12 col-xs-12 np pricing-block">
+                    <div class="pricing-top">
+                        <h3>Freelancer</h3>
+                        <!-- <label class="quiz-only">Quiz Only</label> -->
+                        <span *ngIf="annualActive" class="annual-price">
+                            <p class="strike-price">$22
+                                <sub>mo.</sub>
+                            </p>
+                            <p class="price">
+                                <sup>$</sup>14<sub>mo.</sub>
+                                
+                            </p>
+                        </span>
+                        <span *ngIf="!annualActive" class="monthly-price">
+                            <p class="price">
+                                <sup>$</sup>22<sub>mo.</sub>
+                                
+                            </p>
+                        </span>
+                        <span class="">
+                            <a href="//app.outgrow.co" target="_blank" class="signuplink params btn-hover">Buy now</a>
+                        </span>
+                    </div>
+                    <div class="pricing-bottom open">
+                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideFreelancerQuiz">
+                            <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
+                                <span class="feature-title">{{annualPlan.name}}
+                                    <i class="material-icons">help</i>
+                                </span>
+                                <span class="feature-subtitle yearlyLeads">
+                                    <span [ngClass]="annualPlan.freelancerQuizClass"></span>{{annualPlan.freelancerQuizHead}}</span>
+                                <span class="detail">{{annualPlan.freelancerQuizDescription}} </span>
+                            </li>
+                        </ul>
+                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideFreelancerQuiz">
+                            <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
+                                <span class="feature-title">{{monthlyPlan.name}}
+                                    <i class="material-icons">help</i>
+                                </span>
+
+                                <span class="feature-subtitle monthlyLeads hide">
+                                    <span [ngClass]="monthlyPlan.freelancerQuizClass"></span>{{monthlyPlan.freelancerQuizHead}}</span>
+                                <span class="detail">{{monthlyPlan.freelancerQuizDescription}}</span>
+                            </li>
+                        </ul>
+
+                        <a href="javascript:void(0);" class="toggle-more">
+                            <i class="material-icons">add</i>
+                            <p class="more-info">Show more</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- freelancer Quiz Ends-->
                 <!-- freelancer starts-->
                 <div class="col-md-12 col-sm-12 col-xs-12 np pricing-block">
                     <div class="pricing-top">
@@ -390,64 +448,10 @@
                 </div>
                 <!-- business ends-->
 
-                <!-- freelancer Quiz starts-->
-                <div class="col-md-12 col-sm-12 col-xs-12 np pricing-block">
-                    <div class="pricing-top">
-                        <h3>Freelancer</h3>
-                        <!-- <label class="quiz-only">Quiz Only</label> -->
-                        <span *ngIf="annualActive" class="annual-price">
-                            <p class="strike-price">$22
-                                <sub>mo.</sub>
-                            </p>
-                            <p class="price">
-                                <sup>$</sup>14<sub>mo.</sub>
-                                
-                            </p>
-                        </span>
-                        <span *ngIf="!annualActive" class="monthly-price">
-                            <p class="price">
-                                <sup>$</sup>22<sub>mo.</sub>
-                                
-                            </p>
-                        </span>
-                        <span class="">
-                            <a href="//app.outgrow.co" target="_blank" class="signuplink params btn-hover">Buy now</a>
-                        </span>
-                    </div>
-                    <div class="pricing-bottom open">
-                        <ul *ngIf="annualActive" class="features" [class.rs-hide]="slideFreelancerQuiz">
-                            <li class="expand-rs" *ngFor="let annualPlan of annualPlans">
-                                <span class="feature-title">{{annualPlan.name}}
-                                    <i class="material-icons">help</i>
-                                </span>
-                                <span class="feature-subtitle yearlyLeads">
-                                    <span [ngClass]="annualPlan.freelancerQuizClass"></span>{{annualPlan.freelancerQuizHead}}</span>
-                                <span class="detail">{{annualPlan.freelancerQuizDescription}} </span>
-                            </li>
-                        </ul>
-                        <ul *ngIf="!annualActive" class="features" [class.rs-hide]="slideFreelancerQuiz">
-                            <li class="expand-rs" *ngFor="let monthlyPlan of monthlyPlans">
-                                <span class="feature-title">{{monthlyPlan.name}}
-                                    <i class="material-icons">help</i>
-                                </span>
-
-                                <span class="feature-subtitle monthlyLeads hide">
-                                    <span [ngClass]="monthlyPlan.freelancerQuizClass"></span>{{monthlyPlan.freelancerQuizHead}}</span>
-                                <span class="detail">{{monthlyPlan.freelancerQuizDescription}}</span>
-                            </li>
-                        </ul>
-
-                        <a href="javascript:void(0);" class="toggle-more">
-                            <i class="material-icons">add</i>
-                            <p class="more-info">Show more</p>
-                        </a>
-                    </div>
-                </div>
-                <!-- freelancer Quiz Ends-->
                 <!-- end for responsive -->
             </div>
 
-            <div class="col-md-12 col-sm-12 col-xs-12 np create-exp" id="target">
+            <!-- <div class="col-md-12 col-sm-12 col-xs-12 np create-exp" id="target">
                 <div class="container">
                     <div class="col-md-3 col-sm-3 col-xs-12 np">
                         <h5>Create Custom </h5>
@@ -461,10 +465,10 @@
                     <div class="col-md-2 col-sm-2 col-xs-12 np">
                         <button class="btn btn-white-red-outline btn-hover intercom_trigger" id="intercom_trigger">CLICK HERE</button>
                     </div>
-                    <!-- <button class="closeDiv"><i class="material-icons">cancel</i></button> -->
+                    <button class="closeDiv"><i class="material-icons">cancel</i></button>
                 </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12 np enterprise_pos">
+            </div> -->
+            <!-- <div class="col-md-12 col-sm-12 col-xs-12 np enterprise_pos">
                 <div class="col-md-12 col-sm-12 col-xs-12 np text-center need-custom-plan">
                     <a class="" href="javascrpt:void(0);">
                         <i class="material-icons">headset_mic</i>need enterprise grade features? Contact us.
@@ -483,7 +487,62 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+
+
+            
+            <div class="col-md-12 col-sm-12 col-xs-12 np enterprise-startup">            
+                <div class="container">
+                    <div class="col-md-7 col-sm-12 col-xs-12 np">
+                        <div class="enterprise-box-v2 text-center enterprise-agency-box ">
+                            <img src="assets/images/icon-enterprise.png"/>
+                            <h2 class="title">Enterprise & Agency Plans</h2>
+                            <!-- <span class="border-center"></span> -->
+                            <span class="subtitle">Need Enterprise grade features?</span>
+                            <p>
+                                Made for larger midmarket, enterprise businesses and agencies, these plans
+                                give you advanced access with a dedicated account manager. API access,
+                                custom templates, consulting and team training.
+                            </p>
+                            <button onclick="sendMessageToIntercom('Interested in Enterprise / Agency plans')" href="javascript:void(0)" class="ic-launcher btn btn-white-red-outline btn-hover">Contact us</button>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-12 col-xs-12 np">
+                        <div class="enterprise-box-v2 text-center startup-box">
+                            <img src="assets/images/icon-startup.png"/>
+                            <!-- <h2 class="title">Enterprise & Agency Plans</h2> -->
+                            <!-- <span class="border-center"></span> -->
+                            <span class="subtitle">Are you a Startup or small business?</span>
+                            <p>
+                                See if you qualify for our small business
+                                incentive package and a
+                                custom plan!
+                            </p>
+                            <button class="ic-launcher btn btn-white-red-outline btn-hover" onclick="sendMessageToIntercom('I am on your pricing page and am interested to see if I qualify for your small business incentive program as I would like a special deal. Do I satisfy your business program criteria ?')" id="intercom_trigger">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12 np create-exp" id="target">
+                <div class="container">
+                    <h4>Don't have time? Let's build one for you!</h4>
+                    <div class="col-md-3 col-sm-3 col-xs-12 np">
+                        <h5><img src="assets/images/icon-create-custom.png">We'll Create </h5>
+                        <span class="calc">Calculator/Quiz/Chatbot/Poll/Ecom Rec.</span>
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-12 np text-center create-exp-center">
+                        <span class="create-exp-start">Starting From </span>
+                        <span class="create-exp-price">$250</span>
+                        <span class="text-opacity">/content piece</span>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 np">
+                        <button onclick="sendMessageToIntercom('I am interested in your custom build option')" href="javascript:void(0)" class="btn btn-white-red-outline btn-hover">Learn more</button>
+                    </div>
+                    <!-- <button class="closeDiv"><i class="material-icons">cancel</i></button> -->
+                </div>
+            </div>
+  
         </div>
     </section>
 

@@ -1576,7 +1576,7 @@ label.control-label {
   .video-btn:hover{background:#9b9696; color:#fff;}
   .section-1-left .video-btn i{display:inline-block;float:left;margin-right:10px;font-size:20px}
   .section-1 .container-fluid{padding:0}
-  .section-1-left{/*padding-left:55px;display:table;*/     margin: 10px 0px 0px;}
+  .section-1-left{/*padding-left:55px;display:table;*/     margin:0px 0px 0px;}
  
   .help_outer{font-family:montserratregular}
   .help-icon{font-size:28px;display:inline-block;vertical-align:middle;margin-right:0px;margin-bottom:0px;margin-top:-5px;color:#a4a4a4;transition:.5s ease-in-out}
@@ -1819,7 +1819,7 @@ label.control-label {
   .start-trial-cta label{float:none;width:100%;color:#fff;font-size:13px;font-family:montserratregular;padding:8px 0 0 0;}
   .start-trial-cta .btn-buildcal p{float:left;margin:0 10px 0 0;line-height:30px}
   .start-trial-cta{margin:30px 20px 70px;}
-  .bg1-img{background:url('https://dzvexx2x036l1.cloudfront.net/strtFreeTrial.jpg') no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding:70px 0}
+  .bg1-img{background:url('https://dzvexx2x036l1.cloudfront.net/strtFreeTrial.jpg') no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding:70px 0 100px;}
   .portfolio_main_holder .item_holder .portfolio_title{margin:15px 0;padding:0 20px;box-sizing:border-box}
   .portfolio_main_holder .item_holder.flip_from_left .portfolio_title_custom .portfolio_title a{color:#222;vertical-align:middle}
   .section-12{background:#62696d;min-height:150px;margin-bottom:0;margin-top:0px}
@@ -1976,7 +1976,7 @@ iframe[name=google_conversion_frame]{height:0!important;width:0!important;line-h
 	.Section-13 .panel-heading{padding:0}
 	.Section-13 .panel-group,.Section-13 .panel-group .panel+.panel{margin:0}
 	.Section-13 .panel-title a{color:#62696d;font-size:18px;text-transform:uppercase;font-family:montserratlight;width:100%;padding:25px 15px;display:block}
-	.section-1-left h3,.section-1-left h1.section1-firstheadnoab{font-size:22px; line-height: 32px;}
+	.section-1-left h3,.section-1-left h1.section1-firstheadnoab{font-size:26px; line-height: 32px;}
 	.section-1-left h4{margin-top:10px; font-size: 16px;}
 	
 	.sec-quiz{text-align: center;margin-top: 0;}
@@ -6204,7 +6204,7 @@ span.recom {
 	.footer-img-text a{padding:0!important;text-align: inherit!important;}
 	/* button.btn-readmore.mg{margin:0 0 15px 0!important;} */
 	/* button.btn-readmore.space {margin-bottom:40px;} */
-	.home-imgs li{margin:0 10px 0px 0 !important;}
+	.home-imgs li{     margin: 0 15px 20px 15px!important;}
 	.home-imgs ul{padding: 15px 0 0 0!important;}
 	.over3,.over2,.over1,.over4 {left:0px !important;}
 	span.tag2{line-height:10px!important}
@@ -6219,7 +6219,6 @@ span.recom {
 	/* .case-breathers-rightSide h1.heading {padding-top: 20px !important;} */
 	/* h1.heading.fnt-chnge.product-hunt.hunt1 {padding-top: 30px!important;} */
 	.marg {margin-top:45px!important;}
-	.home-imgs li {margin: 0 12px 20px 2px!important;}
 	.home-imgs li:last-child {margin-top: 10px !important; margin-bottom: 0px !important;}
 	/* img.polls {margin-top: 12px!important;} */
 	.startTrial-outer1{margin: 25px auto 19px!important;}
@@ -6729,7 +6728,7 @@ h4.mk-animate-element.right-to-left.publish {
 	.case-breathers-rightSide .heading{font-size:30px!important; padding-top: 20px;}
 	.case-breathers-rightSide h5.subheading{font-size:15px!important;}
 	.section-4-left h4, .section-5-left h4, .section-6-left h4 {font-size: 18px !important; line-height: 24px;}
-	section .section-2-heading{font-size:30px!important;}
+	section .section-2-heading{font-size:26px!important;}
 	.site-image1{width:154px!important;height:98px!important;}
 	.each-row{padding-bottom:0px!important;}
 	/* .each-row:last-child {padding-bottom: 20px!important;} */
@@ -7027,4 +7026,26 @@ h4.mk-animate-element.right-to-left.publish {
 	}
 
 
-
+	.case-chatbot .btn-readmore-link {
+		background: transparent;
+		border-radius: 25px;
+		border: 1px solid #fb5f66;
+		padding: 9px 27px;
+		font-size: 12px;
+		margin-top: 20px;
+		text-decoration: none;
+	}
+	.btn-hover:hover {
+		-webkit-transition: .5s ease-in-out;
+		transition: .5s ease-in-out;
+		background: #fdb6b9 !important;
+		color: #fb5f66 !important;
+		border-color: #fdb6b9 !important;
+	}
+	.case-chatbot .heading {
+		line-height: 56px;
+	}
+	.chatbot{
+		width:39px;
+		height:32px;
+	}

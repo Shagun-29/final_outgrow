@@ -19,9 +19,19 @@
             <!-- <div class="company-detail">
               Katya’s company made over $10,000 in revenue in just a month of using an Outgrow business calculator.
             </div> -->
-            <a href="https://app.outgrow.co/signup?utm_source=website&utm_medium=link&utm_campaign=outgrow_ROI_page">
+            <!-- <a href="https://app.outgrow.co/signup?utm_source=website&utm_medium=link&utm_campaign=outgrow_ROI_page">
               <button type="button" class="btn btn-white-new">Build Your First Interactive Experience <i class="material-icons">arrow_forward</i></button>
-            </a>
+            </a> -->
+            <div class="startTrial-outer">
+              <label>Build Your First Calculator </label>
+              <i class="material-icons">email</i>
+              <input class="lead-form-email1" name="emailId" type="email" placeholder="Enter your email ID">
+              <span class="lead-form-btn">
+                <a href="//app.outgrow.co/signup/?email=" class="lead-email1 btn-buildcal" onclick="callGA('CANNOT WAIT CTA'); ">
+                  Start Free Trial
+                </a>				
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -45,89 +55,162 @@
     </section>
   
     <section class="section section-premade-temp">
-      <div class="container">
+      <div class="container-fluid">
         <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-heading text-center">Examples Of Highest-ROI Quizzes, Calculators And Assessments </div>
+          <div class="section-heading text-center">Examples Of Surveys You Can Make With Outgrow </div>
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12 section-premade-temp-inner">
-          <!-- <div class="preloader">
-            <div class="status">&nbsp;</div>
-          </div> -->
-          <div class="premade-template">
-            <ul class="pre-temp-cat" id="calc-cats">
-              <li class="active">
-                <a href="javascript:void(0)" id="Auto" (click)="shuffleCalcs('Auto')">Auto</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" id="Education" (click)="shuffleCalcs('Education')">Education</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" id="Finance" (click)="shuffleCalcs('Finance')">Finance</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" id="marketing-advertising" (click)="shuffleCalcs('marketing-advertising')">Marketing & Advertising</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" id="Quintessential" (click)="shuffleCalcs('Quintessential')">Quintessential</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" id="construction" (click)="shuffleCalcs('construction')">Real Estate & Construction</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" id="Technology" (click)="shuffleCalcs('Technology')">Technology</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" id="Entertainment" (click)="shuffleCalcs('Entertainment')">TV and Entertainment</a>
-              </li>
+          <div id="premade-loader-new" class="preloader">
+            <div class="white-wrapper">
+              <div class="status">&nbsp;</div>
+            </div>
+          </div>
+          <div class="premade-template-new hide">
+            <div class="search-input">
+              <!-- <h4>Select Your Industry</h4> -->
+              <div class="input-group">
+                <i class="material-icons">search</i>
+                <input type="text" name="search" id="search-experience" oninput="filterList()" onkeyup = "searchList(event)" placeholder="Search Experiences by Keyword">
+              </div>
+              <div class="no-search hide">
+                <i class="material-icons">error</i> You can see some generic examples below and you can reach out to us <a href="javascript:void(0);" id="intercom_trigger" class="intercom_trigger">here</a> for more specific examples or any other questions. 
+              </div>
+            </div>
+            <div class="premade-template-left">
   
-            </ul>
-            <div class="pre-temp-cont">
-              <ul class="pre-temp-list" id="gallery-content-center">
-                  <li *ngFor="let item of filteredObj; let i=index" [class.active]="item.id == myId" class="filter-all Auto" id="{{item.id}}">
-                      <a href="javascript:void(0)" (click)="markAsActive(item.id)">
-                        {{item.Description}}</a>
-                    </li>
-  
-                <!-- <li class="filter-all Auto active" id="new-car-used-car">
-                  <a href="javascript:void(0)" (click)="markAsActive('new-car-used-car')">
-                    Find out whether you should buy a used card or a new one.</a></li>
-                <li class="filter-all Auto" id="buy-rent">
-                  <a href="javascript:void(0)" (click)="markAsActive('buy-rent')">
-                    Answer 6 questions to find out whether you should buy or lease your next car.</a>
+              <ul class="pre-temp-cat pre-temp-cat-new" id="calc-cats">
+                {{-- <li class="active">
+                  <a href="javascript:void(0)" id="Auto" onclick="shuffleCalcs('Auto')">Auto</a>
                 </li>
-                <li class="filter-all Auto" id="auto-loan">
-                  <a href="javascript:void(0)" (click)="markAsActive('auto-loan')">
-                    Find out how much monthly installment you'll be paying on your auto loan.</a></li>
-                <li class="filter-all Auto" id="early-payment">
-                  <a href="javascript:void(0)" (click)="markAsActive('early-payment')">
-                    How much extra monthly payment will you need to make to shorten your car loan
-                    term?</a></li>
-                <li class="filter-all Auto" id="put-down">
-                  <a href="javascript:void(0)" (click)="markAsActive('put-down')">
-                    Find out the downpayment amount you'll need to purchase your new home.</a></li>
-                <li class="filter-all Auto" id="type-car">
-                  <a href="javascript:void(0)" (click)="markAsActive('type-car')">
-                    Find out which car suits you the best.</a></li> -->
+                <li>
+                  <a href="javascript:void(0)" id="Education" onclick="shuffleCalcs('Education')">Education</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="Finance" onclick="shuffleCalcs('Finance')">Finance</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="MarketingAdvertising"
+                  onclick="shuffleCalcs('MarketingAdvertising')">Marketing & Advertising</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="HealthFitness"
+                  onclick="shuffleCalcs('HealthFitness')">Health & Fitness</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="Legal"
+                  onclick="shuffleCalcs('Legal')">Legal</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="Quintessential"
+                  onclick="shuffleCalcs('Quintessential')">Quintessential</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="RealEstateConstruction"
+                  onclick="shuffleCalcs('RealEstateConstruction')">Real Estate &
+                    Construction</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="Funnels" onclick="shuffleCalcs('Funnels')">
+                  Funnels
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="Trending" onclick="shuffleCalcs('Trending')">
+                  Trending
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="Technology"
+                  onclick="shuffleCalcs('Technology')">Technology</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="Travel"
+                  onclick="shuffleCalcs('Travel')">Travel</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="Publishing"
+                  onclick="shuffleCalcs('Publishing')">Publishing</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)" id="TVandEntertainment"
+                  onclick="shuffleCalcs('TVandEntertainment')">TV and Entertainment</a>
+                </li> --}}
+              </ul>
+              <div class="form-group col-xs-12 np">
+                <div class="selectize selectize-wrapper">
+                  <select id="select-list" placeholder="Select List">
+                    <option value="Auto">Auto</option>
+                    <option value="Education">Education</option>
+                    <option value="Education">Education</option>
+                    <option value="HealthFitness">Health & Fitness</option>
+                    <option value="Quintessential">Quintessential</option>
+                    <option value="RealEstateConstruction">Real Estate & Construction</option>
+                    <option value="MarketingAdvertising">Technology</option>
+                    <option value="Publishing">Publishing</option>
+                    <option value="Travel">Travel</option>
+                    <option value="TVandEntertainment">TV and Entertainment</option>
+                    <option value="Trending">Trending</option>
   
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="pre-temp-cont pre-temp-cont-new"> 
+              <ul class="pre-temp-list" id="gallery-content-center">
+  
+                <!-- <li class="active filter-all filter-auto" id="calc-auto-loan">
+                  <a href="javascript:void(0)" onclick="markAsActive('calc-auto-loan')">Auto Loan Calculator</a>
+                </li>
+                <li class="All Financia filter-all filter-auto" id="calc-early-payment">
+                  <a href="javascript:void(0)" onclick="markAsActive('calc-early-payment')">Early Payment Calculator</a>
+                </li>
+                <li class="All Math filter-all filter-auto" id="calc-downpayment">
+                  <a href="javascript:void(0)" onclick="markAsActive('calc-downpayment')">How much should I put down?</a>
+                </li>
+                <li class="All Others filter-all filter-education" id="calc-student-budget"> 
+                  <a href="javascript:void(0)" onclick="markAsActive('calc-student-budget')">Student Budget Calculator</a>
+                </li>
+                <li class="All Math filter-all filter-education" id="calc-harward-score">
+                  <a href="javascript:void(0)" onclick="markAsActive('calc-harward-score')">What is a good enough score to get into Harvard with your background?</a>
+                </li>
+                <li class="All Math filter-all filter-finance" id="calc-home-budget">
+                  <a href="javascript:void(0)" onclick="markAsActive('calc-home-budget')">Home Budget Calculator</a>
+                </li>
+                <li class="All Others filter-all filter-health" id="calc-weight-loss">
+                  <a href="javascript:void(0)" onclick="markAsActive('calc-weight-loss')">Weight Loss Calculator</a>
+                </li>
+                <li class="All Financial filter-all filter-publishing" id="calc-trump-plan">
+                  <a href="javascript:void(0)" onclick="markAsActive('calc-trump-plan')">How will Trump's tax plan affect you?</a>
+                </li> -->
               </ul>
               <div class="pre-temp-view">
+                <!-- <div class="tag-exp"><i class="material-icons">star_rate</i><span class="tag-exp-text"> Customisable for the Auto Industry</span></div> -->
                 <div class="temp-preview">
                   <span class="image-bg1">
                     <span class="image-scroll1">
-                       <img rel="noshare"  id="premade-gif" src="https://dzvexx2x036l1.cloudfront.net/calc_images/auto+loan+calculator.gif" />
+                      <img id="premade-gif" src="https://dzvexx2x036l1.cloudfront.net/calc_images/auto+loan+calculator.gif" />
                     </span>
                   </span>
                   <div class="content temp-info">
                     <h3>
-                      <p id="premade-calc-name"><i class="material-icons">&#xE80E;</i>{{premadeNameIs}}</p>
-                      <span id="premade-calc-layout"><strong>Layout:</strong> Londoner</span>
+                      <p id="premade-calc-name">
+                        <i class="material-icons">&#xE80E;</i>
+                        AUTO LOAN CALCULATOR
+                      </p>
+                      <span id="premade-calc-layout">
+                        <strong>Layout:</strong> 
+                        The Londoner 
+                      </span>
                     </h3>
-                    <a id="premade-preview-link" class="btn btn-red btn-hover" target="_blank" href="https://premade.outgrow.us/Copy-of-The-quintessential-mortgage-calculator-1">Preview</a>
-                    <a class="btn btn-red btn-hover" href="https://app.outgrow.co/signup?utm_source=website&amp;utm_medium=link&amp;utm_campaign=outgrow_ROI_page">Build your own</a>
+                    <a id="premade-preview-link" class="btn btn-red btn-hover" target="_blank" href="https://premade.outgrow.us/Auto-Loan-Calc">Preview</a>
+                    <a class="btn btn-red btn-hover" href="//app.outgrow.co/signup">Build your own</a>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- <div class="no-match-found hide">
+              <div class="no-match-found-inner"><i class="material-icons">warning</i>No Matches found!</div>
+            </div> -->
           </div>
         </div>
       </div>
