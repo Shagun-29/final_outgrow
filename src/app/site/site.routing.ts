@@ -14,6 +14,8 @@ import { NotFoundComponent } from './use-cases/not-found/not-found.component';
 import { EcommerceQuizesComponent } from './use-cases/ecommerce-quizes/ecommerce-quizes.component';
 import { ChatbotComponent } from './use-cases/chatbot/chatbot.component';
 import { CaseStudiesComponent } from './case-studies/case-studies.component';
+import { TestComponent } from './use-cases/test/test.component';
+import { OutgrowHrComponent } from './use-cases/outgrow-hr/outgrow-hr.component';
 
 export const routes: Routes = [
     { path: '', loadChildren: './home/home.module#HomeModule' },
@@ -31,9 +33,11 @@ export const routes: Routes = [
     { path: 'why-interactive', loadChildren: './why-interactive/why-interactive.module#WhyInteractiveModule' },
     { path: 'ltd-1', component: Ltd1Component },
     { path: 'ltd', component: LtdComponent },
-    { path: 'chatbot', component: ChatbotComponent },
+    { path: 'chatbots', component: ChatbotComponent },
     { path: 'ecommerce-quizes', component: EcommerceQuizesComponent },
     { path: 'case-studies', component: CaseStudiesComponent },
+    { path: 'tests', component: TestComponent },
+    { path: 'outgrow-hr', component: OutgrowHrComponent },
     { path: '**',component: NotFoundComponent}
       
 ];
