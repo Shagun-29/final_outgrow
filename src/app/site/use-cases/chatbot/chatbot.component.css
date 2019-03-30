@@ -134,5 +134,89 @@ background:#fff!important;
  margin-bottom: 70px;
 }
 .bot-head{
- font-family: montserratregular!important;  
+ font-family: montserratbold!important;  
+}
+.sec-w-img {
+    width: 800px;
+    min-height: 400px;
+    margin: 50px auto 130px auto;
+    position: relative;
+}
+.sec-w-img img.first {
+    top: 37%;
+    left: 16%;
+    position: absolute;
+    width: 75%;
+}
+.sec-w-img .img-outer {
+    top: 90px;
+    left: 0%;
+    position: absolute;
+    width: 50%;
+}
+.shadow {
+    width: 80px;
+    height: 30px;
+    margin: auto;
+    margin-top: -40%;
+    background: #000;
+    opacity: .25;
+    display: block;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-transform: translateY(60px);
+    -ms-transform: translateY(60px);
+    transform: translateY(60px);
+    -webkit-filter: blur(17px);
+    filter: blur(17px);
+    -webkit-animation: shadow .5s infinite alternate;
+    animation: shadow .5s infinite alternate;
+}
+.startTrial-outer i.material-icons {
+    position: absolute;
+    left: 23px;
+    top: 12px;
+    font-size: 18px;
+    color: #fb5f66;
+    top: 14px;
+}
+.startTrial-outer input {
+    background: #fff;
+    border: 1px solid #b4b4b4;
+    border-radius: 25px;
+    min-height: 46px;
+    margin: 0;
+    width: 100%;
+    float: none;
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.08);
+    padding-left: 50px;
+    padding-right: 20px;
+    color: #858f94;
+    font-family: montserratlight;
+}
+.lead-form-btn {
+    position: absolute;
+    right: 1px;
+    top: 0px;
+}
+.startTrial-outer .btn-buildcal {
+    background: #fb5f66;
+    color: #fff;
+    font-size: 12px !important;
+    padding: 13px 28px !important;
+    border: 2px solid #fb5f66;
+    transition: .5s ease-in-out;
+    line-height: normal;
+    box-shadow: none;
+    margin-top: 0px;
+    border-radius: 25px;
+    display: inline-block;
+    float: none;
+    font-family: montserratlight;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.08);
+    margin-left: 3px;
+}
+.sec-chatbot.section-premade-temp {
+    background: #fff!important;
 }
