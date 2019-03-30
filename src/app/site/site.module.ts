@@ -29,6 +29,8 @@ import { NotFoundComponent } from './use-cases/not-found/not-found.component';
 import { EcommerceQuizesComponent } from './use-cases/ecommerce-quizes/ecommerce-quizes.component';
 import { ChatbotComponent } from './use-cases/chatbot/chatbot.component';
 import { CaseStudiesComponent } from './case-studies/case-studies.component';
+import { TestComponent } from './use-cases/test/test.component';
+import { OutgrowHrComponent } from './use-cases/outgrow-hr/outgrow-hr.component';
 
 @NgModule({
   imports: [
@@ -51,6 +53,6 @@ import { CaseStudiesComponent } from './case-studies/case-studies.component';
     // Script
     
    ],
-  declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent,InteractiveCalculatorsAndQuizzesComponent, Ltd1Component, LtdComponent, NotFoundComponent, EcommerceQuizesComponent, ChatbotComponent, CaseStudiesComponent]
+  declarations: [CalculatorComponent,IncreaseConversionsComponent,IncreaseRoiComponent,IncreaseSalesComponent,QuizComponent,SurveyComponent,IdeaGeneratorComponent,InteractiveCalculatorsAndQuizzesComponent, Ltd1Component, LtdComponent, NotFoundComponent, EcommerceQuizesComponent, ChatbotComponent, CaseStudiesComponent, TestComponent, OutgrowHrComponent]
 })
 export class SiteModule { }
