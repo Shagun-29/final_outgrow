@@ -181,7 +181,7 @@ span.profile-detail {
 .company-detail {
     font-size: 15px;
 font-family: montserratregular;
-background: rgba(51, 152, 204, 0.1);
+background: rgba(51, 152, 204, 0.1)!important;
 border-radius: 8px;
 padding: 10px;
 line-height: 25px;
@@ -957,7 +957,7 @@ blockquote::after {
     display: block;
     opacity: 0.7;
     line-height: 24px;
-    font-family: montserratlight;
+    font-family: montserratregular;
 }
 
 .section-quotes-border {
@@ -1495,7 +1495,7 @@ span.testi-desig {
     }
     .section-btn {
         margin-top: 30px!important;
-    margin-bottom: 60px!important;
+    margin-bottom: 100px!important;
     }
     .reading-content p {
         min-height: auto;
@@ -1547,7 +1547,7 @@ span.testi-desig {
         display: block!important;
     }
     .section-heading,.section-2-heading {
-        font-size: 22px!important;
+        font-size: 26px!important;
         padding: 0;
         line-height: 26px!important;
         text-align: center;
@@ -1614,11 +1614,11 @@ span.testi-desig {
         background-position: 0px -150px;
     }
     .section {
-        margin-top: 0;
+        margin-top: 0!important;
     }
     .section-banner h1.main-heading {
         margin-top: 40px;
-        font-size: 22px;
+        font-size: 26px;
         padding: 0;
         line-height: 26px;
         margin-bottom: 10px!important;
@@ -1637,6 +1637,36 @@ span.testi-desig {
         margin-left: 0px;
         margin-top: 25px !important;
         width: 100% !important;
+    }
+    .section-banner .startTrial-outer input {
+        min-width: 100% !important;
+    }
+    .startTrial-outer a {
+        margin: 0px !important;
+        margin-top: 20px !important;
+    }
+    .lead-form-btn {
+        position: relative!important;
+    }
+    .section-banner .lead-form-btn {
+        right: 0 !important;
+        top: 0 !important;
+    }
+    .section-banner {
+        height: auto;
+        background-position: 0px -150px;
+        padding-bottom: 50px;
+        margin-bottom: 0;
+    }
+    .section-quotes blockquote {
+        font-size: 15px;
+        line-height: 28px;
+        padding: 0px 20px 14px;
+        max-width: 98%;
+    }
+    .section-quotes blockquote + span {
+        font-size: 15px;
+        line-height: 28px;
     }
 }
 
@@ -1679,6 +1709,12 @@ span.testi-desig {
     }
 }
 
+@media only screen and (max-width:480px) {
+    .startTrial-outer input {
+        min-height: 48px !important;
+    }
+ 
+}
 @media (min-width:1200px) and (max-width:1280px) {
     .section-six ul li span {
         float: left;

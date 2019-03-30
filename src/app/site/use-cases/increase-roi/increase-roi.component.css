@@ -161,7 +161,7 @@ span.profile-detail {
 .company-detail {
     font-size: 15px;
     font-family: montserratregular;
-    background: rgba(51, 152, 204, 0.1);
+    background: rgba(51, 152, 204, 0.1)!important;
     border-radius: 8px;
     padding: 10px;
     line-height: 25px;
@@ -950,7 +950,7 @@ blockquote::after {
 .section-btn {
     float: left;
     width: 100%;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 }
 
 .section-btn span {
@@ -1226,6 +1226,9 @@ span.testi-desig {
         text-transform: none!important;
         font-size: 30px!important;
     }
+    .section-embeds .section-2-heading {
+        margin-top: 0px!important;
+    }
 }
 
 @media (max-width:580px) {
@@ -1459,7 +1462,7 @@ span.testi-desig {
     }
     .section-btn {
         margin-top: 30px!important;
-        margin-bottom: 60px!important;
+        margin-bottom: 100px!important;
     }
     .reading-content p {
         min-height: auto;
@@ -1511,7 +1514,7 @@ span.testi-desig {
         display: block!important;
     }
     .section-heading {
-        font-size: 22px;
+        font-size: 26px;
         padding: 0;
         line-height: 26px;
         text-align: center;
@@ -1578,11 +1581,11 @@ span.testi-desig {
         background-position: 0px -80px;
     }
     .section {
-        margin-top: 0;
+        margin-top: 0!important;
     }
     .section-banner h1.main-heading {
         margin-top: 40px;
-        font-size: 22px;
+        font-size: 26px;
         padding: 0;
         line-height: 26px;
     }
@@ -1603,6 +1606,30 @@ span.testi-desig {
     }
     .banner-jacket img {
         border-radius: 15px;
+    }
+    .section-banner .lead-form-btn {
+        right: 0 !important;
+        top: 0 !important;
+    }
+    .lead-form-btn {
+        position: relative!important;
+    }
+    .startTrial-outer a {
+        margin: 0px !important;
+        margin-top: 20px !important;
+    }
+    .section-quotes blockquote {
+        font-size: 15px;
+        line-height: 28px;
+        padding: 0px 20px 14px;
+        max-width: 98%;
+    }
+    .section-quotes blockquote + span {
+        font-size: 15px;
+        line-height: 28px;
+    }
+    section .section-2-heading {
+        font-size: 26px!important;
     }
 }
 @media (max-width: 360px)
