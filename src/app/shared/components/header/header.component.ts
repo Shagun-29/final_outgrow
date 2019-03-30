@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
   active = document.querySelector('.home');
   
   constructor(private titleService: Title,private router:Router) {
-    
    }
    public setTitle0(){
     this.titleService.setTitle("Interactive Calculators and Quizzes | Outgrow");

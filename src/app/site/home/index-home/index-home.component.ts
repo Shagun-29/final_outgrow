@@ -20,7 +20,7 @@ export class IndexHomeComponent implements OnInit {
   menu1 = document.querySelector('.interactive');
   menu2 = document.querySelector('.features');
   menu3 = document.querySelector('.pricing');
-  menu4 = document.querySelector('.examples');
+  // menu4 = document.querySelector('.examples');
   active = document.querySelector('.home');
   activeHeader: any;
   href: any;
@@ -142,12 +142,12 @@ export class IndexHomeComponent implements OnInit {
       this.menu1.classList.remove('active');
       this.menu2.classList.remove('active');
       this.menu3.classList.remove('active');
-      this.menu4.classList.remove('active');
+      // this.menu4.classList.remove('active');
     }if(this.active){
       this.menu1.classList.remove('active');
       this.menu2.classList.remove('active');
       this.menu3.classList.remove('active');
-      this.menu4.classList.remove('active');
+      // this.menu4.classList.remove('active');
     }
 
     this.loadingService.isLoading.next(false);

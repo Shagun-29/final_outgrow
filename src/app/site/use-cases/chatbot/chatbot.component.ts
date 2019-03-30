@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chatbot.component.css']
 })
 export class ChatbotComponent implements OnInit {
-
+  loader = document.querySelector('.preloader');
   constructor() { }
 
   ngOnInit() {
+    this.loader.classList.add('hide');
+
   }
 
 }
