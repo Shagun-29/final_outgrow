@@ -2139,7 +2139,7 @@ body{background:#fff !important;}
 
 /**** new choose template ***/
     section.section.example-calc {
-        margin: 0px;
+        margin: 50px;
         position: relative;
     }
     /* .example-calc .tab-section{} */
@@ -2319,7 +2319,7 @@ body{background:#fff !important;}
 }
 @media (min-width:991px){
 	.topSpace{
-        margin-top: 66px;
+        /* margin-top: 66px; */
         }
 }
 @media (max-width: 768px)
@@ -2740,9 +2740,10 @@ body{background:#fff !important;}
 }
 .premade-template-new .search-input i.material-icons {
     /* float: left;
-    position: absolute;
+ 
     left: 0;
-    top: 0; */
+	top: 0; */
+	position: absolute;
     font-size: 18px;
     color: #666;
     cursor: pointer;
