@@ -1889,3 +1889,56 @@ span.testi-desig {
                 box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.08);
                 margin-left: 0;
             }
+            .search-input .input-group {
+                float: left;
+                width: 100%;
+            }
+            .input-group {
+                position: relative;
+                display: table;
+                border-collapse: separate;
+            }
+            .premade-template-new .search-input i.material-icons {
+                float: left;
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 18px;
+                color: #666;
+                cursor: pointer;
+                padding: 19px 23px;
+            }
+            .premade-template-new .search-input input[type="text"] {
+                width: 100%;
+                box-sizing: border-box;
+                border: none;
+                font-size: 15px;
+                font-family: montserratlight;
+                color: #555;
+                background-color: #f6f6f6;
+                padding: 17.5px 10px;
+                    padding-left: 10px;
+                -webkit-transition: width 0.4s ease-in-out;
+                transition: width 0.4s ease-in-out;
+                border-radius: 3px;
+                padding-left: 62px;
+            }
+            .section-premade-temp .premade-template-new .search-input input[type="text"] {
+                background: #fff;
+            }
+            .premade-template-left {
+                width: 230px;
+                float: left;
+            }
+            ul.pre-temp-cat-new {
+                background: #f9f9f9;
+                border: 1px solid #ebebeb;
+                height: 600px;
+                width: 230px;
+                margin-top: 0px;
+            }
+            .pre-temp-cont-new {
+                float: left;
+                width: calc(100% - 230px);
+                padding: 0 0px 0px 30px;
+            }
