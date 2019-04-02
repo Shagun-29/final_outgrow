@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Http } from '@angular/http';
-
+import { GetCalcService } from '../../../shared/service/get-calc.service';
 @Component({
   selector: 'app-chatbot',
   templateUrl: './chatbot.component.html',
@@ -9,7 +9,7 @@ import { Http } from '@angular/http';
 })
 export class ChatbotComponent implements OnInit {
   loader = document.querySelector('.preloader');
-  constructor(title:Title) { 
+  constructor(title:Title,private calcService:GetCalcService) { 
    title.setTitle('Improve Marketing and Sales ROI | Outgrow');
   }
 
@@ -20,6 +20,10 @@ export class ChatbotComponent implements OnInit {
     footer.classList.add('show');
     this.loader.classList.add('hide');
 
+    console.log("---------data found-------",this.calcService.getCalcData());
+    this.calcService.getCalcData().subscribe((response)=>{
+      console.log("@@@@@@@@@@@@",response)
+    })
   }
 
-}
+} 
