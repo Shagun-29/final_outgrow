@@ -1887,3 +1887,12 @@ ul.pre-temp-cat-new {
     width: calc(100% - 230px);
     padding: 0 0px 0px 30px;
 }
+.premade-template-new .search-input {
+    /* float: left;
+    width: 266px;
+    position: absolute;
+    top: -35px; */
+    float: left;
+    width: 100%;
+    margin-bottom: 45px;
+}

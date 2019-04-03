@@ -71,9 +71,14 @@ export class HeaderComponent implements OnInit {
              
                         
   });
-  $('.navbar-collapse ul li a').on('click', function () {
-   $('.params').removeClass('active');
-   $(this).addClass('active');
+  $('#menu-toggle').on('click', function () {
+   $('#sidebar-wrapper').addClass('active-over');
+});
+$('#menu-close').on('click', function () {
+  $('#sidebar-wrapper').removeClass('active-over');
+});
+$('.overlay').on('click', function () {
+  $('#sidebar-wrapper').removeClass('active-over');
 });
   });
  
