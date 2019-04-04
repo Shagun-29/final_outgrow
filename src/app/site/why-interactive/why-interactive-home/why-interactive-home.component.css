@@ -1483,6 +1483,9 @@ a:focus, a:hover {
         margin-bottom: 0px;
         margin-top: 0px;
     }
+    .metrics-inner-block h4 {
+        font-size: 22px;
+    }
 }
 #why .section-w2-left h4 {
     font-size: 24px;

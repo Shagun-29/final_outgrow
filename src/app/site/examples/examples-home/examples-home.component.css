@@ -636,9 +636,13 @@ label {
 	padding: 60px 0 70px;
 	margin: 0px;
 }
+.img-section img {
+    height: 100%;
+    width: 100%;
+}
 .section-recentNews .section-2-heading {
     font-family: montserratultra_light!important;
-    color: #fb5f66;
+    color: #fb5f66!important;
     margin-bottom: 30px;
     font-size: 42px;
     float: left;
@@ -951,6 +955,131 @@ label {
 .outer-container {
 	position: relative;
 	margin-bottom: 20px
+}
+.recentNews-outer {
+    margin-right: 20px;
+    max-width: 365px;
+}
+.recentNews-outer h4 {
+    font-size: 18px;
+    color: #62696d;
+    font-family: montserratregular;
+}
+.recentNews-inner {
+    float: left;
+    width: 100%;
+    background: #fff;
+    padding: 22px 20px;
+    transition: all .5s ease 0s;
+    min-height: 375px;
+    max-height: 375px;
+    position: relative;
+}
+.swiper-container-recentNews, .swiper-container-blog {
+    margin: 0 auto;
+    position: static;
+    overflow: hidden;
+    z-index: 1;
+}
+.calendar-wrapper.fixed-width .inner-box {
+    float: left;
+    width: 100%;
+    max-height: 300px;
+    min-height: 335px;
+}
+.recentNews-outer:last-child {
+    margin-right: 0px;
+}
+.btn-preview {
+    background: #fff;
+    color: #fb5f66;
+    padding: 4px 10px;
+    font-size: 10px;
+    border: 1px solid #fb5f66;
+    font-family: montserratlight;
+    text-transform: uppercase;
+    margin-right: 5px;
+    border-radius: 3px;
+    transition: all .5s ease 0s;
+}
+.btn-useTemp {
+    background: #fb5f66;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 10px;
+    border: 1px solid #fb5f66;
+    font-family: montserratlight;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all .5s ease 0s;
+}
+.button-wrapper {
+    float: left;
+    margin-top: 5px;
+}
+#trendingC .recentNews-text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.recentNews-text p {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    color: #62696d;
+    font-family: montserratlight;
+    line-height: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.recentNews-text span {
+    display: block;
+    font-size: 11px;
+    color: #62696d;
+    font-family: montserratlight;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+.recentNews-text h5 {
+    font-size: 15px;
+    color: #62696d;
+    font-family: montserratregular;
+    margin-top: 0px;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.recentNews-text {
+    float: left;
+    width: calc(100% - 88px);
+    padding-left: 15px;
+}
+.img-section {
+    float: left;
+    width: 68px;
+    height: 68px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+}
+.adjust-recentNews .recentNews-inner-row {
+    width: 100%;
+}
+.recentNews-inner-row {
+    float: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+.swiper-container-blog .recentNews-text h5 {
+    margin-top: 20px;
 }
 .img-1 {
 	position: relative;
@@ -1483,7 +1612,7 @@ iframe[name=google_conversion_frame] {
 		/*position: relative;*/
 		margin-bottom: 0px;
 	}
-	.sec-example .section-2-heading {
+	/* .sec-example .section-2-heading {
 		float: left;
 		width: 100%;
 		text-align: center;
@@ -1492,7 +1621,7 @@ iframe[name=google_conversion_frame] {
 		font-family: montserratlight;
 		text-transform: none;
 		margin: 0px;
-	}
+	} */
 	.sec-example .section-2-subheading {
 		float: left;
 		width: 100%;
@@ -2692,17 +2821,7 @@ body{background:#fff !important;}
 .iframe-small:hover{
 	cursor:pointer;
 }
-.sec-example .section-2-heading {
-    float: left;
-    width: 100%;
-    text-align: center;
-    color: #fb5f66 !important;
-    font-size: 38px;
-    font-family: montserratsemibold;
-    text-transform: none;
-    margin: 0px;
-    line-height: normal;
-}
+
 .sec-example .sec-outgrowMagic-title {
     background: #fff;
     color: #fff;

@@ -309,6 +309,9 @@ input.lead-form-email::placeholder {
     border-bottom: none;
     margin-bottom: 8px;
 }
+.drop-sub-menu .dropdown-sub-content{
+    width:88%;
+}
 .sidebar-nav li a {
     color: #62696d;
     display: block;
@@ -329,18 +332,7 @@ input.lead-form-email::placeholder {
     line-height: 46px;
     border-bottom: 1px solid rgba(215,215,215,0.5);
 }
-.dropdown .dropdown-sub-content {
-    display: none;
-    position: absolute;
-    right: -179px;
-    top: 50px;
-    background: #fff;
-    background-color: #fff;
-    /* min-width: 158px; */
-    box-shadow: 0px 30px 40px rgba(0,0,0,0.10);
-    z-index: 1;
-    font-size: 12px;
-}
+
 .dropdown.open .drop-sub-menu .dropdown-sub-content {
     display: block;
 }
@@ -637,23 +629,7 @@ li.nav-lead-input {
         line-height: 26px !important;
         transform: rotate(90deg);
     }
-.dropdown .dropdown-content {
-    min-width: 100% !important;
-    left: 0 !important;
-    background: none;
-    position: relative !important;
-    box-shadow: none !important;
-}
 
-.dropdown .dropdown-sub-content {
-    min-width: 100% !important;
-    left: 0px !important;
-    background: none;
-    position: relative !important;
-    box-shadow: none !important;
-    top: 0px !important;
-    padding: 0px 20px !important;
-}
 .dropdown-content a {
     font-size: 11px !important;
     text-transform: uppercase;
@@ -694,6 +670,7 @@ li.nav-lead-input {
     bottom: 0;
     
 }
+
 }
 @media (max-width: 1023px) and (min-width: 769px)
 {
@@ -822,6 +799,24 @@ li.dropdown.open a {
 }
 .navbar-nav > li > a {
     line-height: 25px!important;
+}
+.dropdown .dropdown-content {
+    min-width: 100% !important;
+    left: 0 !important;
+    background: none;
+    position: relative !important;
+    box-shadow: none !important;
+}
+
+
+.dropdown .dropdown-sub-content {
+    min-width: 100% !important;
+    left: 0px !important;
+    background: none;
+    position: relative !important;
+    box-shadow: none !important;
+    top: 0px !important;
+    padding: 0px 20px !important;
 }
 }
 @media (max-width: 1023px)
