@@ -2804,6 +2804,13 @@ iframe[name=google_conversion_frame]{height:0!important;width:0!important;line-h
 		top: 42%!important;
 		
 	}
+	h1.section1-firstheadnoab span.font-semibold {
+		font-size: 30px!important;
+	}
+.section1-left-cellnoab {
+    height: 21vh;
+    padding-top: 20px;
+}
 }
 @media (min-width:640px) and (max-width:768px){
 	/* .startTrial-outer {

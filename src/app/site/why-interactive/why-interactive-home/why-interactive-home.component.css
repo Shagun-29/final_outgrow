@@ -1474,6 +1474,18 @@ a:focus, a:hover {
     .video-wrapper-1 {
         padding: 0px 30px;
     }
+    .metrics-inner-block{
+        margin-right: 15px!important;
+        max-width: 230px!important;
+    }
+    #why .section-metrics h3 {
+        font-size: 30px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .metrics-inner-block h4 {
+        font-size: 22px;
+    }
 }
 #why .section-w2-left h4 {
     font-size: 24px;
@@ -1758,7 +1770,7 @@ a:focus, a:hover {
     border-bottom: 3px solid #fb5f66;
 }
 .metrics-inner-block:last-child {
-    margin-right: 0;
+    margin-right: 0!important;
 }
 .section-subheading {
     color: #62696d;
