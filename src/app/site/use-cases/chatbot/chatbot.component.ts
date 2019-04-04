@@ -21,9 +21,11 @@ export class ChatbotComponent implements OnInit {
     this.loader.classList.add('hide');
 
     console.log("---------data found-------",this.calcService.getCalcData());
-    this.calcService.getCalcData().subscribe((response)=>{
-      console.log("@@@@@@@@@@@@",response)
+    this.calcService.getCalcData()
+    .map((response)=>{
+      console.log("@@@@@@@@@@@@",response);
     })
+    // this.calcService.getCalcData();
   }
 
 } 

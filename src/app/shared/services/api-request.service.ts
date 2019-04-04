@@ -26,4 +26,19 @@ export class ApiRequestService {
     let url = "https://sheets.googleapis.com/v4/spreadsheets/1V954ZsJkGJ-AUYw62oefS8orYFZKk3Lzktjmyq6dG1w/values/category?key=AIzaSyAAH-UAXp3vTaZjwJkfdjqpOKzssWSmYNY&range=" + categoryKey + "!A2:Z";
     return this._http.get(url)
   }
+
+  // get posts from blog
+  getPosts(){
+    // console.log(this._http.get('https://outgrow.co/blog/api/get_posts/'));
+   let res= this._http.get('https://outgrow.co/blog/api/get_posts/');
+   return res;
+  }
+
+  // get calculators
+  getCalculators(){
+    // let data={ "date": new Date().toISOString(),
+    //     "operator" : "$gte"
+    // }
+    return this._http.post('https://api.outgrow.co/api/v1/admin/getEventsByDate',true);
+  }
 }

@@ -8,6 +8,11 @@ export class GetCalcService {
   
   getCalcData(){
     return this.http.post('https://api.outgrow.co/api/v1/admin/getCalculators',true);
+    // .map((data)=>{
+    //   console.log('data',data);
+    // });
+    // let data=this.http.post('https://api.outgrow.co/api/v1/admin/getCalculators',true);
+    // console.log("--data--",data);
   }
   
 }
