@@ -873,6 +873,11 @@ p#premade-calc-name i {
 .reading-content h4 {
     font-size: 16px;
     line-height: 24px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    height: 72px;
 }
 
 .reading-content p {
@@ -881,6 +886,10 @@ p#premade-calc-name i {
     padding-top: 10px;
     min-height: 130px;
     line-height: 24px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
 }
 
 .btn-readmore-link {
@@ -1363,8 +1372,8 @@ span.testi-desig {
     }
     .banner-content {
         margin-top: 0px;
-        margin-left: 0px;
-        width: 33% !important;
+        margin-left: 0px!important;
+        /* width: 33% !important; */
     }
     .section-banner {
         height: auto;
@@ -1379,7 +1388,7 @@ span.testi-desig {
         margin-top: 20px;
     }
     .section-second ul, .section-six ul {
-        width: 81%;
+        width: 75%;
     }
     .section-second ul li, .section-six ul li {
         font-size: 14px;
@@ -1414,7 +1423,7 @@ span.testi-desig {
     }
     .section-six-calc .section-six img {
         top: 50px;
-        right: 80px;
+        /* right: 80px; */
     }
 }
 
@@ -1430,7 +1439,7 @@ span.testi-desig {
 {
 .section-six img {
     top: 70px;
-    right: 80px;
+    /* right: 80px; */
 }
 .section-six ul {
     width: 70%;
@@ -1447,7 +1456,19 @@ span.testi-desig {
     .rs-hide {
         display: none;
     }
-  
+    .section-banner .startTrial-outer input {
+      
+        min-width: 100%!important;
+        padding-right: 136px!important;
+    }
+    .section-banner .lead-form-btn {
+        right: 1px!important;
+    }
+    .section-banner .startTrial-outer .btn-buildcal {
+   
+        padding: 13px 8px !important;
+ 
+    }
 }
 
 @media (max-width: 767px) {
@@ -1875,7 +1896,7 @@ span.testi-desig {
                 background: #fb5f66;
                 color: #fff;
                 font-size: 12px !important;
-                padding: 13px 28px !important;
+                padding: 13px 28px;
                 border: 2px solid #fb5f66;
                 transition: .5s ease-in-out;
                 line-height: normal;

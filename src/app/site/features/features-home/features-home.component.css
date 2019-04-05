@@ -4890,7 +4890,7 @@ and (max-width: 480px){
 	}
 	#feature .mobile-container{
 	padding:0px;
-	text-align: center;
+	/* text-align: center; */
 	}
 	#feature .section-9-left {
 	padding-right: 20px;
@@ -5268,6 +5268,111 @@ and (max-width: 480px){
 	#feature .span-style{
 	font-size:16px !important;
 	}
+	#feature .section-13{
+		margin-top: 0px!important;
+		padding-top: 40px!important;
+	}
+	#feature .feature-heading-1 h3 {
+		font-size: 30px!important;
+		margin-bottom: 0px!important;
+		margin-top: 0px!important;
+	}
+	#feature .vc_custom_1469808665479 {
+		padding-top: 0 !important;
+		margin: 0;
+	}
+	.feature-heading-1 {
+		padding: 0px!important;
+	}
+	#feature .feature-heading-1 h4 {
+		font-size: 15px !important;
+		margin-bottom: 15px!important;
+	}
+	#feature .feature-heading {
+		line-height: normal !important;
+		font-size: 24px !important;
+		margin-top: 0;
+	}
+	.section-studio h5 {
+		padding-right: 30px;
+	}
+	.section-studio {
+		margin-top: 0px!important;
+		padding-bottom: 0px!important;
+	}
+	.section-studio .col-md-4:nth-child(2), .section-studio .col-md-4:nth-child(5), .section-studio .col-md-4:nth-child(3), .section-studio .col-md-4:nth-child(6) {
+		padding-left: 0px !important;
+	}
+	.section-studio span {
+		padding-right: 25px!important;
+	}
+	.display-table-cell {
+		display: block!important;
+	}
+	.section-smart-builder .img-inner1 {
+		top: -30px!important;
+	}
+	.smart-builder-right {
+		padding-left: 0px;
+		margin-top: 50px;
+	}
+	h4.feature-subheading {
+		line-height: normal;
+		font-size: 18px;
+	}
+	.container.mobile-container, .mobile-container, .section-6-right {
+		padding: 0 20px!important;
+	}
+	.smart-builder-right {
+		padding-left: 0px!important;
+		margin-top: 50px;
+	}
+	h4.feature-subheading {
+		line-height: normal!important;
+		font-size: 18px!important;
+	}
+	.section-complex-formulas .img-inner2 {
+		position: relative!important;
+		left: 0!important;
+		bottom: 50px!important;
+	}
+	.section-graphs-charts-right {
+		margin-bottom: 30px!important;
+		margin-top: 0px!important;
+	}
+	.multiple-results-block, .multiple-results-block:last-child {
+		max-width: 100%;
+		margin-right: 0px;
+		margin: 0 auto 30px;
+		float: none!important;
+	}
+	#feature .feature-heading {
+		line-height: normal !important;
+		font-size: 24px !important;
+		margin-top: 0;
+	}
+	.section-embed-anywhere img {
+		margin: 0 auto;
+	}
+	.section-embed-anywhere span, .section-embed-anywhere p {
+		width: 100%!important;
+		text-align: center;
+	}
+	.section-embed-anywhere p {
+		margin-bottom: 35px;
+	}
+	.embed-anywhere-inner .col-md-4:nth-child(2) {
+		padding-left: 0px !important;
+	}
+	.embed-anywhere-inner .col-md-4:nth-child(3) {
+		padding-left: 0px !important;
+	}
+	#feature .section.section-10.sec-help p {
+		margin-bottom: 30px!important;
+	}
+	#pricing .section-faq {
+		padding-top: 40px!important;
+	}
 }
 @media (min-width:991px) and (max-width:1023px){
 	#feature .section-f1-left {
@@ -5418,6 +5523,17 @@ and (max-width: 480px){
 	}
 	#feature .section-7 .slider-sa, #feature .section-f1 .slider-sa {
 		min-height: 370px;
+	}
+	.section-studio .col-md-4:nth-child(2), .section-studio .col-md-4:nth-child(5) {
+		padding-left: 40px;
+	}
+	.section-smart-builder[_ngcontent-c3] .img-inner2[_ngcontent-c3] {
+		left:0px!important;
+		
+	}
+	.section-graphs-charts-right[_ngcontent-c3] {
+		
+		margin-top: 0px!important;
 	}
 }
 @media (min-width: 1024px) and (max-width: 1250px) {
@@ -5643,7 +5759,7 @@ line-height: 22px !important;
 #feature .section-13 {
     float: left;
     width: 100%;
-    /* margin-top: 65px; */
+    margin-top: 65px;
     padding-top: 0px;
     padding-bottom: 0;
     margin-bottom: 0;
@@ -5873,7 +5989,11 @@ span.feature-subtitle {
     opacity: 0.7;
     padding-top: 0;
     line-height: 22px;
-    margin-top: 0px;
+	margin-top: 0px;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 .multiple-results-block:last-child {
     margin-right: 0px;
@@ -5925,7 +6045,7 @@ span.feature-subtitle {
 }
 #feature .section.section-10.sec-help {
     background: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 20px!important;
     margin-top: 0;
     padding: 70px 0px 30px;
 }
@@ -5936,4 +6056,10 @@ span.feature-subtitle {
     margin-left: 0;
     margin-right: 0;
     padding-bottom: 40px !important;
+}
+.section-studio h5 {
+    font-size: 15px;
+    color: #62696d;
+    font-family: montserratregular;
+    margin-top: 20px;
 }
