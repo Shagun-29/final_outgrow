@@ -23,8 +23,6 @@
 		</section>
         <!--  section end-->
     
-    
-    
         <!-- start: example calc -->
     	<section class="section example-calc">
 			<div id="premade-loader-new" class="preloader hide">
@@ -341,23 +339,70 @@
         <section class="section section-5 sec-outgrowMagic ">
             <div class="container-fluid np">
                 <div class="col-xs-12 col-sm-12 col-md-12 np">
-                    <!--<div id="sticky-anchor"></div>-->
-                    <div class="tab-outer-frame col-xs-12 col-md-10 col-sm-12 text-center">
-                        <!--<span class="icon-webcam"></span>-->
-                        <div class="hrefTarget tab-inner-frame col-xs-12 col-md-12 col-sm-12">
-                            <iframe style="overflow-y: hidden;" id="og-iframe" [src]="frameUrl" class="iframe" style="height:auto" scrolling="no" #frame></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-12 col-sm-12 mobile-container rs-hide calc-links text-center iframe-small">
-                    <ng-container *ngFor="let iFrame of iFrames;let i=index">
-                        <a [class.active]="activeFrame === i" (click)="videoURL(frame,i,'onclick')">
-                            <img rel="noshare" alt="Calculator thumb image" class="thumb-calc" [src]="iFrame.media" />
-                        </a>
-                    </ng-container>
-                </div>
-            </div>
-        </section>
+					<!--<div id="sticky-anchor"></div>-->
+					
+         <!-- Homepage The Outgrow Magic -->
+
+		 
+	<section class="section section-5 sec-outgrowMagic-title">
+		<div class="container mobile-container">
+			<div class="section-2-heading">
+				Outgrow Embeds In Practice
+			</div>
+			<h5 class="section-2-subheading mk-animate-element scale-up">
+				Presenting our highly optimized design layouts
+			</h5>
+		</div>
+	</section>
+
+	<section class="section section-5 sec-outgrowMagic">
+		<div class="container-fluid np">
+			<div class="col-xs-12 col-sm-12 col-md-12 np">
+				<!--<div id="sticky-anchor"></div>-->
+				<div class="tab-outer-frame col-xs-12 col-md-10 col-sm-12 text-center">
+					<!--<span class="icon-webcam"></span>-->
+					<div class="hrefTarget tab-inner-frame col-xs-12 col-md-12 col-sm-12">
+						<iframe style="overflow-y: hidden;" id="og-iframe" [src]="frameUrl" style="height:auto" class="iframe" scrolling="no" #frame></iframe>
+					</div>
+				</div>
+				<nav></nav>
+			</div>
+
+
+			<div class="col-xs-12 col-md-12 col-sm-12 mobile-container rs-hide calc-links text-center">
+				<ng-container *ngFor="let iFrame of iFrames;let i=index">
+					<a href="javascript:void(0);" [class.active]="activeFrame === i" (click)="videoURL(frame,i)">
+						<img rel="noshare" alt="Calculator thumb image" class="thumb-calc" [src]="iFrame.media" />
+					</a>
+				</ng-container>
+			</div>
+
+			<div class="col-xs-12 col-md-12 col-sm-12 section-6-left mobile-container rs-show text-center">
+				<div class="col-md-12 col-sm-12 col-xs-12 np calc-links">
+					<a href="//website.outgrow.us/build-a-startup?vHeight=1" class="col-sm-4 np calcembed active" target="_blank">
+						<img rel="noshare" alt="Calculator thumb image" class="thumb-calc" src="//dzvexx2x036l1.cloudfront.net/calc06.jpg">
+					</a>
+					<a href="//website.outgrow.us/Which-engineering-major-is-right-for-you?vHeight=1" class="col-sm-4 np calcembed" target="_blank">
+						<img rel="noshare" alt="Calculator thumb image" class="thumb-calc" src="//dzvexx2x036l1.cloudfront.net/calc01.jpg">
+					</a>
+					<a href="//website.outgrow.us/Cost-of-a-video-campaign-4?vHeight=1" class="col-sm-4 np calcembed" target="_blank">
+						<img alt="Calculator thumb image" class="thumb-calc" src="//dzvexx2x036l1.cloudfront.net/calc02.jpg">
+					</a>
+					<a href="//website.outgrow.us/What-is-your-risk-of-getting-a-heart-disease?vHeight=1" class="col-sm-4 np calcembed" target="_blank">
+						<img rel="noshare"  alt="Calculator thumb image" class="thumb-calc" src="//dzvexx2x036l1.cloudfront.net/calc03.jpg">
+					</a>
+					<a href="//website.outgrow.us/outgrow-roi?vHeight=1" class="col-sm-4 np calcembed" target="_blank">
+						<img rel="noshare" alt="Calculator thumb image" class="thumb-calc" src="//dzvexx2x036l1.cloudfront.net/calc04.jpg">
+					</a>
+					<a href="//website.outgrow.us/build-an-app" class="col-sm-4 np calcembed" target="_blank">
+						<img rel="noshare" alt="Calculator thumb image" class="thumb-calc" src="//dzvexx2x036l1.cloudfront.net/calc05.jpg">
+					</a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	
     </div>
 
     <!-- Start Trial CTA-->

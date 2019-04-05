@@ -31,7 +31,7 @@ import { ChatbotComponent } from './use-cases/chatbot/chatbot.component';
 import { CaseStudiesComponent } from './case-studies/case-studies.component';
 import { TestComponent } from './use-cases/test/test.component';
 import { OutgrowHrComponent } from './use-cases/outgrow-hr/outgrow-hr.component';
-
+import { GetCalcService } from '../shared/service/get-calc.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -49,7 +49,8 @@ import { OutgrowHrComponent } from './use-cases/outgrow-hr/outgrow-hr.component'
     IdeaGenService,
     HttpClient,
     ApiRequestService,
-    PricingService
+    PricingService,
+    GetCalcService
     // Script
     
    ],

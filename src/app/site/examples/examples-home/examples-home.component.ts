@@ -4,7 +4,9 @@ import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ApiRequestService } from '../../../shared/services/api-request.service';
 import { VideoUrlService } from '../../../shared/service/video-url.service';
+import { LoadingService } from '../../../shared/service/loading.service';
 import * as _ from 'lodash';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-examples-home',
@@ -24,8 +26,7 @@ export class ExamplesHomeComponent implements OnInit {
   interactive = document.querySelector('.interactive');
   pricing = document.querySelector('.pricing');
   features = document.querySelector('.features');
-
-
+  iFrames: { name: string; media: string; url: string; }[];
 
   allCalcs: any;
   industries: any = [];
@@ -34,18 +35,21 @@ export class ExamplesHomeComponent implements OnInit {
   gif: any;
   loading: boolean;
   activeFrame: any;
-  iFrames: Array<Object>;
+  // iFrames: Array<Object>;
   frameUrl: any;
   public frame = document.getElementsByTagName('frame');
   href="";
   text:any;
   activeHeader="";
+  public allPosts: Array<{title:string, picUrl:string, url:string}>=new Array();
+  public trendingCalc: Array<{title:string, type:string, description:string, media:string, preview:string}>=new Array();
 
   constructor(public videoURLService: VideoUrlService,
     public title: Title,
     public apiRequestService: ApiRequestService,
     public sanitizer: DomSanitizer,
-    private router: Router
+    private router: Router,public loadingService: LoadingService,
+    private https : Http
   ) {
     title.setTitle("Examples | Outgrow");
   }
@@ -58,22 +62,91 @@ export class ExamplesHomeComponent implements OnInit {
     this.href = this.router.url;
     this.text=this.href.split('/');
 
-    if (this.text[this.text.length-1] == "examples") {
-      this.examples.classList.add('active');
-      if(this.pricing){
-        this.pricing.classList.remove('active');  
-      }
-      if(this.features){
-        this.features.classList.remove('active');
-      }
-      if(this.interactive){
-        this.interactive.classList.remove('active');
-      }
+    // if (this.text[this.text.length-1] == "examples") {
+    //   this.examples.classList.add('active');
+    //   if(this.pricing){
+    //     this.pricing.classList.remove('active');  
+    //   }
+    //   if(this.features){
+    //     this.features.classList.remove('active');
+    //   }
+    //   if(this.interactive){
+    //     this.interactive.classList.remove('active');
+    //   }
      
-    }
-
+    // }
     this.iFrames = this.videoURLService.iFrames;
     this.videoURL(this.frame);
+
+      // get blog posts
+    let promise=new Promise((resolve,reject)=>{
+      let apiURL="https://outgrow.co/blog/api/get_posts/";
+      let results=[];
+      this.https.get(apiURL)
+      .toPromise()
+      .then(
+        res=>{
+        results=res.json();
+        for (var prop in results) {
+          if(prop=="posts"){
+            results[prop].forEach(element => {
+              this.allPosts.push({title:element.title,picUrl:element.attachments[0].url,url: element.url});
+            });
+          }   
+        } 
+        // console.log("----get posts-----",this.allPosts)
+          resolve();
+        },msg=>{
+          reject();
+        }
+      )
+    })
+
+    // get trending calculators
+    let promise2=new Promise((resolve,reject)=>{
+      let apiURL="https://api.outgrow.co/api/v1/admin/getCalculators";
+      let results=[];
+      this.https.post(apiURL,true)
+      .toPromise()
+      .then(
+        res=>{
+        results=res.json();
+        for (var prop in results) {
+          if(prop=="data"){
+            results['data']['calculators'].forEach(element => {
+              if(element['industry']=="Trending"){
+                this.trendingCalc.push({title:element['title'], type:element['type'], description:element['description'], media:element['media'], preview:element['liveApp']['url']});
+              }
+            });
+          }
+        }
+        // console.log("--------trending calc---------",this.trendingCalc)
+          resolve();
+        },msg=>{
+          reject();
+        }
+      )
+    })
+
+    // get Events
+    let promise3=new Promise((resolve,reject)=>{
+      let apiUrl="https://api.outgrow.co/api/v1/admin/getEventsByDate";
+      let results=[];
+      let header={
+        'date': new Date().toISOString(),
+        'operator': '$gte'
+      }
+      this.https.post(apiUrl,header)
+      .toPromise()
+      .then(
+        res=>{
+          results=res.json();
+          let events=results['data']['events'];
+          // console.log("------res----",events);
+          resolve();
+        }
+      )
+    })
 
   }
 
@@ -177,16 +250,15 @@ export class ExamplesHomeComponent implements OnInit {
     this.loading = false;
   }
 
-  videoURL(frame, index = 0,str='') {
+  videoURL(frame, index = 0) {
     this.activeFrame = index;
     this.frameUrl = this.iFrames[index]['url'];
-    window.outerWidth <= 1000 && str == 'onclick' && window.open(this.frameUrl, '_blank');
-    this.sanitize(this.frameUrl);
+    this.frameUrl = this.sanitize(this.frameUrl);
     this.videoURLService.resizeIframe(frame);
   }
 
   sanitize(frameUri) {
-    this.frameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(frameUri);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(frameUri);
   }
 
 }

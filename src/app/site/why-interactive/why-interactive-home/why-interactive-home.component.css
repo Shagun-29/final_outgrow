@@ -1986,3 +1986,13 @@ label {
 .custom-embeds .nav-tabs>li>a:hover {
     background-color: transparent;
 }
+
+.testhide {
+    overflow: hidden;
+    height: 0;
+    margin-top: 0 !important;
+}
+
+.testshow {
+    height: auto;
+}
