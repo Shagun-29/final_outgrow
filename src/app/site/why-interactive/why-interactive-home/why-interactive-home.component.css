@@ -1374,7 +1374,7 @@ a:focus, a:hover {
         margin-top: 0;
     }
     .section {
-        margin-top: 0;
+        margin-top: 0!important;
     }
     .section-10, .section-6 {
         margin-bottom: 0;
@@ -1479,12 +1479,36 @@ a:focus, a:hover {
         max-width: 230px!important;
     }
     #why .section-metrics h3 {
-        font-size: 30px;
+        font-size: 30px!important;
         margin-bottom: 0px;
-        margin-top: 0px;
+        margin-top: 0px!important;
     }
     .metrics-inner-block h4 {
-        font-size: 22px;
+        font-size: 22px!important;
+    }
+    #why .section-metrics{
+        margin-bottom: 40px!important;
+        padding-bottom: 50px!important;
+        padding-top:40px!important;
+    }
+    .metrics-inner{
+        margin-top: 30px!important;
+    }
+    .section-3.calc-table .mobile-sec3.rs-show, .section-5.sec-outgrowMagic .section-6-left.mobile-container.rs-show {
+        display: block!important;
+    }
+    .section-subheading {
+        font-size: 18px!important;
+        line-height: normal!important;
+    }
+    .whyMerticsAwesome-inner-left.sec-newTraffic, .whyMerticsAwesome-inner-left.sec-audience {
+        left: 0px!important;
+    }
+    .calc-table {
+        margin-top: 40px !important;
+        margin-bottom: 10px !important;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 #why .section-w2-left h4 {
@@ -1531,11 +1555,20 @@ a:focus, a:hover {
     .sec3-box2inner {min-height: 140px;}
     .sec3-box1inner {min-height: 140px;}
     #why .secw2-2-new {margin-left: 0;}
-    .calc-table {
+    /* .calc-table {
         margin-top: 55px;
-    }
+    } */
+ 
 }
-
+@media (min-width:991px) and (max-width:1200px){
+.whyMerticsAwesome-inner-left.sec-newTraffic, .whyMerticsAwesome-inner-left.sec-audience {
+    left: 0!important;
+}
+.metrics-inner-block {
+    margin-right: 30px !important;
+    max-width: 293px !important;
+}
+}
 
 @media (min-width: 1024px) and (max-width:1250px) {
     
@@ -1554,6 +1587,20 @@ a:focus, a:hover {
         font-size: 19px;
     }
 }
+@media (max-width: 1024px) and (min-width: 769px)
+{
+    video {
+        width: 100%!important;
+    }
+}
+@media (max-width: 1024px) and (min-width: 0px)
+{
+
+    .case-breathers1 .section-2-heading {
+        margin-top: 40px !important;
+    }
+}
+
 
 @media (max-width: 1920px) and (min-width: 1440px)
 {

@@ -301,11 +301,11 @@ label {
 	float: left;
 	width: 100%;
 	text-align: center;
-	color: #dfe3e6 !important;
-	font-size: 48px;
+	color:#fb6c73 !important;
+	font-size: 38px;
 	line-height: 52px;
-	font-family: montserratbold;
-	text-transform: uppercase;
+	font-family: montserratsemibold;
+	text-transform: none;
 	margin: 0px;
 }
 .section-2-subheading {
@@ -1406,7 +1406,7 @@ h4.mk-animate-element.right-to-left.publish {width: 85%;}
 	width: 100%;
 	font-size: 18px;
 	font-family: montserratlight;
-	color: #62696d;
+	color: #fb6c73;
 	margin-bottom: 30px;
 	line-height: 25px
 }
@@ -2268,7 +2268,7 @@ body{background:#fff !important;}
 
 /**** new choose template ***/
     section.section.example-calc {
-        margin: 50px;
+        margin-top: 50px;
         position: relative;
     }
     /* .example-calc .tab-section{} */
@@ -2681,8 +2681,30 @@ body{background:#fff !important;}
 		display: block;
 		margin-top: 0px;
 	}
-	/* end: example page responsive css by Arti */
+	.section-2-heading {
+		text-transform: none;
+		line-height: normal;
+		font-size: 30px !important;
+		text-align: center;
+	}
+	.sec-example .sec-outgrowMagic-title{
 
+		margin-top: 0!important;
+		padding: 40px!important;
+	}
+	.section-2-subheading {
+		display: block;
+		font-size: 15px !important;
+	}
+
+	.premade-template-new {
+		margin-bottom: 20px;
+		margin-top: 0;
+	}
+	section.section.example-calc {
+		margin-top: 0px !important;
+		margin-bottom: 20px;
+	}
 }
 @media (min-width: 1024px) and (max-width:1250px) {
 	
