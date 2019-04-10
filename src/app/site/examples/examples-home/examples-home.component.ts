@@ -7,6 +7,7 @@ import { VideoUrlService } from '../../../shared/service/video-url.service';
 import { LoadingService } from '../../../shared/service/loading.service';
 import * as _ from 'lodash';
 import { Http } from '@angular/http';
+declare let Swiper: any;
 
 @Component({
   selector: 'app-examples-home',
@@ -43,7 +44,7 @@ export class ExamplesHomeComponent implements OnInit {
   activeHeader="";
   public allPosts: Array<{title:string, picUrl:string, url:string}>=new Array();
   public trendingCalc: Array<{title:string, type:string, description:string, media:string, preview:string}>=new Array();
-
+  public allIndustries=[];
   constructor(public videoURLService: VideoUrlService,
     public title: Title,
     public apiRequestService: ApiRequestService,
@@ -94,7 +95,6 @@ export class ExamplesHomeComponent implements OnInit {
             });
           }   
         } 
-        // console.log("----get posts-----",this.allPosts)
           resolve();
         },msg=>{
           reject();
@@ -111,6 +111,7 @@ export class ExamplesHomeComponent implements OnInit {
       .then(
         res=>{
         results=res.json();
+        this.allIndustries=results['data']['industries'];
         for (var prop in results) {
           if(prop=="data"){
             results['data']['calculators'].forEach(element => {
@@ -120,7 +121,6 @@ export class ExamplesHomeComponent implements OnInit {
             });
           }
         }
-        // console.log("--------trending calc---------",this.trendingCalc)
           resolve();
         },msg=>{
           reject();
@@ -142,16 +142,54 @@ export class ExamplesHomeComponent implements OnInit {
         res=>{
           results=res.json();
           let events=results['data']['events'];
-          // console.log("------res----",events);
           resolve();
         }
       )
     })
 
+    setTimeout(() => {
+      var swiper = new Swiper('.swiper-container-recentNews', {
+          pagination: '.swiper-pagination',
+          paginationClickable: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          //spaceBetween: 30,
+          //slidesPerView: 3,
+          centeredSlides: true,
+          // autoplay: 2500,
+          speed: 500,
+          autoplayDisableOnInteraction: false
+      });
+  }, 4000);
+
+
+  setTimeout(() => {
+    var swiper = new Swiper('.swiper-container-blog', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        //spaceBetween: 30,
+        //slidesPerView: 3,
+        centeredSlides: true,
+        // autoplay: 2500,
+        speed: 500,
+        autoplayDisableOnInteraction: false
+    });
+}, 4000);
+    
   }
 
   ngAfterViewInit() {
     this.getAllCalculators();
+  //   jQuery('#select-list').selectize({
+  //     create: true,
+  //     sortField: 'text',
+  //     onChange: function (event) {
+  //         // window.shuffleCalcs(event, false)
+  //         console.log("---yeah------")
+  //     }
+  // });
   }
 
   getAllCalculators() {
@@ -261,4 +299,6 @@ export class ExamplesHomeComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(frameUri);
   }
 
+  // get response calc
+ 
 }
